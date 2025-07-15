@@ -138,7 +138,7 @@ def process_file(ctx, input_file, output_file, no_ai_analysis, no_validation, co
         )
         
         # Display results
-        if result.get('success', False):
+        if result.get('status') == 'success':
             click.echo(f"✅ Successfully processed: {input_file}")
             click.echo(f"📁 Output saved to: {output_file}")
             
@@ -161,7 +161,7 @@ def process_file(ctx, input_file, output_file, no_ai_analysis, no_validation, co
                     data = json.load(f)
                     click.echo(json.dumps(data, indent=2, ensure_ascii=False)[:500] + "...")
         else:
-            click.echo(f"❌ Processing failed: {result.get('error', 'Unknown error')}", err=True)
+            click.echo(f"❌ Processing failed: {result.get('error_message', result.get('error', 'Unknown error'))}", err=True)
             sys.exit(1)
             
     except Exception as e:

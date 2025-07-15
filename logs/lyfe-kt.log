@@ -110,3 +110,319 @@
 2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
 2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
 2025-07-15 15:13:01 - lyfe-kt - INFO - Status command called
+2025-07-15 15:19:00 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:19:06 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:19:12 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:19:12 - lyfe-kt - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json -> work/02_preprocessed/levantar_da_cama/test_processed.json
+2025-07-15 15:19:12 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:19:12 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:19:12 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:19:12 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:19:12 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:19:12 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:19:12 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:19:12 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:19:12 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:19:12 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:19:12 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:19:12 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:19:12 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:19:13 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:19:13 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:19:13 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:19:13 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:19:13 - lyfe_kt.stage1_integration - INFO - Progress: 4/5 - Validating output
+2025-07-15 15:19:13 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:19:13 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:19:13 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 1.00 seconds
+2025-07-15 15:19:43 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:19:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:19:48 - lyfe-kt - INFO - Processing directory: work/01_raw/levantar_da_cama -> work/02_preprocessed/levantar_da_cama
+2025-07-15 15:19:48 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:19:48 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:19:48 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:19:48 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:19:48 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:19:48 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:19:48 - lyfe_kt.stage1_integration - INFO - Processing directory: work/01_raw/levantar_da_cama
+2025-07-15 15:19:48 - lyfe_kt.stage1_integration - INFO - Progress: 0/1 - Found 1 JSON files
+2025-07-15 15:19:48 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:19:48 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:19:48 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:19:48 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:19:48 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:19:48 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:19:48 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:19:49 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:19:49 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:19:49 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:19:49 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:19:49 - lyfe_kt.stage1_integration - INFO - Progress: 4/5 - Validating output
+2025-07-15 15:19:49 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:19:49 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:19:49 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.58 seconds
+2025-07-15 15:19:49 - lyfe_kt.stage1_integration - INFO - Progress: 1/1 - Processed test.json
+2025-07-15 15:19:49 - lyfe_kt.stage1_integration - INFO - Progress: 1/1 - Performing cross-file analysis
+2025-07-15 15:19:49 - lyfe_kt.stage1_integration - INFO - Directory processing completed: 1/1 files successful
+2025-07-15 15:19:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:19:55 - lyfe-kt - INFO - Generating report from: work/02_preprocessed/levantar_da_cama
+2025-07-15 15:19:55 - lyfe-kt - ERROR - Error generating report: [Errno 21] Is a directory: 'work/02_preprocessed/levantar_da_cama'
+2025-07-15 15:20:00 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:20:09 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:20:09 - lyfe-kt - INFO - Generating report from: work/02_preprocessed/levantar_da_cama/test_processed.json
+2025-07-15 15:20:09 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:09 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:20:09 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:20:09 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:20:09 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:09 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:20:53 - lyfe-kt - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json -> work/02_preprocessed/levantar_da_cama/test_sample_testing.json
+2025-07-15 15:20:53 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:53 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:20:53 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:20:53 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:20:53 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:53 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:20:53 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:53 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:20:53 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:20:53 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:53 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:20:53 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:53 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:54 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:20:54 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:20:54 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Progress: 4/5 - Validating output
+2025-07-15 15:20:54 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.50 seconds
+2025-07-15 15:20:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:20:54 - lyfe-kt - INFO - Processing directory: work/01_raw/levantar_da_cama -> work/02_preprocessed/levantar_da_cama
+2025-07-15 15:20:54 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:54 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:20:54 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:20:54 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:20:54 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Processing directory: work/01_raw/levantar_da_cama
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Progress: 0/1 - Found 1 JSON files
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:20:54 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:54 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:20:54 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:54 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:55 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:20:55 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:20:55 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:20:55 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:20:55 - lyfe_kt.stage1_integration - INFO - Progress: 4/5 - Validating output
+2025-07-15 15:20:55 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:55 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:20:55 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.42 seconds
+2025-07-15 15:20:55 - lyfe_kt.stage1_integration - INFO - Progress: 1/1 - Processed test.json
+2025-07-15 15:20:55 - lyfe_kt.stage1_integration - INFO - Progress: 1/1 - Performing cross-file analysis
+2025-07-15 15:20:55 - lyfe_kt.stage1_integration - INFO - Directory processing completed: 1/1 files successful
+2025-07-15 15:20:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:20:55 - lyfe-kt - INFO - Generating report from: work/02_preprocessed/levantar_da_cama/test_sample_testing.json
+2025-07-15 15:20:55 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:55 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:20:55 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:20:55 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:20:55 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:55 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:20:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:20:56 - lyfe-kt - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json -> work/02_preprocessed/levantar_da_cama/test_sample_testing_no_validation.json
+2025-07-15 15:20:56 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:56 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:20:56 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:20:56 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:20:56 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:20:56 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:20:56 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:56 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:20:56 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:20:56 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:56 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:20:56 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:56 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:20:56 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:20:56 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:20:56 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:20:56 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:20:56 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:20:56 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.49 seconds
+2025-07-15 15:20:57 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:40 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:40 - lyfe-kt - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json -> work/02_preprocessed/levantar_da_cama/test_cli_fix.json
+2025-07-15 15:21:40 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:40 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:21:40 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:21:40 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:21:40 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:40 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:21:40 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:40 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:21:40 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:21:40 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:40 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:21:40 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:40 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:41 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:21:41 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:21:41 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:21:41 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:21:41 - lyfe_kt.stage1_integration - INFO - Progress: 4/5 - Validating output
+2025-07-15 15:21:41 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:41 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:21:41 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.53 seconds
+2025-07-15 15:21:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:46 - lyfe-kt - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json -> work/02_preprocessed/levantar_da_cama/test_sample_testing.json
+2025-07-15 15:21:46 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:46 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:21:46 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:21:46 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:21:46 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:46 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:21:46 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:46 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:21:46 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:21:46 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:46 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:21:46 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:46 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:47 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:21:47 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:21:47 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Progress: 4/5 - Validating output
+2025-07-15 15:21:47 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.38 seconds
+2025-07-15 15:21:47 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:47 - lyfe-kt - INFO - Processing directory: work/01_raw/levantar_da_cama -> work/02_preprocessed/levantar_da_cama
+2025-07-15 15:21:47 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:47 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:21:47 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:21:47 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:21:47 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Processing directory: work/01_raw/levantar_da_cama
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Progress: 0/1 - Found 1 JSON files
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:21:47 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:47 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:21:47 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:47 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:48 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:21:48 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:21:48 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Progress: 4/5 - Validating output
+2025-07-15 15:21:48 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.35 seconds
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Progress: 1/1 - Processed test.json
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Progress: 1/1 - Performing cross-file analysis
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Directory processing completed: 1/1 files successful
+2025-07-15 15:21:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:48 - lyfe-kt - INFO - Generating report from: work/02_preprocessed/levantar_da_cama/test_sample_testing.json
+2025-07-15 15:21:48 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:48 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:21:48 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:21:48 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:21:48 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:21:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:48 - lyfe-kt - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json -> work/02_preprocessed/levantar_da_cama/test_sample_testing_no_validation.json
+2025-07-15 15:21:48 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:48 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:21:48 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:21:48 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:21:48 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:21:48 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:48 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:21:48 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:48 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:21:49 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:21:49 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:21:49 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:21:49 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:21:49 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:21:49 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.72 seconds
+2025-07-15 15:21:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp_a7eco2k/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp_a7eco2k/output.json
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpp1lymfri/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpp1lymfri/output.json
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpx8hkojsk/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpx8hkojsk/output
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwsoj3vdb/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwsoj3vdb/output
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpuoua9wl2/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpuoua9wl2/output
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3_jdewy1/results.json
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpgcqudsn1/results.json
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:21:56 - lyfe-kt - INFO - Status command called
+2025-07-15 15:22:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:26 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwad6jf1f/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwad6jf1f/output.json
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3ad7znj8/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3ad7znj8/output.json
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpw1nrzb06/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpw1nrzb06/output.json
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpbcazakqz/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpbcazakqz/output
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmplt8lmmgm/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmplt8lmmgm/output
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmphwp_p2zn/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmphwp_p2zn/output
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpak1q4nu9/results.json
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp4j55ophj/results.json
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:22:31 - lyfe-kt - INFO - Status command called
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqkknqysa/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqkknqysa/output.json
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpdnv76b24/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpdnv76b24/output.json
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnqe2idzn/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnqe2idzn/output
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp46vtpck2/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp46vtpck2/output
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp4h547rxh/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp4h547rxh/output
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmps5aqqig8/results.json
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpw8h1cwrd/results.json
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:23:22 - lyfe-kt - INFO - Status command called

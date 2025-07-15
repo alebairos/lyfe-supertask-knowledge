@@ -195,7 +195,7 @@ class TestStage1CLI:
         """Test successful single file processing."""
         # Mock successful processing
         mock_process.return_value = {
-            'success': True,
+            'status': 'success',
             'processing_time_seconds': 1.5,
             'validation_result': {
                 'is_valid': True,
