@@ -1,1 +1,112 @@
 2025-07-14 23:58:55 - lyfe-kt - INFO - Status command called
+2025-07-15 12:05:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:05:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:05:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:05:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:05:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:05:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:05:46 - lyfe-kt - INFO - Status command called
+2025-07-15 12:06:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:53 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwsy2i2ds/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwsy2i2ds/output.json
+2025-07-15 12:06:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:54 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpbf7oj1hz/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpbf7oj1hz/output.json
+2025-07-15 12:06:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:54 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp1k3mzhwu/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp1k3mzhwu/output
+2025-07-15 12:06:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:54 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpcrmkno7t/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpcrmkno7t/output
+2025-07-15 12:06:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:54 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpcegn3zpm/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpcegn3zpm/output
+2025-07-15 12:06:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:54 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjp21lr57/results.json
+2025-07-15 12:06:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:54 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpu6e0m0tz/results.json
+2025-07-15 12:06:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:06:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpmo41vp7p/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpmo41vp7p/output.json
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpr6h_k6ls/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpr6h_k6ls/output.json
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp4h_py71j/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp4h_py71j/output
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7_d_p7x2/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7_d_p7x2/output
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpijealxs4/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpijealxs4/output
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpr1ncctvj/results.json
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj1jhp0hd/results.json
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:18 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnmhffxu5/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnmhffxu5/output.json
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkzyae9gl/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkzyae9gl/output.json
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpfb0mq2kw/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpfb0mq2kw/output
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmps14847j2/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmps14847j2/output
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9kdo8jun/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9kdo8jun/output
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp59qn7pyp/results.json
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpayshwh6l/results.json
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 12:07:23 - lyfe-kt - INFO - Status command called
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp28zfkt_3/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp28zfkt_3/output.json
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpln5sb0tj/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpln5sb0tj/output.json
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpvlrsq7fe/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpvlrsq7fe/output
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp82znyega/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp82znyega/output
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpz6oleapy/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpz6oleapy/output
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpq7mt7gx_/results.json
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkyjaa3r6/results.json
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:07:39 - lyfe-kt - INFO - Status command called
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3ydetwoc/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3ydetwoc/output.json
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqim5up21/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqim5up21/output.json
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpa2urcqmv/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpa2urcqmv/output
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpz46ggtzl/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpz46ggtzl/output
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpprugderj/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpprugderj/output
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp1z3u7fik/results.json
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Generating report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpy0vc8ln9/results.json
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:13:01 - lyfe-kt - INFO - Status command called

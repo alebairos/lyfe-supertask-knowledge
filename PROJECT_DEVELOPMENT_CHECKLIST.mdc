@@ -1,0 +1,303 @@
+# Project Development Checklist
+**Lyfe Supertask Knowledge Generator - Development Protocol**
+
+## 🔄 MANDATORY COMPLETION CHECKLIST
+**EVERY TODO IMPLEMENTATION MUST FOLLOW THIS EXACT SEQUENCE**
+
+### Phase 1: Pre-Implementation ✅
+- [ ] **Mark TODO as `in_progress`** using `todo_write` tool
+- [ ] **Analyze requirements** and understand dependencies
+- [ ] **Plan implementation** with clear deliverables
+- [ ] **Identify test strategy** (unit, integration, mocking needs)
+
+### Phase 2: Implementation ✅
+- [ ] **Implement core functionality** following user rules and best practices
+- [ ] **Write comprehensive tests** covering all scenarios
+- [ ] **Ensure code follows** DRY, YAGNI, KISS principles
+- [ ] **Add proper error handling** and logging
+
+### Phase 3: Testing & Quality Assurance ✅
+- [ ] **Run ALL tests** and ensure 100% pass rate
+  ```bash
+  source venv/bin/activate && python -m pytest tests/ -v
+  ```
+- [ ] **Fix ANY failing tests** immediately
+- [ ] **Add defensive tests** for edge cases and error scenarios
+- [ ] **Verify integration** with existing components
+- [ ] **Test CLI commands** manually if applicable
+
+### Phase 4: Documentation Updates ✅
+- [ ] **Update TODO.md** with completed status and implementation details
+  - Mark TODO as ✅ COMPLETED
+  - Add implementation checklist with all features
+  - Add testing results and file references
+  - Add documentation reference
+- [ ] **Update implementation-summary.md** with comprehensive section
+  - Add new TODO section with full implementation details
+  - Document all methods, classes, and key features
+  - Include test results and file statistics
+  - Add code examples and usage patterns
+- [ ] **Update TODO list** using `todo_write` tool to mark as completed
+
+### Phase 5: Version Control ✅
+- [ ] **Review all changes** before committing
+- [ ] **Add, commit, and push** all changes with descriptive commit message
+  ```bash
+  git add .
+  git commit -m "feat: Implement [TODO_NAME] - [Brief description]"
+  git push origin main
+  ```
+- [ ] **Verify push success** and clean working directory
+
+### Phase 6: Review & Testing Prompt ✅
+- [ ] **Prompt user for review** with implementation summary
+- [ ] **Suggest manual testing** scenarios if applicable
+- [ ] **Provide usage examples** and next steps
+- [ ] **Confirm readiness** for next TODO item
+
+---
+
+## 🧪 TESTING REQUIREMENTS
+
+### Test Coverage Standards
+- **Unit Tests**: All public methods and functions
+- **Integration Tests**: Component interactions
+- **Error Handling**: All error scenarios and edge cases
+- **CLI Tests**: All commands, options, and error paths
+- **Mocking**: External dependencies (OpenAI, file system when needed)
+
+### Test Execution Protocol
+1. **Run full test suite** before marking TODO complete
+2. **Fix ALL failing tests** - no exceptions
+3. **Achieve 100% pass rate** on implemented functionality
+4. **Add new tests** for new functionality
+5. **Verify test isolation** - tests should not depend on each other
+
+### Test Documentation
+- **Test count** and pass rate in all documentation
+- **Test file references** in implementation summary
+- **Test strategy explanation** for complex components
+
+---
+
+## 📝 DOCUMENTATION STANDARDS
+
+### TODO.md Updates
+```markdown
+### [TODO_NUMBER]. [todo-id]
+**Status**: ✅ COMPLETED  
+**Dependencies**: [dependency-list]  
+**Description**: [Original description]
+- **Implemented**: ✅ [Feature 1 with details]
+- **Implemented**: ✅ [Feature 2 with details]
+- **Implemented**: ✅ [Feature 3 with details]
+- **Tested**: ✅ [X] comprehensive tests with [Y]% pass rate
+- **Documented**: ✅ docs/features/implementation-summary.md
+```
+
+### Implementation Summary Standards
+```markdown
+## ✅ TODO [NUMBER]: [Title]
+
+**Status**: COMPLETED  
+**Date**: [YYYY-MM-DD]  
+**Duration**: ~[X] hours  
+
+### What Was Implemented
+1. **[Major Feature 1]**: [Description with code stats]
+2. **[Major Feature 2]**: [Description with functionality]
+3. **[Major Feature 3]**: [Description with integration details]
+
+### Key Methods/Classes Implemented
+- **`ClassName.method_name()`**: [Description of functionality]
+- **`function_name()`**: [Description of purpose]
+
+### Comprehensive Testing
+**Test Suite**: `tests/test_[module].py` ([X] lines, [Y] tests)
+**Test Results**: [Y]/[Y] tests passing (100% success rate)
+
+### Files Created/Modified
+- `src/[module].py` - [Description] ([X] lines)
+- `tests/test_[module].py` - [Description] ([Y] lines)
+
+### Next Steps
+[Brief description of what this enables for future TODOs]
+```
+
+---
+
+## 🔧 IMPLEMENTATION STANDARDS
+
+### Code Quality Requirements
+- **DRY Principle**: Eliminate code duplication
+- **YAGNI Principle**: Avoid premature optimization
+- **KISS Principle**: Keep implementations simple and clear
+- **Error Handling**: Comprehensive error catching and logging
+- **Type Hints**: Use type hints for better code documentation
+- **Docstrings**: Document all public methods and classes
+
+### Testing Approach (Default)
+- **Very focused**: Each test targets a specific scenario
+- **Simple**: Tests are straightforward and easy to understand
+- **No mocks initially**: Avoid complex mock structures when possible
+- **Easy to maintain**: Tests have clear assertions and comments
+- **One test at a time**: Each test focuses on single functionality
+
+### CLI Implementation Standards
+- **Help Documentation**: Comprehensive help for all commands
+- **Error Messages**: Clear, actionable error messages
+- **Progress Reporting**: Real-time feedback for long operations
+- **Exit Codes**: Proper exit codes for automation
+- **Option Validation**: Validate all inputs and options
+
+---
+
+## 🚨 FAILURE RECOVERY PROTOCOL
+
+### If Tests Fail
+1. **STOP implementation** immediately
+2. **Analyze failure** root cause
+3. **Fix failing tests** before proceeding
+4. **Re-run full test suite** to verify fix
+5. **Document fix** if it affects implementation
+
+### If Documentation Missing
+1. **STOP completion process** immediately
+2. **Complete ALL documentation** requirements
+3. **Verify documentation** accuracy and completeness
+4. **Update version control** with documentation
+
+### If Git Operations Fail
+1. **Resolve git issues** before proceeding
+2. **Verify clean working directory**
+3. **Confirm successful push** to remote
+4. **Re-run checklist** from Phase 5
+
+---
+
+## 📋 QUICK REFERENCE COMMANDS
+
+### Testing Commands
+```bash
+# Run all tests
+source venv/bin/activate && python -m pytest tests/ -v
+
+# Run specific test file
+source venv/bin/activate && python -m pytest tests/test_[module].py -v
+
+# Run with coverage
+source venv/bin/activate && python -m pytest tests/ --cov=src/lyfe_kt --cov-report=html
+```
+
+### Git Commands
+```bash
+# Standard workflow
+git add .
+git status
+git commit -m "feat: Implement [TODO] - [description]"
+git push origin main
+
+# Check status
+git status
+git log --oneline -n 3
+```
+
+### CLI Testing Commands
+```bash
+# Test CLI help
+source venv/bin/activate && python -m lyfe_kt.cli --help
+source venv/bin/activate && python -m lyfe_kt.cli stage1 --help
+
+# Test specific commands
+source venv/bin/activate && python -m lyfe_kt.cli stage1 process-file --help
+```
+
+---
+
+## 🎯 SUCCESS CRITERIA
+
+### Definition of Done
+- ✅ **All tests passing** (100% pass rate)
+- ✅ **TODO.md updated** with completion status
+- ✅ **Implementation summary updated** with comprehensive documentation
+- ✅ **TODO list updated** using todo_write tool
+- ✅ **Code committed and pushed** successfully
+- ✅ **User prompted for review** and manual testing
+- ✅ **Ready for next TODO** implementation
+
+### Quality Gates
+- **No failing tests** in the entire test suite
+- **No broken functionality** in existing features
+- **Complete documentation** for all new features
+- **Proper error handling** for all edge cases
+- **Clean git history** with descriptive commit messages
+
+---
+
+## 🔄 AUTOMATION REMINDERS
+
+### Before Starting Any TODO
+```bash
+# Ensure clean state
+git status
+source venv/bin/activate && python -m pytest tests/ -v
+```
+
+### After Completing Any TODO
+```bash
+# Verify everything works
+source venv/bin/activate && python -m pytest tests/ -v
+git add .
+git commit -m "feat: Implement [TODO] - [description]"
+git push origin main
+```
+
+### Manual Testing Suggestions
+- **CLI Commands**: Test all new CLI commands manually
+- **Error Scenarios**: Test with invalid inputs and missing files
+- **Integration**: Test with real OpenAI API calls
+- **Performance**: Test with larger datasets if applicable
+
+---
+
+## 📞 USER INTERACTION PROTOCOL
+
+### Review Request Format
+```
+✅ **TODO [NUMBER] ([TODO_NAME]) is now complete!**
+
+## Summary of What Was Accomplished
+[Detailed summary of implementation]
+
+## Key Features Implemented
+[List of major features with descriptions]
+
+## Testing Results
+[Test statistics and pass rates]
+
+## Files Created/Modified
+[List of all files with line counts]
+
+## Manual Testing Suggestions
+[Specific testing scenarios for the user]
+
+## Current Project Status
+- **Progress**: [X]% complete ([Y]/[Z] TODOs completed)
+- **Next Phase**: TODO [NEXT_NUMBER] - [NEXT_DESCRIPTION]
+
+Ready to proceed with **TODO [NEXT_NUMBER]**!
+```
+
+### Manual Testing Prompts
+- Suggest specific commands to test
+- Provide example usage scenarios
+- Highlight potential edge cases
+- Recommend integration testing approaches
+
+---
+
+**🎯 REMEMBER: This checklist is MANDATORY for EVERY TODO implementation. No exceptions!**
+description:
+globs:
+alwaysApply: false
+---
