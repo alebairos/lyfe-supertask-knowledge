@@ -1,0 +1,70 @@
+{
+  "title": "Levantar da Cama",
+  "dimension": "physicalHealth",
+  "archetype": "warrior",
+  "relatedToType": "HABITBP",
+  "relatedToId": "wake-up-early",
+  "estimatedDuration": 300,
+  "coinsReward": 15,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Acordar cedo é fundamental para ter um dia produtivo e saudável. Quando você se levanta nas primeiras horas da manhã, seu corpo está descansado e sua mente está clara, pronta para enfrentar os desafios do dia.",
+      "author": "Dr. Silva, Especialista em Medicina do Sono"
+    },
+    {
+      "type": "quote",
+      "content": "O sucesso não é acidental. É trabalho duro, perseverança, aprendizado, estudo, sacrifício e, acima de tudo, amor pelo que você está fazendo.",
+      "author": "Pelé"
+    },
+    {
+      "type": "content",
+      "content": "Estabelecer uma rotina matinal consistente é essencial para manter o hábito de acordar cedo. Isso inclui ir para a cama no mesmo horário todas as noites, evitar dispositivos eletrônicos antes de dormir e criar um ambiente propício ao sono."
+    },
+    {
+      "type": "quiz",
+      "question": "Qual é o principal benefício de acordar cedo?",
+      "options": [
+        "Ter mais tempo para redes sociais",
+        "Maior produtividade e clareza mental",
+        "Poder dormir mais tarde",
+        "Evitar o trânsito da manhã"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Acordar cedo proporciona maior produtividade e clareza mental porque o corpo está descansado e a mente está fresca para enfrentar os desafios do dia."
+    },
+    {
+      "type": "content",
+      "content": "Para facilitar o processo de acordar cedo, é importante preparar o ambiente na noite anterior. Deixe a roupa separada, prepare o café da manhã e defina um alarme motivador que te inspire a sair da cama.",
+      "tips": [
+        "Deixe a cortina entreaberta para a luz natural entrar",
+        "Coloque o despertador longe da cama",
+        "Tenha uma garrafa de água ao lado da cama"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Segundo o texto, o que é essencial para manter o hábito de acordar cedo?",
+      "options": [
+        "Beber muito café",
+        "Estabelecer uma rotina matinal consistente",
+        "Dormir apenas 4 horas por noite",
+        "Usar múltiplos despertadores"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Uma rotina matinal consistente é fundamental para manter o hábito de acordar cedo, incluindo horários regulares de sono e preparação adequada do ambiente."
+    },
+    {
+      "type": "content",
+      "content": "Lembre-se: a mudança de hábito leva tempo. Seja paciente consigo mesmo e celebre as pequenas vitórias. Cada dia que você conseguir acordar cedo é um passo em direção a uma vida mais saudável e produtiva.",
+      "author": "Equipe Lyfe"
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "Brazil",
+    "created_at": "2024-01-15T08:00:00Z",
+    "updated_at": "2024-01-15T08:00:00Z",
+    "version": "1.0"
+  }
+}

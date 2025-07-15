@@ -1,0 +1,2 @@
+[console_scripts]
+lyfe-kt = lyfe_kt.cli:main

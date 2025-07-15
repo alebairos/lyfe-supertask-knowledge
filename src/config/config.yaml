@@ -1,0 +1,214 @@
+# Lyfe Supertask Knowledge Generator Configuration
+# This file contains all configuration settings for the knowledge task generation system
+
+# OpenAI API Configuration
+openai:
+  # Model to use for content generation
+  model: "gpt-4"
+  
+  # Maximum number of tokens to generate
+  max_tokens: 4000
+  
+  # Temperature for creativity (0.0 = deterministic, 2.0 = very creative)
+  temperature: 0.7
+  
+  # Request timeout in seconds
+  timeout: 60
+
+# Processing Configuration
+processing:
+  # Processing stages in order
+  stages:
+    - "content_analysis"
+    - "structure_extraction"
+    - "knowledge_generation"
+    - "validation"
+  
+  # Number of retry attempts for failed operations
+  retry_attempts: 3
+  
+  # Delay between retries in seconds
+  retry_delay: 1.0
+  
+  # Number of items to process in each batch
+  batch_size: 5
+
+# Validation Rules
+validation:
+  # Input validation rules
+  input:
+    # Required fields in input markdown files
+    required_fields:
+      - "title"
+      - "description"
+      - "target_audience"
+      - "difficulty_level"
+      - "learning_objectives"
+    
+    # Maximum file size in MB
+    max_file_size: 10
+    
+    # Allowed file extensions
+    allowed_extensions:
+      - ".md"
+      - ".markdown"
+      - ".json"
+  
+  # Output validation rules
+  output:
+    # JSON schema validation
+    schema:
+      type: "object"
+      required:
+        - "id"
+        - "title"
+        - "content"
+        - "quiz"
+        - "metadata"
+    
+    # Minimum content length
+    min_content_length: 100
+    
+    # Maximum content length
+    max_content_length: 10000
+  
+  # Content validation rules
+  content:
+    # Minimum content length in characters
+    min_length: 50
+    
+    # Maximum content length in characters
+    max_length: 50000
+    
+    # Required content sections
+    required_sections:
+      - "overview"
+      - "main_content"
+      - "key_concepts"
+      - "examples"
+      - "summary"
+
+# Logging Configuration
+logging:
+  # Default log level
+  level: "INFO"
+  
+  # Log message format
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # Default log file path
+  file_path: "logs/lyfe-kt.log"
+  
+  # Log rotation settings
+  rotation:
+    max_size: "10MB"
+    backup_count: 5
+
+# Output Configuration
+output:
+  # Output format (json, yaml, markdown)
+  format: "json"
+  
+  # Output directory
+  directory: "work/04_output"
+  
+  # Filename pattern (supports variables like {title}, {timestamp})
+  filename_pattern: "{title}_{timestamp}.json"
+  
+  # Pretty print JSON output
+  pretty_print: true
+  
+  # Include metadata in output
+  include_metadata: true
+
+# Stage-specific Configuration
+stages:
+  # Stage 1: Content Analysis
+  content_analysis:
+    # Extract key themes and concepts
+    extract_themes: true
+    
+    # Analyze content complexity
+    analyze_complexity: true
+    
+    # Identify learning objectives
+    identify_objectives: true
+  
+  # Stage 2: Structure Extraction
+  structure_extraction:
+    # Preserve original structure
+    preserve_structure: true
+    
+    # Extract hierarchical information
+    extract_hierarchy: true
+    
+    # Identify content relationships
+    identify_relationships: true
+  
+  # Stage 3: Knowledge Generation
+  knowledge_generation:
+    # Generate quiz questions
+    generate_quiz: true
+    
+    # Number of quiz questions to generate
+    quiz_questions: 5
+    
+    # Include multiple choice questions
+    include_multiple_choice: true
+    
+    # Include open-ended questions
+    include_open_ended: true
+    
+    # Generate summary
+    generate_summary: true
+    
+    # Generate key takeaways
+    generate_takeaways: true
+  
+  # Stage 4: Validation
+  validation:
+    # Validate generated content
+    validate_content: true
+    
+    # Check for completeness
+    check_completeness: true
+    
+    # Verify learning objectives alignment
+    verify_objectives: true
+
+# Error Handling Configuration
+error_handling:
+  # Continue processing on non-critical errors
+  continue_on_error: true
+  
+  # Maximum errors before stopping
+  max_errors: 10
+  
+  # Error reporting level
+  error_level: "WARNING"
+  
+  # Save error reports
+  save_error_reports: true
+  
+  # Error report directory
+  error_report_dir: "logs/errors"
+
+# Performance Configuration
+performance:
+  # Enable parallel processing
+  parallel_processing: true
+  
+  # Maximum number of concurrent workers
+  max_workers: 4
+  
+  # Memory limit per worker in MB
+  memory_limit: 1024
+  
+  # Cache processed results
+  enable_cache: true
+  
+  # Cache directory
+  cache_dir: "cache"
+  
+  # Cache expiration time in hours
+  cache_expiration: 24 

@@ -1,0 +1,171 @@
+# LLM Prompts Configuration for Knowledge Task Generation
+# This file contains all prompts used by the generation engine
+# Edit these prompts to customize content analysis and generation behavior
+
+# Content Analysis Prompts
+content_analysis:
+  topic_extraction:
+    prompt: |
+      Analyze the following markdown content and extract:
+      1. Main topic and subtopics
+      2. Key learning objectives
+      3. Difficulty level (beginner/intermediate/advanced)
+      4. Estimated reading time
+      5. Content type (tutorial/guide/reference/concept)
+      
+      Content:
+      {content}
+      
+      Return as JSON format.
+    
+  learning_objectives:
+    prompt: |
+      From this content, identify 3-5 clear learning objectives.
+      Each objective should be specific, measurable, and actionable.
+      Format as: "After completing this, learners will be able to..."
+      
+      Content: {content}
+
+# Quiz Generation Prompts
+quiz_generation:
+  multiple_choice:
+    prompt: |
+      Create {num_questions} multiple choice questions from this content.
+      Each question should:
+      - Test understanding of key concepts
+      - Have 4 options with 1 correct answer
+      - Include plausible distractors
+      - Vary in difficulty
+      
+      Format as JSON with: question, options[], correctAnswer, explanation
+      
+      Content: {content}
+  
+  true_false:
+    prompt: |
+      Create {num_questions} true/false questions from this content.
+      Focus on:
+      - Important facts and concepts
+      - Common misconceptions
+      - Clear statements that are definitively true or false
+      
+      Format as JSON with: statement, isTrue, explanation
+      
+      Content: {content}
+
+# Content Segmentation Prompts
+content_segmentation:
+  step_creation:
+    prompt: |
+      Break this content into {target_steps} logical learning steps.
+      Each step should:
+      - Build upon previous steps
+      - Be digestible in 30-60 seconds
+      - Have a clear learning purpose
+      - Include engaging elements (examples, analogies, etc.)
+      
+      Return as array of steps with: title, content, duration_seconds
+      
+      Content: {content}
+  
+  engagement_enhancement:
+    prompt: |
+      Enhance this content step to be more engaging by:
+      - Adding relevant examples or analogies
+      - Including actionable tips
+      - Using conversational tone
+      - Highlighting key insights
+      
+      Original step: {step_content}
+
+# Template Selection Prompts
+template_selection:
+  archetype_matching:
+    prompt: |
+      Based on this content, determine the most suitable user archetype:
+      - achiever: Goal-oriented, performance-focused content
+      - nurturer: Relationship and care-focused content  
+      - explorer: Discovery and experimentation content
+      - builder: Creation and construction content
+      
+      Content: {content}
+      
+      Return archetype with confidence score.
+  
+  dimension_classification:
+    prompt: |
+      Classify this content into the most appropriate dimension:
+      - wellness: Health, mental wellbeing, self-care
+      - productivity: Efficiency, time management, organization
+      - mindfulness: Meditation, awareness, presence
+      - nutrition: Diet, healthy eating, food choices
+      
+      Content: {content}
+      
+      Return dimension with confidence score.
+
+# Quality Validation Prompts
+quality_validation:
+  content_quality:
+    prompt: |
+      Evaluate this generated knowledge task for quality:
+      1. Content clarity and structure (1-10)
+      2. Learning progression logic (1-10)
+      3. Quiz relevance and difficulty (1-10)
+      4. Engagement and interest level (1-10)
+      5. Overall educational value (1-10)
+      
+      Provide specific feedback for improvement.
+      
+      Knowledge Task: {knowledge_task}
+  
+  completeness_check:
+    prompt: |
+      Verify this knowledge task has all required elements:
+      - Clear learning objectives
+      - Well-structured content steps
+      - Appropriate quiz questions
+      - Correct metadata (dimension, archetype, etc.)
+      - Reasonable coin reward calculation
+      
+      Flag any missing or inadequate elements.
+      
+      Knowledge Task: {knowledge_task}
+
+# Reward Calculation Prompts
+reward_calculation:
+  coin_estimation:
+    prompt: |
+      Calculate appropriate coin reward based on:
+      - Content length and complexity: {content_complexity}
+      - Estimated completion time: {completion_time_minutes}
+      - Quiz difficulty: {quiz_difficulty}
+      - Learning value: {learning_value}
+      
+      Use scale: 10-50 coins for typical knowledge tasks
+      Consider user engagement and content quality.
+      
+      Return coin amount with justification.
+
+# Environment-specific prompt variations
+environments:
+  development:
+    # Use shorter, simpler prompts for faster testing
+    content_analysis:
+      topic_extraction:
+        prompt: |
+          Extract main topic and difficulty from: {content}
+          Return JSON: {topic, difficulty, type}
+  
+  production:
+    # Use comprehensive prompts for highest quality
+    # (inherits from main prompts above)
+    
+  experimental:
+    # Test variations for A/B testing
+    quiz_generation:
+      multiple_choice:
+        prompt: |
+          Create {num_questions} engaging multiple choice questions.
+          Make them challenging but fair. Use storytelling when possible.
+          Content: {content} 

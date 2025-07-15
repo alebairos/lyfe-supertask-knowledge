@@ -1,0 +1,316 @@
+# Lyfe Supertask Knowledge Generator
+
+An intelligent system that transforms raw content into structured, interactive knowledge tasks for the Lyfe platform. The system uses AI to analyze content, extract key concepts, and generate educational materials with quizzes and progressive learning steps.
+
+## 🎯 Overview
+
+The Knowledge Task Generator automates the creation of educational content by:
+1. **Analyzing raw content** (JSON, PDFs, documents) to understand structure and tone
+2. **Preprocessing content** into standardized formats using templates
+3. **Generating knowledge tasks** with AI-powered content segmentation and quiz creation
+4. **Outputting platform-ready** JSON files for direct integration
+
+## 📁 Project Structure
+
+```
+lyfe-supertask-knowledge/
+├── src/
+│   ├── templates/              # Development templates and documentation
+│   │   ├── knowledge_task_input_template.md
+│   │   ├── knowledge_task_form_explanation.md
+│   │   └── knowledge_task_input_form.jpeg
+│   ├── config/                 # Externalized configurations
+│   │   ├── llm_prompts.yaml   # AI prompts for content processing
+│   │   ├── models.yaml        # Model configurations (GPT-4o, etc.)
+│   │   ├── environments.yaml  # Environment-specific settings
+│   │   ├── generation.yaml    # Algorithm parameters
+│   │   ├── template_mappings.yaml
+│   │   └── validation_rules.yaml
+│   └── lyfe-kt/               # Source code
+│       ├── core/              # Main processing logic
+│       ├── services/          # Modular processing services
+│       │   ├── preprocessing/ # Raw content analysis
+│       │   ├── input/         # Input validation and parsing
+│       │   ├── generation/    # AI-powered content generation
+│       │   └── output/        # Output formatting and validation
+│       ├── utils/             # Shared utilities
+│       └── api/               # Integration endpoints
+├── docs/
+│   ├── features/              # PRDs and feature documentation
+│   │   └── knowledge-task-generator.md
+│   └── samples/               # Reference materials and examples
+├── work/                      # Processing pipeline directories
+│   ├── 01_raw/                # Original source materials
+│   ├── 02_preprocessed/       # Normalized JSON following template
+│   ├── 03_input/              # Final markdown ready for generation
+│   └── 04_output/             # Generated knowledge task JSON files
+├── .env-example               # Environment template
+└── README.md
+```
+
+## 🔄 Processing Pipeline
+
+```
+📁 01_raw/          🔍 Analyzer        📁 02_preprocessed/     📝 Formatter       📁 03_input/
+Original Files  ──────────────────► Normalized JSON   ──────────────────► Markdown Files
+(JSON, PDF, docs)                   (Template-compliant)                    (AI-ready)
+                                                                                   │
+                                                                                   ▼
+📁 04_output/       🤖 AI Generator    🚀 Platform
+Knowledge Tasks ◄──────────────────  Integration
+(Platform-ready JSON)
+```
+
+**Format Flow**: `JSON/PDF → JSON → Markdown → JSON`  
+**Directory Flow**: `01_raw → 02_preprocessed → 03_input → 04_output`
+
+### **Stage 1: Raw Content Analysis** (`work/01_raw/` → `work/02_preprocessed/`)
+- **Input**: Original files (JSON, PDF, docs)
+- **Process**: Extract content, metadata, tone, and structure using AI
+- **Output**: Standardized JSON following input template schema
+
+### **Stage 2: Content Preprocessing** (`work/02_preprocessed/` → `work/03_input/`)
+- **Input**: Structured JSON with extracted content and metadata
+- **Process**: Convert to markdown with proper frontmatter and enhanced content
+- **Output**: Markdown files ready for knowledge task generation
+
+### **Stage 3: Knowledge Task Generation** (`work/03_input/` → `work/04_output/`)
+- **Input**: Markdown files with frontmatter metadata
+- **Process**: AI-powered content segmentation and quiz generation
+- **Output**: Complete knowledge task JSON files for platform integration
+
+### **Stage 4: Platform Integration**
+- **Input**: Generated knowledge task JSON files
+- **Process**: Validation and import into Lyfe platform
+- **Output**: Live knowledge tasks available to users
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.9+
+- OpenAI API key
+- Access to Lyfe platform APIs
+
+### Setup
+1. **Clone and install**:
+   ```bash
+   git clone <repository-url>
+   cd lyfe-supertask-knowledge
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+2. **Configure environment**:
+   ```bash
+   cp .env-example .env
+   # Edit .env with your API keys and settings
+   ```
+
+3. **Process content**:
+   ```bash
+   # Place raw content in work/01_raw/
+   python -m lyfe_kt preprocess    # 01_raw → 02_preprocessed
+   python -m lyfe_kt generate      # 02_preprocessed → 03_input → 04_output
+   python -m lyfe_kt integrate     # 04_output → platform
+   ```
+
+## 🎯 Primary Use Case: Supertask Content
+
+The first implementation focuses on processing existing supertask content while preserving original tone and educational value.
+
+### Input Format
+Based on `work/01_raw/levantar_da_cama/test.json`:
+- **Rich content structure** with quotes and authors
+- **Flexible item sequencing** (mixed content/quiz ordering)
+- **Multilingual support** (Portuguese with cultural context)
+- **Specific targeting** (warrior archetype, physicalHealth dimension)
+
+### Key Features
+- **Tone preservation**: Maintains motivational, direct communication style
+- **Author attribution**: Preserves quote sources and inspirational format
+- **Cultural context**: Maintains language and cultural references
+- **Quiz adaptation**: Preserves question complexity and format
+
+## ⚙️ Configuration
+
+### Model Configuration (`src/config/models.yaml`)
+```yaml
+primary_model:
+  provider: "openai"
+  model: "gpt-4o"
+  temperature: 0.7
+  max_tokens: 4000
+```
+
+### Environment Variables (`.env`)
+```env
+# OpenAI Configuration
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_ORG_ID=your_org_id_here
+
+# Processing Settings
+BATCH_SIZE=10
+MAX_CONCURRENT_REQUESTS=5
+```
+
+### LLM Prompts (`src/config/llm_prompts.yaml`)
+Externalized prompts for:
+- Content analysis and tone extraction
+- Quiz generation with multiple question types
+- Content segmentation and enhancement
+- Quality validation and completeness checks
+
+## 🔧 Development
+
+### Directory Purposes
+
+#### `src/templates/`
+- **Input templates**: Standardized markdown templates with required frontmatter
+- **Documentation**: Form explanations and UI guidelines
+- **Reference materials**: Examples and structural guidelines
+
+#### `src/config/`
+- **LLM prompts**: Externalized and editable prompts for content processing
+- **Model settings**: AI model configurations and parameters
+- **Validation rules**: Quality standards and content requirements
+- **Environment management**: Different configs for dev/staging/production
+
+#### `work/`
+- **Processing pipeline**: Clear 4-stage transformation process
+- **File correlation**: Consistent naming across all pipeline stages
+- **Quality control**: Validation and review at each transformation point
+- **Batch processing**: Handle multiple files efficiently
+
+### Benefits of This Structure
+
+1. **Separation of Concerns**: Source code, configuration, and working files clearly separated
+2. **Configuration Externalization**: Non-technical users can modify prompts and rules
+3. **Template Management**: Centralized templates with clear documentation
+4. **Workflow Clarity**: 4-stage pipeline with format progression (JSON → JSON → Markdown → JSON)
+5. **Scalability**: Easy to add new templates, prompts, and configurations
+
+## 🧪 Testing
+
+### Unit Tests
+```bash
+pytest                      # Run all tests
+pytest --watch             # Watch mode
+pytest --cov=src          # Coverage report
+```
+
+### Integration Tests
+```bash
+pytest tests/integration/  # End-to-end pipeline tests
+pytest tests/samples/      # Test with sample data
+```
+
+### Quality Assurance
+- **Input validation**: Verify structure and completeness
+- **Output validation**: Ensure platform compatibility
+- **Content quality**: AI-powered quality scoring
+- **Performance testing**: Batch processing efficiency
+
+## 📊 Monitoring
+
+### Generation Metrics
+- **Success rate**: >95% successful processing
+- **Processing speed**: <30 seconds per file
+- **Content quality**: Average rating >4.0/5.0
+- **Error rate**: <5% requiring manual intervention
+
+### Performance Tracking
+- **Batch processing**: Monitor concurrent request handling
+- **API usage**: Track OpenAI API consumption
+- **Quality scores**: Content effectiveness metrics
+- **User engagement**: Generated content performance
+
+## 🔐 Security
+
+### API Keys
+- Store in environment variables only
+- Use `.env-example` for team setup
+- Never commit sensitive data to version control
+
+### Content Validation
+- Input sanitization and validation
+- Output security scanning
+- Content policy compliance
+- Rate limiting for API calls
+
+## 🤝 Contributing
+
+### Development Workflow
+1. Create feature branch from `main`
+2. Implement changes with tests
+3. Update documentation as needed
+4. Submit pull request with description
+
+### Code Standards
+- Follow existing code style
+- Write comprehensive tests
+- Document configuration changes
+- Update README for new features
+
+## 📚 Documentation
+
+- **PRD**: Complete product requirements in `docs/features/knowledge-task-generator.md`
+- **API Documentation**: Generated from code comments
+- **Configuration Guide**: Detailed setup instructions
+- **Template Reference**: Input template structure and examples
+
+## 🚀 Deployment
+
+### Environment Setup
+```bash
+# Production deployment
+python -m build
+python -m lyfe_kt deploy --env=prod
+
+# Staging deployment
+python -m lyfe_kt deploy --env=staging
+```
+
+### Platform Integration
+- Direct API integration with Lyfe platform
+- Automated knowledge task import
+- Real-time processing capabilities
+- Monitoring and alerting setup
+
+## 📈 Roadmap
+
+### Phase 1: Core Infrastructure (Weeks 1-6)
+- ✅ Directory structure and templates
+- ✅ Configuration externalization
+- 🔄 Basic generation pipeline
+- 🔄 CLI processing tools
+
+### Phase 2: Enhanced Processing (Weeks 7-10)
+- 🔄 Advanced content analysis
+- 🔄 Multi-template support
+- 🔄 Quality scoring system
+- 🔄 Batch processing optimization
+
+### Phase 3: Management Interface (Weeks 11-14)
+- 🔄 Web-based configuration interface
+- 🔄 Content preview and editing
+- 🔄 Analytics dashboard
+- 🔄 User management system
+
+### Phase 4: Advanced Features (Weeks 15-20)
+- 🔄 Machine learning optimization
+- 🔄 A/B testing framework
+- 🔄 Performance analytics
+- 🔄 Multi-language support
+
+## 📞 Support
+
+For questions, issues, or contributions:
+- **Documentation**: Check `docs/features/` for detailed specifications
+- **Issues**: Use GitHub issues for bug reports and feature requests
+- **Configuration**: Refer to `src/config/` files for setup guidance
+- **Examples**: See `work/01_raw/` for sample input formats
+
+---
+
+**Built with ❤️ for the Lyfe platform** 

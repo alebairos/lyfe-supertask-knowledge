@@ -1,0 +1,10 @@
+# Minimal dependencies for Lyfe Supertask Knowledge Generator
+openai>=1.0.0
+click>=8.0.0
+python-dotenv>=1.0.0
+pyyaml>=6.0.0
+
+# Development dependencies (install with: pip install -r requirements-dev.txt)
+# pytest>=7.0.0
+# black>=23.0.0
+# isort>=5.12.0 
