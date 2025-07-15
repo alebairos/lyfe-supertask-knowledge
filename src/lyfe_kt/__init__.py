@@ -28,6 +28,7 @@ from . import input_validation
 
 # Import Stage 1 functions module
 from . import stage1_functions
+from .stage1_functions import analyze_ari_persona_patterns, process_directory_with_ari_analysis
 
 # Import OpenAI client module
 from . import openai_client 

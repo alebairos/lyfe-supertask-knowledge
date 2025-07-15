@@ -710,3 +710,354 @@ class TestErrorHandling:
             
         finally:
             os.unlink(temp_path) 
+
+
+class TestAriPersonaAnalysis:
+    """Test Ari persona analysis functions."""
+    
+    def test_analyze_ari_persona_patterns_basic(self):
+        """Test basic Ari persona pattern analysis."""
+        from lyfe_kt.stage1_functions import analyze_ari_persona_patterns
+        
+        # Test data with coaching opportunities
+        content_items = [
+            {"content": "Estabelecer uma rotina matinal é importante para criar hábitos saudáveis", "type": "content"},
+            {"content": "Você deve preparar o ambiente na noite anterior", "type": "content"},
+            {"content": "Pequenos passos levam a grandes mudanças", "type": "content"}
+        ]
+        
+        quiz_items = [
+            {"question": "Qual é o benefício de acordar cedo?", "options": ["A", "B"], "correctAnswer": 0}
+        ]
+        
+        result = analyze_ari_persona_patterns(content_items, quiz_items)
+        
+        # Check structure
+        assert "coaching_opportunities" in result
+        assert "framework_integration" in result
+        assert "engagement_patterns" in result
+        assert "language_patterns" in result
+        assert "ari_readiness_score" in result
+        assert "enhancement_recommendations" in result
+        
+        # Check coaching opportunities
+        assert len(result["coaching_opportunities"]["habit_formation"]) > 0
+        assert len(result["coaching_opportunities"]["behavioral_change"]) > 0
+        
+        # Check framework integration
+        assert result["framework_integration"]["tiny_habits"] == True
+        assert result["framework_integration"]["behavioral_design"] == True
+        
+        # Check language patterns
+        assert result["language_patterns"]["portuguese_detected"] == True
+        
+        # Check readiness score
+        assert 0.0 <= result["ari_readiness_score"] <= 1.0
+        
+        # Check recommendations
+        assert len(result["enhancement_recommendations"]) > 0
+    
+    def test_analyze_ari_persona_patterns_with_huberman_content(self):
+        """Test Ari persona analysis with Huberman Protocol content."""
+        from lyfe_kt.stage1_functions import analyze_ari_persona_patterns
+        
+        content_items = [
+            {"content": "A luz da manhã é fundamental para regular o ritmo circadiano", "type": "content"},
+            {"content": "O sono de qualidade melhora a neuroplasticidade", "type": "content"}
+        ]
+        
+        quiz_items = []
+        
+        result = analyze_ari_persona_patterns(content_items, quiz_items)
+        
+        # Check Huberman protocol detection
+        assert result["framework_integration"]["huberman_protocols"] == True
+        
+        # Check recommendations include Huberman
+        recommendations = result["enhancement_recommendations"]
+        huberman_recommendation = any("Huberman" in rec for rec in recommendations)
+        assert huberman_recommendation == True
+    
+    def test_analyze_ari_persona_patterns_with_motivational_content(self):
+        """Test Ari persona analysis with motivational content."""
+        from lyfe_kt.stage1_functions import analyze_ari_persona_patterns
+        
+        content_items = [
+            {"content": "O sucesso vem da perseverança diária", "type": "content"},
+            {"content": "Cada vitória pequena é um passo para o desafio maior", "type": "content"}
+        ]
+        
+        quiz_items = []
+        
+        result = analyze_ari_persona_patterns(content_items, quiz_items)
+        
+        # Check motivation detection
+        assert len(result["coaching_opportunities"]["motivation_points"]) > 0
+        
+        # Check coaching moments
+        coaching_moments = result["engagement_patterns"]["coaching_moments"]
+        motivational_moments = [moment for moment in coaching_moments if "Motivational" in moment]
+        assert len(motivational_moments) > 0
+    
+    def test_analyze_ari_persona_patterns_with_action_content(self):
+        """Test Ari persona analysis with action-oriented content."""
+        from lyfe_kt.stage1_functions import analyze_ari_persona_patterns
+        
+        content_items = [
+            {"content": "Prepare sua roupa na noite anterior", "type": "content"},
+            {"content": "Defina um horário fixo para acordar", "type": "content"},
+            {"content": "Comece com pequenos passos", "type": "content"}
+        ]
+        
+        quiz_items = []
+        
+        result = analyze_ari_persona_patterns(content_items, quiz_items)
+        
+        # Check action trigger detection
+        assert len(result["coaching_opportunities"]["action_triggers"]) > 0
+        
+        # Check question opportunities
+        question_opportunities = result["engagement_patterns"]["question_opportunities"]
+        commitment_questions = [q for q in question_opportunities if "When will you start?" in q]
+        assert len(commitment_questions) > 0
+        
+        # Check coaching moments
+        coaching_moments = result["engagement_patterns"]["coaching_moments"]
+        action_moments = [moment for moment in coaching_moments if "Action content" in moment]
+        assert len(action_moments) > 0
+    
+    def test_analyze_ari_persona_patterns_with_tips(self):
+        """Test Ari persona analysis with tips sections."""
+        from lyfe_kt.stage1_functions import analyze_ari_persona_patterns
+        
+        content_items = [
+            {
+                "content": "Para facilitar o processo",
+                "type": "content",
+                "tips": ["Deixe a cortina entreaberta", "Coloque o despertador longe"]
+            }
+        ]
+        
+        quiz_items = []
+        
+        result = analyze_ari_persona_patterns(content_items, quiz_items)
+        
+        # Check coaching moments for tips
+        coaching_moments = result["engagement_patterns"]["coaching_moments"]
+        tips_moments = [moment for moment in coaching_moments if "Tips section" in moment]
+        assert len(tips_moments) > 0
+    
+    def test_analyze_ari_persona_patterns_error_handling(self):
+        """Test Ari persona analysis error handling."""
+        from lyfe_kt.stage1_functions import analyze_ari_persona_patterns
+        
+        # Test with invalid data that might cause errors
+        content_items = [{"invalid": "structure"}]
+        quiz_items = [{"also_invalid": "structure"}]
+        
+        result = analyze_ari_persona_patterns(content_items, quiz_items)
+        
+        # Should return basic structure even with errors
+        assert "coaching_opportunities" in result
+        assert "framework_integration" in result
+        assert "engagement_patterns" in result
+        assert "language_patterns" in result
+        assert "ari_readiness_score" in result
+        assert "enhancement_recommendations" in result
+        
+        # Check for error indication
+        if "analysis_error" in result:
+            assert isinstance(result["analysis_error"], str)
+    
+    def test_process_directory_with_ari_analysis_basic(self):
+        """Test directory processing with Ari analysis."""
+        from lyfe_kt.stage1_functions import process_directory_with_ari_analysis
+        import tempfile
+        import json
+        import os
+        
+        # Create temporary directories
+        with tempfile.TemporaryDirectory() as input_dir:
+            with tempfile.TemporaryDirectory() as output_dir:
+                # Create test JSON file
+                test_data = {
+                    "title": "Test Supertask",
+                    "flexibleItems": [
+                        {"type": "content", "content": "Estabelecer uma rotina é importante"},
+                        {"type": "quiz", "question": "Qual é o benefício?", "options": ["A", "B"], "correctAnswer": 0}
+                    ]
+                }
+                
+                test_file = os.path.join(input_dir, "test.json")
+                with open(test_file, 'w', encoding='utf-8') as f:
+                    json.dump(test_data, f)
+                
+                # Process directory
+                result = process_directory_with_ari_analysis(input_dir, output_dir)
+                
+                # Check basic processing results
+                assert result["successful"] == 1
+                assert result["failed_count"] == 0
+                assert len(result["processed"]) == 1
+                
+                # Check Ari analysis results
+                assert "ari_persona_analysis" in result
+                assert len(result["ari_persona_analysis"]) == 1
+                
+                ari_analysis = result["ari_persona_analysis"][0]
+                assert "file" in ari_analysis
+                assert "title" in ari_analysis
+                assert "ari_analysis" in ari_analysis
+                
+                # Check Ari summary
+                assert "ari_summary" in result
+                assert "total_files_analyzed" in result["ari_summary"]
+                assert "average_ari_readiness" in result["ari_summary"]
+                assert "high_readiness_files" in result["ari_summary"]
+                assert "medium_readiness_files" in result["ari_summary"]
+                assert "low_readiness_files" in result["ari_summary"]
+    
+    def test_process_directory_with_ari_analysis_multiple_files(self):
+        """Test directory processing with multiple files."""
+        from lyfe_kt.stage1_functions import process_directory_with_ari_analysis
+        import tempfile
+        import json
+        import os
+        
+        # Create temporary directories
+        with tempfile.TemporaryDirectory() as input_dir:
+            with tempfile.TemporaryDirectory() as output_dir:
+                # Create multiple test JSON files
+                test_files = [
+                    {
+                        "name": "habit_formation.json",
+                        "data": {
+                            "title": "Habit Formation",
+                            "flexibleItems": [
+                                {"type": "content", "content": "Criar hábitos pequenos é fundamental"},
+                                {"type": "content", "content": "A rotina matinal transforma sua vida"}
+                            ]
+                        }
+                    },
+                    {
+                        "name": "sleep_protocol.json",
+                        "data": {
+                            "title": "Sleep Protocol",
+                            "flexibleItems": [
+                                {"type": "content", "content": "A luz da manhã regula o ritmo circadiano"},
+                                {"type": "content", "content": "O sono melhora a neuroplasticidade"}
+                            ]
+                        }
+                    }
+                ]
+                
+                for test_file_info in test_files:
+                    test_file = os.path.join(input_dir, test_file_info["name"])
+                    with open(test_file, 'w', encoding='utf-8') as f:
+                        json.dump(test_file_info["data"], f)
+                
+                # Process directory
+                result = process_directory_with_ari_analysis(input_dir, output_dir)
+                
+                # Check processing results
+                assert result["successful"] == 2
+                assert result["failed_count"] == 0
+                assert len(result["processed"]) == 2
+                
+                # Check Ari analysis results
+                assert len(result["ari_persona_analysis"]) == 2
+                
+                # Check different framework integrations
+                analyses = [item["ari_analysis"] for item in result["ari_persona_analysis"]]
+                
+                # Should have at least one with tiny_habits and one with huberman_protocols
+                tiny_habits_detected = any(analysis["framework_integration"]["tiny_habits"] for analysis in analyses)
+                huberman_detected = any(analysis["framework_integration"]["huberman_protocols"] for analysis in analyses)
+                
+                assert tiny_habits_detected == True
+                assert huberman_detected == True
+                
+                # Check summary statistics
+                assert result["ari_summary"]["total_files_analyzed"] == 2
+                assert result["ari_summary"]["average_ari_readiness"] > 0
+    
+    def test_ari_readiness_score_calculation(self):
+        """Test Ari readiness score calculation."""
+        from lyfe_kt.stage1_functions import _calculate_ari_readiness_score
+        
+        # Test high readiness
+        coaching_opportunities = {
+            "habit_formation": ["present"],
+            "behavioral_change": ["present"],
+            "motivation_points": ["present"],
+            "action_triggers": ["present"],
+            "micro_habits": ["present"]
+        }
+        
+        framework_integration = {
+            "tiny_habits": True,
+            "behavioral_design": True,
+            "huberman_protocols": True
+        }
+        
+        engagement_patterns = {
+            "question_opportunities": ["present"],
+            "coaching_moments": ["present"]
+        }
+        
+        score = _calculate_ari_readiness_score(coaching_opportunities, framework_integration, engagement_patterns)
+        
+        # Should be high score (5 * 0.15 + 3 * 0.1 + 2 * 0.2 = 1.45, capped at 1.0)
+        assert score == 1.0
+        
+        # Test low readiness
+        empty_opportunities = {key: [] for key in coaching_opportunities.keys()}
+        empty_framework = {key: False for key in framework_integration.keys()}
+        empty_engagement = {"question_opportunities": [], "coaching_moments": []}
+        
+        low_score = _calculate_ari_readiness_score(empty_opportunities, empty_framework, empty_engagement)
+        assert low_score == 0.0
+    
+    def test_enhancement_recommendations_generation(self):
+        """Test enhancement recommendations generation."""
+        from lyfe_kt.stage1_functions import _generate_enhancement_recommendations
+        
+        # Test with various opportunities
+        coaching_opportunities = {
+            "habit_formation": ["present"],
+            "behavioral_change": ["present"],
+            "motivation_points": [],
+            "action_triggers": ["present"],
+            "micro_habits": ["present"]
+        }
+        
+        framework_integration = {
+            "tiny_habits": True,
+            "behavioral_design": False,
+            "huberman_protocols": True
+        }
+        
+        recommendations = _generate_enhancement_recommendations(coaching_opportunities, framework_integration)
+        
+        # Should include specific recommendations
+        assert len(recommendations) > 0
+        
+        # Check for specific recommendations
+        tiny_habits_rec = any("Tiny Habits" in rec for rec in recommendations)
+        habit_formation_rec = any("habit formation" in rec for rec in recommendations)
+        huberman_rec = any("Huberman" in rec for rec in recommendations)
+        
+        assert tiny_habits_rec == True
+        assert habit_formation_rec == True
+        assert huberman_rec == True
+        
+        # Test with empty opportunities
+        empty_opportunities = {key: [] for key in coaching_opportunities.keys()}
+        empty_framework = {key: False for key in framework_integration.keys()}
+        
+        empty_recommendations = _generate_enhancement_recommendations(empty_opportunities, empty_framework)
+        
+        # Should still provide default recommendations
+        assert len(empty_recommendations) >= 2
+        assert any("basic Ari persona enhancement" in rec for rec in empty_recommendations)
+        assert any("TARS-inspired brevity" in rec for rec in empty_recommendations) 
