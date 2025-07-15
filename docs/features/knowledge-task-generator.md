@@ -82,10 +82,13 @@ All generated knowledge tasks will be authored by **Ari**, the TARS-inspired lif
 ### Advanced Features
 
 #### 1. Content Intelligence
-- **Topic Recognition**: Identify main themes and subtopics automatically
-- **Difficulty Assessment**: Analyze content complexity for appropriate user targeting
-- **Learning Objective Extraction**: Derive clear learning goals from content
-- **Prerequisite Detection**: Identify content dependencies and sequencing
+- **Multi-Sample Analysis**: Process and analyze multiple JSON files from `work/01_raw/` with consistent methodology
+- **Topic Recognition**: Identify main themes and subtopics automatically across different content types
+- **Difficulty Assessment**: Analyze content complexity for appropriate user targeting across various supertask formats
+- **Learning Objective Extraction**: Derive clear learning goals from content while preparing for Ari persona integration
+- **Prerequisite Detection**: Identify content dependencies and sequencing across multiple related supertasks
+- **Ari Voice Preparation**: Analyze existing content patterns to inform Ari's coaching style adaptation
+- **Scalable Processing**: Handle batch processing of multiple supertask directories with consistent analysis results
 
 #### 2. Quiz Generation Engine
 - **Question Types**: Support multiple choice, single choice, and true/false questions
@@ -395,10 +398,11 @@ graph TD
 ### Processing Workflow
 
 #### **Stage 1: Raw Content Analysis** (`work/01_raw/` → `work/02_preprocessed/`)
-1. **Raw Content Parsing** → Extract content, metadata, and structure from source files
-2. **Content Analysis** → Identify tone, style, key concepts using LLM prompts
-3. **Template Mapping** → Select appropriate preprocessing template
-4. **JSON Normalization** → Create structured JSON following input template schema
+1. **Multi-Sample Loading** → Parse multiple JSON files from subdirectories and validate structure
+2. **Content Extraction** → Extract text, quotes, and quiz items from flexible item structures
+3. **Ari Content Analysis** → Analyze existing content patterns to inform Ari persona voice adaptation
+4. **Template Mapping** → Select appropriate preprocessing template based on content type and structure
+5. **JSON Normalization** → Create structured JSON following input template schema with Ari persona preparation
 
 #### **Stage 2: Content Preprocessing** (`work/02_preprocessed/` → `work/03_input/`)
 5. **JSON Validation** → Verify structure and completeness using JSON Schema
@@ -434,10 +438,13 @@ Based on the sample `work/01_raw/levantar_da_cama/test.json`:
 ### Processing Requirements
 
 #### **Stage 1: Raw Analysis**
-- **Content Extraction**: Parse quotes, questions, and answers
-- **Tone Analysis**: Identify motivational, direct communication style
-- **Style Preservation**: Maintain author attribution and quote format
-- **Metadata Mapping**: Extract dimension, archetype, and habit relationship
+- **Multi-Sample Processing**: Process multiple JSON files from `work/01_raw/` directory structure
+- **Content Extraction**: Parse quotes, questions, and answers from flexible item structures
+- **Tone Analysis**: Identify motivational, direct communication style across different content types
+- **Style Preservation**: Maintain author attribution and quote format for Ari persona enhancement
+- **Metadata Mapping**: Extract dimension, archetype, and habit relationship from various supertask formats
+- **Ari Content Preparation**: Analyze existing content patterns to inform Ari's voice adaptation
+- **Scalable Processing**: Handle batch processing of multiple supertask JSON files with consistent analysis
 
 #### **Stage 2: Template-Based Preprocessing**
 - **JSON Structure**: Convert to structured format for processing
@@ -473,6 +480,47 @@ Generated knowledge tasks will follow the existing platform format but with enha
 ```
 Raw JSON → Normalized JSON → Markdown → Final JSON
 ```
+
+### Enhanced Content Analysis Requirements
+
+#### **Multi-Sample Processing**
+The content analysis functions must be designed to handle multiple JSON samples from the `work/01_raw/` directory structure:
+
+**Directory Structure Support**:
+```
+work/01_raw/
+├── levantar_da_cama/
+│   ├── test.json
+│   └── test_sample_kt_Levantar_da_cama.png
+├── exercicio_matinal/
+│   ├── content.json
+│   └── assets/
+└── habito_agua/
+    ├── supertask.json
+    └── images/
+```
+
+**Processing Requirements**:
+- **Batch Processing**: Analyze multiple JSON files in a single operation
+- **Consistent Analysis**: Apply the same analysis methodology across all samples
+- **Pattern Recognition**: Identify common themes, tones, and styles across different content types
+- **Ari Voice Preparation**: Analyze existing content patterns to inform Ari's coaching style adaptation
+- **Scalable Architecture**: Handle growing numbers of supertask samples efficiently
+
+#### **Ari Persona Content Integration**
+The content analysis functions serve as the foundation for Ari persona integration:
+
+**Content Pattern Analysis**:
+- **Tone Identification**: Recognize motivational, educational, and inspirational tones
+- **Style Analysis**: Identify direct communication patterns, question-heavy approaches
+- **Framework Recognition**: Detect existing behavioral change methodologies
+- **Cultural Context**: Preserve Portuguese language patterns and cultural references
+
+**Ari Voice Preparation**:
+- **Coaching Style Mapping**: Analyze how existing content can be enhanced with Ari's TARS-inspired brevity
+- **Framework Integration**: Prepare content for integration with Ari's 9 expert frameworks
+- **Engagement Patterns**: Identify opportunities for Ari's progressive engagement approach
+- **Language Consistency**: Ensure masculine Portuguese forms for Ari's identity
 
 ### Configuration Requirements
 

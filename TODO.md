@@ -7,6 +7,7 @@
 - **Last Updated**: December 2024
 - **Progress**: 32% complete (9/28)
 - **Documentation**: All completed items documented in implementation-summary.md
+- **Recent Updates**: Enhanced content analysis requirements for multi-sample processing and Ari persona preparation
 
 ## Completed TODOs ✅
 
@@ -78,8 +79,14 @@
 ### 10. content-analyzer
 **Status**: Pending  
 **Dependencies**: stage1-functions, openai-client  
-**Description**: Implement content analysis functions to extract tone, style, and key concepts from supertask JSON  
-**Notes**: OpenAI client already has `analyze_content()` method - may need integration
+**Description**: Implement content analysis functions to extract tone, style, and key concepts from multiple supertask JSON files  
+**Enhanced Requirements**:
+- **Multi-Sample Processing**: Handle multiple JSON files from `work/01_raw/` directory structure
+- **Ari Persona Preparation**: Analyze existing content patterns to inform Ari's voice adaptation
+- **Scalable Analysis**: Process batch of supertask directories with consistent methodology
+- **Content Pattern Recognition**: Identify themes, tone, and style across different content types
+- **Integration Ready**: Prepare content analysis for Ari persona integration in future TODOs
+**Notes**: OpenAI client already has `analyze_content()` method - needs enhancement for multi-sample processing
 
 ### 11. json-normalizer
 **Status**: Pending  
@@ -94,7 +101,13 @@
 ### 13. stage1-functions
 **Status**: Pending  
 **Dependencies**: input-validation  
-**Description**: Implement Stage 1 as simple Python functions: load JSON, extract content, normalize structure
+**Description**: Implement Stage 1 as simple Python functions: load JSON, extract content, normalize structure  
+**Enhanced Requirements**:
+- **Multi-Sample Support**: Process multiple JSON files from `work/01_raw/` subdirectories
+- **Ari Content Analysis**: Analyze existing content patterns for Ari persona voice preparation
+- **Batch Processing**: Handle directory-level processing with consistent results
+- **Pattern Recognition**: Identify content themes, tone, and style across different supertask formats
+**Notes**: Current implementation exists but needs enhancement for multi-sample processing and Ari persona preparation
 
 ### 14. stage1-integration
 **Status**: Pending  
@@ -198,9 +211,16 @@
 - `templates/knowledge_task_input_form.jpeg` - Input form reference
 
 ## Next Steps Priority
-1. **Immediate**: Continue with `stage1-functions` (TODO 13) to complete Stage 1 pipeline
-2. **Short-term**: Complete Stage 1 testing and validation (TODOs 14-20)
-3. **Medium-term**: Begin Ari persona integration (TODOs 21-28)
+1. **Immediate**: Continue with `stage1-functions` (TODO 13) - enhance for multi-sample processing
+2. **Priority**: Implement `content-analyzer` (TODO 10) with Ari persona preparation
+3. **Short-term**: Complete Stage 1 testing and validation (TODOs 14-20)
+4. **Medium-term**: Begin Ari persona integration (TODOs 21-28)
+
+## Recent Enhancements
+- **Multi-Sample Processing**: Content analysis functions now designed to handle multiple JSON files from `work/01_raw/` directory structure
+- **Ari Persona Preparation**: Content analysis enhanced to prepare for Ari's voice adaptation and coaching style integration
+- **Scalable Architecture**: Batch processing capabilities for growing numbers of supertask samples
+- **PRD Updated**: Enhanced content analysis requirements documented in knowledge-task-generator.md
 
 ## Testing Status
 - **Total Tests**: 150+ tests
