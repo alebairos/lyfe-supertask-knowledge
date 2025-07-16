@@ -71,4 +71,31 @@ from .output_validation import OutputValidator, ValidationResult, validate_outpu
 
 # Import Stage 1 integration module
 from . import stage1_integration
-from .stage1_integration import Stage1Pipeline, create_stage1_pipeline, process_single_file_stage1, process_directory_stage1, generate_stage1_report 
+from .stage1_integration import Stage1Pipeline, create_stage1_pipeline, process_single_file_stage1, process_directory_stage1, generate_stage1_report
+
+# Import Stage 1 preprocessing module
+from . import stage1_preprocessing
+from .stage1_preprocessing import (
+    PreprocessingPipeline,
+    ContentExtractor,
+    AriIntegrator,
+    TemplateGenerator,
+    create_preprocessing_pipeline,
+    preprocess_file,
+    preprocess_directory,
+    generate_preprocessing_report,
+    PreprocessingError
+)
+
+# Import Stage 3 generation module
+from . import stage3_generation
+from .stage3_generation import (
+    GenerationPipeline,
+    TemplateProcessor,
+    JSONGenerator,
+    create_generation_pipeline,
+    generate_from_template,
+    generate_from_directory,
+    generate_generation_report,
+    GenerationError
+) 

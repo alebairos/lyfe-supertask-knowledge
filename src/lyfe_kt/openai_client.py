@@ -50,7 +50,14 @@ class OpenAIClient:
         if not api_key:
             raise OpenAIClientError("OPENAI_API_KEY environment variable is required")
         
-        self.client = OpenAI(api_key=api_key)
+        # Get organization ID if available
+        org_id = os.getenv('OPENAI_ORG_ID')
+        
+        # Initialize client with or without organization
+        if org_id:
+            self.client = OpenAI(api_key=api_key, organization=org_id)
+        else:
+            self.client = OpenAI(api_key=api_key)
         
         # Client configuration
         self.model = self.config.get('model', 'gpt-4')

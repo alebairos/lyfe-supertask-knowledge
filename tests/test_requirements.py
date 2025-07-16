@@ -103,8 +103,8 @@ def test_minimal_dependency_count():
     dependency_lines = [line.strip() for line in lines 
                        if line.strip() and not line.strip().startswith('#')]
     
-    # Should have exactly 4 main dependencies as per requirements
-    expected_count = 4
+    # Should have exactly 13 dependencies (4 original + 4 for file processing + 5 for testing)
+    expected_count = 13
     assert len(dependency_lines) == expected_count, \
         f"Expected {expected_count} dependencies, found {len(dependency_lines)}: {dependency_lines}"
 

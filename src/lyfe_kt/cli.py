@@ -359,5 +359,476 @@ def generate_report(ctx, results_file, output, report_format, report_type):
         sys.exit(1)
 
 
+# Stage 1 Preprocessing Commands Group
+@main.group(name='preprocess')
+@click.pass_context
+def preprocess(ctx):
+    """
+    Stage 1 preprocessing commands for raw content → filled templates.
+    
+    Transform raw content from multiple file formats into filled markdown templates
+    using Ari persona integration and Oracle data context.
+    """
+    logger = ctx.obj['logger']
+    logger.info("Preprocessing command group accessed")
+
+
+@preprocess.command(name='file')
+@click.argument('input_file', type=click.Path(exists=True))
+@click.argument('output_dir', type=click.Path())
+@click.option('--report', is_flag=True, help='Generate processing report')
+@click.option('--progress', is_flag=True, help='Show progress information')
+@click.pass_context
+def preprocess_file(ctx, input_file, output_dir, report, progress):
+    """
+    Process a single file through Stage 1 preprocessing pipeline.
+    
+    INPUT_FILE: Path to the input file (.md, .json, .pdf, .txt, .docx)
+    OUTPUT_DIR: Directory to save the filled template and analysis files
+    """
+    logger = ctx.obj['logger']
+    
+    try:
+        from .stage1_preprocessing import preprocess_file as process_file_impl
+        
+        # Progress callback
+        def progress_callback(current, total, message):
+            if progress:
+                click.echo(f"🔄 [{current}/{total}] {message}")
+        
+        click.echo(f"🚀 Starting preprocessing of {input_file}")
+        
+        # Process the file
+        result = process_file_impl(
+            input_file=input_file,
+            output_dir=output_dir,
+            progress_callback=progress_callback if progress else None
+        )
+        
+        if result['status'] == 'success':
+            click.echo(f"✅ Successfully processed {input_file}")
+            click.echo(f"📁 Output directory: {result['output_directory']}")
+            
+            # Show generated files
+            generated_files = result.get('generated_files', {})
+            click.echo("\n📄 Generated files:")
+            for file_type, file_path in generated_files.items():
+                click.echo(f"  • {file_type}: {file_path}")
+            
+            # Show processing time
+            processing_time = result.get('processing_time_seconds', 0)
+            click.echo(f"⏱️  Processing time: {processing_time:.2f} seconds")
+            
+            # Generate report if requested
+            if report:
+                from .stage1_preprocessing import generate_preprocessing_report
+                report_dir = Path(output_dir).parent / 'reports'
+                generate_preprocessing_report({'individual_results': [result]}, str(report_dir))
+                click.echo(f"📊 Report generated in: {report_dir}")
+            
+        else:
+            click.echo(f"❌ Processing failed: {result.get('error_message', 'Unknown error')}")
+            ctx.exit(1)
+            
+    except Exception as e:
+        logger.error(f"Preprocessing failed: {e}")
+        click.echo(f"❌ Error: {e}")
+        ctx.exit(1)
+
+
+@preprocess.command(name='directory')
+@click.argument('input_dir', type=click.Path(exists=True))
+@click.argument('output_dir', type=click.Path())
+@click.option('--report', is_flag=True, help='Generate comprehensive processing report')
+@click.option('--progress', is_flag=True, help='Show progress information')
+@click.pass_context
+def preprocess_directory(ctx, input_dir, output_dir, report, progress):
+    """
+    Process all supported files in a directory through Stage 1 preprocessing.
+    
+    INPUT_DIR: Directory containing raw content files
+    OUTPUT_DIR: Directory to save processed templates (organized by topic)
+    """
+    logger = ctx.obj['logger']
+    
+    try:
+        from .stage1_preprocessing import preprocess_directory as process_directory_impl
+        
+        # Progress callback
+        def progress_callback(current, total, message):
+            if progress:
+                click.echo(f"🔄 [{current}/{total}] {message}")
+        
+        click.echo(f"🚀 Starting batch preprocessing of {input_dir}")
+        
+        # Process the directory
+        result = process_directory_impl(
+            input_dir=input_dir,
+            output_dir=output_dir,
+            progress_callback=progress_callback if progress else None
+        )
+        
+        if result['status'] == 'completed':
+            summary = result.get('processing_summary', {})
+            click.echo(f"✅ Batch processing completed")
+            click.echo(f"📊 Results: {summary.get('successful', 0)}/{summary.get('total_files', 0)} files successful")
+            click.echo(f"📈 Success rate: {summary.get('success_rate', 0):.1%}")
+            click.echo(f"⏱️  Total time: {summary.get('total_processing_time', 0):.2f} seconds")
+            
+            # Show cross-file analysis
+            cross_analysis = result.get('cross_file_analysis', {})
+            if cross_analysis:
+                common_themes = cross_analysis.get('common_themes', {})
+                if common_themes:
+                    click.echo(f"\n🎯 Common themes: {', '.join(list(common_themes.keys())[:5])}")
+                
+                framework_apps = cross_analysis.get('framework_applications', {})
+                if framework_apps:
+                    click.echo(f"🧠 Frameworks applied: {len(framework_apps)} different frameworks")
+            
+            # Generate report if requested or always for batch processing
+            if report or True:  # Always generate report for batch processing
+                from .stage1_preprocessing import generate_preprocessing_report
+                report_dir = Path(output_dir).parent / 'reports'
+                generate_preprocessing_report(result, str(report_dir))
+                click.echo(f"📊 Comprehensive report generated in: {report_dir}")
+            
+        else:
+            click.echo(f"❌ Batch processing failed")
+            ctx.exit(1)
+            
+    except Exception as e:
+        logger.error(f"Batch preprocessing failed: {e}")
+        click.echo(f"❌ Error: {e}")
+        ctx.exit(1)
+
+
+@preprocess.command(name='batch')
+@click.argument('input_dir', type=click.Path(exists=True))
+@click.argument('output_dir', type=click.Path())
+@click.option('--comprehensive-reports', is_flag=True, help='Generate comprehensive analysis reports')
+@click.option('--progress', is_flag=True, help='Show detailed progress information')
+@click.pass_context
+def preprocess_batch(ctx, input_dir, output_dir, comprehensive_reports, progress):
+    """
+    Advanced batch preprocessing with comprehensive reporting.
+    
+    INPUT_DIR: Directory containing raw content files
+    OUTPUT_DIR: Directory to save processed templates with full analysis
+    """
+    logger = ctx.obj['logger']
+    
+    try:
+        from .stage1_preprocessing import preprocess_directory as process_directory_impl
+        
+        # Enhanced progress callback
+        def progress_callback(current, total, message):
+            if progress:
+                percentage = (current / total * 100) if total > 0 else 0
+                click.echo(f"🔄 [{current}/{total}] ({percentage:.1f}%) {message}")
+        
+        click.echo(f"🚀 Starting advanced batch preprocessing")
+        click.echo(f"📁 Input: {input_dir}")
+        click.echo(f"📁 Output: {output_dir}")
+        
+        # Process the directory
+        result = process_directory_impl(
+            input_dir=input_dir,
+            output_dir=output_dir,
+            progress_callback=progress_callback if progress else None
+        )
+        
+        if result['status'] == 'completed':
+            summary = result.get('processing_summary', {})
+            
+            # Detailed success reporting
+            click.echo(f"\n✅ Advanced batch processing completed")
+            click.echo(f"📊 Processing Summary:")
+            click.echo(f"  • Total files: {summary.get('total_files', 0)}")
+            click.echo(f"  • Successful: {summary.get('successful', 0)}")
+            click.echo(f"  • Failed: {summary.get('failed', 0)}")
+            click.echo(f"  • Success rate: {summary.get('success_rate', 0):.1%}")
+            click.echo(f"  • Total time: {summary.get('total_processing_time', 0):.2f} seconds")
+            
+            # Cross-file analysis
+            cross_analysis = result.get('cross_file_analysis', {})
+            if cross_analysis:
+                click.echo(f"\n🎯 Cross-File Analysis:")
+                
+                common_themes = cross_analysis.get('common_themes', {})
+                if common_themes:
+                    click.echo(f"  • Common themes: {', '.join(list(common_themes.keys())[:5])}")
+                
+                complexity_dist = cross_analysis.get('complexity_distribution', {})
+                if complexity_dist:
+                    click.echo(f"  • Complexity distribution: {complexity_dist}")
+                
+                framework_apps = cross_analysis.get('framework_applications', {})
+                if framework_apps:
+                    click.echo(f"  • Top frameworks: {', '.join(list(framework_apps.keys())[:3])}")
+            
+            # Always generate comprehensive reports for batch processing
+            from .stage1_preprocessing import generate_preprocessing_report
+            report_dir = Path(output_dir).parent / 'reports'
+            generate_preprocessing_report(result, str(report_dir))
+            
+            click.echo(f"\n📊 Comprehensive reports generated:")
+            click.echo(f"  • Report directory: {report_dir}")
+            click.echo(f"  • Analysis includes: content patterns, Ari integration, Oracle utilization")
+            
+            if comprehensive_reports:
+                click.echo(f"  • Enhanced analysis: framework applications, quality metrics, recommendations")
+            
+        else:
+            click.echo(f"❌ Advanced batch processing failed")
+            ctx.exit(1)
+            
+    except Exception as e:
+        logger.error(f"Advanced batch preprocessing failed: {e}")
+        sys.exit(1)
+
+
+# Stage 3 Generation Commands Group
+@main.group(name='generate')
+@click.pass_context
+def generate(ctx):
+    """
+    Stage 3 generation commands for filled templates → supertask JSON.
+    
+    Convert filled markdown templates into platform-ready supertask JSON files
+    with exact test.json structure compliance and Ari persona consistency.
+    """
+    logger = ctx.obj['logger']
+    logger.info("Generation command group accessed")
+
+
+@generate.command(name='template')
+@click.argument('template_file', type=click.Path(exists=True))
+@click.argument('output_dir', type=click.Path())
+@click.option('--difficulty', type=click.Choice(['beginner', 'advanced', 'both']), 
+              default='both', help='Generate specific difficulty level or both (default: both)')
+@click.option('--report', type=click.Path(), help='Save processing report to file')
+@click.option('--progress', is_flag=True, help='Show detailed progress')
+@click.pass_context
+def generate_template(ctx, template_file, output_dir, difficulty, report, progress):
+    """
+    Generate supertask JSON from a single filled template.
+    
+    TEMPLATE_FILE: Path to the filled markdown template
+    OUTPUT_DIR: Directory where generated JSON files will be saved
+    
+    Example:
+        lyfe-kt generate template work/02_preprocessed/sample.md work/03_output
+    """
+    logger = ctx.obj['logger']
+    
+    try:
+        from .stage3_generation import generate_from_template
+        
+        def progress_callback(current, total, message):
+            if progress:
+                click.echo(f"[{current}/{total}] {message}")
+        
+        click.echo(f"🚀 Starting generation from template: {template_file}")
+        
+        # Determine difficulty settings
+        generate_both = difficulty == 'both'
+        
+        result = generate_from_template(
+            template_file,
+            output_dir,
+            generate_both_difficulties=generate_both,
+            progress_callback=progress_callback if progress else None
+        )
+        
+        if result['status'] == 'success':
+            click.echo(f"✅ Generation completed successfully!")
+            click.echo(f"📁 Output directory: {result['output_directory']}")
+            click.echo(f"📄 Generated files: {len(result['generated_files'])}")
+            
+            for file_path in result['generated_files']:
+                click.echo(f"   - {Path(file_path).name}")
+            
+            click.echo(f"⏱️  Processing time: {result['processing_time_seconds']:.2f} seconds")
+            
+            # Generate report if requested
+            if report:
+                from .stage3_generation import generate_generation_report
+                report_dir = Path(report).parent
+                report_dir.mkdir(parents=True, exist_ok=True)
+                
+                report_content = generate_generation_report(result)
+                with open(report, 'w', encoding='utf-8') as f:
+                    f.write(report_content)
+                
+                click.echo(f"📊 Report saved to: {report}")
+        else:
+            click.echo(f"❌ Generation failed: {result.get('error_message', 'Unknown error')}")
+            sys.exit(1)
+            
+    except Exception as e:
+        logger.error(f"Template generation failed: {e}")
+        click.echo(f"❌ Error: {e}")
+        sys.exit(1)
+
+
+@generate.command(name='directory')
+@click.argument('input_dir', type=click.Path(exists=True))
+@click.argument('output_dir', type=click.Path())
+@click.option('--difficulty', type=click.Choice(['beginner', 'advanced', 'both']), 
+              default='both', help='Generate specific difficulty level or both (default: both)')
+@click.option('--report', type=click.Path(), help='Save processing report to file')
+@click.option('--progress', is_flag=True, help='Show detailed progress')
+@click.pass_context
+def generate_directory(ctx, input_dir, output_dir, difficulty, report, progress):
+    """
+    Generate supertask JSONs from all templates in a directory.
+    
+    INPUT_DIR: Directory containing filled markdown templates
+    OUTPUT_DIR: Directory where generated JSON files will be saved
+    
+    Example:
+        lyfe-kt generate directory work/02_preprocessed work/03_output
+    """
+    logger = ctx.obj['logger']
+    
+    try:
+        from .stage3_generation import generate_from_directory
+        
+        def progress_callback(current, total, message):
+            if progress:
+                click.echo(f"[{current}/{total}] {message}")
+        
+        click.echo(f"🚀 Starting batch generation from directory: {input_dir}")
+        
+        # Determine difficulty settings
+        generate_both = difficulty == 'both'
+        
+        result = generate_from_directory(
+            input_dir,
+            output_dir,
+            generate_both_difficulties=generate_both,
+            progress_callback=progress_callback if progress else None
+        )
+        
+        if result['status'] == 'completed':
+            click.echo(f"✅ Batch generation completed!")
+            click.echo(f"📁 Output directory: {result['output_directory']}")
+            click.echo(f"📊 Processing summary:")
+            click.echo(f"   - Total templates: {result['total_files']}")
+            click.echo(f"   - Successful: {result['successful_files']}")
+            click.echo(f"   - Failed: {result['failed_files']}")
+            click.echo(f"   - Success rate: {result['success_rate']:.1%}")
+            click.echo(f"⏱️  Total processing time: {result['processing_time_seconds']:.2f} seconds")
+            
+            # Show failed files if any
+            if result['failed_files_list']:
+                click.echo(f"\n❌ Failed files:")
+                for failed_file in result['failed_files_list']:
+                    click.echo(f"   - {Path(failed_file['file']).name}: {failed_file['error']}")
+            
+            # Generate report if requested
+            if report:
+                from .stage3_generation import generate_generation_report
+                report_dir = Path(report).parent
+                report_dir.mkdir(parents=True, exist_ok=True)
+                
+                report_content = generate_generation_report(result)
+                with open(report, 'w', encoding='utf-8') as f:
+                    f.write(report_content)
+                
+                click.echo(f"📊 Report saved to: {report}")
+        else:
+            click.echo(f"❌ Batch generation failed: {result.get('error_message', 'Unknown error')}")
+            sys.exit(1)
+            
+    except Exception as e:
+        logger.error(f"Directory generation failed: {e}")
+        click.echo(f"❌ Error: {e}")
+        sys.exit(1)
+
+
+@generate.command(name='pipeline')
+@click.argument('input_dir', type=click.Path(exists=True))
+@click.argument('output_dir', type=click.Path())
+@click.option('--difficulty', type=click.Choice(['beginner', 'advanced', 'both']), 
+              default='both', help='Generate specific difficulty level or both (default: both)')
+@click.option('--report', type=click.Path(), help='Save processing report to file')
+@click.option('--progress', is_flag=True, help='Show detailed progress')
+@click.pass_context
+def generate_pipeline(ctx, input_dir, output_dir, difficulty, report, progress):
+    """
+    Run complete Stage 3 generation pipeline with validation.
+    
+    INPUT_DIR: Directory containing filled markdown templates
+    OUTPUT_DIR: Directory where generated JSON files will be saved
+    
+    This command includes comprehensive validation and quality checks.
+    
+    Example:
+        lyfe-kt generate pipeline work/02_preprocessed work/03_output --report report.md
+    """
+    logger = ctx.obj['logger']
+    
+    try:
+        from .stage3_generation import generate_from_directory, generate_generation_report
+        
+        def progress_callback(current, total, message):
+            if progress:
+                click.echo(f"[{current}/{total}] {message}")
+        
+        click.echo(f"🚀 Starting complete Stage 3 generation pipeline")
+        click.echo(f"📁 Input: {input_dir}")
+        click.echo(f"📁 Output: {output_dir}")
+        click.echo(f"🎯 Difficulty: {difficulty}")
+        
+        # Determine difficulty settings
+        generate_both = difficulty == 'both'
+        
+        result = generate_from_directory(
+            input_dir,
+            output_dir,
+            generate_both_difficulties=generate_both,
+            progress_callback=progress_callback if progress else None
+        )
+        
+        if result['status'] == 'completed':
+            click.echo(f"\n✅ Stage 3 generation pipeline completed successfully!")
+            click.echo(f"📊 Final summary:")
+            click.echo(f"   - Templates processed: {result['total_files']}")
+            click.echo(f"   - JSON files generated: {sum(r.get('generated_count', 0) for r in result['individual_results'] if r.get('status') == 'success')}")
+            click.echo(f"   - Success rate: {result['success_rate']:.1%}")
+            click.echo(f"   - Total time: {result['processing_time_seconds']:.2f} seconds")
+            
+            # Quality metrics
+            successful_results = [r for r in result['individual_results'] if r.get('status') == 'success']
+            if successful_results:
+                avg_time = sum(r.get('processing_time_seconds', 0) for r in successful_results) / len(successful_results)
+                click.echo(f"   - Average time per template: {avg_time:.2f} seconds")
+            
+            # Generate comprehensive report
+            report_path = report or Path(output_dir) / 'generation_report.md'
+            report_dir = Path(report_path).parent
+            report_dir.mkdir(parents=True, exist_ok=True)
+            
+            report_content = generate_generation_report(result)
+            with open(report_path, 'w', encoding='utf-8') as f:
+                f.write(report_content)
+            
+            click.echo(f"📊 Comprehensive report saved to: {report_path}")
+            
+            if result['failed_files_list']:
+                click.echo(f"\n⚠️  {len(result['failed_files_list'])} files failed processing - check report for details")
+                sys.exit(1)
+        else:
+            click.echo(f"❌ Pipeline failed: {result.get('error_message', 'Unknown error')}")
+            sys.exit(1)
+            
+    except Exception as e:
+        logger.error(f"Generation pipeline failed: {e}")
+        click.echo(f"❌ Error: {e}")
+        sys.exit(1)
+
+
 if __name__ == '__main__':
     main() 

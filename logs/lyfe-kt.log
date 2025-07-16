@@ -860,3 +860,736 @@
 2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
 2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
 2025-07-16 00:23:35 - lyfe-kt - INFO - Status command called
+2025-07-16 09:48:31 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-07-16 09:48:31 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-07-16 09:48:31 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 09:48:31 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-07-16 09:48:31 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-07-16 09:48:31 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/test_preprocessing/sample.md
+2025-07-16 09:48:31 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of sample.md
+2025-07-16 09:48:31 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-07-16 09:48:31 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-07-16 09:48:31 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-07-16 09:48:31 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-07-16 09:48:31 - lyfe_kt.stage1_preprocessing - ERROR - Processing failed for work/01_raw/test_preprocessing/sample.md: Error filling template: build_preprocessing_prompt() got an unexpected keyword argument 'template_content'
+2025-07-16 09:48:31 - lyfe-kt - ERROR - Preprocessing failed: 1
+2025-07-16 09:49:07 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-07-16 09:49:07 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-07-16 09:49:07 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 09:49:07 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-07-16 09:49:07 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-07-16 09:49:07 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/test_preprocessing/sample.md
+2025-07-16 09:49:07 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of sample.md
+2025-07-16 09:49:07 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-07-16 09:49:07 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-07-16 09:49:07 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-07-16 09:49:07 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-07-16 09:49:07 - lyfe_kt.stage1_preprocessing - ERROR - Processing failed for work/01_raw/test_preprocessing/sample.md: Error filling template: 'OpenAIClient' object has no attribute 'generate_content'
+2025-07-16 09:49:07 - lyfe-kt - ERROR - Preprocessing failed: 1
+2025-07-16 09:49:32 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-07-16 09:49:32 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-07-16 09:49:32 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 09:49:32 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-07-16 09:49:32 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-07-16 09:49:32 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/test_preprocessing/sample.md
+2025-07-16 09:49:32 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of sample.md
+2025-07-16 09:49:32 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-07-16 09:49:32 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-07-16 09:49:32 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-07-16 09:49:32 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-07-16 09:49:33 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-16 09:49:33 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-16 09:49:33 - lyfe_kt.stage1_preprocessing - ERROR - Processing failed for work/01_raw/test_preprocessing/sample.md: Error filling template: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-16 09:49:33 - lyfe-kt - ERROR - Preprocessing failed: 1
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkz6dymr6/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkz6dymr6/output.json
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6ahzkage/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6ahzkage/output.json
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkqxsjyfx/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkqxsjyfx/output
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpspb58x77/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpspb58x77/output
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpx9lcufon/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpx9lcufon/output
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpdd0jsiuu/results.json
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpyqfjel08/results.json
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 09:52:32 - lyfe-kt - INFO - Status command called
+2025-07-16 09:57:19 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-07-16 09:57:37 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-07-16 09:57:37 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-07-16 09:57:37 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 09:57:37 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-07-16 09:57:37 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-07-16 09:57:37 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/test_preprocessing/sample.md
+2025-07-16 09:57:37 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of sample.md
+2025-07-16 09:57:37 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-07-16 09:57:37 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-07-16 09:57:37 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-07-16 09:57:37 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-07-16 09:57:37 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-16 09:57:37 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-16 09:57:38 - lyfe_kt.stage1_preprocessing - ERROR - Processing failed for work/01_raw/test_preprocessing/sample.md: Error filling template: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-16 09:57:38 - lyfe-kt - ERROR - Preprocessing failed: 1
+2025-07-16 10:00:39 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-07-16 10:00:39 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-07-16 10:00:39 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 10:00:39 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-07-16 10:00:39 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-07-16 10:00:39 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/test_preprocessing/sample.md
+2025-07-16 10:00:39 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of sample.md
+2025-07-16 10:00:39 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-07-16 10:00:39 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-07-16 10:00:39 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-07-16 10:00:39 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-07-16 10:00:40 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-16 10:00:40 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-16 10:00:40 - lyfe_kt.stage1_preprocessing - ERROR - Processing failed for work/01_raw/test_preprocessing/sample.md: Error filling template: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-16 10:00:40 - lyfe-kt - ERROR - Preprocessing failed: 1
+2025-07-16 10:01:45 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-07-16 10:01:45 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-07-16 10:01:45 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 10:01:45 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-07-16 10:01:45 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-07-16 10:01:45 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/test_preprocessing/sample.md
+2025-07-16 10:01:45 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of sample.md
+2025-07-16 10:01:45 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-07-16 10:01:45 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-07-16 10:01:45 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-07-16 10:01:45 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-07-16 10:01:46 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-16 10:01:46 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-16 10:01:46 - lyfe_kt.stage1_preprocessing - ERROR - Processing failed for work/01_raw/test_preprocessing/sample.md: Error filling template: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-16 10:01:46 - lyfe-kt - ERROR - Preprocessing failed: 1
+2025-07-16 10:02:09 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-07-16 10:02:09 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-07-16 10:02:09 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 10:02:09 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-07-16 10:02:09 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-07-16 10:02:09 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/test_preprocessing/sample.md
+2025-07-16 10:02:09 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of sample.md
+2025-07-16 10:02:09 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-07-16 10:02:09 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-07-16 10:02:09 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-07-16 10:02:09 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-07-16 10:03:09 - openai._base_client - INFO - Retrying request to /chat/completions in 0.465632 seconds
+2025-07-16 10:04:08 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 10:04:08 - lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-07-16 10:04:08 - lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-07-16 10:04:08 - lyfe_kt.stage1_preprocessing - INFO - Successfully processed work/01_raw/test_preprocessing/sample.md in 119.48 seconds
+2025-07-16 10:04:08 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-07-16 10:04:08 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-07-16 10:04:08 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-07-16 10:04:08 - lyfe_kt.stage1_preprocessing - INFO - Report generated: work/reports/supertasks_2025-07-16_10-04-08.md
+2025-07-16 10:24:44 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-07-16 10:24:45 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-07-16 10:24:45 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 10:24:45 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-07-16 10:24:45 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-07-16 10:24:45 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/test_preprocessing/sample.md
+2025-07-16 10:24:45 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of sample.md
+2025-07-16 10:24:45 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-07-16 10:24:45 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-07-16 10:24:45 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-07-16 10:24:45 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-07-16 10:25:45 - openai._base_client - INFO - Retrying request to /chat/completions in 0.375911 seconds
+2025-07-16 10:26:43 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 10:26:43 - lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-07-16 10:26:43 - lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-07-16 10:26:43 - lyfe_kt.stage1_preprocessing - INFO - Successfully processed work/01_raw/test_preprocessing/sample.md in 118.63 seconds
+2025-07-16 10:26:43 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-07-16 10:26:43 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-07-16 10:26:43 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-07-16 10:26:43 - lyfe_kt.stage1_preprocessing - INFO - Report generated: work/reports/supertasks_2025-07-16_10-26-43.md
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpctwl5sdm/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpctwl5sdm/output.json
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpz0qy6jv5/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpz0qy6jv5/output.json
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprxpeam82/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprxpeam82/output
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpmenggapz/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpmenggapz/output
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpcpx9zx2_/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpcpx9zx2_/output
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9ua5klae/results.json
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmponnethyq/results.json
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:28:20 - lyfe-kt - INFO - Status command called
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwdz1zgie/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwdz1zgie/output.json
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp102169yi/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp102169yi/output.json
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpf6s1nych/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpf6s1nych/output
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp8cpluz4y/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp8cpluz4y/output
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpcmrksxro/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpcmrksxro/output
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpx5kdpkt8/results.json
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpv2fxp4ox/results.json
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:32:48 - lyfe-kt - INFO - Status command called
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqij13a5f/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqij13a5f/output.json
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7iek25zf/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7iek25zf/output.json
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpvok9uvi3/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpvok9uvi3/output
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpmfutwz6u/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpmfutwz6u/output
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmphoz5cx84/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmphoz5cx84/output
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpfvkyc2a5/results.json
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpvc5d9edd/results.json
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:41:54 - lyfe-kt - INFO - Status command called
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6ym8_ue5/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6ym8_ue5/output.json
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpuianam2n/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpuianam2n/output.json
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpx96aznvo/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpx96aznvo/output
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprsuipd9m/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprsuipd9m/output
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6mj1pd80/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6mj1pd80/output
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp4iisosab/results.json
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6ocap4en/results.json
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:46:53 - lyfe-kt - INFO - Status command called
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjy7l2tz4/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjy7l2tz4/output.json
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7n3dgpms/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7n3dgpms/output.json
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpw7fjgyll/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpw7fjgyll/output
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpv07ah5vf/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpv07ah5vf/output
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnvhyc44h/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnvhyc44h/output
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwslvle_2/results.json
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpgdlus258/results.json
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:48:44 - lyfe-kt - INFO - Status command called
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpd3e7wdlm/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpd3e7wdlm/output.json
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpksoyuaw_/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpksoyuaw_/output.json
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpm8uj7e0v/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpm8uj7e0v/output
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2522e7x8/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2522e7x8/output
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp8cf0f72i/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp8cf0f72i/output
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2pdy87gs/results.json
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3tnmno07/results.json
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:56:46 - lyfe-kt - INFO - Status command called
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6yzrgxy7/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6yzrgxy7/output.json
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpybqdvjji/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpybqdvjji/output.json
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6xizpuc7/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6xizpuc7/output
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmplf9vtuzr/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmplf9vtuzr/output
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpemzu0uki/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpemzu0uki/output
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpa54oidbj/results.json
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9vfmsh38/results.json
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 10:57:37 - lyfe-kt - INFO - Status command called
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwvihbbrx/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwvihbbrx/output.json
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpcyi2gub7/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpcyi2gub7/output.json
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp0nypjta2/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp0nypjta2/output
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpr1jd1vvs/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpr1jd1vvs/output
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpf94n266a/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpf94n266a/output
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpd789z5rg/results.json
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7ic_rb0j/results.json
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 13:46:20 - lyfe-kt - INFO - Status command called
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpq1cicptl/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpq1cicptl/output.json
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpduysvjat/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpduysvjat/output.json
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpb4_ehcpa/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpb4_ehcpa/output
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj2y3g74y/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj2y3g74y/output
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7a29e5hs/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7a29e5hs/output
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpg1sf10s_/results.json
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7f4xy5nz/results.json
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:44:54 - lyfe-kt - INFO - Status command called
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2r2eu_jf/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2r2eu_jf/output.json
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6xjprcm2/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6xjprcm2/output.json
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp8r27cmdc/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp8r27cmdc/output
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpl6c1lg1l/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpl6c1lg1l/output
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpzw09path/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpzw09path/output
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp1wgqzb9d/results.json
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpi6th666x/results.json
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:53:08 - lyfe-kt - INFO - Status command called
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpi_sb9vop/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpi_sb9vop/output.json
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqc8y1oet/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqc8y1oet/output.json
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpre6x14hq/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpre6x14hq/output
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9uval3q4/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9uval3q4/output
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmphx0whqtk/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmphx0whqtk/output
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp89rvbryw/results.json
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpy1x6ua13/results.json
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 14:54:26 - lyfe-kt - INFO - Status command called
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpvk5iz4ho/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpvk5iz4ho/output.json
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpov87adw_/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpov87adw_/output.json
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnei0dpgw/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnei0dpgw/output
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpf3nkzxm2/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpf3nkzxm2/output
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9tr1qlzx/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9tr1qlzx/output
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjcf4ieb2/results.json
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp5zi6bmb2/results.json
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:04:55 - lyfe-kt - INFO - Status command called
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpyq8kul0e/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpyq8kul0e/output.json
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp64y73xqe/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp64y73xqe/output.json
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3_wk6y7s/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3_wk6y7s/output
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpi3kobtww/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpi3kobtww/output
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2_5yy3m7/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2_5yy3m7/output
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6byzpfup/results.json
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmphs2bc2ut/results.json
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 15:48:02 - lyfe-kt - INFO - Status command called
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmplwopvpi7/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmplwopvpi7/output.json
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwxt6ytix/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwxt6ytix/output.json
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3ufta5hw/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3ufta5hw/output
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp8o4m002i/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp8o4m002i/output
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3hpuh7by/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3hpuh7by/output
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3nzi9v3d/results.json
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkvw0s8sk/results.json
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:08:46 - lyfe-kt - INFO - Status command called
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpev7m97c9/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpev7m97c9/output.json
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptpsuo1mi/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptpsuo1mi/output.json
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmph1qg24eu/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmph1qg24eu/output
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpe53blks9/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpe53blks9/output
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptiz9kr76/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptiz9kr76/output
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpbzmg1caa/results.json
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpo8gsfdl3/results.json
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:10:46 - lyfe-kt - INFO - Status command called
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2y6hw9zb/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2y6hw9zb/output.json
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpemuif97j/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpemuif97j/output.json
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpz84i0fi5/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpz84i0fi5/output
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3pd0vqor/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3pd0vqor/output
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp1117ixq9/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp1117ixq9/output
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpma3iyitk/results.json
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp595x4kra/results.json
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:16:17 - lyfe-kt - INFO - Status command called
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprul2c5_p/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprul2c5_p/output.json
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpekl51ei4/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpekl51ei4/output.json
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp11ig7p7k/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp11ig7p7k/output
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpy1j64ndq/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpy1j64ndq/output
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp5l_okf5b/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp5l_okf5b/output
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj8o75f_x/results.json
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpf9dh9g7e/results.json
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:19:16 - lyfe-kt - INFO - Status command called
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9n4qd9pm/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9n4qd9pm/output.json
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprkolzz2y/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprkolzz2y/output.json
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwxholca9/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwxholca9/output
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpta7ub0ek/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpta7ub0ek/output
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9cfpl0hu/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9cfpl0hu/output
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpm9m_zakp/results.json
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpl89o9sow/results.json
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 16:21:45 - lyfe-kt - INFO - Status command called
+2025-07-16 16:25:08 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:25:15 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:25:44 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:25:44 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:25:44 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:25:44 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:25:44 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:25:44 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:25:44 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of sample_filled_template.md
+2025-07-16 16:25:44 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:25:44 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:25:44 - lyfe-kt - ERROR - Template generation failed: Invalid template format: no frontmatter found
+2025-07-16 16:26:44 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:26:44 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:26:44 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:26:44 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:26:44 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:26:44 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:26:44 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of sample_filled_template.md
+2025-07-16 16:26:44 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:26:44 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:26:44 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:26:44 - lyfe_kt.stage3_generation - ERROR - Missing required frontmatter field: difficulty
+2025-07-16 16:26:44 - lyfe-kt - ERROR - Template generation failed: Template validation failed
+2025-07-16 16:27:19 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:27:19 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of sample_filled_template.md
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks (beginner and advanced)
+2025-07-16 16:27:19 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:28:19 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:28:19 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Failed to parse generated JSON: Expecting value: line 1 column 1 (char 0)
+2025-07-16 16:36:58 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:36:58 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of sample_filled_template.md
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks (beginner and advanced)
+2025-07-16 16:36:58 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:37:45 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:37:45 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Failed to parse generated JSON: Expecting value: line 1 column 1 (char 0)
+2025-07-16 16:38:17 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:38:17 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of sample_filled_template.md
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:38:17 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:39:10 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:39:10 - lyfe-kt - ERROR - Template generation failed: Failed to parse generated JSON: Expecting value: line 1 column 1 (char 0)
+2025-07-16 16:43:53 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:43:53 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of simple_test_template.md
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:43:53 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:44:06 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:44:06 - lyfe-kt - ERROR - Template generation failed: Failed to parse generated JSON: Expecting value: line 1 column 1 (char 0)
+2025-07-16 16:45:12 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:45:12 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of simple_test_template.md
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:45:12 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:45:32 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:45:32 - lyfe_kt.stage3_generation - ERROR - JSON structure validation failed: ['Missing required metadata field: language', 'Missing required metadata field: region', 'Missing required metadata field: created_at', 'Missing required metadata field: updated_at', 'Missing required metadata field: version']
+2025-07-16 16:45:32 - lyfe-kt - ERROR - Template generation failed: Generated JSON does not match required structure
+2025-07-16 16:46:16 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:46:16 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of simple_test_template.md
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:46:16 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:46:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:46:34 - lyfe_kt.stage3_generation - ERROR - JSON structure validation failed: ['Missing required metadata field: language', 'Missing required metadata field: region', 'Missing required metadata field: created_at', 'Missing required metadata field: updated_at', 'Missing required metadata field: version']
+2025-07-16 16:46:34 - lyfe-kt - ERROR - Template generation failed: Generated JSON does not match required structure
+2025-07-16 16:47:07 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:47:07 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of simple_test_template.md
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:47:07 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:47:25 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:47:25 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-07-16 16:47:25 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-07-16 16:47:25 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:47:48 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:47:49 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of simple_test_template.md
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks (beginner and advanced)
+2025-07-16 16:47:49 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:48:03 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:48:03 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: advanced
+2025-07-16 16:48:24 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:48:24 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-07-16 16:48:24 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-07-16 16:48:24 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/simple_test_template.md
+2025-07-16 16:48:39 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:48:39 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Processing directory: work/02_preprocessed
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of sample_filled_template.md
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/sample_filled_template.md
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks (beginner and advanced)
+2025-07-16 16:48:39 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:49:37 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:49:37 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: advanced
+2025-07-16 16:56:21 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:56:21 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks (beginner and advanced)
+2025-07-16 16:56:21 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:57:08 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:57:08 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: advanced
+2025-07-16 16:57:52 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:57:52 - lyfe_kt.stage3_generation - ERROR - JSON structure validation failed: ['flexibleItems[4] missing required field: content', 'flexibleItems[5] missing required field: content']
+2025-07-16 16:57:52 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Generated JSON does not match required structure
+2025-07-16 16:58:01 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 16:58:01 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 16:58:01 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 16:58:48 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 16:58:48 - lyfe_kt.stage3_generation - ERROR - JSON structure validation failed: ['flexibleItems[4] missing required field: content', 'flexibleItems[5] missing required field: content']
+2025-07-16 16:58:48 - lyfe-kt - ERROR - Template generation failed: Generated JSON does not match required structure
