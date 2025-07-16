@@ -1,129 +1,158 @@
 ---
-title: "[Replace with your knowledge task title]"
-description: "[Provide a brief description of what this knowledge task covers]"
-target_audience: "[Specify who this content is for - e.g., beginners, intermediate, advanced]"
-difficulty_level: "[Set difficulty: beginner, intermediate, advanced, expert]"
-estimated_time: "[Estimated completion time - e.g., 15 minutes, 30 minutes, 1 hour]"
+title: "[Supertask Title - Beginner/Advanced]"
+description: "[Brief description of what this supertask teaches]"
+target_audience: "[beginner/advanced]"
+difficulty_level: "[beginner/advanced]"
+estimated_time: "[time in minutes - e.g., 5 minutes]"
+dimension: "[physicalHealth/mentalHealth/relationships/work/spirituality]"
+archetype: "[warrior/explorer/sage/ruler]"
+related_to_type: "[HABITBP/GENERIC]"
+related_to_id: "[habit-blueprint-id or generic-identifier]"
+estimated_duration: "[time in seconds - e.g., 300 for 5 minutes]"
+coins_reward: "[number of coins - e.g., 15]"
+language: "[portuguese/english]"
+region: "[Brazil/US]"
 learning_objectives:
-  - "[List what learners will be able to do after completing this task]"
-  - "[Include specific, measurable learning outcomes]"
-  - "[Add more objectives as needed]"
+  - "[What the user will learn or be able to do]"
+  - "[Specific behavioral change expected]"
+  - "[Measurable outcome or skill gained]"
 prerequisites:
-  - "[List any required prior knowledge or skills]"
-  - "[Include links to prerequisite materials if applicable]"
-  - "[Leave empty array if no prerequisites]"
+  - "[Any prior knowledge or skills needed]"
+  - "[Or 'None' if no prerequisites]"
 tags:
-  - "[Add relevant tags for categorization]"
-  - "[Include topic areas, skills, or domains]"
-  - "[Use consistent tagging for better organization]"
+  - "[relevant-topic-tag]"
+  - "[skill-area-tag]"
+  - "[behavior-change-tag]"
 ---
 
 # Content
 
 ## Overview
-
-[Provide a comprehensive overview of the topic. This should give learners a clear understanding of what they will learn and why it's important. Include the context and relevance of the topic.]
-
-### What You'll Learn
-
-[Summarize the key takeaways and skills that will be developed through this knowledge task.]
-
-### Why This Matters
-
-[Explain the practical applications and importance of this knowledge in real-world scenarios.]
+[Provide context for this supertask and why it matters for the specific habit or generic learning goal. This should align with Ari's coaching philosophy of evidence-based behavioral change.]
 
 ## Main Content
 
-### Introduction
+### Content Item 1
+[Educational content about the topic. This will become a "content" type flexible item. Keep it concise but informative, following Ari's style of intelligent brevity.]
 
-[Introduce the core concepts and provide necessary background information. Set the stage for deeper learning.]
+**Author**: [If applicable - could be expert citation or "Equipe Lyfe"]
 
-### Core Concepts
+**Tips** (if applicable):
+- [Practical tip 1]
+- [Practical tip 2] 
+- [Practical tip 3]
 
-[Explain the fundamental concepts that learners need to understand. Break down complex ideas into digestible parts.]
+### Quote Item (if applicable)
+[Inspirational quote related to the topic]
 
-#### Concept 1: [Replace with actual concept name]
+**Author**: [Quote attribution]
 
-[Provide detailed explanation of the first key concept. Include definitions, explanations, and context.]
+### Content Item 2  
+[Additional educational content that builds on the first item. Focus on practical application and behavioral insights.]
 
-#### Concept 2: [Replace with actual concept name]
+### Content Item 3
+[Further content that reinforces learning and provides actionable insights. Include Ari's framework integration where relevant.]
 
-[Provide detailed explanation of the second key concept. Build upon previous concepts where appropriate.]
-
-#### Concept 3: [Replace with actual concept name]
-
-[Continue with additional concepts as needed. Ensure logical progression and clear connections between ideas.]
-
-### Detailed Explanation
-
-[Provide in-depth coverage of the topic. Include step-by-step processes, methodologies, or procedures as appropriate.]
+**Author**: [Content source attribution]
 
 ## Key Concepts
 
-### Important Terms
+### Key Concept 1
+[Important concept that users need to understand]
 
-[Define key terminology that learners should understand and remember.]
+### Key Concept 2
+[Supporting concept that builds on the first]
 
-- **Term 1**: [Definition and explanation]
-- **Term 2**: [Definition and explanation]
-- **Term 3**: [Definition and explanation]
-
-### Key Principles
-
-[List and explain the fundamental principles that govern this topic.]
-
-1. **Principle 1**: [Explanation of the principle and its importance]
-2. **Principle 2**: [Explanation of the principle and its importance]
-3. **Principle 3**: [Explanation of the principle and its importance]
+### Key Concept 3
+[Advanced concept that ties everything together]
 
 ## Examples
 
-### Example 1: [Replace with descriptive title]
+### Example 1: [Practical Scenario]
+[Real-world example showing how to apply the content]
 
-[Provide a concrete, real-world example that illustrates the concepts. Include step-by-step walkthrough if appropriate.]
-
-```
-[Include code snippets, formulas, or other relevant examples in appropriate formatting]
-```
-
-### Example 2: [Replace with descriptive title]
-
-[Provide another example that demonstrates different aspects or applications of the concepts.]
-
-### Common Scenarios
-
-[Describe typical situations where this knowledge would be applied.]
-
-- **Scenario 1**: [Description of when and how to apply the knowledge]
-- **Scenario 2**: [Description of another common application]
-- **Scenario 3**: [Description of additional use cases]
+### Example 2: [Common Challenge]
+[Example addressing common obstacles or misconceptions]
 
 ## Summary
 
-### Key Takeaways
+[Brief summary of the main takeaways from this supertask. Reinforce the key behavioral changes and emphasize Ari's micro-habit approach.]
 
-[Summarize the most important points that learners should remember. This should reinforce the learning objectives.]
+## Quiz Questions
 
-1. [First key takeaway]
-2. [Second key takeaway]
-3. [Third key takeaway]
+### Quiz Question 1
+**Question**: [Clear, specific question about the content covered]
 
-### Next Steps
+**Options**:
+a) [Option 1]
+b) [Option 2]
+c) [Option 3]
+d) [Option 4]
 
-[Provide guidance on how learners can continue their learning journey or apply what they've learned.]
+**Correct Answer**: [Letter of correct option]
+**Explanation**: [Brief explanation of why this is correct and others are wrong]
 
-- [Suggested follow-up activities or resources]
-- [Related topics to explore next]
-- [Ways to practice or implement the knowledge]
+### Quiz Question 2
+**Question**: [Second question covering different aspect of content]
 
-### Additional Resources
+**Options**:
+a) [Option 1]
+b) [Option 2]
+c) [Option 3]
+d) [Option 4]
 
-[Include links to supplementary materials, documentation, or further reading.]
+**Correct Answer**: [Letter of correct option]
+**Explanation**: [Explanation with coaching insight from Ari's perspective]
 
-- [Resource 1]: [Brief description]
-- [Resource 2]: [Brief description]
-- [Resource 3]: [Brief description]
+### Quiz Question 3 (True/False)
+**Statement**: [True or false statement about the content]
+
+**Answer**: [True/False]
+**Explanation**: [Explanation with reference to content and behavioral science principles]
 
 ---
 
-**Note**: This template provides a structured framework for creating comprehensive knowledge tasks. Replace all placeholder text with actual content relevant to your specific topic. Ensure that the content is accurate, engaging, and appropriate for your target audience. 
+## Template Guidelines
+
+### Content Structure Requirements
+1. **title**: Clear, specific title including difficulty level
+2. **description**: Concise summary of learning goals
+3. **content**: Progressive content items (at least 3)
+4. **quiz**: Assessment questions (2-4 questions recommended)
+
+### Ari's Voice Integration
+- Use Ari's characteristic intelligent brevity
+- Apply relevant behavioral science frameworks naturally
+- Include coaching questions and micro-habit suggestions
+- Maintain encouraging but realistic tone
+- Use masculine Portuguese forms when applicable
+
+### Flexible Items Guidelines
+This template content will be converted to flexibleItems array with:
+- **content** items: Educational text with optional author attribution  
+- **quote** items: Inspirational quotes with author attribution
+- **quiz** items: Interactive questions with options, correct answer index, and explanation
+
+### Title Naming Convention
+- Include "Beginner" or "Advanced" in the title
+- Make it specific and actionable (e.g., "Levantar da Cama - Beginner")
+- Focus on the behavioral outcome, not just the topic
+
+### Metadata Requirements
+- **dimension**: Must match one of the 5 core dimensions
+- **archetype**: Align with user personality types
+- **relatedToType**: "HABITBP" for habit-specific, "GENERIC" for general learning
+- **relatedToId**: Specific habit blueprint ID or generic category
+- **estimatedDuration**: Realistic completion time in seconds
+- **coinsReward**: Appropriate reward based on content complexity and duration
+- **language**: "portuguese" for Brazilian content
+- **region**: "Brazil" for localized content
+
+---
+
+**Template Usage Notes**: 
+- Replace all bracketed placeholders with actual content
+- Ensure content follows Ari's persona and coaching methodology
+- Maintain consistency with existing supertask JSON structure
+- Generate both beginner and advanced versions when applicable
+- Integrate relevant behavioral science frameworks naturally 

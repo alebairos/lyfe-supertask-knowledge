@@ -180,9 +180,10 @@ def process_file(ctx, input_file, output_file, no_ai_analysis, no_validation, co
 @click.option('--progress', is_flag=True, help='Show progress information')
 @click.option('--pattern', default='*.json', help='File pattern to match (default: *.json)')
 @click.option('--report', type=click.Path(path_type=Path), help='Save processing report to file')
+@click.option('--save-results', type=click.Path(path_type=Path), help='Save raw JSON results to file for later report generation')
 @click.option('--continue-on-error', is_flag=True, help='Continue processing other files if one fails')
 @click.pass_context
-def process_directory(ctx, input_dir, output_dir, no_ai_analysis, no_validation, config, progress, pattern, report, continue_on_error):
+def process_directory(ctx, input_dir, output_dir, no_ai_analysis, no_validation, config, progress, pattern, report, save_results, continue_on_error):
     """
     Process all files in a directory through Stage 1 pipeline.
     
@@ -289,6 +290,13 @@ def process_directory(ctx, input_dir, output_dir, no_ai_analysis, no_validation,
                 f.write(report_content)
             click.echo(f"\n📄 Processing report saved to: {report}")
         
+        # Save raw JSON results if requested
+        if save_results:
+            save_results.parent.mkdir(parents=True, exist_ok=True)
+            with open(save_results, 'w') as f:
+                json.dump(result, f, indent=2, ensure_ascii=False)
+            click.echo(f"\n💾 Raw results saved to: {save_results}")
+        
         # Exit with error code if there were failures and continue-on-error is not set
         if stats.get('failed_files', 0) > 0 and not continue_on_error:
             sys.exit(1)
@@ -304,34 +312,44 @@ def process_directory(ctx, input_dir, output_dir, no_ai_analysis, no_validation,
 @click.option('--output', type=click.Path(path_type=Path), help='Output file for the report (default: stdout)')
 @click.option('--format', 'report_format', type=click.Choice(['markdown', 'json', 'text'], case_sensitive=False), 
               default='markdown', help='Report format (default: markdown)')
+@click.option('--type', 'report_type', type=click.Choice(['technical', 'content'], case_sensitive=False), 
+              default='technical', help='Report type: technical (processing metrics) or content (educational value)')
 @click.pass_context
-def generate_report(ctx, results_file, output, report_format):
+def generate_report(ctx, results_file, output, report_format, report_type):
     """
     Generate a processing report from Stage 1 results.
     
     RESULTS_FILE: Path to the JSON results file from a previous processing run
     
+    Report Types:
+    - technical: Processing metrics, validation, and technical statistics
+    - content: Educational value, learning outcomes, and content analysis
+    
     Example:
-        lyfe-kt stage1 generate-report results.json --output report.md
+        lyfe-kt stage1 generate-report results.json --output report.md --type content
     """
     logger = ctx.obj['logger']
-    logger.info(f"Generating report from: {results_file}")
+    logger.info(f"Generating {report_type} report from: {results_file}")
     
     try:
         # Load results
         with open(results_file, 'r') as f:
             results = json.load(f)
         
-        # Generate report
-        from .stage1_integration import generate_stage1_report
-        report_content = generate_stage1_report(results)
+        # Generate appropriate report
+        if report_type == 'content':
+            from .stage1_integration import generate_content_analysis_report
+            report_content = generate_content_analysis_report(results)
+        else:
+            from .stage1_integration import generate_stage1_report
+            report_content = generate_stage1_report(results)
         
         # Output report
         if output:
             output.parent.mkdir(parents=True, exist_ok=True)
             with open(output, 'w') as f:
                 f.write(report_content)
-            click.echo(f"📄 Report saved to: {output}")
+            click.echo(f"📄 {report_type.title()} report saved to: {output}")
         else:
             click.echo(report_content)
             

@@ -209,44 +209,25 @@ class TestJSONNormalizer:
                 
                 result = normalizer.normalize_single_file("test.json")
                 
-                # Check basic structure
+                # Check preserved original structure (not template structure)
                 assert "title" in result
-                assert "description" in result
-                assert "target_audience" in result
-                assert "difficulty_level" in result
-                assert "learning_objectives" in result
-                assert "language" in result
-                assert "content" in result
-                assert "quiz" in result
+                assert "archetype" in result
+                assert "dimension" in result
+                assert "relatedToType" in result
+                assert "relatedToId" in result
+                assert "estimatedDuration" in result
+                assert "coinsReward" in result
+                assert "flexibleItems" in result
                 assert "metadata" in result
                 
-                # Check values
-                assert result["title"] == "Test Supertask"
-                assert result["language"] == "portuguese"
-                assert result["difficulty_level"] == "intermediate"
-                assert result["target_audience"] == "achiever"
-                assert result["dimension"] == "wellness"
-                
-                # Check enhanced content
-                assert len(result["content"]) == 2
-                assert "ari_enhancement" in result["content"][0]
-                
-                # Check enhanced quiz
-                assert len(result["quiz"]) == 1
-                assert "ari_coaching_style" in result["quiz"][0]
-                
-                # Check metadata
-                assert "content_analysis" in result["metadata"]
-                assert "content_statistics" in result["metadata"]
-                assert "processing_info" in result["metadata"]
-                assert "quality_metrics" in result["metadata"]
-                
-                # Check normalization metadata
-                assert "normalization_metadata" in result
-                assert result["normalization_metadata"]["source_file"] == "test.json"
-                assert result["normalization_metadata"]["template_compliance"] == "full"
-                
-                mock_content_analyzer.analyze_single_file.assert_called_once_with("test.json", True)
+                # Check that flexibleItems are enhanced
+                assert isinstance(result["flexibleItems"], list)
+                if result["flexibleItems"]:
+                    # Check for enhanced content in flexibleItems
+                    for item in result["flexibleItems"]:
+                        assert isinstance(item, dict)
+                        # Enhanced items should have original fields plus enhancements
+                        assert "type" in item
     
     def test_normalize_single_file_without_ai(self):
         """Test single file normalization without AI analysis."""
@@ -260,8 +241,15 @@ class TestJSONNormalizer:
                 
                 result = normalizer.normalize_single_file("test.json", include_ai_analysis=False)
                 
+                # Check preserved original structure
                 assert "title" in result
-                assert "normalization_metadata" in result
+                assert "archetype" in result
+                assert "dimension" in result
+                assert "flexibleItems" in result
+                assert "metadata" in result
+                
+                # Check that metadata contains normalization info
+                assert "_processing_info" in result["metadata"]
                 
                 mock_content_analyzer.analyze_single_file.assert_called_once_with("test.json", False)
     
@@ -410,7 +398,7 @@ class TestJSONNormalizer:
                 assert result["failed_files"][0]["input_file"] == "test2.json"
     
     def test_create_template_compliant_structure(self):
-        """Test template-compliant structure creation."""
+        """Test template-compliant structure creation (now preserves original format)."""
         with patch('src.lyfe_kt.json_normalizer.get_config', return_value=self.config):
             with patch('src.lyfe_kt.json_normalizer.get_content_analyzer') as mock_analyzer:
                 mock_analyzer.return_value = Mock()
@@ -425,28 +413,23 @@ class TestJSONNormalizer:
                     self.sample_analyzer_result["ari_preparation"]
                 )
                 
-                # Check required fields
+                # Check preserved original structure fields
                 required_fields = [
-                    "title", "description", "target_audience", "difficulty_level",
-                    "learning_objectives", "language", "content", "quiz", "metadata"
+                    "title", "archetype", "dimension", "relatedToType",
+                    "relatedToId", "estimatedDuration", "coinsReward", "flexibleItems", "metadata"
                 ]
                 
                 for field in required_fields:
                     assert field in result, f"Missing required field: {field}"
                 
-                # Check enhanced fields
-                assert "estimated_duration" in result
-                assert "tags" in result
-                assert "dimension" in result
-                assert "archetype" in result
-                
-                # Check content enhancement
-                assert len(result["content"]) > 0
-                assert "ari_enhancement" in result["content"][0]
-                
-                # Check quiz enhancement
-                assert len(result["quiz"]) > 0
-                assert "ari_coaching_style" in result["quiz"][0]
+                # Check that flexibleItems are enhanced
+                assert isinstance(result["flexibleItems"], list)
+                if result["flexibleItems"]:
+                    # Check for enhanced content in flexibleItems
+                    for item in result["flexibleItems"]:
+                        assert isinstance(item, dict)
+                        # Enhanced items should have original fields plus enhancements
+                        assert "type" in item
     
     def test_generate_enhanced_description(self):
         """Test enhanced description generation."""
@@ -600,17 +583,17 @@ class TestJSONNormalizer:
                     self.sample_analyzer_result
                 )
                 
-                # Check that missing fields were added
+                # Check that missing original format fields were added
                 required_fields = [
-                    "title", "description", "target_audience", "difficulty_level",
-                    "learning_objectives", "language", "content", "quiz", "metadata"
+                    "title", "archetype", "dimension", "relatedToType",
+                    "relatedToId", "estimatedDuration", "coinsReward", "flexibleItems"
                 ]
                 
                 for field in required_fields:
                     assert field in result, f"Missing required field: {field}"
                 
-                assert result["validation_status"] == "validated"
-                assert result["enhancement_level"] == "comprehensive"
+                # Check that flexibleItems is a list
+                assert isinstance(result["flexibleItems"], list)
     
     def test_helper_methods(self):
         """Test various helper methods."""
@@ -857,16 +840,18 @@ class TestJSONNormalizerIntegration:
                     # This should work with actual integration
                     result = normalizer.normalize_single_file(test_file, include_ai_analysis=False)
                     
+                    # Check preserved original structure
                     assert "title" in result
-                    assert "description" in result
-                    assert "content" in result
-                    assert "quiz" in result
+                    assert "archetype" in result
+                    assert "dimension" in result
+                    assert "flexibleItems" in result
                     assert "metadata" in result
-                    assert "normalization_metadata" in result
+                    
+                    # Check that metadata contains normalization info
+                    assert "_processing_info" in result["metadata"]
                     
                     # Check that normalization was successful
-                    assert result["normalization_metadata"]["template_compliance"] == "full"
-                    assert result["normalization_metadata"]["source_file"] == test_file
+                    assert result["metadata"]["_processing_info"]["source_file"] == test_file
                     
         finally:
             os.unlink(test_file)

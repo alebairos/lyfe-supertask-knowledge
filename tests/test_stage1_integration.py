@@ -97,32 +97,57 @@ class TestStage1Pipeline:
     @patch('lyfe_kt.stage1_integration.OutputValidator')
     def test_process_single_file_success(self, mock_validator, mock_normalizer, mock_analyzer):
         """Test successful single file processing."""
-        # Mock components
+        # Mock components with simple JSON-serializable returns
         mock_analyzer_instance = Mock()
         mock_analyzer.return_value = mock_analyzer_instance
-        mock_analyzer_instance.analyze_single_file.return_value = {
+        
+        # Create a simple analysis result that's JSON serializable
+        analysis_result = {
             "analysis_summary": {"common_themes": ["test"]},
-            "status": "success"
+            "status": "success",
+            "processed_data": {"title": "Test", "flexibleItems": []},
+            "ari_analysis": {"ari_readiness_score": 0.8},
+            "ai_analysis": {"basic_analysis": {"tone": "neutral"}},
+            "integrated_analysis": {"integrated_insights": {"content_quality_score": 0.7}},
+            "ari_preparation": {"recommendations": {}}
         }
+        mock_analyzer_instance.analyze_single_file.return_value = analysis_result
         
         mock_normalizer_instance = Mock()
         mock_normalizer.return_value = mock_normalizer_instance
-        mock_normalizer_instance.normalize_single_file.return_value = {
+        
+        # Create a simple normalized result that's JSON serializable
+        normalized_result = {
             "title": "Test Task",
-            "content": [{"type": "text", "content": "Test content"}],
-            "quiz": [{"question": "Test?", "options": ["A", "B"], "correct_answer": "A"}]
+            "archetype": "achiever",
+            "dimension": "wellness",
+            "relatedToType": "habit",
+            "relatedToId": "test_habit",
+            "estimatedDuration": 300,
+            "coinsReward": 15,
+            "flexibleItems": [{"type": "content", "content": "Test content"}],
+            "metadata": {
+                "_processing_info": {
+                    "source_file": "test.json",
+                    "processing_date": "2024-12-01"
+                }
+            }
         }
+        mock_normalizer_instance.normalize_from_analysis.return_value = normalized_result
         
         mock_validator_instance = Mock()
         mock_validator.return_value = mock_validator_instance
         
-        # Mock validation result
-        mock_validation_result = Mock()
-        mock_validation_result.is_valid = True
-        mock_validation_result.score = 8.5
-        mock_validation_result.metadata = {"quality_score": 8.5}
+        # Create a simple validation result that's JSON serializable
+        class SimpleValidationResult:
+            def __init__(self):
+                self.is_valid = True
+                self.score = 8.5
+                self.metadata = {"quality_score": 8.5}
         
-        with patch('lyfe_kt.stage1_integration.validate_output_file', return_value=mock_validation_result):
+        validation_result = SimpleValidationResult()
+        
+        with patch('lyfe_kt.stage1_integration.validate_output_file', return_value=validation_result):
             pipeline = Stage1Pipeline()
             
             # Create temporary files
@@ -148,7 +173,7 @@ class TestStage1Pipeline:
                 
                 # Verify component calls
                 mock_analyzer_instance.analyze_single_file.assert_called_once()
-                mock_normalizer_instance.normalize_single_file.assert_called_once()
+                mock_normalizer_instance.normalize_from_analysis.assert_called_once()
                 
             finally:
                 Path(input_path).unlink()
@@ -184,37 +209,62 @@ class TestStage1Pipeline:
     @patch('lyfe_kt.stage1_integration.OutputValidator')
     def test_process_directory_success(self, mock_validator, mock_normalizer, mock_analyzer):
         """Test successful directory processing."""
-        # Mock components
+        # Mock components with simple JSON-serializable returns
         mock_analyzer_instance = Mock()
         mock_analyzer.return_value = mock_analyzer_instance
-        mock_analyzer_instance.analyze_single_file.return_value = {
+        
+        # Create a simple analysis result that's JSON serializable
+        analysis_result = {
             "analysis_summary": {
                 "common_themes": ["test"],
                 "primary_language": "portuguese",
                 "average_difficulty": "intermediate",
                 "primary_archetype": "achiever"
             },
-            "status": "success"
+            "status": "success",
+            "processed_data": {"title": "Test", "flexibleItems": []},
+            "ari_analysis": {"ari_readiness_score": 0.8},
+            "ai_analysis": {"basic_analysis": {"tone": "neutral"}},
+            "integrated_analysis": {"integrated_insights": {"content_quality_score": 0.7}},
+            "ari_preparation": {"recommendations": {}}
         }
+        mock_analyzer_instance.analyze_single_file.return_value = analysis_result
         
         mock_normalizer_instance = Mock()
         mock_normalizer.return_value = mock_normalizer_instance
-        mock_normalizer_instance.normalize_single_file.return_value = {
+        
+        # Create a simple normalized result that's JSON serializable
+        normalized_result = {
             "title": "Test Task",
-            "content": [{"type": "text", "content": "Test content"}],
-            "quiz": [{"question": "Test?", "options": ["A", "B"], "correct_answer": "A"}]
+            "archetype": "achiever",
+            "dimension": "wellness",
+            "relatedToType": "habit",
+            "relatedToId": "test_habit",
+            "estimatedDuration": 300,
+            "coinsReward": 15,
+            "flexibleItems": [{"type": "content", "content": "Test content"}],
+            "metadata": {
+                "_processing_info": {
+                    "source_file": "test.json",
+                    "processing_date": "2024-12-01"
+                }
+            }
         }
+        mock_normalizer_instance.normalize_from_analysis.return_value = normalized_result
         
         mock_validator_instance = Mock()
         mock_validator.return_value = mock_validator_instance
         
-        # Mock validation result
-        mock_validation_result = Mock()
-        mock_validation_result.is_valid = True
-        mock_validation_result.score = 8.5
-        mock_validation_result.metadata = {"quality_score": 8.5}
+        # Create a simple validation result that's JSON serializable
+        class SimpleValidationResult:
+            def __init__(self):
+                self.is_valid = True
+                self.score = 8.5
+                self.metadata = {"quality_score": 8.5}
         
-        with patch('lyfe_kt.stage1_integration.validate_output_file', return_value=mock_validation_result):
+        validation_result = SimpleValidationResult()
+        
+        with patch('lyfe_kt.stage1_integration.validate_output_file', return_value=validation_result):
             pipeline = Stage1Pipeline()
             
             # Create temporary directory with test files

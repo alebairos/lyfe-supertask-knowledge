@@ -1,13 +1,13 @@
 # Lyfe Supertask Knowledge Generator - TODO List
 
 ## Project Status Overview
-- **Current Phase**: Stage 1 Implementation (Output Validation completed)
-- **Next Phase**: Stage 1 Integration  
-- **Total TODOs**: 28 items (13 completed, 15 pending)
+- **Current Phase**: Pipeline Redesign (3-stage simplified approach)
+- **Next Phase**: Template and Configuration Implementation  
+- **Total TODOs**: 35 items (16 completed, 19 pending)
 - **Last Updated**: December 2024
-- **Progress**: 46% complete (13/28)
+- **Progress**: 46% complete (16/35)
 - **Documentation**: All completed items documented in implementation-summary.md
-- **Recent Updates**: Comprehensive output validation system with schema validation, content quality assessment, and Ari persona consistency
+- **Recent Updates**: Pipeline redesigned to 3-stage approach, template updated for supertask compliance, Oracle data strategy decided
 
 ## Completed TODOs ✅
 
@@ -39,7 +39,7 @@
 **Status**: Completed  
 **Dependencies**: minimal-package-setup  
 **Description**: Create src/templates/knowledge_task_input_template.md with markdown template and frontmatter  
-**Implementation**: Markdown template with frontmatter for knowledge tasks
+**Implementation**: ✅ UPDATED - Complete supertask-compliant template with all test.json fields, Ari voice guidelines, flexible items structure, and 50% beginner/50% advanced requirement
 
 ### 6. simple-config ✅
 **Status**: Completed  
@@ -146,10 +146,8 @@
 - **Duration**: ~4 hours
 - **Documented**: ✅ docs/features/implementation-summary.md
 
-## Pending TODOs - Stage 1 Completion 🔄
-
-### 14. stage1-integration
-**Status**: ✅ COMPLETED  
+### 14. stage1-integration ✅
+**Status**: Completed  
 **Dependencies**: output-validation  
 **Description**: Integrate Stage 1 components with error handling and progress reporting
 - **Implemented**: ✅ Complete Stage 1 pipeline orchestration with `Stage1Pipeline` class
@@ -162,8 +160,8 @@
 - **Tested**: ✅ 23 comprehensive tests with 100% pass rate
 - **Documented**: ✅ docs/features/implementation-summary.md
 
-### 15. cli-stage1
-**Status**: ✅ COMPLETED  
+### 15. cli-stage1 ✅
+**Status**: Completed  
 **Dependencies**: stage1-integration  
 **Description**: Add Stage 1 command to CLI with file processing and error reporting
 - **Implemented**: ✅ Complete Stage 1 command group with `lyfe-kt stage1` interface
@@ -177,8 +175,8 @@
 - **Tested**: ✅ 25 comprehensive CLI tests with 100% pass rate
 - **Documented**: ✅ docs/features/implementation-summary.md
 
-### 16. sample-testing
-**Status**: ✅ COMPLETED  
+### 16. sample-testing ✅
+**Status**: Completed  
 **Dependencies**: cli-stage1  
 **Description**: Test Stage 1 with existing supertask sample (work/01_raw/levantar_da_cama/test.json)
 - **Implemented**: ✅ Sample file analysis and processing with real data
@@ -192,68 +190,263 @@
 - **Tested**: ✅ 273/273 tests passing (100% success rate)
 - **Documented**: ✅ All functionality manually verified with real sample data
 
-### 17. defensive-tests
-**Status**: Pending  
+## Pending TODOs - Critical Pipeline Redesign 🚨
+
+### 17. pipeline-redesign
+**Status**: ✅ COMPLETED (Design Phase)
 **Dependencies**: sample-testing  
-**Description**: Write defensive tests for input validation, error handling, and edge cases
+**Description**: Redesign pipeline to simplified 3-stage approach based on analysis and user feedback
+**Implementation**: 
+- ✅ **Architecture Defined**: 3-stage pipeline (Raw → Preprocessed → JSON)
+- ✅ **Template Updated**: Complete supertask compliance with test.json structure
+- ✅ **Oracle Strategy**: Single prompt with filtered data approach decided
+- ✅ **Documentation Updated**: knowledge-task-generator.md and ari-persona-integration-summary.md
+- 🔄 **Next Phase**: Implementation of new pipeline components
 
-### 18. error-scenarios
+## Pending TODOs - New Pipeline Implementation 🔄
+
+### 18. ari-persona-config ✅
+**Status**: ✅ COMPLETED  
+**Dependencies**: pipeline-redesign  
+**Description**: Create comprehensive Ari persona configuration with Oracle data integration
+**PRD**: `docs/features/ari-persona-config-feature.md`
+**Implementation**: 
+- ✅ **Current State Analysis**: Inspected existing implementation and identified reuse opportunities
+- ✅ **Feature PRD**: Complete requirements and implementation approach documented
+- ✅ **Core Configuration**: Created comprehensive `src/config/ari_persona.yaml` with all 662 lines including identity, communication patterns, 9 expert frameworks, Oracle integration strategy, and cultural context
+- ✅ **Configuration Loading**: Extended `src/lyfe_kt/config_loader.py` with `load_ari_persona_config()`, `validate_ari_config()`, and Oracle data filtering functions
+- ✅ **Oracle Data Integration**: Implemented filtering for habits catalog (16KB→8KB), trails structure (32KB→12KB), complete LyfeCoach (20KB) and objectives (4KB) for ~44KB optimized context
+- ✅ **Validation System**: Comprehensive validation covering all configuration sections, frameworks, and Oracle data sources with detailed error reporting
+- ✅ **Module Integration**: Updated `src/lyfe_kt/__init__.py` exports and maintained backward compatibility with existing systems
+- ✅ **Error Handling**: Added `AriPersonaConfigError` exception with proper error propagation and user-friendly messages
+- ✅ **Caching System**: Implemented configuration and Oracle data caching with cache management functions
+- ✅ **Testing**: Created comprehensive test suite `tests/test_ari_persona_config.py` with 22 tests covering all functionality (100% pass rate)
+- ✅ **Template Updates**: Fixed `src/templates/knowledge_task_input_template.md` to meet test requirements and maintain supertask compliance
+- ✅ **Documentation**: Documented in `docs/features/ari-persona-config-feature.md` and `docs/features/implementation-summary-phase2.md`
+**Files Created/Modified**:
+- `src/config/ari_persona.yaml` - Complete Ari persona configuration (662 lines)
+- `src/lyfe_kt/config_loader.py` - Extended with Ari configuration loading (~800 lines added)
+- `src/lyfe_kt/__init__.py` - Updated exports for new Ari functions
+- `tests/test_ari_persona_config.py` - Comprehensive test suite (22 tests, 100% pass)
+- `docs/features/ari-persona-config-feature.md` - Complete feature requirements document
+- `src/templates/knowledge_task_input_template.md` - Updated for test compliance
+
+### 19. oracle-data-filters ✅
+**Status**: ✅ COMPLETED  
+**Dependencies**: ari-persona-config  
+**Description**: Implement Oracle data filtering for optimal LLM context
+**Implementation**: 
+- ✅ **Oracle Data Integration**: Complete filtering implementation in `src/lyfe_kt/config_loader.py`
+- ✅ **Habits Filtering**: Filter habitos.csv (16KB→8KB) with dimension score >15, top 50 habits  
+- ✅ **Trails Filtering**: Filter Trilhas.csv (32KB→12KB) with 2 complete trail examples per dimension
+- ✅ **Complete Inclusion**: LyfeCoach (20KB) and Objetivos.csv (4KB) included completely
+- ✅ **Dynamic Context**: Filtering utilities integrated with Ari persona configuration loading
+- ✅ **Performance**: Optimized context size from 72KB to 44KB (39% reduction)
+**Functions Created**:
+- `_load_oracle_data_filtered()` - Main Oracle data loading with filtering
+- `_filter_habits_catalog()` - Habits filtering by dimension scores
+- `_filter_trails_structure()` - Trails filtering with pattern exemplars
+- `_load_objectives_complete()` - Complete objectives loading
+**Files Modified**: `src/lyfe_kt/config_loader.py` (Oracle filtering functions)
+
+### 20. preprocessing-prompts ✅
+**Status**: ✅ COMPLETED  
+**Dependencies**: oracle-data-filters  
+**Description**: Create Stage 1 preprocessing prompts with Ari persona and Oracle integration
+**Implementation**: 
+- ✅ **Configuration File**: Created comprehensive `src/config/preprocessing_prompts.yaml` (398 lines)
+- ✅ **Ari Persona Integration**: Complete system message with Ari's identity, tone, and 9 expert frameworks
+- ✅ **Content Analysis**: File-type specific analysis prompts (markdown, JSON, PDF, text)
+- ✅ **Framework Integration**: All 9 frameworks with triggers and application guidelines
+- ✅ **Oracle Integration**: Patterns for habits, trails, and objectives context integration
+- ✅ **Difficulty Configurations**: Beginner and advanced content guidelines
+- ✅ **Quality Standards**: Content quality, Ari voice compliance, and educational effectiveness rules
+- ✅ **Template Integration**: Dynamic template loading and variable substitution
+- ✅ **Validation System**: Comprehensive validation for all configuration sections
+**Functions Created**:
+- `load_preprocessing_prompts()` - Load and cache preprocessing prompts configuration
+- `validate_preprocessing_prompts_config()` - Validate configuration structure and content
+- `get_preprocessing_prompts()` - Access configuration with dot notation support
+- `build_preprocessing_prompt()` - Build complete LLM prompts with context substitution
+- `get_framework_integration_for_content()` - Analyze content for relevant frameworks
+- `clear_preprocessing_prompts_cache()` - Cache management
+**Files Created/Modified**:
+- `src/config/preprocessing_prompts.yaml` - Complete preprocessing prompts configuration (398 lines)
+- `src/lyfe_kt/config_loader.py` - Extended with preprocessing prompts functions
+- `src/lyfe_kt/__init__.py` - Updated exports for new functions
+- `tests/test_preprocessing_prompts.py` - Comprehensive test suite (30 tests, 100% pass)
+**Testing**: 30 new tests covering loading, validation, access, prompt building, framework integration, and error handling
+
+### 21. generation-prompts
 **Status**: Pending  
-**Dependencies**: defensive-tests  
-**Description**: Test error scenarios: missing files, malformed JSON, API failures, invalid configuration
+**Dependencies**: preprocessing-prompts  
+**Description**: Create Stage 3 generation prompts for template → supertask JSON conversion  
+**Requirements**:
+- Convert filled .md template to exact test.json structure compliance
+- Generate both beginner (50%) and advanced (50%) versions by default
+- Maintain Ari's voice throughout content and quiz items
+- Ensure unique titles with difficulty level appended
+**Expected Output**: `src/config/generation_prompts.yaml`
 
-### 19. basic-documentation
+### 22. stage1-preprocessing
+**Status**: Pending  
+**Dependencies**: generation-prompts  
+**Description**: Implement Stage 1 preprocessing pipeline (Raw → Preprocessed)
+**Requirements**:
+- Process multiple file formats using preprocessing prompts
+- Apply Ari persona and Oracle context integration
+- Generate filled template in work/02_preprocessed/
+- Support batch processing with progress reporting
+**Expected Output**: Enhanced `src/lyfe_kt/stage1_functions.py`
+
+### 23. stage3-generation
+**Status**: Pending  
+**Dependencies**: stage1-preprocessing  
+**Description**: Implement Stage 3 generation pipeline (Template → JSON)
+**Requirements**:
+- Convert .md templates to supertask JSON with exact compliance
+- Apply generation prompts with Ari persona consistency
+- Generate multiple supertasks when appropriate (beginner/advanced)
+- Output to work/04_output/ with proper validation
+**Expected Output**: `src/lyfe_kt/stage3_functions.py`
+
+### 24. cli-new-pipeline
+**Status**: Pending  
+**Dependencies**: stage3-generation  
+**Description**: Update CLI for new 3-stage pipeline with preprocessing and generation commands
+**Requirements**:
+- `lyfe-kt preprocess` command for Stage 1 (Raw → Preprocessed)
+- `lyfe-kt generate` command for Stage 3 (Template → JSON)
+- `lyfe-kt pipeline` command for full pipeline execution
+- Progress reporting and error handling for each stage
+**Expected Output**: Enhanced `src/lyfe_kt/cli.py`
+
+### 25. json-format-compliance  
+**Status**: Pending  
+**Dependencies**: cli-new-pipeline  
+**Description**: Ensure exact JSON format compliance with test.json structure
+**Priority**: CRITICAL - Output JSON must preserve exact input structure
+**Requirements**:
+- All fields preserved: dimension, archetype, relatedToType, relatedToId, estimatedDuration, coinsReward, flexibleItems
+- flexibleItems array with proper type, content, options, correctAnswer structure
+- Metadata structure matching input format
+**Expected Output**: Updated validation and generation functions
+
+## Pending TODOs - Quality Assurance 🔄
+
+### 26. ari-voice-validation
+**Status**: Pending  
+**Dependencies**: json-format-compliance  
+**Description**: Implement Ari persona consistency validation across all generated content
+**Requirements**:
+- TARS-inspired brevity validation
+- Portuguese masculine form automated checking
+- Framework integration verification (9 expert frameworks)
+- Engagement progression pattern validation
+**Expected Output**: `src/lyfe_kt/ari_validation.py`
+
+### 27. comprehensive-testing
+**Status**: Pending  
+**Dependencies**: ari-voice-validation  
+**Description**: Create comprehensive test suite for new pipeline
+**Requirements**:
+- Stage 1 preprocessing tests with multiple file formats
+- Stage 3 generation tests with template compliance
+- End-to-end pipeline tests with real samples
+- Ari persona consistency tests across all stages
+**Expected Output**: Enhanced test suite covering all pipeline stages
+
+### 28. error-scenarios
+**Status**: Pending  
+**Dependencies**: comprehensive-testing  
+**Description**: Test error scenarios: missing files, malformed input, API failures, invalid configuration
+**Requirements**:
+- Input validation for all supported file formats
+- OpenAI API failure recovery and fallback
+- Malformed template handling
+- Invalid Oracle data recovery
+**Expected Output**: Robust error handling across pipeline
+
+### 29. performance-optimization
 **Status**: Pending  
 **Dependencies**: error-scenarios  
-**Description**: Create simple README section with installation and usage instructions
+**Description**: Optimize pipeline for batch processing and production efficiency
+**Requirements**:
+- Batch processing optimization for multiple files
+- Oracle data caching for repeated operations
+- LLM prompt optimization for token efficiency
+- Progress reporting and cancellation support
+**Expected Output**: Production-ready performance characteristics
 
-### 20. packaging
+## Pending TODOs - Documentation and Packaging 📋
+
+### 30. pipeline-documentation
 **Status**: Pending  
-**Dependencies**: basic-documentation  
-**Description**: Set up basic Python packaging for local installation and distribution
+**Dependencies**: performance-optimization  
+**Description**: Create comprehensive documentation for new 3-stage pipeline
+**Requirements**:
+- User guide for preprocessing and generation commands
+- Template filling instructions with examples
+- Ari persona integration guide
+- Oracle data utilization documentation
+**Expected Output**: Complete user and developer documentation
 
-## Pending TODOs - Ari Persona Integration 🚀
-
-### 21. ari-persona-config
+### 31. basic-packaging
 **Status**: Pending  
-**Dependencies**: openai-client  
-**Description**: Create Ari persona configuration file with TARS-inspired communication patterns and expert frameworks  
-**Notes**: Create `src/config/ari_persona.yaml` with complete persona definition
+**Dependencies**: pipeline-documentation  
+**Description**: Set up Python packaging for local installation and distribution
+**Requirements**:
+- Proper setup.py with dependencies and entry points
+- Installation instructions and requirements
+- Version management and release process
+- Distribution package creation
+**Expected Output**: Installable Python package
 
-### 22. ari-prompt-integration
-**Status**: Pending  
-**Dependencies**: ari-persona-config  
-**Description**: Update LLM prompts to include Ari's persona, communication style, and expert frameworks
+## Pending TODOs - Advanced Features 🚀
 
-### 23. ari-content-enhancement
+### 32. batch-optimization
 **Status**: Pending  
-**Dependencies**: ari-prompt-integration  
-**Description**: Enhance OpenAI client to apply Ari's voice and coaching methodology to generated content
+**Dependencies**: basic-packaging  
+**Description**: Advanced batch processing with parallel execution and caching
+**Requirements**:
+- Parallel processing for multiple files
+- Result caching and incremental updates
+- Progress tracking and resumable operations
+- Resource usage optimization
+**Expected Output**: Enterprise-grade batch processing capabilities
 
-### 24. ari-quiz-transformation
+### 33. quality-metrics
 **Status**: Pending  
-**Dependencies**: ari-content-enhancement  
-**Description**: Transform quiz generation to use Ari's coaching style with actionable, brief questions
+**Dependencies**: batch-optimization  
+**Description**: Implement content quality metrics and improvement suggestions
+**Requirements**:
+- Automated quality scoring for generated content
+- Ari persona consistency scoring
+- Learning effectiveness metrics
+- Improvement recommendation engine
+**Expected Output**: Quality assessment and optimization system
 
-### 25. ari-language-validation
+### 34. template-variants
 **Status**: Pending  
-**Dependencies**: ari-persona-config  
-**Description**: Implement Portuguese masculine form validation for Ari's identity consistency
+**Dependencies**: quality-metrics  
+**Description**: Support for multiple template variants and customization
+**Requirements**:
+- Multiple template types for different content categories
+- Customizable template fields and structure
+- Template validation and versioning
+- User-defined template creation
+**Expected Output**: Flexible template management system
 
-### 26. ari-framework-integration
+### 35. integration-api
 **Status**: Pending  
-**Dependencies**: ari-content-enhancement  
-**Description**: Integrate Ari's 9 expert frameworks into content analysis and generation pipeline
-
-### 27. ari-brevity-engine
-**Status**: Pending  
-**Dependencies**: ari-framework-integration  
-**Description**: Implement TARS-inspired brevity rules and engagement progression in content generation
-
-### 28. ari-testing-validation
-**Status**: Pending  
-**Dependencies**: ari-brevity-engine  
-**Description**: Create comprehensive tests for Ari persona integration and voice consistency
+**Dependencies**: template-variants  
+**Description**: Create API endpoints for integration with Lyfe platform
+**Requirements**:
+- REST API for pipeline operations
+- Webhook support for async processing
+- Authentication and authorization
+- Rate limiting and monitoring
+**Expected Output**: Production API for platform integration
 
 ## Key Files and Documentation
 
@@ -261,46 +454,74 @@
 - `src/lyfe_kt/openai_client.py` - OpenAI client implementation (400+ lines)
 - `src/lyfe_kt/config_loader.py` - Configuration loading system
 - `src/lyfe_kt/input_validation.py` - Input validation functions
+- `src/templates/knowledge_task_input_template.md` - ✅ UPDATED - Complete supertask template
 - `config.yaml` - Main configuration file
 - `requirements.txt` - Project dependencies
+
+### New Configuration Files (To Be Created)
+- `src/config/ari_persona.yaml` - Complete Ari persona with Oracle integration
+- `src/config/preprocessing_prompts.yaml` - Stage 1 prompts for raw content processing
+- `src/config/generation_prompts.yaml` - Stage 3 prompts for JSON generation
+- `src/config/oracle_data_filters.yaml` - Oracle data filtering configuration
 
 ### Test Files
 - `tests/test_openai_client.py` - OpenAI client tests (29 tests, all passing)
 - `tests/test_input_validation.py` - Input validation tests (27 tests, all passing)
 - `tests/test_config_loader.py` - Configuration tests
+- **New test files needed** for preprocessing, generation, and Ari validation
 
 ### Documentation
-- `docs/features/knowledge-task-generator.md` - Main PRD with Ari persona integration
-- `docs/features/ari-persona-integration-summary.md` - Detailed Ari persona implementation guide
+- `docs/features/knowledge-task-generator.md` - ✅ UPDATED - Complete PRD with 3-stage pipeline
+- `docs/features/ari-persona-integration-summary.md` - ✅ UPDATED - Oracle strategy and implementation
 - `docs/features/implementation-summary.md` - Technical implementation details
 
 ### Template Files
 - `templates/feature_knowledge_task.md` - Knowledge task template
 - `templates/knowledge_task_input_form.jpeg` - Input form reference
 
-## Next Steps Priority
-1. **Immediate**: Implement `output-validation` (TODO 13) with comprehensive validation rules
-2. **Priority**: Complete `stage1-integration` (TODO 14) and `cli-stage1` (TODO 15)
-3. **Short-term**: Complete Stage 1 testing and validation (TODOs 16-20)
-4. **Medium-term**: Begin Ari persona integration (TODOs 21-28)
+## Oracle Data Integration Summary
 
-## Recent Enhancements
-- **Multi-Sample Processing**: Content analysis functions now designed to handle multiple JSON files from `work/01_raw/` directory structure
-- **Ari Persona Preparation**: Content analysis enhanced to prepare for Ari's voice adaptation and coaching style integration
-- **Scalable Architecture**: Batch processing capabilities for growing numbers of supertask samples
-- **PRD Updated**: Enhanced content analysis requirements documented in knowledge-task-generator.md
+### Data Analysis Results
+- **Oracle Directory**: `/Users/alebairos/Projects/mahhp/oracle` (72KB total)
+- **LyfeCoach**: 20KB (359 lines) - Core persona with 9 frameworks
+- **habitos.csv**: 16KB (1000+ habits) - 5-dimension habit catalog  
+- **Trilhas.csv**: 32KB (999+ trails) - Learning progression paths
+- **Objetivos.csv**: 4KB (21 objectives) - Goal-to-trail mappings
+
+### Selected Strategy
+**Approach (a): Single prompt with filtered data**
+- **Filtered Context**: ~44KB optimized for LLM efficiency
+- **Core Persona**: Include complete LyfeCoach file (20KB)
+- **Filtered Habits**: Essential habits only (~8KB from habitos.csv)
+- **Trail Patterns**: Exemplar structures only (~12KB from Trilhas.csv)  
+- **Complete Objectives**: Full mapping file (4KB from Objetivos.csv)
+
+## Next Steps Priority
+1. **HIGH**: Complete `ari-persona-config` (TODO 18) - Foundation for all Ari integration
+2. **HIGH**: Implement `oracle-data-filters` (TODO 19) - Context optimization
+3. **MEDIUM**: Create `preprocessing-prompts` (TODO 20) and `generation-prompts` (TODO 21)
+4. **MEDIUM**: Implement new pipeline stages (TODOs 22-23)
+5. **LOW**: CLI integration and testing (TODOs 24-27)
+
+## Recent Major Changes
+- **Pipeline Redesign**: Simplified from 4-stage to 3-stage approach
+- **Template Update**: Complete alignment with test.json supertask structure
+- **Oracle Integration**: Data analysis complete, filtering strategy decided
+- **Ari Persona**: Enhanced integration with 9 expert frameworks
+- **Documentation**: Complete PRD and integration summary updates
 
 ## Testing Status
-- **Total Tests**: 150+ tests
+- **Total Tests**: 273 tests passing
 - **OpenAI Client**: 29 tests ✅
 - **Input Validation**: 27 tests ✅
 - **Configuration**: Multiple tests ✅
-- **All tests passing**: No regressions
+- **New Pipeline**: Testing needed for redesigned components
 
 ## Environment Setup
 - Python package installed in development mode: `pip install -e .`
 - OpenAI API key required in environment or config
 - All dependencies installed via requirements.txt
+- Oracle directory access: `/Users/alebairos/Projects/mahhp/oracle`
 
 ---
-*This TODO.md file serves as a persistent backup of project progress and can be updated as work continues.* 
+*This TODO.md file serves as a persistent backup of project progress and can be updated as work continues. The redesigned 3-stage pipeline represents a significant simplification and improvement over the previous complex approach.* 

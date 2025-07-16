@@ -169,8 +169,8 @@ class Stage1Pipeline:
             
             # Step 2: JSON normalization to template compliance
             self._report_progress(2, 5, "Normalizing JSON structure")
-            normalized_result = self.json_normalizer.normalize_single_file(
-                input_file, analysis_result
+            normalized_result = self.json_normalizer.normalize_from_analysis(
+                analysis_result
             )
             
             # Step 3: Save normalized output
@@ -575,6 +575,220 @@ class Stage1Pipeline:
         
         return recommendations
     
+    def generate_content_analysis_report(self, results: Dict[str, Any]) -> str:
+        """
+        Generate a content-focused analysis report that highlights the educational value
+        and learning content created from raw data.
+        
+        Args:
+            results: Processing results from Stage 1 pipeline.
+            
+        Returns:
+            Formatted content analysis report.
+        """
+        try:
+            report_lines = []
+            
+            # Header
+            report_lines.append("# Supertask Content Analysis Report")
+            report_lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            report_lines.append("")
+            
+            # Executive Summary
+            stats = results.get("statistics", {})
+            successful_files = stats.get("successful_files", 0)
+            
+            report_lines.append("## Executive Summary")
+            report_lines.append(f"From the raw input data, we successfully created **{successful_files} comprehensive supertask{'s' if successful_files != 1 else ''}** ")
+            report_lines.append("designed to help users learn through structured, interactive experiences.")
+            report_lines.append("")
+            
+            # Content Analysis
+            if results.get("individual_results"):
+                report_lines.append("## Content Analysis: What Was Created")
+                report_lines.append("")
+                
+                for i, result in enumerate(results.get("individual_results", [])):
+                    if result.get("status") == "success":
+                        report_lines.extend(self._analyze_individual_content(result, i + 1))
+            
+            # Learning Outcomes Summary
+            cross_analysis = results.get("cross_file_analysis", {})
+            if cross_analysis.get("status") == "completed":
+                report_lines.append("## Learning Outcomes and Educational Value")
+                report_lines.append("")
+                
+                dominant = cross_analysis.get("dominant_patterns", {})
+                themes = dominant.get("themes", [])
+                
+                if themes:
+                    report_lines.append("### Primary Learning Topics Identified:")
+                    for theme, count in themes[:5]:
+                        report_lines.append(f"- **{theme.title()}**: {count} supertask{'s' if count != 1 else ''}")
+                    report_lines.append("")
+                
+                # Ari persona insights
+                ari_insights = cross_analysis.get("ari_persona_insights", {})
+                if ari_insights:
+                    report_lines.append("### Coaching and Behavioral Change Potential:")
+                    report_lines.append(f"- **Content Readiness**: {ari_insights.get('content_readiness', 'N/A').title()}")
+                    report_lines.append(f"- **Framework Integration**: {ari_insights.get('framework_integration_potential', 'N/A').title()}")
+                    report_lines.append(f"- **Coaching Opportunities**: {ari_insights.get('coaching_opportunities', 0)} identified")
+                    report_lines.append(f"- **Cultural Context**: {ari_insights.get('cultural_context', 'N/A').title()}")
+                    report_lines.append("")
+            
+            # Content Quality and Impact
+            validation = results.get("validation_summary", {})
+            if validation.get("status") == "completed":
+                report_lines.append("## Content Quality and Impact")
+                report_lines.append("")
+                
+                avg_quality = validation.get("average_quality_score", 0)
+                quality_dist = validation.get("quality_distribution", {})
+                
+                report_lines.append(f"### Overall Quality Assessment:")
+                report_lines.append(f"- **Average Quality Score**: {avg_quality:.1f}/10.0")
+                report_lines.append(f"- **Excellent Content**: {quality_dist.get('excellent', 0)} supertasks")
+                report_lines.append(f"- **Good Content**: {quality_dist.get('good', 0)} supertasks")
+                report_lines.append(f"- **Fair Content**: {quality_dist.get('fair', 0)} supertasks")
+                report_lines.append("")
+                
+                # Improvement recommendations
+                recommendations = validation.get("improvement_recommendations", [])
+                if recommendations:
+                    report_lines.append("### Content Enhancement Recommendations:")
+                    for rec in recommendations:
+                        report_lines.append(f"- {rec}")
+                    report_lines.append("")
+            
+            # Future Content Generation Vision
+            report_lines.append("## Future Content Generation Vision")
+            report_lines.append("")
+            report_lines.append("### Current Capability Demonstrated:")
+            report_lines.append("- **Automatic Topic Inference**: System successfully identified learning topics from raw content")
+            report_lines.append("- **Content Structuring**: Transformed raw content into progressive learning sequences")
+            report_lines.append("- **Interactive Elements**: Generated relevant quiz questions with coaching integration")
+            report_lines.append("- **Framework Alignment**: Prepared content for behavioral change methodologies")
+            report_lines.append("")
+            
+            report_lines.append("### Next Phase Capabilities (Planned):")
+            report_lines.append("- **User-Requested Topics**: \"I want to learn about habit formation based on BJ Fogg\"")
+            report_lines.append("- **Specific Challenges**: \"How to reduce social media usage\"")
+            report_lines.append("- **Custom Learning Paths**: Personalized content based on user goals and archetype")
+            report_lines.append("- **Multi-Supertask Series**: Connected learning experiences across related topics")
+            report_lines.append("")
+            
+            # Processing Statistics
+            report_lines.append("## Processing Statistics")
+            report_lines.append(f"- **Total Files Processed**: {stats.get('total_files', 0)}")
+            report_lines.append(f"- **Successful Supertasks Created**: {stats.get('successful_files', 0)}")
+            report_lines.append(f"- **Success Rate**: {stats.get('success_rate', 0):.1%}")
+            report_lines.append(f"- **Average Processing Time**: {stats.get('average_processing_time', 0):.2f} seconds per file")
+            report_lines.append("")
+            
+            return "\n".join(report_lines)
+            
+        except Exception as e:
+            logger.error(f"Content analysis report generation failed: {e}")
+            return f"Content analysis report generation failed: {e}"
+    
+    def _analyze_individual_content(self, result: Dict[str, Any], index: int) -> List[str]:
+        """
+        Analyze individual content result for the report.
+        
+        Args:
+            result: Individual processing result.
+            index: File index number.
+            
+        Returns:
+            List of report lines for this content.
+        """
+        lines = []
+        
+        try:
+            normalized_result = result.get("normalized_result", {})
+            if not normalized_result:
+                return lines
+            
+            title = normalized_result.get("title", "Unknown Title")
+            description = normalized_result.get("description", "")
+            
+            lines.append(f"### {index}. {title}")
+            lines.append("")
+            
+            # Topic and learning focus
+            if description:
+                lines.append(f"**Learning Focus**: {description[:200]}{'...' if len(description) > 200 else ''}")
+                lines.append("")
+            
+            # Content structure analysis
+            content_items = normalized_result.get("content", [])
+            quiz_items = normalized_result.get("quiz", [])
+            
+            lines.append("**Content Structure:**")
+            lines.append(f"- **Educational Content**: {len(content_items)} sections")
+            lines.append(f"- **Interactive Elements**: {len(quiz_items)} quiz questions")
+            
+            # Learning objectives
+            objectives = normalized_result.get("learning_objectives", [])
+            if objectives:
+                lines.append(f"- **Learning Objectives**: {len(objectives)} defined goals")
+            
+            # Target audience and difficulty
+            audience = normalized_result.get("target_audience", "")
+            difficulty = normalized_result.get("difficulty_level", "")
+            if audience or difficulty:
+                lines.append(f"- **Target Audience**: {audience.title()} archetype")
+                lines.append(f"- **Difficulty Level**: {difficulty.title()}")
+            
+            lines.append("")
+            
+            # Key learning points (from content analysis)
+            if content_items:
+                lines.append("**Key Learning Points:**")
+                for i, item in enumerate(content_items[:3]):  # Show first 3 items
+                    content_text = item.get("content", "")
+                    if content_text:
+                        # Extract first sentence or up to 100 characters
+                        summary = content_text.split('.')[0][:100] + "..."
+                        lines.append(f"- {summary}")
+                
+                if len(content_items) > 3:
+                    lines.append(f"- ... and {len(content_items) - 3} more content sections")
+                lines.append("")
+            
+            # Coaching and framework integration
+            metadata = normalized_result.get("metadata", {})
+            if metadata:
+                themes = metadata.get("themes", [])
+                if themes:
+                    lines.append("**Coaching Integration:**")
+                    lines.append(f"- **Key Themes**: {', '.join(themes[:5])}")
+                    
+                    # Check for framework alignment in content
+                    framework_count = 0
+                    for item in content_items:
+                        if item.get("framework_alignment"):
+                            framework_count += len(item.get("framework_alignment", []))
+                    
+                    if framework_count > 0:
+                        lines.append(f"- **Framework Alignments**: {framework_count} identified")
+                    
+                    lines.append("")
+            
+            # Quality metrics
+            quality_score = result.get("quality_score")
+            if quality_score:
+                lines.append(f"**Quality Score**: {quality_score:.1f}/10.0")
+                lines.append("")
+            
+        except Exception as e:
+            logger.error(f"Error analyzing individual content: {e}")
+            lines.append(f"Error analyzing content: {e}")
+            lines.append("")
+        
+        return lines
+
     def generate_processing_report(self, results: Dict[str, Any]) -> str:
         """
         Generate a comprehensive processing report.
@@ -745,4 +959,18 @@ def generate_stage1_report(results: Dict[str, Any]) -> str:
         Formatted report string.
     """
     pipeline = create_stage1_pipeline()
-    return pipeline.generate_processing_report(results) 
+    return pipeline.generate_processing_report(results)
+
+
+def generate_content_analysis_report(results: Dict[str, Any]) -> str:
+    """
+    Generate a content-focused analysis report highlighting educational value.
+    
+    Args:
+        results: Processing results from Stage 1 pipeline.
+        
+    Returns:
+        Formatted content analysis report string.
+    """
+    pipeline = create_stage1_pipeline()
+    return pipeline.generate_content_analysis_report(results) 

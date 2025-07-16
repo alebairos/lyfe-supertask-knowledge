@@ -373,17 +373,21 @@ def process_raw_file(file_path: str) -> Dict[str, Any]:
     """
     Process a raw supertask file through the complete Stage 1 pipeline.
     
+    CRITICAL: This function now preserves the original JSON structure 
+    while extracting content for analysis.
+    
     This function performs the complete Stage 1 processing:
     1. Load raw JSON file
     2. Extract content and metadata
     3. Analyze content structure
     4. Normalize into preprocessed format
+    5. Preserve original structure for format compliance
     
     Args:
         file_path: Path to the raw JSON file to process.
         
     Returns:
-        Dictionary in preprocessed JSON format.
+        Dictionary in preprocessed JSON format with original structure preserved.
         
     Raises:
         Stage1ProcessingError: If any step in the pipeline fails.
@@ -400,6 +404,17 @@ def process_raw_file(file_path: str) -> Dict[str, Any]:
         
         # Step 4: Normalize structure
         normalized = normalize_structure(extracted_content, analysis)
+        
+        # Step 5: CRITICAL - Preserve original structure for format compliance
+        normalized["original_structure"] = raw_data.copy()
+        
+        # Step 6: Add extraction metadata
+        normalized["extraction_metadata"] = {
+            "original_flexible_items_count": len(raw_data.get("flexibleItems", [])),
+            "extracted_content_items": len(extracted_content.get("content_items", [])),
+            "extracted_quiz_items": len(extracted_content.get("quiz_items", [])),
+            "extraction_timestamp": datetime.now().isoformat()
+        }
         
         return normalized
         

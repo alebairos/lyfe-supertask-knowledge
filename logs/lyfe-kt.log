@@ -426,3 +426,437 @@
 2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
 2025-07-15 15:23:22 - lyfe-kt - INFO - Stage 1 command group accessed
 2025-07-15 15:23:22 - lyfe-kt - INFO - Status command called
+2025-07-15 15:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:39:39 - lyfe-kt - INFO - Generating content report from: work/02_preprocessed/levantar_da_cama/test_processed.json
+2025-07-15 15:39:39 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:39:39 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:39:39 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:39:39 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:39:39 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:39:39 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:39:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:39:50 - lyfe-kt - INFO - Processing directory: work/01_raw/levantar_da_cama -> work/02_preprocessed/levantar_da_cama
+2025-07-15 15:39:50 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:39:50 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:39:50 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:39:50 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:39:50 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Processing directory: work/01_raw/levantar_da_cama
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Progress: 0/1 - Found 1 JSON files
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:39:50 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:39:50 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:39:50 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:39:50 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:39:50 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:39:50 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Progress: 4/5 - Validating output
+2025-07-15 15:39:50 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.49 seconds
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Progress: 1/1 - Processed test.json
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Progress: 1/1 - Performing cross-file analysis
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Directory processing completed: 1/1 files successful
+2025-07-15 15:39:50 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:39:50 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:39:50 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:39:58 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:39:58 - lyfe-kt - INFO - Generating content report from: work/reports/directory_processing_results.json
+2025-07-15 15:39:58 - lyfe-kt - ERROR - Error generating report: Expecting value: line 1 column 1 (char 0)
+2025-07-15 15:41:03 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:41:03 - lyfe-kt - INFO - Processing directory: work/01_raw/levantar_da_cama -> work/02_preprocessed/levantar_da_cama
+2025-07-15 15:41:03 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:41:03 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:41:03 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:41:03 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:41:03 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Processing directory: work/01_raw/levantar_da_cama
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Progress: 0/1 - Found 1 JSON files
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 15:41:03 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 15:41:03 - lyfe_kt.json_normalizer - INFO - Normalizing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:41:03 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 15:41:03 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-07-15 15:41:03 - lyfe_kt.openai_client - WARNING - OpenAI API call failed (attempt 1): Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:41:03 - lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: Content analysis failed: OpenAI API call failed after 3 attempts: Error code: 401 - {'error': {'message': 'OpenAI-Organization header should match organization for API key', 'type': 'invalid_request_error', 'param': None, 'code': 'mismatched_organization'}}
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Progress: 4/5 - Validating output
+2025-07-15 15:41:03 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.51 seconds
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Progress: 1/1 - Processed test.json
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Progress: 1/1 - Performing cross-file analysis
+2025-07-15 15:41:03 - lyfe_kt.stage1_integration - INFO - Directory processing completed: 1/1 files successful
+2025-07-15 15:41:12 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:41:12 - lyfe-kt - INFO - Generating content report from: work/reports/directory_results.json
+2025-07-15 15:41:12 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:41:12 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:41:12 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:41:12 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:41:12 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:41:12 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 15:41:29 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 15:41:29 - lyfe-kt - INFO - Generating technical report from: work/reports/directory_results.json
+2025-07-15 15:41:29 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:41:29 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:41:29 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 15:41:29 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 15:41:29 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 15:41:29 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:03:30 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:03:34 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:03:34 - lyfe-kt - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json -> work/02_preprocessed/levantar_da_cama/test_fixed.json
+2025-07-15 16:03:34 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:03:34 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:03:34 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:03:34 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 16:03:34 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:03:34 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:03:34 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 16:03:34 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 16:03:34 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 16:03:34 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 16:03:34 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 16:03:34 - lyfe_kt.json_normalizer - INFO - Normalizing from analysis result: work/01_raw/levantar_da_cama/test.json
+2025-07-15 16:03:34 - lyfe_kt.json_normalizer - WARNING - Missing required field: description
+2025-07-15 16:03:34 - lyfe_kt.json_normalizer - WARNING - Missing required field: target_audience
+2025-07-15 16:03:34 - lyfe_kt.json_normalizer - WARNING - Missing required field: difficulty_level
+2025-07-15 16:03:34 - lyfe_kt.json_normalizer - WARNING - Missing required field: learning_objectives
+2025-07-15 16:03:34 - lyfe_kt.json_normalizer - WARNING - Missing required field: language
+2025-07-15 16:03:34 - lyfe_kt.json_normalizer - WARNING - Missing required field: content
+2025-07-15 16:03:34 - lyfe_kt.json_normalizer - WARNING - Missing required field: quiz
+2025-07-15 16:03:34 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 16:03:34 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 16:03:34 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.00 seconds
+2025-07-15 16:04:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:04:56 - lyfe-kt - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json -> work/02_preprocessed/levantar_da_cama/test_clean.json
+2025-07-15 16:04:56 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:04:56 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:04:56 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:04:56 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 16:04:56 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:04:56 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:04:56 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 16:04:56 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 16:04:56 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 16:04:56 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 16:04:56 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 16:04:56 - lyfe_kt.json_normalizer - INFO - Normalizing from analysis result: work/01_raw/levantar_da_cama/test.json
+2025-07-15 16:04:56 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 16:04:56 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 16:04:56 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.00 seconds
+2025-07-15 16:05:24 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:05:24 - lyfe-kt - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json -> work/02_preprocessed/levantar_da_cama/test_perfect.json
+2025-07-15 16:05:24 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:05:24 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:05:24 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:05:24 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 16:05:24 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:05:24 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:05:24 - lyfe_kt.stage1_integration - INFO - Processing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 16:05:24 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test.json
+2025-07-15 16:05:24 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 16:05:24 - lyfe_kt.content_analyzer - INFO - Analyzing single file: work/01_raw/levantar_da_cama/test.json
+2025-07-15 16:05:24 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 16:05:24 - lyfe_kt.json_normalizer - INFO - Normalizing from analysis result: work/01_raw/levantar_da_cama/test.json
+2025-07-15 16:05:24 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 16:05:24 - lyfe_kt.stage1_integration - INFO - Progress: 5/5 - Compiling results
+2025-07-15 16:05:24 - lyfe_kt.stage1_integration - INFO - Successfully processed work/01_raw/levantar_da_cama/test.json in 0.00 seconds
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3jae0z07/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp3jae0z07/output.json
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpq5dm92vm/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpq5dm92vm/output.json
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpijohanh0/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpijohanh0/output
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp59aa033t/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp59aa033t/output
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp_2voxhik/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp_2voxhik/output
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprjpk56tk/results.json
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpinrn24tb/results.json
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 5/10 - Test message
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp98l9u366.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of tmp98l9u366.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - ERROR - Unexpected error processing /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp98l9u366.json: Object of type Mock is not JSON serializable
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpi66fzg53.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of tmpi66fzg53.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - ERROR - Unexpected error processing /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpi66fzg53.json: Test error
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj1l3ixvk/input
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 0/3 - Found 3 JSON files
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj1l3ixvk/input/test_0.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test_0.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - ERROR - Unexpected error processing /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj1l3ixvk/input/test_0.json: Object of type Mock is not JSON serializable
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 1/3 - Processed test_0.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj1l3ixvk/input/test_1.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test_1.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - ERROR - Unexpected error processing /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj1l3ixvk/input/test_1.json: Object of type Mock is not JSON serializable
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 2/3 - Processed test_1.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj1l3ixvk/input/test_2.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 0/5 - Starting processing of test_2.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Performing content analysis
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Normalizing JSON structure
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 3/5 - Saving normalized output
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - ERROR - Unexpected error processing /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpj1l3ixvk/input/test_2.json: Object of type Mock is not JSON serializable
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 3/3 - Processed test_2.json
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Directory processing completed: 0/3 files successful
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpu3evhats/input
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Processing directory: nonexistent_dir
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - ERROR - Cross-file analysis failed: 'status'
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Stage 1 pipeline initialized successfully
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 1/5 - Step 1
+2025-07-15 16:06:23 - lyfe_kt.stage1_integration - INFO - Progress: 2/5 - Step 2
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpa_5ppqyz/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpa_5ppqyz/output.json
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprcfl0y25/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprcfl0y25/output.json
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpywncp47j/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpywncp47j/output
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpgewk9wot/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpgewk9wot/output
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7zt15bbn/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7zt15bbn/output
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpx1r3y9zt/results.json
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpy638o661/results.json
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:08:39 - lyfe-kt - INFO - Status command called
+2025-07-15 16:14:12 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:14:12 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmplvo9_t3l/results.json
+2025-07-15 16:14:21 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:14:21 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpygdi7dbq/results.json
+2025-07-15 16:15:38 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:38 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpv4c5y_p3/results.json
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjrbadp0z/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjrbadp0z/output.json
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmph66qpmv4/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmph66qpmv4/output.json
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpw3qnc5gy/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpw3qnc5gy/output
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpk9gvthvh/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpk9gvthvh/output
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpfc104h2w/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpfc104h2w/output
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9jcrpyn3/results.json
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpty43khui/results.json
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:15:44 - lyfe-kt - INFO - Status command called
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp12g77xp5/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp12g77xp5/output.json
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpim1iu5h1/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpim1iu5h1/output.json
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpxe3pzy8w/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpxe3pzy8w/output
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpe2pn8bdc/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpe2pn8bdc/output
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp19hqkn26/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp19hqkn26/output
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmph6oebmyx/results.json
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpbwyhgvx_/results.json
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 16:20:53 - lyfe-kt - INFO - Status command called
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpsa603ho5/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpsa603ho5/output.json
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp0g2rbn4m/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp0g2rbn4m/output.json
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpc4vvl5j8/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpc4vvl5j8/output
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmph3jhkogm/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmph3jhkogm/output
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpp98evlnk/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpp98evlnk/output
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmphdthovdz/results.json
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp17g_edtj/results.json
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:49:39 - lyfe-kt - INFO - Status command called
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpq5osjjt2/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpq5osjjt2/output.json
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp4z1je8ar/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp4z1je8ar/output.json
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp_xmynt8g/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp_xmynt8g/output
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpv0950wcj/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpv0950wcj/output
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptjlzwces/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptjlzwces/output
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp31pxptgs/results.json
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp_m3o0sa1/results.json
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-15 23:50:44 - lyfe-kt - INFO - Status command called
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpubom_ijz/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpubom_ijz/output.json
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpvd94hosh/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpvd94hosh/output.json
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpi7hq4_vq/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpi7hq4_vq/output
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2u5z968w/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2u5z968w/output
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnkq7eu7u/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnkq7eu7u/output
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpra294z9t/results.json
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpju7n9v4o/results.json
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:06:55 - lyfe-kt - INFO - Status command called
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptdl_f8sy/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptdl_f8sy/output.json
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmphafngz09/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmphafngz09/output.json
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp5ggqka37/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp5ggqka37/output
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp_w58qruq/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp_w58qruq/output
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9nf1ijg7/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9nf1ijg7/output
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpzrp0s2a2/results.json
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmplj91hadt/results.json
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:09:56 - lyfe-kt - INFO - Status command called
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6o_8voqs/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp6o_8voqs/output.json
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp95fb5m7q/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp95fb5m7q/output.json
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp657l88ls/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp657l88ls/output
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprtp0kfea/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmprtp0kfea/output
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpt33csbmg/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpt33csbmg/output
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmppt8u6hmq/results.json
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptp0lyidi/results.json
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-16 00:23:35 - lyfe-kt - INFO - Status command called

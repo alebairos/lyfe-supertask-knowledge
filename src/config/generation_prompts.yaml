@@ -1,0 +1,329 @@
+# Generation Prompts Configuration
+# Stage 3: Filled Template → Supertask JSON
+# Converts filled markdown templates to exact test.json structure compliance
+# Maintains Ari persona consistency and generates beginner/advanced versions
+
+generation_prompts:
+  
+  # Main generation prompt template
+  main_prompt:
+    system_message: |
+      Você é Ari, o assistente de desenvolvimento pessoal da Lyfe, especializado em converter templates educativos em JSONs estruturados para supertasks.
+
+      ## Sua Missão
+      Converter o template markdown preenchido em um JSON estruturado que segue EXATAMENTE a estrutura do test.json fornecido. Você deve:
+      - Manter sua voz característica: concisa, inteligente, motivadora
+      - Preservar TODOS os campos obrigatórios da estrutura JSON
+      - Converter conteúdo markdown em flexibleItems array adequadamente
+      - Aplicar suas especialidades em ciência comportamental naturalmente
+      - Gerar títulos únicos com nível de dificuldade anexado
+
+      ## Estrutura JSON Obrigatória
+      ```json
+      {
+        "title": "string",
+        "dimension": "physicalHealth|mentalHealth|relationships|work|spirituality",
+        "archetype": "warrior|explorer|sage|ruler", 
+        "relatedToType": "HABITBP|GENERIC",
+        "relatedToId": "string",
+        "estimatedDuration": number_in_seconds,
+        "coinsReward": number,
+        "flexibleItems": [array_of_items],
+        "metadata": {object}
+      }
+      ```
+
+      ## FlexibleItems Types
+      - **content**: Conteúdo educativo (com "author" opcional)
+      - **quote**: Citações inspiracionais (com "author" obrigatório)
+      - **quiz**: Perguntas com options array, correctAnswer index, explanation
+
+      ## Regras Críticas
+      - PRESERVE todos os campos obrigatórios
+      - NUNCA invente dados não presentes no template
+      - MANTENHA consistência com Ari persona
+      - USE português brasileiro correto (formas masculinas)
+      - GERE títulos específicos e únicos
+
+    user_prompt_template: |
+      ## Tarefa: Converter Template para JSON Estruturado
+
+      ### Template Preenchido:
+      ```markdown
+      {filled_template}
+      ```
+
+      ### Estrutura Alvo (test.json):
+      ```json
+      {target_json_structure}
+      ```
+
+      ### Instruções Específicas:
+      1. **Extraia metadados** do frontmatter para campos JSON obrigatórios
+      2. **Converta seções** do conteúdo em flexibleItems apropriados:
+         - Content sections → type: "content"
+         - Quotes → type: "quote" 
+         - Quiz questions → type: "quiz"
+      3. **Preserve estrutura exata** dos campos obrigatórios
+      4. **Aplique nível de dificuldade**: {target_difficulty}
+      5. **Mantenha voz do Ari** em todo conteúdo e explicações
+      6. **Gere título único** com dificuldade anexada
+
+      ### Configurações de Geração:
+      - **Nível de dificuldade**: {target_difficulty}
+      - **Público-alvo**: {target_audience}
+      - **Estimativa de duração**: {estimated_duration} segundos
+      - **Recompensa sugerida**: {suggested_coins} moedas
+
+      **IMPORTANTE**: Retorne APENAS o JSON válido, sem texto adicional ou markdown.
+
+  # Content conversion rules
+  content_conversion:
+    
+    markdown_to_flexibleitems:
+      content_section:
+        pattern: "### Content Item"
+        conversion: |
+          Converta seções de conteúdo para:
+          {
+            "type": "content",
+            "content": "texto_do_conteudo",
+            "author": "autor_se_especificado",
+            "tips": ["array_de_dicas_se_presente"]
+          }
+          
+      quote_section:
+        pattern: "### Quote Item"
+        conversion: |
+          Converta citações para:
+          {
+            "type": "quote", 
+            "content": "texto_da_citacao",
+            "author": "autor_obrigatorio"
+          }
+          
+      quiz_section:
+        pattern: "### Quiz Question"
+        conversion: |
+          Converta perguntas para:
+          {
+            "type": "quiz",
+            "question": "pergunta_completa",
+            "options": ["opcao1", "opcao2", "opcao3", "opcao4"],
+            "correctAnswer": index_numerico,
+            "explanation": "explicacao_com_voz_do_ari"
+          }
+
+    frontmatter_mapping:
+      title: "title"
+      dimension: "dimension" 
+      archetype: "archetype"
+      related_to_type: "relatedToType"
+      related_to_id: "relatedToId"
+      estimated_duration: "estimatedDuration"
+      coins_reward: "coinsReward"
+      language: "metadata.language"
+      region: "metadata.region"
+
+  # Difficulty-specific generation rules
+  difficulty_generation:
+    
+    beginner:
+      title_suffix: " - Beginner"
+      characteristics:
+        - "Linguagem simples e acessível"
+        - "Conceitos fundamentais"
+        - "Exemplos básicos e universais"
+        - "Passos pequenos e graduais"
+        - "Explicações detalhadas nas quizzes"
+      
+      content_guidelines:
+        duration_range: [300, 480]  # 5-8 minutes
+        coins_range: [10, 15]
+        quiz_complexity: "simples"
+        content_depth: "introdutório"
+        
+      quiz_style:
+        question_complexity: "direta"
+        options_style: "claras e distintas"
+        explanation_style: "didática e encorajadora"
+        
+    advanced:
+      title_suffix: " - Advanced"
+      characteristics:
+        - "Conceitos sofisticados"
+        - "Nuances e complexidades"
+        - "Integração de múltiplos conceitos"
+        - "Estratégias avançadas"
+        - "Aplicação prática desafiadora"
+      
+      content_guidelines:
+        duration_range: [600, 900]  # 10-15 minutes
+        coins_range: [15, 25]
+        quiz_complexity: "desafiadora"
+        content_depth: "aprofundado"
+        
+      quiz_style:
+        question_complexity: "analítica"
+        options_style: "sutis e diferenciadas"
+        explanation_style: "insights profundos"
+
+  # Ari voice consistency rules
+  ari_voice_integration:
+    
+    content_voice:
+      tone: "encorajador mas realista"
+      style: "brevidade inteligente"
+      approach: "baseado em evidências"
+      language_markers:
+        - "Use português masculino brasileiro"
+        - "Prefira frases concisas (6-15 palavras)"
+        - "Aplique ciência comportamental naturalmente"
+        - "Mantenha tom motivador mas prático"
+        
+    quiz_voice:
+      explanation_patterns:
+        - "Conecte com princípios comportamentais"
+        - "Use linguagem de coaching"
+        - "Reforce aprendizagem positiva"
+        - "Aplique micro-hábitos quando relevante"
+        
+      coaching_integration:
+        - "Celebre o progresso incremental"
+        - "Foque em mudanças sustentáveis"
+        - "Use perguntas que estimulem reflexão"
+        - "Mantenha esperança realista"
+
+  # JSON structure validation
+  json_structure_validation:
+    
+    required_fields:
+      - "title"
+      - "dimension"
+      - "archetype"
+      - "relatedToType"
+      - "relatedToId"
+      - "estimatedDuration"
+      - "coinsReward"
+      - "flexibleItems"
+      - "metadata"
+      
+    metadata_required:
+      - "language"
+      - "region"
+      - "created_at"
+      - "updated_at"
+      - "version"
+      
+    flexibleitems_validation:
+      allowed_types: ["content", "quote", "quiz"]
+      content_required: ["type", "content"]
+      content_optional: ["author", "tips"]
+      quote_required: ["type", "content", "author"]
+      quiz_required: ["type", "question", "options", "correctAnswer", "explanation"]
+      
+    data_types:
+      title: "string"
+      dimension: "enum"
+      archetype: "enum"
+      relatedToType: "enum"
+      relatedToId: "string"
+      estimatedDuration: "integer"
+      coinsReward: "integer"
+      flexibleItems: "array"
+      metadata: "object"
+
+  # Content quality standards
+  quality_standards:
+    
+    content_quality:
+      min_content_items: 3
+      max_content_items: 8
+      min_quiz_items: 2
+      max_quiz_items: 4
+      content_length_range: [50, 300]  # words per content item
+      
+    educational_effectiveness:
+      learning_progression: "gradual"
+      practical_application: "alta"
+      behavioral_focus: "obrigatório"
+      evidence_based: "sempre"
+      
+    engagement_optimization:
+      variety_requirement: "mix de content, quote, quiz"
+      flow_pattern: "content → quiz → content → quote → content → quiz"
+      coaching_moments: "distributed throughout"
+
+  # Error handling and edge cases
+  error_handling:
+    
+    missing_frontmatter:
+      action: "generate default values"
+      defaults:
+        dimension: "auto-detect from content"
+        archetype: "warrior"
+        relatedToType: "GENERIC"
+        estimatedDuration: 300
+        coinsReward: 15
+        
+    incomplete_content:
+      action: "enhance with Ari voice"
+      min_requirements:
+        - "At least 3 content sections"
+        - "At least 2 quiz questions"
+        - "Consistent difficulty level"
+        
+    invalid_structure:
+      action: "restructure maintaining content"
+      validation_rules:
+        - "Ensure all required fields present"
+        - "Validate enum values"
+        - "Check data types"
+        - "Verify flexibleItems structure"
+
+# Generation configuration presets
+generation_presets:
+  
+  default_beginner:
+    target_difficulty: "beginner"
+    target_audience: "beginner"
+    estimated_duration: 360
+    suggested_coins: 12
+    
+  default_advanced:
+    target_difficulty: "advanced"
+    target_audience: "advanced" 
+    estimated_duration: 720
+    suggested_coins: 20
+    
+  habit_specific:
+    relatedToType: "HABITBP"
+    focus: "behavioral change"
+    framework_emphasis: "tiny_habits"
+    
+  generic_learning:
+    relatedToType: "GENERIC"
+    focus: "knowledge acquisition"
+    framework_emphasis: "multiple"
+
+# Output formatting and post-processing
+output_formatting:
+  
+  json_formatting:
+    indent: 2
+    ensure_ascii: false
+    sort_keys: false
+    separators: [",", ": "]
+    
+  metadata_generation:
+    created_at: "auto_timestamp"
+    updated_at: "auto_timestamp"
+    version: "1.0"
+    language: "portuguese"
+    region: "Brazil"
+    
+  final_validation:
+    structure_check: true
+    ari_voice_check: true
+    content_quality_check: true
+    json_validity_check: true 

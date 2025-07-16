@@ -401,7 +401,7 @@ class TestStage1CLI:
             ])
             
             assert result.exit_code == 0, f"generate-report failed: {result.output}"
-            assert f'Report saved to: {output_file}' in result.output, "Should show report saved message"
+            assert f'📄 Technical report saved to: {output_file}' in result.output, "Should show report saved message"
             assert output_file.exists(), "Report file should be created"
             
             # Verify report content

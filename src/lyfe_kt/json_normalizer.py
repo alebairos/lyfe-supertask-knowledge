@@ -122,6 +122,51 @@ class JSONNormalizer:
         except Exception as e:
             raise JSONNormalizerError(f"Unexpected error normalizing {file_path}: {e}")
     
+    def normalize_from_analysis(self, analysis_result: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Normalize using pre-computed analysis result.
+        
+        Args:
+            analysis_result: Pre-computed analysis result from content analyzer.
+            
+        Returns:
+            Dictionary with normalized, template-compliant JSON structure.
+            
+        Raises:
+            JSONNormalizerError: If normalization fails.
+        """
+        try:
+            file_path = analysis_result.get("file_path", "unknown")
+            logger.info(f"Normalizing from analysis result: {file_path}")
+            
+            # Step 1: Extract key components
+            processed_data = analysis_result["processed_data"]
+            ari_analysis = analysis_result["ari_analysis"]
+            ai_analysis = analysis_result["ai_analysis"]
+            integrated_analysis = analysis_result["integrated_analysis"]
+            ari_preparation = analysis_result["ari_preparation"]
+            
+            # Step 2: Create template-compliant structure
+            normalized_structure = self._create_template_compliant_structure(
+                processed_data, ari_analysis, ai_analysis, integrated_analysis, ari_preparation
+            )
+            
+            # Step 3: Validate and enhance the structure
+            validated_structure = self._validate_and_enhance_structure(
+                normalized_structure, analysis_result
+            )
+            
+            # Step 4: Add normalization metadata
+            final_structure = self._add_normalization_metadata(
+                validated_structure, file_path, analysis_result
+            )
+            
+            return final_structure
+            
+        except Exception as e:
+            file_path = analysis_result.get("file_path", "unknown")
+            raise JSONNormalizerError(f"Unexpected error normalizing from analysis {file_path}: {e}")
+    
     def normalize_directory(self, input_dir: str, output_dir: str, include_ai_analysis: bool = True) -> Dict[str, Any]:
         """
         Normalize multiple JSON files in a directory.
@@ -211,7 +256,10 @@ class JSONNormalizer:
         ari_preparation: Dict[str, Any]
     ) -> Dict[str, Any]:
         """
-        Create template-compliant JSON structure from analysis results.
+        Create template-compliant JSON structure that preserves input format.
+        
+        CRITICAL: This method now preserves the exact input structure while enhancing
+        the flexibleItems content with AI analysis and Ari persona insights.
         
         Args:
             processed_data: Stage 1 processing results.
@@ -221,66 +269,246 @@ class JSONNormalizer:
             ari_preparation: Ari preparation recommendations.
             
         Returns:
-            Template-compliant JSON structure.
+            Enhanced JSON structure that maintains input format.
         """
         try:
-            # Extract basic information
-            title = processed_data.get("title", "Knowledge Task")
-            language = processed_data.get("language", "portuguese")
-            difficulty_level = processed_data.get("difficulty_level", "intermediate")
+            # Start with the original structure from processed_data
+            original_structure = processed_data.get("original_structure", {})
             
-            # Generate enhanced description using AI insights
-            description = self._generate_enhanced_description(
-                processed_data, ai_analysis, ari_analysis
-            )
+            # If no original structure, create basic structure
+            if not original_structure:
+                logger.warning("No original structure found, creating basic structure")
+                original_structure = {
+                    "title": processed_data.get("title", "Knowledge Task"),
+                    "dimension": processed_data.get("dimension", "physicalHealth"),
+                    "archetype": processed_data.get("archetype", "warrior"),
+                    "relatedToType": processed_data.get("relatedToType", "HABITBP"),
+                    "relatedToId": processed_data.get("relatedToId", "generic"),
+                    "estimatedDuration": processed_data.get("estimatedDuration", 300),
+                    "coinsReward": processed_data.get("coinsReward", 15),
+                    "flexibleItems": []
+                }
             
-            # Determine target audience from archetype or default
-            target_audience = self._determine_target_audience(
-                processed_data, ari_analysis, integrated_analysis
-            )
+            # Create enhanced structure that preserves input format
+            enhanced_structure = original_structure.copy()
             
-            # Generate learning objectives enhanced with Ari insights
-            learning_objectives = self._generate_enhanced_learning_objectives(
-                processed_data, ari_analysis, ai_analysis
-            )
+            # Enhance flexibleItems with AI analysis and Ari persona insights
+            if "flexibleItems" in enhanced_structure:
+                enhanced_structure["flexibleItems"] = self._enhance_flexible_items(
+                    enhanced_structure["flexibleItems"], 
+                    ari_analysis, 
+                    ai_analysis, 
+                    ari_preparation
+                )
+            else:
+                # If no flexibleItems, create from processed content
+                enhanced_structure["flexibleItems"] = self._create_flexible_items_from_content(
+                    processed_data.get("content", []),
+                    processed_data.get("quiz", []),
+                    ari_analysis,
+                    ari_preparation
+                )
             
-            # Process content items with Ari enhancement
-            enhanced_content = self._enhance_content_items(
-                processed_data.get("content", []), ari_analysis, ari_preparation
-            )
+            # Store enhancement metadata in existing metadata field to preserve format
+            if "metadata" not in enhanced_structure:
+                enhanced_structure["metadata"] = {}
             
-            # Process quiz items with Ari coaching style
-            enhanced_quiz = self._enhance_quiz_items(
-                processed_data.get("quiz", []), ari_analysis, ari_preparation
-            )
-            
-            # Create metadata with comprehensive information
-            metadata = self._create_enhanced_metadata(
-                processed_data, ari_analysis, ai_analysis, integrated_analysis, ari_preparation
-            )
-            
-            # Create template-compliant structure
-            template_structure = {
-                "title": title,
-                "description": description,
-                "target_audience": target_audience,
-                "difficulty_level": difficulty_level,
-                "learning_objectives": learning_objectives,
-                "language": language,
-                "content": enhanced_content,
-                "quiz": enhanced_quiz,
-                "metadata": metadata,
-                "estimated_duration": self._calculate_estimated_duration(enhanced_content, enhanced_quiz),
-                "tags": self._generate_tags(ai_analysis, ari_analysis),
-                "dimension": self._determine_dimension(processed_data, ai_analysis),
-                "archetype": self._determine_archetype(processed_data, ari_analysis)
+            enhanced_structure["metadata"]["_enhancement_info"] = {
+                "ai_analysis_applied": True,
+                "ari_persona_applied": True,
+                "enhancement_timestamp": datetime.now().isoformat(),
+                "original_items_count": len(original_structure.get("flexibleItems", [])),
+                "enhanced_items_count": len(enhanced_structure.get("flexibleItems", [])),
+                "enhancement_version": "1.0.0"
             }
             
-            return template_structure
+            return enhanced_structure
             
         except Exception as e:
             logger.error(f"Failed to create template-compliant structure: {e}")
             raise JSONNormalizerError(f"Template structure creation failed: {e}")
+    
+    def _enhance_flexible_items(
+        self, 
+        flexible_items: List[Dict[str, Any]], 
+        ari_analysis: Dict[str, Any],
+        ai_analysis: Dict[str, Any],
+        ari_preparation: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """
+        Enhance flexible items with AI analysis and Ari persona insights.
+        
+        Args:
+            flexible_items: Original flexible items from input JSON.
+            ari_analysis: Ari persona analysis results.
+            ai_analysis: AI analysis results.
+            ari_preparation: Ari preparation recommendations.
+            
+        Returns:
+            Enhanced flexible items with AI and Ari insights.
+        """
+        try:
+            enhanced_items = []
+            
+            for i, item in enumerate(flexible_items):
+                enhanced_item = item.copy()
+                
+                # Add AI analysis enhancements
+                enhanced_item["_ai_analysis"] = {
+                    "themes": ai_analysis.get("themes", []),
+                    "tone": ai_analysis.get("tone", "neutral"),
+                    "complexity": ai_analysis.get("complexity", "intermediate"),
+                    "language": ai_analysis.get("language", "portuguese")
+                }
+                
+                # Add Ari persona enhancements
+                enhanced_item["_ari_enhancement"] = {
+                    "brevity_suggestions": ari_preparation.get("brevity_suggestions", []),
+                    "question_opportunities": ari_preparation.get("question_opportunities", []),
+                    "coaching_moments": ari_preparation.get("coaching_moments", []),
+                    "framework_alignment": ari_preparation.get("framework_alignment", []),
+                    "engagement_level": ari_analysis.get("engagement_level", "medium")
+                }
+                
+                # Enhance content based on type
+                if item.get("type") == "content":
+                    enhanced_item = self._enhance_content_item(enhanced_item, ari_analysis, ai_analysis)
+                elif item.get("type") == "quiz":
+                    enhanced_item = self._enhance_quiz_item(enhanced_item, ari_analysis, ari_preparation)
+                elif item.get("type") == "quote":
+                    enhanced_item = self._enhance_quote_item(enhanced_item, ari_analysis, ai_analysis)
+                
+                enhanced_items.append(enhanced_item)
+            
+            return enhanced_items
+            
+        except Exception as e:
+            logger.error(f"Failed to enhance flexible items: {e}")
+            # Return original items if enhancement fails
+            return flexible_items
+    
+    def _create_flexible_items_from_content(
+        self,
+        content_items: List[Dict[str, Any]],
+        quiz_items: List[Dict[str, Any]],
+        ari_analysis: Dict[str, Any],
+        ari_preparation: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """
+        Create flexible items from processed content and quiz items.
+        
+        Args:
+            content_items: Processed content items.
+            quiz_items: Processed quiz items.
+            ari_analysis: Ari persona analysis results.
+            ari_preparation: Ari preparation recommendations.
+            
+        Returns:
+            List of flexible items in original format.
+        """
+        try:
+            flexible_items = []
+            
+            # Convert content items to flexible items
+            for item in content_items:
+                flexible_item = {
+                    "type": item.get("type", "content"),
+                    "content": item.get("content", ""),
+                    "author": item.get("author", ""),
+                    "_ai_analysis": item.get("_ai_analysis", {}),
+                    "_ari_enhancement": item.get("ari_enhancement", {})
+                }
+                flexible_items.append(flexible_item)
+            
+            # Convert quiz items to flexible items
+            for item in quiz_items:
+                flexible_item = {
+                    "type": "quiz",
+                    "question": item.get("question", ""),
+                    "options": item.get("options", []),
+                    "correctAnswer": item.get("correctAnswer", ""),
+                    "explanation": item.get("explanation", ""),
+                    "_ari_enhancement": item.get("ari_coaching_style", {})
+                }
+                flexible_items.append(flexible_item)
+            
+            return flexible_items
+            
+        except Exception as e:
+            logger.error(f"Failed to create flexible items from content: {e}")
+            return []
+    
+    def _enhance_content_item(
+        self, 
+        item: Dict[str, Any], 
+        ari_analysis: Dict[str, Any], 
+        ai_analysis: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Enhance a content item with AI and Ari insights."""
+        try:
+            enhanced_item = item.copy()
+            
+            # Add content-specific enhancements
+            enhanced_item["_content_enhancement"] = {
+                "readability_score": ai_analysis.get("readability_score", 0.7),
+                "key_concepts": ai_analysis.get("key_concepts", []),
+                "learning_value": ai_analysis.get("learning_value", "medium"),
+                "ari_coaching_potential": ari_analysis.get("coaching_potential", "medium")
+            }
+            
+            return enhanced_item
+            
+        except Exception as e:
+            logger.warning(f"Failed to enhance content item: {e}")
+            return item
+    
+    def _enhance_quiz_item(
+        self, 
+        item: Dict[str, Any], 
+        ari_analysis: Dict[str, Any], 
+        ari_preparation: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Enhance a quiz item with Ari coaching style."""
+        try:
+            enhanced_item = item.copy()
+            
+            # Add quiz-specific enhancements
+            enhanced_item["_quiz_enhancement"] = {
+                "coaching_style": ari_preparation.get("coaching_style", "supportive"),
+                "question_type": "assessment",
+                "learning_objective": ari_analysis.get("learning_objective", "knowledge_check"),
+                "difficulty_level": ari_analysis.get("difficulty_level", "intermediate")
+            }
+            
+            return enhanced_item
+            
+        except Exception as e:
+            logger.warning(f"Failed to enhance quiz item: {e}")
+            return item
+    
+    def _enhance_quote_item(
+        self, 
+        item: Dict[str, Any], 
+        ari_analysis: Dict[str, Any], 
+        ai_analysis: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Enhance a quote item with motivational insights."""
+        try:
+            enhanced_item = item.copy()
+            
+            # Add quote-specific enhancements
+            enhanced_item["_quote_enhancement"] = {
+                "motivational_impact": ai_analysis.get("motivational_impact", "medium"),
+                "relevance_score": ai_analysis.get("relevance_score", 0.7),
+                "ari_integration_potential": ari_analysis.get("integration_potential", "medium"),
+                "inspirational_value": ai_analysis.get("inspirational_value", "high")
+            }
+            
+            return enhanced_item
+            
+        except Exception as e:
+            logger.warning(f"Failed to enhance quote item: {e}")
+            return item
     
     def _generate_enhanced_description(
         self, 
@@ -657,45 +885,49 @@ class JSONNormalizer:
         """
         Validate and enhance the normalized structure.
         
+        CRITICAL: This method now validates the preserved input structure
+        instead of adding new fields that break format compliance.
+        
         Args:
-            structure: Template-compliant structure.
+            structure: Enhanced structure that preserves input format.
             analysis_result: Complete analysis result.
             
         Returns:
-            Validated and enhanced structure.
+            Validated structure with minimal additional metadata.
         """
         try:
             validated_structure = structure.copy()
             
-            # Validate required fields
-            required_fields = [
-                "title", "description", "target_audience", "difficulty_level", 
-                "learning_objectives", "language", "content", "quiz", "metadata"
+            # Validate that flexibleItems is present and enhanced
+            if "flexibleItems" not in validated_structure:
+                logger.warning("Missing flexibleItems, creating empty array")
+                validated_structure["flexibleItems"] = []
+            
+            # Validate that required original fields are preserved
+            required_original_fields = [
+                "title", "dimension", "archetype", "relatedToType", 
+                "relatedToId", "estimatedDuration", "coinsReward"
             ]
             
-            for field in required_fields:
+            for field in required_original_fields:
                 if field not in validated_structure:
-                    logger.warning(f"Missing required field: {field}")
-                    validated_structure[field] = self._generate_default_value(field, analysis_result)
-            
-            # Validate content length
-            if len(validated_structure.get("content", [])) == 0:
-                logger.warning("No content items found, generating default")
-                validated_structure["content"] = self._generate_default_content(analysis_result)
-            
-            # Validate quiz items
-            if len(validated_structure.get("quiz", [])) == 0:
-                logger.warning("No quiz items found, generating default")
-                validated_structure["quiz"] = self._generate_default_quiz(analysis_result)
-            
-            # Validate learning objectives
-            if len(validated_structure.get("learning_objectives", [])) == 0:
-                logger.warning("No learning objectives found, generating default")
-                validated_structure["learning_objectives"] = self._generate_default_objectives(analysis_result)
-            
-            # Enhance with additional fields
-            validated_structure["validation_status"] = "validated"
-            validated_structure["enhancement_level"] = "comprehensive"
+                    logger.warning(f"Missing required original field: {field}")
+                    # Try to get from original structure
+                    original_structure = analysis_result.get("processed_data", {}).get("original_structure", {})
+                    if field in original_structure:
+                        validated_structure[field] = original_structure[field]
+                    else:
+                        # Use default values that match original format
+                        defaults = {
+                            "title": "Knowledge Task",
+                            "dimension": "physicalHealth",
+                            "archetype": "warrior",
+                            "relatedToType": "HABITBP",
+                            "relatedToId": "generic",
+                            "estimatedDuration": 300,
+                            "coinsReward": 15
+                        }
+                        validated_structure[field] = defaults.get(field, "")
             
             return validated_structure
             
@@ -710,7 +942,10 @@ class JSONNormalizer:
         analysis_result: Dict[str, Any]
     ) -> Dict[str, Any]:
         """
-        Add normalization metadata to the final structure.
+        Add minimal normalization metadata to the final structure.
+        
+        CRITICAL: This method now only adds metadata that doesn't break
+        format compliance. All metadata is stored in existing fields.
         
         Args:
             structure: Validated structure.
@@ -718,24 +953,28 @@ class JSONNormalizer:
             analysis_result: Complete analysis result.
             
         Returns:
-            Final structure with normalization metadata.
+            Final structure with minimal metadata additions.
         """
         try:
             final_structure = structure.copy()
             
-            # Add normalization metadata
-            final_structure["normalization_metadata"] = {
+            # Only add metadata to existing metadata field to preserve format
+            if "metadata" not in final_structure:
+                final_structure["metadata"] = {}
+            
+            # Add processing metadata to existing metadata field
+            final_structure["metadata"]["_processing_info"] = {
                 "source_file": file_path,
                 "normalization_timestamp": datetime.now().isoformat(),
                 "normalizer_version": "1.0.0",
                 "analysis_version": analysis_result.get("analyzer_version", "1.0.0"),
                 "processing_pipeline": [
                     "stage1_processing",
-                    "content_analysis",
+                    "content_analysis", 
                     "ari_persona_analysis",
                     "json_normalization"
                 ],
-                "template_compliance": "full",
+                "format_compliance": "preserved",
                 "enhancement_applied": True
             }
             

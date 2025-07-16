@@ -1,0 +1,398 @@
+# Preprocessing Prompts Configuration
+# Stage 1: Raw Content → Filled Template
+# Integrates Ari persona, 9 expert frameworks, and Oracle data context
+
+preprocessing_prompts:
+  
+  # Main preprocessing prompt template
+  main_prompt:
+    system_message: |
+      Você é Ari, o assistente de desenvolvimento pessoal da Lyfe. Sua personalidade combina a praticidade objetiva do TARS (de Interestelar) com profundo conhecimento em ciência comportamental e coaching.
+
+      ## Sua Identidade
+      - **Nome**: Ari (assistente masculino brasileiro)
+      - **Tom**: Direto, inteligente, encorajador mas realista  
+      - **Especialidade**: Ciência comportamental aplicada a hábitos e bem-estar
+      - **Estilo**: Brevidade inteligente (6→15→60 palavras), sempre em português masculino
+
+      ## Frameworks Especializados que você domina:
+      1. **Tiny Habits (BJ Fogg)**: Micro-hábitos e comportamento automático
+      2. **Behavioral Design (Jason Hreha)**: Design de produtos para mudança comportamental
+      3. **Dopamine Nation (Anna Lembke)**: Equilíbrio dopaminérgico e prazer adaptativo
+      4. **Molecule of More (Lieberman)**: Neurociência da motivação e antecipação
+      5. **Flourish (Seligman)**: Psicologia positiva e bem-estar (PERMA)
+      6. **Hierarquia de Maslow**: Necessidades humanas e motivação
+      7. **Protocolos Huberman**: Neurocientífico aplicado (sono, exercício, foco)
+      8. **Scarcity Brain (Michael Easter)**: Psicologia da abundância vs. escassez
+      9. **Compassionate Communication (Newberg)**: Neurociência da comunicação
+
+      ## Sua Missão
+      Transformar o conteúdo fornecido em um supertask educativo seguindo o template específico. Você deve:
+      - Aplicar seus frameworks de forma natural (não forçada)
+      - Manter sua voz característica: concisa, inteligente, motivadora
+      - Integrar contexto dos dados Oracle quando relevante
+      - Gerar versões beginner E advanced quando apropriado
+      - Focar em mudança comportamental prática e sustentável
+
+    user_prompt_template: |
+      ## Tarefa: Criar Supertask Educativo
+
+      ### Conteúdo de Entrada:
+      ```
+      {raw_content}
+      ```
+
+      ### Metadados do Contexto:
+      - **Tipo de arquivo**: {file_type}
+      - **Dimensão sugerida**: {suggested_dimension}
+      - **Nível de dificuldade**: {target_difficulty}
+      - **Público-alvo**: {target_audience}
+
+      ### Contexto Oracle Disponível:
+      {oracle_context}
+
+      ### Instruções Específicas:
+      1. **Analise o conteúdo** e identifique o conceito central e objetivos de aprendizagem
+      2. **Escolha 1-2 frameworks** mais relevantes dos seus 9 especializados
+      3. **Determine a dimensão** (physicalHealth/mentalHealth/relationships/work/spirituality)
+      4. **Crie título único** incluindo nível de dificuldade (ex: "Levantar da Cama - Beginner")
+      5. **Preencha completamente** o template fornecido
+      6. **Integre Oracle data** quando relevante (hábitos, trilhas, objetivos)
+      7. **Mantenha sua voz**: conciso, inteligente, motivador
+
+      ### Template a ser preenchido:
+      ```markdown
+      {template_content}
+      ```
+
+      ### Regras de Qualidade:
+      - **Brevidade inteligente**: Preferir 6-15 palavras quando possível, máximo 60
+      - **Marcos masculinos**: Use formas masculinas do português brasileiro
+      - **Aplicação natural**: Integre frameworks sem mencionar explicitamente
+      - **Foco comportamental**: Priorize insights práticos e aplicáveis
+      - **Progressão lógica**: Construa conhecimento de forma incremental
+
+      **Gere o template completamente preenchido mantendo sua personalidade e expertise.**
+
+  # Content analysis prompts for different file types
+  content_analysis:
+    
+    markdown_analysis:
+      prompt: |
+        Analise este conteúdo markdown e extraia:
+        1. **Conceito principal**: Qual é o tema central?
+        2. **Objetivos de aprendizagem**: O que o usuário deve aprender?
+        3. **Dimensão sugerida**: Qual das 5 dimensões se aplica melhor?
+        4. **Complexidade**: Nível beginner ou advanced?
+        5. **Frameworks relevantes**: Quais dos 9 frameworks se aplicam?
+        6. **Contexto Oracle**: Há conexão com hábitos/trilhas específicos?
+
+    json_analysis:
+      prompt: |
+        Analise este JSON e extraia:
+        1. **Estrutura de dados**: Que informações estão disponíveis?
+        2. **Conteúdo educativo**: Há material para criar supertask?
+        3. **Metadados**: Dimensão, dificuldade, público-alvo explícitos?
+        4. **Relacionamentos**: Conexões com hábitos ou trilhas?
+        5. **Qualidade**: O conteúdo é suficiente para aprendizagem?
+
+    pdf_analysis:
+      prompt: |
+        Analise este conteúdo de PDF e extraia:
+        1. **Resumo executivo**: Principais pontos em 3-5 frases
+        2. **Insights chave**: Conceitos mais importantes para hábitos
+        3. **Aplicação prática**: Como transformar em ação comportamental?
+        4. **Nível técnico**: Adequado para iniciantes ou avançados?
+        5. **Frameworks aplicáveis**: Quais especializações se conectam?
+
+    text_analysis:
+      prompt: |
+        Analise este texto e extraia:
+        1. **Essência do conteúdo**: Core message em 1-2 frases
+        2. **Valor educativo**: O que o usuário ganhará?
+        3. **Dimensão de bem-estar**: Física, mental, relacionamentos, trabalho, espiritualidade?
+        4. **Aplicabilidade**: Como transformar em hábito/comportamento?
+        5. **Público adequado**: Iniciante, intermediário ou avançado?
+
+  # Framework integration guidelines
+  framework_integration:
+    
+    tiny_habits:
+      triggers:
+        - "hábito"
+        - "rotina"
+        - "comportamento automático"
+        - "mudança gradual"
+      application: |
+        Aplique princípios de micro-hábitos:
+        - Comece extremamente pequeno
+        - Conecte a gatilhos existentes
+        - Celebre imediatamente
+        - Foque na facilidade, não motivação
+    
+    behavioral_design:
+      triggers:
+        - "design"
+        - "interface"
+        - "experiência"
+        - "nudge"
+      application: |
+        Integre design comportamental:
+        - Reduza fricção para bons comportamentos
+        - Aumente fricção para maus comportamentos
+        - Use defaults inteligentes
+        - Aproveite vieses cognitivos positivamente
+
+    dopamine_nation:
+      triggers:
+        - "prazer"
+        - "recompensa"
+        - "vício"
+        - "equilíbrio"
+      application: |
+        Aplique equilíbrio dopaminérgico:
+        - Alterne prazer com desconforto pequeno
+        - Evite picos dopaminérgicos constantes
+        - Valorize recompensas atrasadas
+        - Pratique dopamine fasting moderado
+
+    molecule_of_more:
+      triggers:
+        - "motivação"
+        - "antecipação"
+        - "desejo"
+        - "objetivos"
+      application: |
+        Use neurociência da motivação:
+        - Cultive antecipação saudável
+        - Balance 'aqui e agora' vs 'futuro'
+        - Channel dopamine para crescimento
+        - Evite armadilhas do "mais"
+
+    flourish:
+      triggers:
+        - "bem-estar"
+        - "felicidade"
+        - "propósito"
+        - "relacionamentos"
+      application: |
+        Integre PERMA model:
+        - Positive emotions (emoções positivas)
+        - Engagement (engajamento/flow)
+        - Relationships (relacionamentos)
+        - Meaning (propósito/significado)
+        - Achievement (conquistas)
+
+    maslow_hierarchy:
+      triggers:
+        - "necessidades"
+        - "segurança"
+        - "pertencimento"
+        - "realização"
+      application: |
+        Considere hierarquia de necessidades:
+        - Atenda necessidades básicas primeiro
+        - Construa segurança emocional
+        - Cultive conexões sociais
+        - Busque realização pessoal
+
+    huberman_protocols:
+      triggers:
+        - "sono"
+        - "exercício"
+        - "foco"
+        - "neuroplasticidade"
+      application: |
+        Aplique protocolos neurocientíficos:
+        - Otimize ritmos circadianos
+        - Use exercício para neuroplasticidade
+        - Pratique foco sustentado
+        - Integre recovery ativo
+
+    scarcity_brain:
+      triggers:
+        - "abundância"
+        - "escassez"
+        - "consumo"
+        - "gratidão"
+      application: |
+        Combata mentalidade de escassez:
+        - Pratique gratidão ativa
+        - Questione impulsos de "mais"
+        - Valorize experiências vs. coisas
+        - Cultive contentamento
+
+    compassionate_communication:
+      triggers:
+        - "comunicação"
+        - "conflito"
+        - "empatia"
+        - "relacionamentos"
+      application: |
+        Use comunicação neuroinformada:
+        - Pratique escuta ativa
+        - Reduza defensividade
+        - Expresse necessidades claramente
+        - Cultive compreensão mútua
+
+  # Oracle data integration patterns
+  oracle_integration:
+    
+    habits_context:
+      when_to_use: "Quando o conteúdo se relaciona com hábitos específicos"
+      integration_pattern: |
+        Integre dados de hábitos Oracle:
+        - Mencione hábitos relacionados naturalmente
+        - Use score de dimensão para relevância
+        - Conecte com trilhas de desenvolvimento
+        - Sugira progressão lógica
+
+    trails_context:
+      when_to_use: "Quando o conteúdo se encaixa em uma trilha de desenvolvimento"
+      integration_pattern: |
+        Conecte com trilhas Oracle:
+        - Posicione dentro da jornada da trilha
+        - Referencie objetivos relacionados
+        - Mantenha consistência com progressão
+        - Sugira próximos passos
+
+    objectives_context:
+      when_to_use: "Quando o conteúdo atende a objetivos específicos"
+      integration_pattern: |
+        Alinhe com objetivos Oracle:
+        - Conecte aprendizagem com meta específica
+        - Mensure progresso tangível
+        - Integre com sistema de conquistas
+        - Mantenha foco no resultado
+
+  # Quality guidelines
+  quality_standards:
+    
+    content_quality:
+      minimum_length: 200  # words
+      maximum_length: 1500  # words
+      learning_objectives: 
+        min: 2
+        max: 5
+      quiz_questions:
+        min: 2
+        max: 4
+      
+    ari_voice_compliance:
+      brevity_check: true
+      masculine_forms: true
+      framework_integration: true
+      encouraging_tone: true
+      practical_focus: true
+      
+    educational_effectiveness:
+      clear_structure: true
+      progressive_complexity: true
+      actionable_insights: true
+      behavioral_focus: true
+      measurement_possible: true
+
+  # Output formatting
+  output_format:
+    
+    template_structure: |
+      O output deve seguir exatamente a estrutura do template fornecido:
+      1. **Frontmatter completo** com todos os metadados
+      2. **Overview** contextual e motivador
+      3. **Main Content** com 3-4 items progressivos
+      4. **Key Concepts** claros e aplicáveis
+      5. **Examples** práticos e realistas
+      6. **Summary** reforçando mudança comportamental
+      7. **Quiz Questions** testando compreensão
+
+    metadata_requirements:
+      title: "Deve incluir nível de dificuldade"
+      description: "Concisa e orientada a resultado"
+      target_audience: "beginner ou advanced"
+      difficulty_level: "Consistente com target_audience"
+      estimated_time: "Realista (5-15 minutos)"
+      dimension: "Uma das 5 dimensões core"
+      archetype: "warrior/explorer/sage/ruler"
+      related_to_type: "HABITBP ou GENERIC"
+      related_to_id: "ID específico ou categoria"
+      estimated_duration: "Em segundos (300-900)"
+      coins_reward: "10-25 baseado em complexidade"
+      language: "portuguese"
+      region: "Brazil"
+
+# Difficulty-specific configurations
+difficulty_configurations:
+  
+  beginner:
+    characteristics:
+      - "Conceitos fundamentais"
+      - "Linguagem simples e acessível"
+      - "Passos pequenos e graduais"
+      - "Exemplos básicos e universais"
+      - "Foco em hábitos simples"
+      
+    content_guidelines:
+      complexity: "Baixa - introduz conceitos básicos"
+      vocabulary: "Simples e cotidiano"
+      examples: "Situações comuns e relacionáveis"
+      frameworks: "1-2 frameworks principais"
+      duration: "5-8 minutos"
+      coins: "10-15"
+      
+  advanced:
+    characteristics:
+      - "Conceitos sofisticados"
+      - "Nuances e complexidades"
+      - "Integração de múltiplos conceitos"
+      - "Exemplos desafiadores"
+      - "Estratégias avançadas"
+      
+    content_guidelines:
+      complexity: "Alta - integra múltiplos conceitos"
+      vocabulary: "Técnico quando apropriado"
+      examples: "Cenários complexos e específicos"
+      frameworks: "2-3 frameworks integrados"
+      duration: "10-15 minutos"
+      coins: "15-25"
+
+# Error handling and validation
+validation_rules:
+  
+  required_fields:
+    - title
+    - description
+    - target_audience
+    - difficulty_level
+    - estimated_time
+    - dimension
+    - archetype
+    - related_to_type
+    - related_to_id
+    - estimated_duration
+    - coins_reward
+    - language
+    - region
+    - learning_objectives
+    - prerequisites
+    
+  content_validation:
+    min_content_items: 3
+    min_key_concepts: 3
+    min_examples: 2
+    min_quiz_questions: 2
+    max_quiz_questions: 4
+    
+  quality_checks:
+    ari_voice_indicators:
+      - "Tom encorajador mas realista"
+      - "Brevidade inteligente"
+      - "Foco comportamental"
+      - "Aplicação prática"
+      - "Português masculino brasileiro"
+    
+    framework_integration_markers:
+      - "Micro-hábitos mencionados"
+      - "Ciência comportamental aplicada"
+      - "Neuroplasticidade considerada"
+      - "Bem-estar holístico"
+      - "Comunicação efetiva" 
