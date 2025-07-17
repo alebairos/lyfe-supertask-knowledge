@@ -1,0 +1,235 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://lyfe.app/schemas/supertask/v1.0",
+  "title": "Lyfe Supertask Format v1.0",
+  "description": "JSON Schema for Lyfe supertask knowledge tasks format version 1.0",
+  "type": "object",
+  "required": [
+    "title",
+    "dimension", 
+    "archetype",
+    "relatedToType",
+    "relatedToId",
+    "estimatedDuration",
+    "coinsReward",
+    "flexibleItems",
+    "metadata"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "The title of the supertask"
+    },
+    "dimension": {
+      "type": "string",
+      "enum": [
+        "physicalHealth",
+        "mentalHealth", 
+        "relationships",
+        "work",
+        "spirituality"
+      ],
+      "description": "The life dimension this task addresses"
+    },
+    "archetype": {
+      "type": "string",
+      "enum": [
+        "warrior",
+        "explorer", 
+        "sage",
+        "ruler"
+      ],
+      "description": "The user archetype this task is designed for"
+    },
+    "relatedToType": {
+      "type": "string",
+      "enum": [
+        "HABITBP",
+        "GENERIC"
+      ],
+      "description": "The type of content this task relates to"
+    },
+    "relatedToId": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The ID of the related content"
+    },
+    "estimatedDuration": {
+      "type": "integer",
+      "minimum": 60,
+      "maximum": 7200,
+      "description": "Estimated duration in seconds"
+    },
+    "coinsReward": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000,
+      "description": "Coins reward for completing the task"
+    },
+    "flexibleItems": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "description": "Array of content items with different types",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["type", "content"],
+            "properties": {
+              "type": {
+                "const": "content"
+              },
+              "content": {
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 5000,
+                "description": "The main content text"
+              },
+              "author": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100,
+                "description": "Optional author of the content"
+              },
+              "tips": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 500
+                },
+                "maxItems": 10,
+                "description": "Optional array of tips"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object", 
+            "required": ["type", "content", "author"],
+            "properties": {
+              "type": {
+                "const": "quote"
+              },
+              "content": {
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 1000,
+                "description": "The quote text"
+              },
+              "author": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100,
+                "description": "Author of the quote"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "required": ["type", "question", "options", "correctAnswer", "explanation"],
+            "properties": {
+              "type": {
+                "const": "quiz"
+              },
+              "question": {
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 500,
+                "description": "The quiz question"
+              },
+              "options": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 5,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "description": "Array of answer options"
+              },
+              "correctAnswer": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Index of the correct answer (0-based)"
+              },
+              "explanation": {
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 1000,
+                "description": "Explanation of the correct answer"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "language",
+        "region",
+        "created_at",
+        "updated_at", 
+        "version"
+      ],
+      "properties": {
+        "language": {
+          "type": "string",
+          "enum": ["portuguese", "english", "spanish"],
+          "description": "Content language"
+        },
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Target region"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation timestamp in ISO 8601 format"
+        },
+        "updated_at": {
+          "type": "string", 
+          "format": "date-time",
+          "description": "Last update timestamp in ISO 8601 format"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+(\\.\\d+)?$",
+          "description": "Version number in semantic versioning format"
+        },
+        "generated_by": {
+          "type": "string",
+          "description": "Tool that generated this content"
+        },
+        "generation_timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Generation timestamp"
+        },
+        "ari_persona_applied": {
+          "type": "boolean",
+          "description": "Whether Ari persona was applied"
+        },
+        "difficulty_level": {
+          "type": "string",
+          "enum": ["beginner", "intermediate", "advanced"],
+          "description": "Difficulty level of the content"
+        },
+        "source_template": {
+          "type": "string",
+          "description": "Source template filename"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+} 

@@ -1593,3 +1593,186 @@
 2025-07-16 16:58:48 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-07-16 16:58:48 - lyfe_kt.stage3_generation - ERROR - JSON structure validation failed: ['flexibleItems[4] missing required field: content', 'flexibleItems[5] missing required field: content']
 2025-07-16 16:58:48 - lyfe-kt - ERROR - Template generation failed: Generated JSON does not match required structure
+2025-07-16 23:38:38 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 23:38:38 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 23:38:38 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 23:39:06 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 23:39:06 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-07-16 23:39:06 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-07-16 23:39:06 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:46:47 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 23:46:47 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 23:46:48 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 23:46:48 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 23:46:48 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 23:46:48 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:46:48 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-16 23:46:48 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 23:46:48 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:46:48 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 23:46:48 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 23:46:48 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 23:46:48 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 23:47:18 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 23:47:18 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-07-16 23:47:18 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-07-16 23:47:18 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:47:27 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 23:47:27 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - JSON generator initialized successfully
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks (beginner and advanced)
+2025-07-16 23:47:27 - lyfe_kt.stage3_generation - INFO - Generating supertask with difficulty: beginner
+2025-07-16 23:48:12 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 23:48:12 - lyfe_kt.stage3_generation - ERROR - JSON structure validation failed: ['flexibleItems[0] missing required field: content', 'flexibleItems[1] missing required field: content', 'flexibleItems[2] missing required field: content', 'flexibleItems[2] missing required field: author', 'flexibleItems[3] missing required field: content', 'flexibleItems[3] missing required field: author', 'flexibleItems[4] missing required field: content', 'flexibleItems[5] missing required field: question', 'flexibleItems[5] missing required field: options', 'flexibleItems[5] missing required field: correctAnswer', 'flexibleItems[5] missing required field: explanation', 'flexibleItems[6] missing required field: question', 'flexibleItems[6] missing required field: options', 'flexibleItems[6] missing required field: correctAnswer', 'flexibleItems[6] missing required field: explanation', 'flexibleItems[7] missing required field: question', 'flexibleItems[7] missing required field: options', 'flexibleItems[7] missing required field: correctAnswer', 'flexibleItems[7] missing required field: explanation']
+2025-07-16 23:48:12 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Generated JSON does not match required structure
+2025-07-16 23:52:36 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 23:52:36 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 23:52:36 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 23:52:36 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.0
+2025-07-16 23:52:36 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 23:52:36 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:52:36 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-16 23:52:36 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 23:52:36 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:52:36 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 23:52:36 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 23:52:36 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 23:52:36 - lyfe-kt - ERROR - Template generation failed: Failed to process template work/02_preprocessed/levantar_da_cama_template.md: 'StructuralJSONGenerator' object has no attribute 'generate_multiple_supertasks'
+2025-07-16 23:53:15 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 23:53:15 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.0
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-07-16 23:53:15 - lyfe_kt.stage3_generation - ERROR - Failed to generate flexible items: 'list' object has no attribute 'strip'
+2025-07-16 23:53:15 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Failed to generate flexible items: 'list' object has no attribute 'strip'
+2025-07-16 23:54:03 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 23:54:03 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.0
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-07-16 23:54:03 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-07-16 23:54:03 - lyfe-kt - ERROR - Template generation failed: Failed to process template work/02_preprocessed/levantar_da_cama_template.md: 'difficulty_level'
+2025-07-16 23:55:14 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 23:55:14 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.0
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-07-16 23:55:14 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:59:58 - lyfe-kt - INFO - Generation command group accessed
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-16 23:59:58 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.0
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.0
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-07-16 23:59:58 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-17 00:02:37 - lyfe-kt - INFO - Generation command group accessed
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-07-17 00:02:37 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.0
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of levantar_da_cama_template.md
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.0
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.0
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-07-17 00:02:37 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/levantar_da_cama_template.md
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpivo41y5x/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpivo41y5x/output.json
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpuuwm_zq7/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpuuwm_zq7/output.json
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpn7r4de50/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpn7r4de50/output
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpu_ojzqfm/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpu_ojzqfm/output
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkxjsfgkz/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkxjsfgkz/output
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpwcjokgws/results.json
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp4rj5e19b/results.json
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-07-17 08:22:50 - lyfe-kt - INFO - Status command called
