@@ -30,22 +30,21 @@ class FormatVersionManager:
         "v1.0": {
             "schema_file": "supertask_schema_v1.0.json",
             "generator_class": "StructuralJSONGenerator",
-            "deprecated": False,
+            "deprecated": True,
             "description": "Initial structural format with guaranteed compliance",
             "introduced": "2025-07-16"
         },
-        # Future versions will be added here
-        # "v1.1": {
-        #     "schema_file": "supertask_schema_v1.1.json", 
-        #     "generator_class": "StructuralJSONGenerator_v1_1",
-        #     "deprecated": False,
-        #     "migration_from": ["v1.0"],
-        #     "description": "Enhanced format with additional fields",
-        #     "introduced": "2025-XX-XX"
-        # }
+        "v1.1": {
+            "schema_file": "supertask_schema_v1.1.json", 
+            "generator_class": "StructuralJSONGenerator",
+            "deprecated": False,
+            "migration_from": ["v1.0"],
+            "description": "Mobile-optimized format with character limits",
+            "introduced": "2025-01-14"
+        }
     }
     
-    DEFAULT_VERSION = "v1.0"
+    DEFAULT_VERSION = "v1.1"
     SCHEMA_DIR = "src/config"
     
     def __init__(self, config_dir: Optional[str] = None):

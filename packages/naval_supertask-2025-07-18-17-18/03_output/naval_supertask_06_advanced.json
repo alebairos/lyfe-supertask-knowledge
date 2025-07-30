@@ -1,0 +1,41 @@
+{
+  "title": "Quatro Tipos de Sorte - Advanced",
+  "dimension": "work",
+  "archetype": "warrior",
+  "relatedToType": "GENERIC",
+  "relatedToId": "naval-wealth",
+  "estimatedDuration": 450,
+  "coinsReward": 25,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Sorte cega (aleatória), por ação (movimento), por preparo (reconhecer) e por caráter (atrai)."
+    },
+    {
+      "type": "quiz",
+      "question": "Qual sorte você pode mais controlar?",
+      "options": [
+        "Sorte por caráter",
+        "Sorte cega",
+        "Todas iguais"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Caráter atrai oportunidades consistentemente."
+    },
+    {
+      "type": "content",
+      "content": "Construa reputação sólida para que sorte encontre você através do seu caráter."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "BR",
+    "created_at": "2025-07-18T16:58:02.143073",
+    "updated_at": "2025-07-18T16:58:02.143075",
+    "version": "1.1.0",
+    "generated_by": "demo-mobile-v1.1",
+    "ari_persona_applied": true,
+    "difficulty_level": "advanced",
+    "mobile_optimization_score": 0.95
+  }
+}

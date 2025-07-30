@@ -1,0 +1,41 @@
+{
+  "title": "Alavancagem Básica - Beginner",
+  "dimension": "work",
+  "archetype": "warrior",
+  "relatedToType": "GENERIC",
+  "relatedToId": "naval-wealth",
+  "estimatedDuration": 300,
+  "coinsReward": 15,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Alavancagem amplifica decisões. Código e mídia são mais acessíveis que capital e trabalho."
+    },
+    {
+      "type": "quiz",
+      "question": "Qual alavancagem é mais democrática?",
+      "options": [
+        "Código e mídia",
+        "Capital",
+        "Trabalho"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Código e mídia não precisam de permissão inicial."
+    },
+    {
+      "type": "content",
+      "content": "Comece criando conteúdo ou produtos digitais para construir sua primeira alavancagem."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "BR",
+    "created_at": "2025-07-18T16:58:02.138291",
+    "updated_at": "2025-07-18T16:58:02.138296",
+    "version": "1.1.0",
+    "generated_by": "demo-mobile-v1.1",
+    "ari_persona_applied": true,
+    "difficulty_level": "beginner",
+    "mobile_optimization_score": 0.95
+  }
+}

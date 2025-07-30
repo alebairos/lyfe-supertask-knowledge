@@ -1,0 +1,41 @@
+{
+  "title": "Accountability e Equity - Advanced",
+  "dimension": "work",
+  "archetype": "warrior",
+  "relatedToType": "GENERIC",
+  "relatedToId": "naval-wealth",
+  "estimatedDuration": 450,
+  "coinsReward": 25,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Assuma responsabilidade pública para ganhar alavancagem e participação nos resultados."
+    },
+    {
+      "type": "content",
+      "content": "Accountability com downside pessoal gera confiança e oportunidades de equity."
+    },
+    {
+      "type": "quiz",
+      "question": "Por que assumir accountability?",
+      "options": [
+        "Ganha equity",
+        "Evita problemas",
+        "É obrigatório"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Responsabilidade gera participação nos lucros."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "BR",
+    "created_at": "2025-07-18T16:58:02.147886",
+    "updated_at": "2025-07-18T16:58:02.147890",
+    "version": "1.1.0",
+    "generated_by": "demo-mobile-v1.1",
+    "ari_persona_applied": true,
+    "difficulty_level": "advanced",
+    "mobile_optimization_score": 0.95
+  }
+}

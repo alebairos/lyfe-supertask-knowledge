@@ -1,0 +1,75 @@
+{
+  "title": "Teste Simples de Geração de CLI - Avançado - Advanced",
+  "dimension": "work",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "generic1",
+  "estimatedDuration": 300,
+  "coinsReward": 15,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "This is a simple test task to debug the CLI generation.",
+      "title": "Introdução"
+    },
+    {
+      "type": "content",
+      "content": "This is the first key point about the topic.",
+      "title": "Ponto Chave 1"
+    },
+    {
+      "type": "content",
+      "content": "This is the second key point about the topic.",
+      "title": "Ponto Chave 2"
+    },
+    {
+      "type": "content",
+      "content": "After completing this task, you will be able to:\n1. Understand the basic concept\n2. Apply the knowledge",
+      "title": "Objetivos de Aprendizado"
+    },
+    {
+      "type": "quiz",
+      "question": "What is the main purpose of this task?",
+      "options": [
+        "To learn something complex",
+        "To test the CLI generation",
+        "To practice skills",
+        "To have fun"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This task is designed to test the CLI generation system."
+    }
+  ],
+  "metadata": {
+    "difficultyLevel": "advanced",
+    "targetAudience": "advanced",
+    "generated_by": "lyfe-kt-stage3",
+    "generation_timestamp": "2025-07-16T16:48:24.101308",
+    "ari_persona_applied": true,
+    "difficulty_level": "advanced",
+    "source_template": "simple_test_template.md",
+    "template_metadata": {
+      "source_file": "simple_test_template.md",
+      "source_path": "work/02_preprocessed/simple_test_template.md",
+      "file_size": 849,
+      "modification_time": "2025-07-16T16:43:35.366968",
+      "frontmatter_keys": [
+        "title",
+        "description",
+        "difficulty",
+        "dimension",
+        "archetype",
+        "estimated_duration",
+        "coins_reward",
+        "language",
+        "region"
+      ],
+      "processing_timestamp": "2025-07-16T16:47:49.037010"
+    },
+    "language": "english",
+    "region": "US",
+    "created_at": "2025-07-16T16:48:24.101386",
+    "updated_at": "2025-07-16T16:48:24.101389",
+    "version": "1.0.0"
+  }
+}

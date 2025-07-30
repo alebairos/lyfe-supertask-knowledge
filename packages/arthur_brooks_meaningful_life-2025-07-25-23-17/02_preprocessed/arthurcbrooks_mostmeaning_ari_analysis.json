@@ -1,0 +1,29 @@
+{
+  "ari_analysis": {
+    "applicable_frameworks": [],
+    "total_frameworks_identified": 0,
+    "content_analysis": {
+      "word_count": 849,
+      "primary_themes": [
+        "morning",
+        "health"
+      ],
+      "complexity_level": "advanced",
+      "language": "english"
+    }
+  },
+  "coaching_opportunities": [
+    {
+      "type": "behavioral_change",
+      "framework": "behavioral_design",
+      "suggestion": "Focar no design do ambiente para facilitar mudança",
+      "coaching_prompt": "O ambiente ajuda ou atrapalha?"
+    },
+    {
+      "type": "motivation_enhancement",
+      "framework": "molecule_of_more",
+      "suggestion": "Balancear expectativas futuras com apreciação presente",
+      "coaching_prompt": "Muito futuro, pouco presente?"
+    }
+  ]
+}

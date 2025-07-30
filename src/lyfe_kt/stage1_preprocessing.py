@@ -46,6 +46,7 @@ from .config_loader import (
     build_preprocessing_prompt
 )
 from .openai_client import get_openai_client
+from .session_logger import create_session, SessionLogger
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -525,11 +526,16 @@ class TemplateGenerator:
     filled markdown templates from extracted content.
     """
     
-    def __init__(self):
+    def __init__(self, session_logger: SessionLogger = None):
         """Initialize template generator."""
         try:
             self.openai_client = get_openai_client()
             self.preprocessing_prompts = load_preprocessing_prompts()
+            self.session_logger = session_logger
+            
+            # Set session ID in OpenAI client for audit correlation
+            if session_logger:
+                self.openai_client.set_session_id(session_logger.session_id)
             
             # Load template
             template_path = Path(__file__).parent.parent / 'templates' / 'knowledge_task_input_template.md'
@@ -582,15 +588,13 @@ class TemplateGenerator:
                 target_audience=target_difficulty
             )
             
-            # Combine system and user messages
-            full_prompt = f"{prompt_dict['system_message']}\n\n{prompt_dict['user_message']}"
+            # Prepare user prompt with template
+            user_prompt = f"{prompt_dict['user_message']}\n\n### Template to be filled:\n```markdown\n{self.template_content}\n```"
             
-            # Add template content to the prompt
-            full_prompt += f"\n\n### Template to be filled:\n```markdown\n{self.template_content}\n```"
-            
-            # Generate filled template using OpenAI
+            # Generate filled template using OpenAI with proper system/user separation
             filled_template = self.openai_client.generate_completion(
-                prompt=full_prompt,
+                prompt=user_prompt,
+                system_message=prompt_dict['system_message'],
                 max_tokens=2000,
                 temperature=0.7
             )
@@ -713,12 +717,13 @@ class PreprocessingPipeline:
     raw content into filled templates with comprehensive reporting.
     """
     
-    def __init__(self, config: Optional[Dict[str, Any]] = None):
+    def __init__(self, config: Optional[Dict[str, Any]] = None, session_logger: SessionLogger = None):
         """
         Initialize preprocessing pipeline.
         
         Args:
             config: Optional configuration dictionary.
+            session_logger: Optional session logger for execution tracking.
         """
         try:
             # Load configuration if not provided
@@ -730,11 +735,12 @@ class PreprocessingPipeline:
                     config = get_config()
             
             self.config = config
+            self.session_logger = session_logger or create_session()
             
-            # Initialize components
+            # Initialize components with session context
             self.content_extractor = ContentExtractor()
             self.ari_integrator = AriIntegrator()
-            self.template_generator = TemplateGenerator()
+            self.template_generator = TemplateGenerator(self.session_logger)
             
             # Load Oracle data from Ari persona config
             self.oracle_data = self.ari_integrator.oracle_data
@@ -743,6 +749,9 @@ class PreprocessingPipeline:
             self.progress_callback = None
             self.current_progress = 0
             self.total_files = 0
+            
+            # Log pipeline initialization
+            self.session_logger.log_with_session("INFO", "Preprocessing pipeline initialized")
             
             logger.info("Preprocessing pipeline initialized successfully")
             
@@ -776,6 +785,10 @@ class PreprocessingPipeline:
         """
         try:
             start_time = datetime.now()
+            
+            # Log input file
+            self.session_logger.log_input_file(input_path)
+            self.session_logger.log_stage_start("preprocessing")
             
             logger.info(f"Processing file: {input_path}")
             self._report_progress(0, 6, f"Starting processing of {Path(input_path).name}")
@@ -815,8 +828,14 @@ class PreprocessingPipeline:
             input_name = Path(input_path).stem
             template_file = output_path / f"{input_name}_filled_template.md"
             
+            # Clean up the filled template content (remove markdown code blocks if present)
+            clean_template = self._clean_template_content(filled_template)
+            
             with open(template_file, 'w', encoding='utf-8') as f:
-                f.write(filled_template)
+                f.write(clean_template)
+            
+            # Log output file
+            self.session_logger.log_output_file(str(template_file))
             
             # Save Ari analysis
             analysis_file = output_path / f"{input_name}_ari_analysis.json"
@@ -826,14 +845,23 @@ class PreprocessingPipeline:
                     'coaching_opportunities': coaching_opportunities
                 }, f, indent=2, ensure_ascii=False)
             
+            # Log output file
+            self.session_logger.log_output_file(str(analysis_file))
+            
             # Save Oracle context
             oracle_file = output_path / f"{input_name}_oracle_context.json"
             with open(oracle_file, 'w', encoding='utf-8') as f:
                 json.dump(self.oracle_data, f, indent=2, ensure_ascii=False)
             
+            # Log output file
+            self.session_logger.log_output_file(str(oracle_file))
+            
             # Compile results
             end_time = datetime.now()
             processing_time = (end_time - start_time).total_seconds()
+            
+            # Log stage completion
+            self.session_logger.log_stage_complete("preprocessing", processing_time)
             
             result = {
                 'status': 'success',
@@ -851,7 +879,8 @@ class PreprocessingPipeline:
                 'ari_analysis': ari_analysis,
                 'coaching_opportunities': coaching_opportunities,
                 'validation_results': validation_results,
-                'oracle_data_applied': True
+                'oracle_data_applied': True,
+                'session_id': self.session_logger.session_id
             }
             
             logger.info(f"Successfully processed {input_path} in {processing_time:.2f} seconds")
@@ -1157,6 +1186,40 @@ class PreprocessingPipeline:
 """
         
         return report
+    
+    def _clean_template_content(self, filled_template: str) -> str:
+        """
+        Clean the filled template content by removing AI-generated markdown formatting.
+        
+        Args:
+            filled_template: Raw filled template from AI generation.
+            
+        Returns:
+            Clean template content ready for frontmatter parsing.
+        """
+        try:
+            # Remove markdown code block wrappers if present
+            content = filled_template.strip()
+            
+            # Remove opening markdown block
+            if content.startswith('```markdown'):
+                content = content[11:].strip()
+            elif content.startswith('```'):
+                content = content[3:].strip()
+            
+            # Remove closing markdown block
+            if content.endswith('```'):
+                content = content[:-3].strip()
+            
+            # Ensure content starts with frontmatter
+            if not content.startswith('---'):
+                logger.warning("Template content doesn't start with frontmatter, may need manual review")
+            
+            return content
+            
+        except Exception as e:
+            logger.warning(f"Failed to clean template content: {e}")
+            return filled_template
 
 
 # Global convenience functions

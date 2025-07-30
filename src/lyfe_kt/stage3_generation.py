@@ -134,14 +134,20 @@ class StructuralJSONGenerator:
         """Create guaranteed compliant base structure."""
         frontmatter = template_data.get('frontmatter', {})
         
+        # Map template field names to expected JSON field names
+        related_to_type = frontmatter.get('related_to_type', frontmatter.get('relatedToType', 'HABITBP'))
+        related_to_id = frontmatter.get('related_to_id', frontmatter.get('relatedToId', 'generic'))
+        estimated_duration = frontmatter.get('estimated_duration', frontmatter.get('estimatedDuration', 300))
+        coins_reward = frontmatter.get('coins_reward', frontmatter.get('coinsReward', 15))
+        
         return {
             "title": f"{frontmatter.get('title', 'Knowledge Task')} - {difficulty.capitalize()}",
             "dimension": frontmatter.get('dimension', 'physicalHealth'),
-            "archetype": frontmatter.get('archetype', 'warrior'),
-            "relatedToType": frontmatter.get('relatedToType', 'HABITBP'),
-            "relatedToId": frontmatter.get('relatedToId', 'generic'),
-            "estimatedDuration": int(frontmatter.get('estimatedDuration', 300)),
-            "coinsReward": int(frontmatter.get('coinsReward', 15)),
+            "archetype": self._normalize_archetype(frontmatter.get('archetype', 'warrior')),
+            "relatedToType": related_to_type,
+            "relatedToId": related_to_id,
+            "estimatedDuration": int(str(estimated_duration).replace(' seconds', '').replace(' minutes', '')),
+            "coinsReward": int(str(coins_reward)),
             "flexibleItems": [],  # Will be filled by AI
             "metadata": {}        # Will be filled by metadata generator
         }
@@ -305,6 +311,28 @@ class StructuralJSONGenerator:
             logger.error(f"Structure validation error: {e}")
             return False
 
+    def _normalize_archetype(self, archetype: str) -> str:
+        """Normalize Portuguese archetypes to English."""
+        if not archetype:
+            return archetype
+            
+        # Mapping Portuguese → English
+        archetype_mapping = {
+            'guerreiro': 'warrior',
+            'explorador': 'explorer', 
+            'sábio': 'sage',
+            'sabio': 'sage',  # without accent
+            'governante': 'ruler',
+            'warrior': 'warrior',  # already English
+            'explorer': 'explorer',
+            'sage': 'sage',
+            'ruler': 'ruler'
+        }
+        
+        normalized = archetype_mapping.get(archetype.lower(), archetype)
+        logger.info(f"Normalized archetype '{archetype}' → '{normalized}'")
+        return normalized
+
 
 class TemplateProcessor:
     """
@@ -434,6 +462,28 @@ class TemplateProcessor:
             logger.warning(f"Failed to parse content sections: {e}")
             return {'main_content': [content], 'quiz_items': [], 'quotes': [], 'learning_objectives': [], 'key_takeaways': []}
     
+    def _normalize_archetype(self, archetype: str) -> str:
+        """Normalize Portuguese archetypes to English."""
+        if not archetype:
+            return archetype
+            
+        # Mapping Portuguese → English  
+        archetype_mapping = {
+            'guerreiro': 'warrior',
+            'explorador': 'explorer', 
+            'sábio': 'sage',
+            'sabio': 'sage',  # without accent
+            'governante': 'ruler',
+            'warrior': 'warrior',  # already English
+            'explorer': 'explorer',
+            'sage': 'sage', 
+            'ruler': 'ruler'
+        }
+        
+        normalized = archetype_mapping.get(archetype.lower(), archetype)
+        logger.info(f"Normalized archetype '{archetype}' → '{normalized}'")
+        return normalized
+
     def _extract_template_metadata(self, template_path: str, frontmatter: Dict[str, Any]) -> Dict[str, Any]:
         """Extract metadata for JSON generation."""
         try:
@@ -466,21 +516,36 @@ class TemplateProcessor:
             frontmatter = template_data.get('frontmatter', {})
             sections = template_data.get('sections', {})
             
-            # Required frontmatter fields
-            required_fields = ['title', 'dimension', 'archetype', 'difficulty', 'estimated_duration', 'coins_reward']
+            # Required frontmatter fields (checking for both template and JSON field names)
+            required_fields = ['title', 'dimension', 'archetype', 'difficulty_level']
+            optional_mapping_fields = [
+                ('estimated_duration', 'estimatedDuration'),
+                ('coins_reward', 'coinsReward'),
+                ('related_to_type', 'relatedToType'),
+                ('related_to_id', 'relatedToId')
+            ]
             
             for field in required_fields:
                 if field not in frontmatter:
                     logger.error(f"Missing required frontmatter field: {field}")
                     return False
             
-            # Validate field types
-            if not isinstance(frontmatter.get('estimated_duration'), (int, float)):
-                logger.error("estimated_duration must be a number")
+            # Check for optional mapping fields (at least one form must exist)
+            for template_field, json_field in optional_mapping_fields:
+                if template_field not in frontmatter and json_field not in frontmatter:
+                    logger.error(f"Missing required field: {template_field} or {json_field}")
+                    return False
+            
+            # Validate field types for duration and coins
+            duration_field = frontmatter.get('estimated_duration') or frontmatter.get('estimatedDuration')
+            coins_field = frontmatter.get('coins_reward') or frontmatter.get('coinsReward')
+            
+            if duration_field and not isinstance(duration_field, (int, float, str)):
+                logger.error("estimated_duration must be a number or string")
                 return False
             
-            if not isinstance(frontmatter.get('coins_reward'), (int, float)):
-                logger.error("coins_reward must be a number")
+            if coins_field and not isinstance(coins_field, (int, float, str)):
+                logger.error("coins_reward must be a number or string")
                 return False
             
             # Validate dimension values
@@ -491,7 +556,8 @@ class TemplateProcessor:
             
             # Validate archetype values
             valid_archetypes = ['warrior', 'explorer', 'sage', 'ruler']
-            if frontmatter.get('archetype') not in valid_archetypes:
+            archetype = self._normalize_archetype(frontmatter.get('archetype'))
+            if archetype not in valid_archetypes:
                 logger.error(f"Invalid archetype: {frontmatter.get('archetype')}")
                 return False
             
@@ -739,7 +805,7 @@ class GenerationPipeline:
             
             # Initialize components
             self.template_processor = TemplateProcessor()
-            self.json_generator = StructuralJSONGenerator()  # Use structural generator for guaranteed compliance
+            self.json_generator = StructuralJSONGenerator(format_version="v1.0")  # Temporarily use v1.0 schema for generation
             
             # Progress tracking
             self.progress_callback = None

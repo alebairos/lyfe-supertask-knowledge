@@ -1,0 +1,53 @@
+{
+  "title": "Encontrando Sentido em Cinco Passos - Iniciante - Advanced",
+  "dimension": "mentalHealth",
+  "archetype": "explorer",
+  "relatedToType": "GENERIC",
+  "relatedToId": "finding-meaning",
+  "estimatedDuration": 600,
+  "coinsReward": 20,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "# Content\n Descobrir o sentido da vida pode parecer uma tarefa intimidadora. Mas, quebrando esse conceito em cinco áreas essenciais, podemos criar pequenos hábitos que nos ajudam a cultivar um maior senso de propósito e significado.\n \n### Content Item 1\nAs cinco áreas essenciais para encontrar sentido na vida são: amor, transcendência, vocação, beleza e sofrimento. Cada uma dessas áreas pode ser abordada com pequenos hábitos diários.\n\n**Author**: Arthur C. Brooks\n\n**Dicas**:\n- Amor: Dedique tempo diário para expressar amor aos próximos.\n- Transcendência: Pratique a meditação ou outras formas de conexão espiritual.\n- Vocação: Faça algo que você ama todos os dias, mesmo que por pouco tempo.\n- Beleza: Aprecie a beleza ao seu redor, seja na natureza ou na arte.\n- Sofrimento: Aprenda a aceitar e lidar com o sofrimento de maneira saudável.\n\n### Content Item 2  \nÉ importante entender que o sentido da vida não vem apenas de prazeres momentâneos, mas de um equilíbrio entre prazer e propósito. Isso é chamado de equilíbrio dopaminérgico, onde a dopamina desempenha um papel crucial na motivação e antecipação de recompensas.\n\n### Content Item 3\nPara manter esse equilíbrio, é importante reconhecer quando estamos buscando apenas gratificação instantânea em detrimento de atividades que proporcionam um sentido mais profundo. Pequenas mudanças de comportamento podem nos ajudar a equilibrar melhor essa escala.\n\n**Author**: Ari\n \n### Key Concept 1\nExistem cinco áreas essenciais para encontrar sentido na vida: amor, transcendência, vocação, beleza e sofrimento.\n\n### Key Concept 2\nO equilíbrio entre prazer e propósito é essencial para encontrar um sentido duradouro na vida.\n\n### Key Concept 3\nPequenas mudanças de comportamento podem nos ajudar a cultivar um maior senso de propósito e significado.\n \n### Exemplo 1: Equilibrando prazer e propósito\nSe você ama música, mas passa muito tempo ouvindo passivamente, tente aprender a tocar um instrumento. Isso pode ser mais desafiador, mas proporcionará um sentido mais profundo e duradouro.\n\n### Exemplo 2: Lidando com obstáculos\nSe você está lutando para encontrar tempo para suas paixões devido ao trabalho ou outros compromissos, tente reservar um pequeno período do seu dia para isso. Mesmo 15 minutos podem fazer uma grande diferença.\n A busca por sentido na vida não precisa ser uma tarefa gigantesca. Ao dividir isso em cinco áreas essenciais e implementar pequenos hábitos diários, podemos cultivar um maior senso de propósito e significado.",
+      "author": "Ari"
+    }
+  ],
+  "metadata": {
+    "generated_by": "lyfe-kt-structural-v1.0",
+    "generation_timestamp": "2025-07-30T00:25:50.824900",
+    "ari_persona_applied": true,
+    "difficulty_level": "advanced",
+    "source_template": "arthurcbrooks_mostmeaning_extracted_filled_template.md",
+    "template_metadata": {
+      "source_file": "arthurcbrooks_mostmeaning_extracted_filled_template.md",
+      "source_path": "work/02_preprocessed/arthurcbrooks_mostmeaning_extracted/arthurcbrooks_mostmeaning_extracted_filled_template.md",
+      "file_size": 4893,
+      "modification_time": "2025-07-30T00:25:23.945704",
+      "frontmatter_keys": [
+        "title",
+        "description",
+        "target_audience",
+        "difficulty_level",
+        "estimated_time",
+        "dimension",
+        "archetype",
+        "related_to_type",
+        "related_to_id",
+        "estimated_duration",
+        "coins_reward",
+        "language",
+        "region",
+        "learning_objectives",
+        "prerequisites",
+        "tags"
+      ],
+      "processing_timestamp": "2025-07-30T00:25:50.796052"
+    },
+    "language": "portuguese",
+    "region": "Brazil",
+    "created_at": "2025-07-30T00:25:50.824905",
+    "updated_at": "2025-07-30T00:25:50.824906",
+    "version": "1.0.0"
+  }
+}

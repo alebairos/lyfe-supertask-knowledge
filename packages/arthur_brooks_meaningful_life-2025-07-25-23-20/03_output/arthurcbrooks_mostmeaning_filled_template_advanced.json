@@ -1,0 +1,53 @@
+{
+  "title": "Encontrando Sua Vida Mais Significativa - Iniciante - Advanced",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "purposeful-life",
+  "estimatedDuration": 1200,
+  "coinsReward": 20,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "# Conteúdo\n Viver uma vida cheia de significado não é apenas uma filosofia - é uma estratégia comprovada para a saúde mental e a satisfação geral. Vamos explorar as quatro pilastras do significado e como você pode aplicá-las em sua vida diária.\n \n### Item de Conteúdo 1\nDe acordo com Arthur C. Brooks, professor de Harvard, uma vida verdadeiramente significativa é construída sobre quatro pilares fundamentais: família e relacionamentos profundos, fé e transcendência, trabalho e vocação, filosofia e sabedoria.\n\n**Autor**: Equipe Lyfe\n\n**Dicas**:\n- Invista tempo e energia emocional em relacionamentos\n- Mantenha práticas regulares de meditação ou oração\n- Alinhe suas habilidades com o serviço aos outros\n- A sabedoria vem de entender como viver bem\n\n### Citação\n\"A chave para a satisfação não é aumentar nossos haveres, mas diminuir nossos desejos. A chave para a felicidade não é fazer o que você gosta, mas gostar do que você faz.\" - Arthur C. Brooks\n\n### Item de Conteúdo 2\nA pesquisa de Brooks sobre a \"curva da felicidade\" revela que a satisfação com a vida geralmente começa alta na juventude, cai na meia-idade, e sobe novamente mais tarde.\n\n### Item de Conteúdo 3\nO segredo para uma vida mais significativa está em fazer escolhas conscientes direcionadas para o significado e não para o sucesso. Isso envolve aceitar limitações, redefinir o sucesso, valorizar a experiência e encontrar propósito em ajudar a próxima geração.\n\n**Autor**: Arthur C. Brooks\n \n### Conceito-Chave 1\nA família e os relacionamentos profundos formam a base de uma existência significativa.\n\n### Conceito-Chave 2\nO trabalho significativo vai além de apenas ganhar dinheiro; envolve usar seus talentos únicos para servir aos outros.\n\n### Conceito-Chave 3\nDesenvolver uma visão de mundo coerente e buscar sabedoria através do aprendizado contínuo e da reflexão são fundamentais para uma vida significativa.\n \n### Exemplo 1: Reflexão Matinal\nComece cada dia considerando: Como posso fortalecer meus relacionamentos hoje? Como posso servir aos outros através do meu trabalho? O que posso aprender hoje?\n\n### Exemplo 2: Revisão Noturna\nTermine cada dia refletindo: Agi de acordo com meus valores? Como contribuí para o bem-estar dos outros? Que sabedoria ganhei?\n \nViver uma vida significativa é uma jornada contínua de alinhamento entre valores e ações, reflexão regular sobre o que realmente importa, coragem para fazer escolhas difíceis, porém significativas, e paciência com o processo de crescimento e descoberta.",
+      "author": "Ari"
+    }
+  ],
+  "metadata": {
+    "generated_by": "lyfe-kt-structural-v1.0",
+    "generation_timestamp": "2025-07-25T23:20:07.721663",
+    "ari_persona_applied": true,
+    "difficulty_level": "advanced",
+    "source_template": "arthurcbrooks_mostmeaning_filled_template.md",
+    "template_metadata": {
+      "source_file": "arthurcbrooks_mostmeaning_filled_template.md",
+      "source_path": "work/02_preprocessed/arthurcbrooks_mostmeaning_filled_template.md",
+      "file_size": 4977,
+      "modification_time": "2025-07-25T23:19:11.198418",
+      "frontmatter_keys": [
+        "title",
+        "description",
+        "target_audience",
+        "difficulty_level",
+        "estimated_time",
+        "dimension",
+        "archetype",
+        "related_to_type",
+        "related_to_id",
+        "estimated_duration",
+        "coins_reward",
+        "language",
+        "region",
+        "learning_objectives",
+        "prerequisites",
+        "tags"
+      ],
+      "processing_timestamp": "2025-07-25T23:20:07.698975"
+    },
+    "language": "portuguese",
+    "region": "Brazil",
+    "created_at": "2025-07-25T23:20:07.721670",
+    "updated_at": "2025-07-25T23:20:07.721671",
+    "version": "1.0.0"
+  }
+}

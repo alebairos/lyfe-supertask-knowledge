@@ -1,0 +1,52 @@
+# Work directory gitignore
+# Prevent temporary and test files from being committed
+
+# Temporary files
+*.tmp
+*.temp
+*_temp.*
+*_tmp.*
+
+# Test files (unless explicitly needed)
+test_*.json
+*_test.json
+*_testing.*
+
+# Backup files
+*.bak
+*.backup
+*_backup.*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Processing artifacts
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Output files that are too large
+*.json.large
+*.md.large
+
+# Duplicate files
+*_copy.*
+*_duplicate.*
+*_old.*
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-* 

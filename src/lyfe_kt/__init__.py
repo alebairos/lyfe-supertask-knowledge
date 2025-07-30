@@ -98,4 +98,17 @@ from .stage3_generation import (
     generate_from_directory,
     generate_generation_report,
     GenerationError
+)
+
+# Import session logging module
+from . import session_logger
+from .session_logger import (
+    SessionLogger,
+    SessionMetadata,
+    generate_session_id,
+    create_session,
+    get_session,
+    finalize_session,
+    get_active_sessions,
+    clear_all_sessions
 ) 

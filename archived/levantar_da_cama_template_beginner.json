@@ -1,0 +1,51 @@
+{
+  "title": "Levantar da Cama - Beginner",
+  "dimension": "physicalHealth",
+  "archetype": "warrior",
+  "relatedToType": "HABITBP",
+  "relatedToId": "generic",
+  "estimatedDuration": 300,
+  "coinsReward": 15,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "# Levantar da Cama - Transforme suas Manhãs\n \nAcordar cedo é fundamental para ter um dia produtivo e saudável. Quando você se levanta nas primeiras horas da manhã, seu corpo está descansado e sua mente está clara, pronta para enfrentar os desafios do dia.\n \n### Por que Acordar Cedo Importa?\n\nAcordar cedo é fundamental para ter um dia produtivo e saudável. Quando você se levanta nas primeiras horas da manhã, seu corpo está descansado e sua mente está clara, pronta para enfrentar os desafios do dia.\n\n### Estratégias para Facilitar o Despertar\n\n**1. Prepare o Ambiente na Noite Anterior**\n- Deixe as cortinas ligeiramente abertas para a luz natural entrar\n- Coloque o despertador longe da cama\n- Prepare suas roupas e itens essenciais\n\n**2. Crie uma Rotina de Sono Consistente**\n- Vá para a cama no mesmo horário todos os dias\n- Evite telas pelo menos 1 hora antes de dormir\n- Mantenha o quarto fresco e escuro\n\n**3. Use Técnicas de Motivação Imediata**\n- Tenha uma razão clara para acordar cedo\n- Planeje algo prazeroso para as primeiras horas\n- Use a técnica dos 5 segundos: conte 5-4-3-2-1 e levante\n\n### Benefícios Científicos do Despertar Matinal\n\nEstudos mostram que pessoas que acordam cedo tendem a:\n- Ter melhor qualidade de sono\n- Ser mais proativas e organizadas\n- Ter menos estresse e ansiedade\n- Ter melhor desempenho cognitivo\n \n> \"O sucesso vem para aqueles que ousam começar.\" - Eugene F. Ware\n\n> \"A manhã é quando eu sou mais criativo e produtivo.\" - Benjamin Franklin",
+      "author": "Ari"
+    }
+  ],
+  "metadata": {
+    "generated_by": "lyfe-kt-structural-v1.0",
+    "generation_timestamp": "2025-07-17T00:02:37.260453",
+    "ari_persona_applied": true,
+    "difficulty_level": "beginner",
+    "source_template": "levantar_da_cama_template.md",
+    "template_metadata": {
+      "source_file": "levantar_da_cama_template.md",
+      "source_path": "work/02_preprocessed/levantar_da_cama_template.md",
+      "file_size": 3949,
+      "modification_time": "2025-07-16T16:56:11.964601",
+      "frontmatter_keys": [
+        "title",
+        "description",
+        "difficulty",
+        "dimension",
+        "archetype",
+        "related_to_type",
+        "related_to_id",
+        "estimated_duration",
+        "coins_reward",
+        "language",
+        "region",
+        "learning_objectives",
+        "prerequisites",
+        "tags"
+      ],
+      "processing_timestamp": "2025-07-17T00:02:37.260262"
+    },
+    "language": "portuguese",
+    "region": "Brazil",
+    "created_at": "2025-07-17T00:02:37.260456",
+    "updated_at": "2025-07-17T00:02:37.260456",
+    "version": "1.0.0"
+  }
+}

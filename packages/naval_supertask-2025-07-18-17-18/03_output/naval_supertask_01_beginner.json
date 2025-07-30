@@ -1,0 +1,42 @@
+{
+  "title": "Riqueza vs Dinheiro - Beginner",
+  "dimension": "work",
+  "archetype": "warrior",
+  "relatedToType": "GENERIC",
+  "relatedToId": "naval-wealth",
+  "estimatedDuration": 300,
+  "coinsReward": 15,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Riqueza são ativos que geram renda enquanto você dorme. Dinheiro é apenas troca de tempo."
+    },
+    {
+      "type": "quote",
+      "content": "Riqueza é ter ativos que trabalham para você.",
+      "author": "Naval Ravikant"
+    },
+    {
+      "type": "quiz",
+      "question": "O que é riqueza segundo Naval?",
+      "options": [
+        "Ativos que geram renda",
+        "Muito dinheiro",
+        "Status social"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Riqueza são ativos que trabalham para você 24/7."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "BR",
+    "created_at": "2025-07-18T16:58:02.134304",
+    "updated_at": "2025-07-18T16:58:02.134316",
+    "version": "1.1.0",
+    "generated_by": "demo-mobile-v1.1",
+    "ari_persona_applied": true,
+    "difficulty_level": "beginner",
+    "mobile_optimization_score": 0.95
+  }
+}

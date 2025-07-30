@@ -1,0 +1,70 @@
+{
+  "title": "Testando a Geração CLI (Nível Iniciante) - Beginner",
+  "dimension": "work",
+  "archetype": "explorer",
+  "relatedToType": "GENERIC",
+  "relatedToId": "CLI_TEST",
+  "estimatedDuration": 300,
+  "coinsReward": 15,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Esta é uma tarefa de teste simples para depurar a geração do CLI.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Este é o primeiro ponto-chave sobre o tópico."
+    },
+    {
+      "type": "content",
+      "content": "Este é o segundo ponto-chave sobre o tópico."
+    },
+    {
+      "type": "content",
+      "content": "Depois de completar esta tarefa, você será capaz de: 1. Entender o conceito básico 2. Aplicar o conhecimento"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual é o principal objetivo desta tarefa?",
+      "options": [
+        "Para aprender algo complexo",
+        "Para testar a geração do CLI",
+        "Para praticar habilidades",
+        "Para se divertir"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Esta tarefa foi projetada para testar o sistema de geração do CLI."
+    }
+  ],
+  "metadata": {
+    "generated_by": "lyfe-kt-stage3",
+    "generation_timestamp": "2025-07-16T16:48:03.649362",
+    "ari_persona_applied": true,
+    "difficulty_level": "beginner",
+    "source_template": "simple_test_template.md",
+    "template_metadata": {
+      "source_file": "simple_test_template.md",
+      "source_path": "work/02_preprocessed/simple_test_template.md",
+      "file_size": 849,
+      "modification_time": "2025-07-16T16:43:35.366968",
+      "frontmatter_keys": [
+        "title",
+        "description",
+        "difficulty",
+        "dimension",
+        "archetype",
+        "estimated_duration",
+        "coins_reward",
+        "language",
+        "region"
+      ],
+      "processing_timestamp": "2025-07-16T16:47:49.037010"
+    },
+    "language": "english",
+    "region": "US",
+    "created_at": "2025-07-16T16:48:03.649396",
+    "updated_at": "2025-07-16T16:48:03.649398",
+    "version": "1.0.0"
+  }
+}

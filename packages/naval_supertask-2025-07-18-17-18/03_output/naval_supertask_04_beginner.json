@@ -1,0 +1,42 @@
+{
+  "title": "Jogos de Longo Prazo - Beginner",
+  "dimension": "work",
+  "archetype": "warrior",
+  "relatedToType": "GENERIC",
+  "relatedToId": "naval-wealth",
+  "estimatedDuration": 300,
+  "coinsReward": 15,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Toda ética nos negócios vem de jogos repetidos. Construa relacionamentos duradouros."
+    },
+    {
+      "type": "quote",
+      "content": "Reputação é seu ativo mais valioso.",
+      "author": "Naval Ravikant"
+    },
+    {
+      "type": "quiz",
+      "question": "Por que jogar jogos de longo prazo?",
+      "options": [
+        "Constrói confiança",
+        "É mais fácil",
+        "Ganha sempre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Confiança gera oportunidades e parcerias valiosas."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "BR",
+    "created_at": "2025-07-18T16:58:02.139925",
+    "updated_at": "2025-07-18T16:58:02.139931",
+    "version": "1.1.0",
+    "generated_by": "demo-mobile-v1.1",
+    "ari_persona_applied": true,
+    "difficulty_level": "beginner",
+    "mobile_optimization_score": 0.95
+  }
+}

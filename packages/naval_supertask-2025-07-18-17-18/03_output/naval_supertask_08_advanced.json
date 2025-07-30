@@ -1,0 +1,42 @@
+{
+  "title": "Julgamento Decisivo - Advanced",
+  "dimension": "work",
+  "archetype": "warrior",
+  "relatedToType": "GENERIC",
+  "relatedToId": "naval-wealth",
+  "estimatedDuration": 450,
+  "coinsReward": 25,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Julgamento é a habilidade mais importante. Boas decisões criam riqueza duradoura."
+    },
+    {
+      "type": "quote",
+      "content": "Na era da alavancagem, julgamento é tudo.",
+      "author": "Naval Ravikant"
+    },
+    {
+      "type": "quiz",
+      "question": "Como desenvolver melhor julgamento?",
+      "options": [
+        "Ler muito + praticar",
+        "Só experiência",
+        "Intuição apenas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Leitura constrói modelos mentais para decisões."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "BR",
+    "created_at": "2025-07-18T16:58:02.146214",
+    "updated_at": "2025-07-18T16:58:02.146217",
+    "version": "1.1.0",
+    "generated_by": "demo-mobile-v1.1",
+    "ari_persona_applied": true,
+    "difficulty_level": "advanced",
+    "mobile_optimization_score": 0.95
+  }
+}

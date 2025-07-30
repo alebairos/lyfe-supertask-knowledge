@@ -1,0 +1,41 @@
+{
+  "title": "Conhecimento Específico - Beginner",
+  "dimension": "work",
+  "archetype": "warrior",
+  "relatedToType": "GENERIC",
+  "relatedToId": "naval-wealth",
+  "estimatedDuration": 300,
+  "coinsReward": 15,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Conhecimento específico é único, não pode ser ensinado e cria vantagem competitiva."
+    },
+    {
+      "type": "content",
+      "content": "Siga sua curiosidade natural. Combine áreas diferentes para criar especialização única."
+    },
+    {
+      "type": "quiz",
+      "question": "Como desenvolver conhecimento específico?",
+      "options": [
+        "Seguir curiosidade",
+        "Copiar outros",
+        "Estudar muito"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Curiosidade natural leva ao conhecimento único."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "BR",
+    "created_at": "2025-07-18T16:58:02.136705",
+    "updated_at": "2025-07-18T16:58:02.136715",
+    "version": "1.1.0",
+    "generated_by": "demo-mobile-v1.1",
+    "ari_persona_applied": true,
+    "difficulty_level": "beginner",
+    "mobile_optimization_score": 0.95
+  }
+}

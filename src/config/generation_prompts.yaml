@@ -38,12 +38,21 @@ generation_prompts:
       - **quote**: Citações inspiracionais (com "author" obrigatório)
       - **quiz**: Perguntas com options array, correctAnswer index, explanation
 
+      ## Limites Mobile (v1.1)
+      - **content**: 50-300 caracteres para exibição mobile otimizada
+      - **quote**: 20-200 caracteres para citações mobile
+      - **quiz question**: 15-120 caracteres para perguntas mobile
+      - **quiz options**: 3-60 caracteres cada opção
+      - **quiz explanation**: 30-250 caracteres para explicações mobile
+      - **total items**: 3-8 itens por supertask para mobile
+
       ## Regras Críticas
       - PRESERVE todos os campos obrigatórios
       - NUNCA invente dados não presentes no template
       - MANTENHA consistência com Ari persona
       - USE português brasileiro correto (formas masculinas)
       - GERE títulos específicos e únicos
+      - RESPEITE limites de caracteres para mobile (v1.1)
 
     user_prompt_template: |
       ## Tarefa: Converter Template para JSON Estruturado
@@ -87,9 +96,9 @@ generation_prompts:
           Converta seções de conteúdo para:
           {
             "type": "content",
-            "content": "texto_do_conteudo",
+            "content": "texto_do_conteudo (50-300 chars para mobile)",
             "author": "autor_se_especificado",
-            "tips": ["array_de_dicas_se_presente"]
+            "tips": ["array_de_dicas_se_presente (20-150 chars cada)"]
           }
           
       quote_section:
@@ -98,7 +107,7 @@ generation_prompts:
           Converta citações para:
           {
             "type": "quote", 
-            "content": "texto_da_citacao",
+            "content": "texto_da_citacao (20-200 chars para mobile)",
             "author": "autor_obrigatorio"
           }
           
@@ -108,10 +117,10 @@ generation_prompts:
           Converta perguntas para:
           {
             "type": "quiz",
-            "question": "pergunta_completa",
-            "options": ["opcao1", "opcao2", "opcao3", "opcao4"],
+            "question": "pergunta_completa (15-120 chars para mobile)",
+            "options": ["opcao1 (3-60 chars)", "opcao2 (3-60 chars)", "opcao3 (3-60 chars)", "opcao4 (3-60 chars)"],
             "correctAnswer": index_numerico,
-            "explanation": "explicacao_com_voz_do_ari"
+            "explanation": "explicacao_com_voz_do_ari (30-250 chars para mobile)"
           }
 
     frontmatter_mapping:
@@ -138,10 +147,12 @@ generation_prompts:
         - "Explicações detalhadas nas quizzes"
       
       content_guidelines:
-        duration_range: [300, 480]  # 5-8 minutes
+        duration_range: [180, 360]  # 3-6 minutes (mobile optimized)
         coins_range: [10, 15]
         quiz_complexity: "simples"
         content_depth: "introdutório"
+        mobile_constraints: true
+        max_items: 6  # mobile friendly
         
       quiz_style:
         question_complexity: "direta"

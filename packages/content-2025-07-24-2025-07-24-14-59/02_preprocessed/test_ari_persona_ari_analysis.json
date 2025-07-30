@@ -1,0 +1,28 @@
+{
+  "ari_analysis": {
+    "applicable_frameworks": [],
+    "total_frameworks_identified": 0,
+    "content_analysis": {
+      "word_count": 72,
+      "primary_themes": [
+        "habits"
+      ],
+      "complexity_level": "intermediate",
+      "language": "english"
+    }
+  },
+  "coaching_opportunities": [
+    {
+      "type": "habit_formation",
+      "framework": "tiny_habits",
+      "suggestion": "Aplicar princípios de micro-hábitos para facilitar adoção",
+      "coaching_prompt": "Menor que isso, impossível?"
+    },
+    {
+      "type": "behavioral_change",
+      "framework": "behavioral_design",
+      "suggestion": "Focar no design do ambiente para facilitar mudança",
+      "coaching_prompt": "O ambiente ajuda ou atrapalha?"
+    }
+  ]
+}

@@ -405,6 +405,10 @@ def preprocess_file(ctx, input_file, output_dir, report, progress):
             progress_callback=progress_callback if progress else None
         )
         
+        # Store session ID for potential packaging
+        if result.get('session_id'):
+            ctx.obj['last_session_id'] = result['session_id']
+        
         if result['status'] == 'success':
             click.echo(f"✅ Successfully processed {input_file}")
             click.echo(f"📁 Output directory: {result['output_directory']}")
@@ -826,6 +830,92 @@ def generate_pipeline(ctx, input_dir, output_dir, difficulty, report, progress):
             
     except Exception as e:
         logger.error(f"Generation pipeline failed: {e}")
+        click.echo(f"❌ Error: {e}")
+        sys.exit(1)
+
+
+@main.command()
+@click.argument('title', required=False)
+@click.option('--output-dir', default='packages', help='Output directory for packages (default: packages)')
+@click.option('--keep-work', is_flag=True, help='Keep work directory content after packaging')
+@click.option('--session-id', help='Session ID for log correlation (auto-detect if not provided)')
+@click.pass_context
+def package(ctx, title, output_dir, keep_work, session_id):
+    """
+    Package pipeline content into organized folders.
+    
+    Moves all content from work directories to a timestamped package folder
+    and cleans up the work directory for the next project.
+    
+    TITLE: Optional custom package name. If not provided, auto-detects from supertask files.
+    
+    Examples:
+    \b
+    # Auto-detect title and package content
+    python -m src.lyfe_kt.cli package
+    
+    # Custom title
+    python -m src.lyfe_kt.cli package "naval_wealth_concepts"
+    
+    # Custom output directory
+    python -m src.lyfe_kt.cli package --output-dir "archived_projects"
+    
+    # Keep work directory content
+    python -m src.lyfe_kt.cli package --keep-work
+    """
+    logger = ctx.obj['logger']
+    logger.info("Packaging command accessed")
+    
+    try:
+        from .content_packager import ContentPackager
+        
+        click.echo("📦 Starting content packaging...")
+        
+        # Initialize packager
+        packager = ContentPackager(work_dir="work", packages_dir=output_dir)
+        
+        # Auto-detect title if not provided
+        if not title:
+            detected_title = packager.detect_title()
+            click.echo(f"🔍 Auto-detected title: {detected_title}")
+            title = detected_title
+        
+        # Use last session ID if not provided
+        if not session_id:
+            session_id = ctx.obj.get('last_session_id')
+            if session_id:
+                click.echo(f"🔗 Using session from last pipeline run: {session_id}")
+        
+        # Package content
+        result = packager.package_content(title=title, keep_work=keep_work, session_id=session_id)
+        
+        if result["success"]:
+            click.echo(f"📁 Created package: {result['package_path']}")
+            
+            # Show summary
+            package_path = Path(result['package_path'])
+            if package_path.exists():
+                # Count total files in package
+                total_files = len(list(package_path.rglob("*")))
+                click.echo(f"📋 Packaged {total_files} items")
+            
+            if not keep_work:
+                click.echo("🧹 Cleaned work directory (kept structural folders)")
+            else:
+                click.echo("📂 Work directory preserved (--keep-work flag)")
+                
+            click.echo("✅ Content packaged successfully!")
+            
+        else:
+            click.echo(f"❌ Packaging failed: {result['message']}")
+            sys.exit(1)
+            
+    except ImportError as e:
+        logger.error(f"Missing dependency for packaging: {e}")
+        click.echo(f"❌ Error: Missing dependency - {e}")
+        sys.exit(1)
+    except Exception as e:
+        logger.error(f"Packaging failed: {e}")
         click.echo(f"❌ Error: {e}")
         sys.exit(1)
 

@@ -9,6 +9,8 @@ import os
 import time
 import logging
 from typing import Dict, Any, Optional, List
+from pathlib import Path
+from datetime import datetime
 from openai import OpenAI
 from openai.types.chat import ChatCompletion
 
@@ -69,7 +71,18 @@ class OpenAIClient:
         self.retry_attempts = self.processing_config.get('retry_attempts', 3)
         self.retry_delay = self.processing_config.get('retry_delay', 1.0)
         
+        # Prompt auditing configuration
+        self.enable_prompt_auditing = self.config.get('enable_prompt_auditing', True)
+        self.prompt_audit_dir = Path("logs/prompts")
+        if self.enable_prompt_auditing:
+            self.prompt_audit_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Session tracking for audit correlation
+        self.current_session_id = None
+        
         logger.info(f"OpenAI client initialized with model: {self.model}")
+        if self.enable_prompt_auditing:
+            logger.info("Prompt auditing enabled")
     
     def generate_completion(
         self,
@@ -106,6 +119,10 @@ class OpenAIClient:
             messages.append({"role": "system", "content": system_message})
         messages.append({"role": "user", "content": prompt})
         
+        # Log prompt request (before API call)
+        if self.enable_prompt_auditing:
+            self._log_prompt_request(messages, model, max_tokens, temperature)
+        
         # Retry logic
         last_error = None
         for attempt in range(self.retry_attempts):
@@ -125,6 +142,11 @@ class OpenAIClient:
                     content = response.choices[0].message.content
                     if content:
                         logger.debug(f"OpenAI API call successful, response length: {len(content)}")
+                        
+                        # Log response
+                        if self.enable_prompt_auditing:
+                            self._log_prompt_response(response, content)
+                        
                         return content.strip()
                 
                 raise OpenAIClientError("Empty response from OpenAI API")
@@ -364,6 +386,71 @@ Return the enhanced content directly, without additional formatting or explanati
             "retry_attempts": self.retry_attempts,
             "retry_delay": self.retry_delay
         }
+
+    def set_session_id(self, session_id: str):
+        """Set current session ID for audit correlation."""
+        self.current_session_id = session_id
+    
+    def _log_prompt_request(self, messages: List[Dict[str, str]], model: str, max_tokens: int, temperature: float):
+        """Log prompt request details to audit file."""
+        try:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            # Create log entry
+            log_entry = f"""
+=== PROMPT REQUEST ===
+Timestamp: {timestamp}
+Session ID: {self.current_session_id or 'unknown'}
+Model: {model}
+Max Tokens: {max_tokens}
+Temperature: {temperature}
+
+"""
+            
+            # Add each message
+            for i, message in enumerate(messages):
+                role = message.get('role', 'unknown')
+                content = message.get('content', '')
+                log_entry += f"{role.upper()} MESSAGE:\n{content}\n\n"
+            
+            log_entry += "=" * 60 + "\n\n"
+            
+            # Write to single audit log (simplest approach)
+            audit_log = self.prompt_audit_dir / "prompts_audit.log"
+            
+            with open(audit_log, 'a', encoding='utf-8') as f:
+                f.write(log_entry)
+                    
+        except Exception as e:
+            logger.warning(f"Failed to log prompt request: {e}")
+
+    def _log_prompt_response(self, response: ChatCompletion, content: str):
+        """Log model response to audit file."""
+        try:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            # Create response log entry
+            log_entry = f"""=== RESPONSE ===
+Timestamp: {timestamp}
+Session ID: {self.current_session_id or 'unknown'}
+Response ID: {getattr(response, 'id', 'unknown')}
+Usage: {getattr(response, 'usage', 'unknown')}
+
+CONTENT:
+{content}
+
+{'=' * 60}
+
+"""
+            
+            # Write to single audit log (simplest approach)
+            audit_log = self.prompt_audit_dir / "prompts_audit.log"
+            
+            with open(audit_log, 'a', encoding='utf-8') as f:
+                f.write(log_entry)
+                    
+        except Exception as e:
+            logger.warning(f"Failed to log prompt response: {e}")
 
 
 # Global client instance

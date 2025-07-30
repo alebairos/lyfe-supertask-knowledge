@@ -1,0 +1,41 @@
+{
+  "title": "Vendas e Construção - Beginner",
+  "dimension": "work",
+  "archetype": "warrior",
+  "relatedToType": "GENERIC",
+  "relatedToId": "naval-wealth",
+  "estimatedDuration": 300,
+  "coinsReward": 15,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Aprender a vender e construir são as duas habilidades mais importantes para riqueza."
+    },
+    {
+      "type": "content",
+      "content": "Construir é criar produtos. Vender é comunicar valor. Juntas são imbatíveis."
+    },
+    {
+      "type": "quiz",
+      "question": "Qual combinação é mais poderosa?",
+      "options": [
+        "Vender + Construir",
+        "Apenas vender",
+        "Apenas construir"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Combinação de ambas cria capacidade completa."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "BR",
+    "created_at": "2025-07-18T16:58:02.141599",
+    "updated_at": "2025-07-18T16:58:02.141601",
+    "version": "1.1.0",
+    "generated_by": "demo-mobile-v1.1",
+    "ari_persona_applied": true,
+    "difficulty_level": "beginner",
+    "mobile_optimization_score": 0.95
+  }
+}
