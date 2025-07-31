@@ -1,0 +1,53 @@
+{
+  "title": "Descobrindo uma Vida com Propósito - Iniciante - Advanced",
+  "dimension": "mentalHealth",
+  "archetype": "explorer",
+  "relatedToType": "GENERIC",
+  "relatedToId": "purposeful_life",
+  "estimatedDuration": 900,
+  "coinsReward": 20,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "# Conteúdo\n Esta supertarefa apresenta os quatro pilares de uma vida significativa definidos por Arthur C. Brooks. Você aprenderá a incorporar esses pilares em sua vida diária, criando um senso de propósito mais profundo e duradouro.\n \n### Item 1: Os Quatro Pilares de uma Vida Significativa\nUma vida com propósito é construída em quatro pilares: relacionamentos profundos, transcendência, trabalho e vocação, e filosofia e sabedoria. Ao fortalecer cada um desses pilares, você pode alcançar um maior senso de satisfação e propósito.\n\n**Autor**: Arthur C. Brooks\n\n### Item 2: Práticas Diárias para uma Vida Intencional\nIncorporar práticas diárias focadas em cada um dos quatro pilares pode ajudar a manter sua conexão com o que é verdadeiramente importante para você. Isso pode incluir reflexões matinais sobre seus relacionamentos e trabalho, e revisões noturnas de seus valores e contribuições.\n\n### Item 3: Criando Sua Declaração de Propósito\nUma declaração de propósito é um breve enunciado que captura seus valores centrais, sua contribuição única, sua visão de impacto e seu compromisso com o crescimento. Escrever sua própria declaração de propósito pode ser uma ferramenta poderosa para orientar suas decisões e ações.\n \n### Conceito-chave 1: Pilares de uma Vida Significativa\nOs quatro pilares de uma vida significativa são relacionamentos profundos, transcendência, trabalho e vocação, e filosofia e sabedoria.\n\n### Conceito-chave 2: Práticas Diárias Intencionais\nPráticas diárias, como reflexão e revisão, podem ajudar a manter a conexão com o que é verdadeiramente importante para você.\n\n### Conceito-chave 3: Declaração de Propósito\nUma declaração de propósito é uma ferramenta poderosa para orientar suas decisões e ações em direção a uma vida mais significativa.\n \n### Exemplo 1: Práticas Diárias\nComece cada dia com uma reflexão sobre como você pode fortalecer seus relacionamentos e servir os outros através do seu trabalho. No final do dia, revise suas ações em relação aos seus valores e considere como você pode melhorar amanhã.\n\n### Exemplo 2: Declaração de Propósito\n\"Estou comprometido em usar minha habilidade de ensino para ajudar os jovens a descobrir seu potencial, guiado por compaixão e sabedoria, enquanto continuo aprendendo e crescendo em serviço à minha família e comunidade.\"\n Esta supertask apresentou os quatro pilares de uma vida significativa e como você pode incorporá-los em sua vida diária. Ao desenvolver práticas intencionais e criar uma declaração de propósito pessoal, você pode viver uma vida mais proposital e satisfatória.",
+      "author": "Ari"
+    }
+  ],
+  "metadata": {
+    "generated_by": "lyfe-kt-structural-v1.0",
+    "generation_timestamp": "2025-07-30T23:51:10.928658",
+    "ari_persona_applied": true,
+    "difficulty_level": "advanced",
+    "source_template": "arthurcbrooks_mostmeaning_filled_template.md",
+    "template_metadata": {
+      "source_file": "arthurcbrooks_mostmeaning_filled_template.md",
+      "source_path": "work/02_preprocessed/arthurcbrooks_mostmeaning/arthurcbrooks_mostmeaning_filled_template.md",
+      "file_size": 5065,
+      "modification_time": "2025-07-30T23:50:57.508606",
+      "frontmatter_keys": [
+        "title",
+        "description",
+        "target_audience",
+        "difficulty_level",
+        "estimated_time",
+        "dimension",
+        "archetype",
+        "related_to_type",
+        "related_to_id",
+        "estimated_duration",
+        "coins_reward",
+        "language",
+        "region",
+        "learning_objectives",
+        "prerequisites",
+        "tags"
+      ],
+      "processing_timestamp": "2025-07-30T23:51:10.895145"
+    },
+    "language": "portuguese",
+    "region": "Brazil",
+    "created_at": "2025-07-30T23:51:10.928662",
+    "updated_at": "2025-07-30T23:51:10.928663",
+    "version": "1.0.0"
+  }
+}

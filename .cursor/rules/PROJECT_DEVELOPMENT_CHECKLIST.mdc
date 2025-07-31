@@ -287,6 +287,17 @@ python -m py_compile src/lyfe_kt/*.py
 - **Code reuse** where appropriate to maintain DRY principle
 - **Integration testing** with real data when possible
 
+### Implementation Quality Principles
+
+For every implementation session (typically governed by a TODO item explained in a `todo*.md` document or a PRD), you should ask if the implementation is:
+
+1. **The Simplest Approach**: Is this the simplest solution that could possibly work?
+2. **Concise Enough**: Is the implementation concise and focused without unnecessary complexity?
+3. **Complexity Check**: Are you confident this isn't overly complicated?
+4. **Zen Minimalist Test**: Would you be comfortable showing this to your most critical zen minimalist friends?
+5. **Design Respect (Ryo Lu Standard)**: Would Ryo Lu respect the design implemented? (Think design more broadly - architecture, user experience, code elegance)
+6. **Context Engineering Excellence (Andrej Karpathy Standard)**: Would Andrej Karpathy consider this a well-done example of context engineering and thoughtful implementation?
+
 ---
 
 ## 📞 ENHANCED USER INTERACTION PROTOCOL

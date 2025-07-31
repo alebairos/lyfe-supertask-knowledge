@@ -65,7 +65,7 @@ class StructuralJSONGenerator:
     4. Zero format violations possible
     """
     
-    def __init__(self, format_version="v1.0"):
+    def __init__(self, format_version="v1.1"):
         """Initialize structural JSON generator."""
         try:
             self.format_version = format_version
@@ -805,7 +805,7 @@ class GenerationPipeline:
             
             # Initialize components
             self.template_processor = TemplateProcessor()
-            self.json_generator = StructuralJSONGenerator(format_version="v1.0")  # Temporarily use v1.0 schema for generation
+            self.json_generator = StructuralJSONGenerator(format_version="v1.1")  # Use v1.1 mobile-optimized schema for generation
             
             # Progress tracking
             self.progress_callback = None
