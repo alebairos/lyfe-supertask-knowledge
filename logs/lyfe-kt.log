@@ -3812,3 +3812,91 @@
 2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
 2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing single file: non_existent_file.json
 2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing directory: non_existent_dir
+2025-08-06 14:12:57 - lyfe-kt - INFO - Generation command group accessed
+2025-08-06 14:13:19 - lyfe-kt - INFO - Generation command group accessed
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-06 14:13:19 - src.lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-06 14:13:19 - src.lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Processing template: packages/arthurcbrooks_mostmeaning_extracted_filled_template-2025-07-30-00-26/02_preprocessed/arthurcbrooks_mostmeaning_extracted/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Parsing template: packages/arthurcbrooks_mostmeaning_extracted_filled_template-2025-07-30-00-26/02_preprocessed/arthurcbrooks_mostmeaning_extracted/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorador' → 'explorer'
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorador' → 'explorer'
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - WARNING - jsonschema library not installed, skipping schema validation
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorador' → 'explorer'
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - WARNING - jsonschema library not installed, skipping schema validation
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-06 14:13:19 - src.lyfe_kt.stage3_generation - INFO - Successfully processed template: packages/arthurcbrooks_mostmeaning_extracted_filled_template-2025-07-30-00-26/02_preprocessed/arthurcbrooks_mostmeaning_extracted/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-06 14:13:25 - lyfe-kt - INFO - Generation command group accessed
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-06 14:13:25 - src.lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-06 14:13:25 - src.lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Processing template: packages/content-2025-07-30-2025-07-30-23-58/02_preprocessed/simple_test/simple_test_filled_template.md
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of simple_test_filled_template.md
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Parsing template: packages/content-2025-07-30-2025-07-30-23-58/02_preprocessed/simple_test/simple_test_filled_template.md
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - WARNING - jsonschema library not installed, skipping schema validation
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - WARNING - jsonschema library not installed, skipping schema validation
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-06 14:13:25 - src.lyfe_kt.stage3_generation - INFO - Successfully processed template: packages/content-2025-07-30-2025-07-30-23-58/02_preprocessed/simple_test/simple_test_filled_template.md
+2025-08-06 14:13:29 - lyfe-kt - INFO - Generation command group accessed
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-06 14:13:29 - src.lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-06 14:13:29 - src.lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Processing template: packages/content-2025-07-30-2025-07-30-23-58/02_preprocessed/test_fix/test_fix_filled_template.md
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of test_fix_filled_template.md
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Parsing template: packages/content-2025-07-30-2025-07-30-23-58/02_preprocessed/test_fix/test_fix_filled_template.md
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - WARNING - jsonschema library not installed, skipping schema validation
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - WARNING - jsonschema library not installed, skipping schema validation
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-06 14:13:29 - src.lyfe_kt.stage3_generation - INFO - Successfully processed template: packages/content-2025-07-30-2025-07-30-23-58/02_preprocessed/test_fix/test_fix_filled_template.md
