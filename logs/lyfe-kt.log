@@ -3155,3 +3155,660 @@
 2025-07-31 00:04:41 - lyfe-kt - INFO - Stage 1 command group accessed
 2025-07-31 00:04:41 - lyfe-kt - INFO - Stage 1 command group accessed
 2025-07-31 00:04:41 - lyfe-kt - INFO - Status command called
+2025-08-04 17:26:24 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-08-04 17:26:24 - lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-04_17-26-24_23c5813a
+2025-08-04 17:26:24 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-04 17:26:24 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-04 17:26:24 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-04 17:26:24 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-04 17:26:24 - lyfe_kt.session_logger - INFO - [sess_2025-08-04_17-26-24_23c5813a] Preprocessing pipeline initialized
+2025-08-04 17:26:24 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-04 17:26:24 - lyfe_kt.session_logger - INFO - [sess_2025-08-04_17-26-24_23c5813a] Processing input file: work/01_raw/arthurcbrooks_mostmeaning_extracted.md
+2025-08-04 17:26:24 - lyfe_kt.session_logger - INFO - [sess_2025-08-04_17-26-24_23c5813a] Starting stage: preprocessing
+2025-08-04 17:26:24 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/arthurcbrooks_mostmeaning_extracted.md
+2025-08-04 17:26:24 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of arthurcbrooks_mostmeaning_extracted.md
+2025-08-04 17:26:24 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-08-04 17:26:24 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-08-04 17:26:24 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-08-04 17:26:24 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-08-04 17:27:19 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-04 17:27:19 - lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-08-04 17:27:19 - lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-08-04 17:27:19 - lyfe_kt.session_logger - INFO - [sess_2025-08-04_17-26-24_23c5813a] Generated output file: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-04 17:27:19 - lyfe_kt.session_logger - INFO - [sess_2025-08-04_17-26-24_23c5813a] Generated output file: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_ari_analysis.json
+2025-08-04 17:27:19 - lyfe_kt.session_logger - INFO - [sess_2025-08-04_17-26-24_23c5813a] Generated output file: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_oracle_context.json
+2025-08-04 17:27:19 - lyfe_kt.session_logger - INFO - [sess_2025-08-04_17-26-24_23c5813a] Completed stage: preprocessing
+2025-08-04 17:27:19 - lyfe_kt.stage1_preprocessing - INFO - Successfully processed work/01_raw/arthurcbrooks_mostmeaning_extracted.md in 55.43 seconds
+2025-08-04 17:27:26 - lyfe-kt - INFO - Generation command group accessed
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-04 17:27:26 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-04 17:27:26 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-04 17:27:26 - lyfe_kt.stage3_generation - ERROR - Failed to generate flexible items: expected string or bytes-like object, got 'list'
+2025-08-04 17:27:26 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Failed to generate flexible items: expected string or bytes-like object, got 'list'
+2025-08-04 17:36:45 - lyfe-kt - INFO - Generation command group accessed
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-04 17:36:45 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-04 17:36:45 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-04 17:36:45 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:30:57 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 11:30:57 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-05 11:30:57 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 11:30:57 - lyfe_kt.stage3_generation - ERROR - JSON Schema validation failed: {'type': 'content', 'content': 'Conteúdo educativo para nível beginner sobre este tópico importante.', 'author': 'Equipe Lyfe Tips: - Tente identificar em quais dessas áreas você encontra mais sentido. - Crie micro-hábitos para se envolver mais nessas áreas. - Permita que o sentido evolua e mude com o tempo.'} is not valid under any of the given schemas
+2025-08-05 11:30:57 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Generated structure failed validation (unexpected)
+2025-08-05 11:31:43 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 11:31:43 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 11:31:44 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-05 11:31:44 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 11:31:44 - lyfe_kt.stage3_generation - ERROR - JSON Schema validation failed: {'type': 'content', 'content': 'Conteúdo educativo para nível beginner sobre este tópico importante.', 'author': 'Equipe Lyfe Tips: - Tente identificar em quais dessas áreas você encontra mais sentido. - Crie micro-hábitos para se envolver mais nessas áreas. - Permita que o sentido evolua e mude com o tempo.'} is not valid under any of the given schemas
+2025-08-05 11:31:44 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Generated structure failed validation (unexpected)
+2025-08-05 11:32:55 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 11:32:55 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-05 11:32:55 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 11:32:55 - lyfe_kt.stage3_generation - ERROR - JSON Schema validation failed: {'type': 'content', 'content': 'Conteúdo educativo para nível beginner sobre este tópico importante.', 'author': 'Equipe Lyfe Tips: - Tente identificar em quais dessas áreas você encontra mais sentido. - Crie micro-hábitos para se envolver mais nessas áreas. - Permita que o sentido evolua e mude com o tempo.'} is not valid under any of the given schemas
+2025-08-05 11:32:55 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Generated structure failed validation (unexpected)
+2025-08-05 11:33:20 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 11:33:21 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-05 11:33:21 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 11:33:21 - lyfe_kt.stage3_generation - ERROR - JSON Schema validation failed: {'type': 'content', 'content': 'Conteúdo educativo para nível beginner sobre este tópico importante.', 'author': 'Equipe Lyfe Tips: - Tente identificar em quais dessas áreas você encontra mais sentido. - Crie micro-hábitos para se envolver mais nessas áreas. - Permita que o sentido evolua e mude com o tempo.'} is not valid under any of the given schemas
+2025-08-05 11:33:21 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Generated structure failed validation (unexpected)
+2025-08-05 11:34:23 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 11:34:23 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-05 11:34:23 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 11:34:23 - lyfe_kt.stage3_generation - ERROR - JSON Schema validation failed: {'type': 'content', 'content': 'Conteúdo educativo para nível beginner sobre este tópico importante.', 'author': 'Equipe Lyfe Tips: - Tente identificar em quais dessas áreas você encontra mais sentido. - Crie micro-hábitos para se envolver mais nessas áreas. - Permita que o sentido evolua e mude com o tempo.'} is not valid under any of the given schemas
+2025-08-05 11:34:23 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Generated structure failed validation (unexpected)
+2025-08-05 11:34:44 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 11:34:44 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 11:34:45 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-05 11:34:45 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-05 11:34:45 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 11:41:19 - lyfe-kt - INFO - Packaging command accessed
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - ContentPackager initialized: work → packages
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Starting content packaging workflow
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Created package directory: packages/arthurcbrooks_mostmeaning_fixed-2025-08-05-11-41
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Moved 1 items from 01_raw/
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Moved 3 items from 02_preprocessed/
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Moved 2 items from 03_output/
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Created empty directory: reports/
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Skipped workspace file: 01_raw
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Moved file: .DS_Store
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Skipped workspace file: 02_preprocessed
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Skipped workspace file: README.md
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Skipped workspace file: .gitignore
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Skipped workspace file: 03_output
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Skipped workspace file: reports
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Total files moved: 7
+2025-08-05 11:41:19 - lyfe_kt.content_packager - ERROR - Failed to copy execution logs: unsupported operand type(s) for /: 'str' and 'str'
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Cleaned 01_raw/ (kept folder structure)
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Cleaned 02_preprocessed/ (kept folder structure)
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Cleaned 03_output/ (kept folder structure)
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Cleaned reports/ (kept folder structure)
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Removed file: .DS_Store
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Work directory cleaned: 7 items removed, structure preserved
+2025-08-05 11:41:19 - lyfe_kt.content_packager - INFO - Packaging completed successfully: packages/arthurcbrooks_mostmeaning_fixed-2025-08-05-11-41
+2025-08-05 12:09:27 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 13:46:38 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 13:46:38 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-05 13:46:38 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-05 13:46:38 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:46:44 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 13:46:44 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-05 13:46:44 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 13:46:44 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 13:46:45 - lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 13:46:45 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 13:46:45 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-05 13:46:45 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-05 13:46:45 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:47:03 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 13:47:03 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-05 13:47:03 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Processing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Parsing template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-05 13:47:03 - lyfe_kt.stage3_generation - INFO - Successfully processed template: work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpbnv95t0f/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpbnv95t0f/output.json
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp5x1cekwy/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp5x1cekwy/output.json
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqhy4lu18/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqhy4lu18/output
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7xolkd7y/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7xolkd7y/output
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpmcjnp2h0/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpmcjnp2h0/output
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpsbo12dj9/results.json
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpoxjpua8b/results.json
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-05 17:03:45 - lyfe-kt - INFO - Status command called
+2025-08-05 17:03:45 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-08-05 17:03:45 - src.lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-05_17-03-45_376bd716
+2025-08-05 17:03:45 - src.lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-05 17:03:45 - src.lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-05 17:03:45 - src.lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-05 17:03:45 - src.lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-05 17:03:45 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-03-45_376bd716] Preprocessing pipeline initialized
+2025-08-05 17:03:45 - src.lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-05 17:03:45 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-03-45_376bd716] Processing input file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkj341ums/work/01_raw/habitos_matinais.md
+2025-08-05 17:03:45 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-03-45_376bd716] Starting stage: preprocessing
+2025-08-05 17:03:45 - src.lyfe_kt.stage1_preprocessing - INFO - Processing file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkj341ums/work/01_raw/habitos_matinais.md
+2025-08-05 17:03:45 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of habitos_matinais.md
+2025-08-05 17:03:45 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-08-05 17:03:45 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-08-05 17:03:45 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-08-05 17:03:45 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-08-05 17:04:30 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-08-05 17:04:30 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-03-45_376bd716] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkj341ums/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:04:30 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-03-45_376bd716] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkj341ums/work/02_preprocessed/habitos_matinais_ari_analysis.json
+2025-08-05 17:04:30 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-03-45_376bd716] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkj341ums/work/02_preprocessed/habitos_matinais_oracle_context.json
+2025-08-05 17:04:30 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-03-45_376bd716] Completed stage: preprocessing
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Successfully processed /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkj341ums/work/01_raw/habitos_matinais.md in 44.97 seconds
+2025-08-05 17:04:30 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Processing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkj341ums/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of habitos_matinais_filled_template.md
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Parsing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkj341ums/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-05 17:04:30 - src.lyfe_kt.stage3_generation - INFO - Successfully processed template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkj341ums/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:04:30 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-08-05 17:04:30 - src.lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-05_17-04-30_8a38ba81
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-05 17:04:30 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Preprocessing pipeline initialized
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/01_raw
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 0/2 - Found 2 files
+2025-08-05 17:04:30 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Processing input file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/01_raw/exercicios_matinais.md
+2025-08-05 17:04:30 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Starting stage: preprocessing
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Processing file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/01_raw/exercicios_matinais.md
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of exercicios_matinais.md
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-08-05 17:04:30 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-08-05 17:05:06 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 17:05:06 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-08-05 17:05:06 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-08-05 17:05:06 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/exercicios_matinais/exercicios_matinais_filled_template.md
+2025-08-05 17:05:06 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/exercicios_matinais/exercicios_matinais_ari_analysis.json
+2025-08-05 17:05:06 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/exercicios_matinais/exercicios_matinais_oracle_context.json
+2025-08-05 17:05:06 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Completed stage: preprocessing
+2025-08-05 17:05:06 - src.lyfe_kt.stage1_preprocessing - INFO - Successfully processed /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/01_raw/exercicios_matinais.md in 35.74 seconds
+2025-08-05 17:05:06 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 1/2 - Processed exercicios_matinais.md
+2025-08-05 17:05:06 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Processing input file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/01_raw/mindfulness_iniciantes.md
+2025-08-05 17:05:06 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Starting stage: preprocessing
+2025-08-05 17:05:06 - src.lyfe_kt.stage1_preprocessing - INFO - Processing file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/01_raw/mindfulness_iniciantes.md
+2025-08-05 17:05:06 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of mindfulness_iniciantes.md
+2025-08-05 17:05:06 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-08-05 17:05:06 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-08-05 17:05:06 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-08-05 17:05:06 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-08-05 17:05:50 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-08-05 17:05:50 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/mindfulness_iniciantes/mindfulness_iniciantes_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/mindfulness_iniciantes/mindfulness_iniciantes_ari_analysis.json
+2025-08-05 17:05:50 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/mindfulness_iniciantes/mindfulness_iniciantes_oracle_context.json
+2025-08-05 17:05:50 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-04-30_8a38ba81] Completed stage: preprocessing
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Successfully processed /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/01_raw/mindfulness_iniciantes.md in 44.42 seconds
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 2/2 - Processed mindfulness_iniciantes.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Batch processing completed: 2/2 files successful
+2025-08-05 17:05:50 - src.lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-05_17-05-50_ddf12f6e
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-05 17:05:50 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-05-50_ddf12f6e] Preprocessing pipeline initialized
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Report generated: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/reports/supertasks_2025-08-05_17-05-50.md
+2025-08-05 17:05:50 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Processing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/mindfulness_iniciantes/mindfulness_iniciantes_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of mindfulness_iniciantes_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Parsing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/mindfulness_iniciantes/mindfulness_iniciantes_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - WARNING - Content truncated to mobile limit: 293 chars
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - WARNING - Content truncated to mobile limit: 293 chars
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Successfully processed template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/mindfulness_iniciantes/mindfulness_iniciantes_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 1/2 - Processed mindfulness_iniciantes_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Processing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/exercicios_matinais/exercicios_matinais_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of exercicios_matinais_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Parsing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/exercicios_matinais/exercicios_matinais_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'guerreiro' → 'warrior'
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'guerreiro' → 'warrior'
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - WARNING - Content truncated to mobile limit: 293 chars
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'guerreiro' → 'warrior'
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - WARNING - Content truncated to mobile limit: 293 chars
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Successfully processed template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptr49elmx/work/02_preprocessed/exercicios_matinais/exercicios_matinais_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Progress: 2/2 - Processed exercicios_matinais_filled_template.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Batch processing completed: 2/2 successful
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 17:05:50 - src.lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 17:05:50 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-08-05 17:05:50 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-08-05 17:05:50 - src.lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-05_17-05-50_621ef80d
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-05 17:05:50 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-05-50_621ef80d] Preprocessing pipeline initialized
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-05 17:05:50 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-05-50_621ef80d] Processing input file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjv8_hrca/work/01_raw/habitos_matinais.md
+2025-08-05 17:05:50 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-05-50_621ef80d] Starting stage: preprocessing
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Processing file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjv8_hrca/work/01_raw/habitos_matinais.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of habitos_matinais.md
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-08-05 17:05:50 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-08-05 17:06:43 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-08-05 17:06:43 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-05-50_621ef80d] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjv8_hrca/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:06:43 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-05-50_621ef80d] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjv8_hrca/work/02_preprocessed/habitos_matinais_ari_analysis.json
+2025-08-05 17:06:43 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-05-50_621ef80d] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjv8_hrca/work/02_preprocessed/habitos_matinais_oracle_context.json
+2025-08-05 17:06:43 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-05-50_621ef80d] Completed stage: preprocessing
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Successfully processed /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjv8_hrca/work/01_raw/habitos_matinais.md in 53.00 seconds
+2025-08-05 17:06:43 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Processing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjv8_hrca/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of habitos_matinais_filled_template.md
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Parsing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjv8_hrca/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'warrior' → 'warrior'
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'warrior' → 'warrior'
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'warrior' → 'warrior'
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Successfully generated 2 supertasks with guaranteed structure
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Progress: 4/5 - Saving outputs
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Progress: 5/5 - Compiling results
+2025-08-05 17:06:43 - src.lyfe_kt.stage3_generation - INFO - Successfully processed template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpjv8_hrca/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:06:43 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-08-05 17:06:43 - src.lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-05_17-06-43_5cc9c189
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-05 17:06:43 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-06-43_5cc9c189] Preprocessing pipeline initialized
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-05 17:06:43 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-06-43_5cc9c189] Processing input file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqlbaqdcr/work/01_raw/habitos_matinais.md
+2025-08-05 17:06:43 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-06-43_5cc9c189] Starting stage: preprocessing
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Processing file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqlbaqdcr/work/01_raw/habitos_matinais.md
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of habitos_matinais.md
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-08-05 17:06:43 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-08-05 17:07:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 17:07:39 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-08-05 17:07:39 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-08-05 17:07:39 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-06-43_5cc9c189] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqlbaqdcr/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:07:39 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-06-43_5cc9c189] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqlbaqdcr/work/02_preprocessed/habitos_matinais_ari_analysis.json
+2025-08-05 17:07:39 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-06-43_5cc9c189] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqlbaqdcr/work/02_preprocessed/habitos_matinais_oracle_context.json
+2025-08-05 17:07:39 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-05_17-06-43_5cc9c189] Completed stage: preprocessing
+2025-08-05 17:07:39 - src.lyfe_kt.stage1_preprocessing - INFO - Successfully processed /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqlbaqdcr/work/01_raw/habitos_matinais.md in 55.46 seconds
+2025-08-05 17:07:39 - lyfe-kt - INFO - Generation command group accessed
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Processing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqlbaqdcr/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of habitos_matinais_filled_template.md
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Parsing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpqlbaqdcr/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'guerreiro' → 'warrior'
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'guerreiro' → 'warrior'
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - INFO - Generated 8 mobile-optimized flexible items
+2025-08-05 17:07:39 - src.lyfe_kt.stage3_generation - ERROR - JSON Schema validation failed: 900 is greater than the maximum of 600
+2025-08-05 17:07:39 - lyfe-kt - ERROR - Template generation failed: Failed to generate multiple supertasks: Generated structure failed validation (unexpected)
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Analyzing single file: test.json
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Analyzing single file: test.json
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Analyzing single file: test.json
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Analyzing single file: test.json
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Analyzing directory: input_dir
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Analyzing directory: input_dir
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Analyzing directory: input_dir
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - WARNING - AI analysis failed, using fallback: API error
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - WARNING - Ari-specific analysis failed: API error
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - WARNING - Analysis integration failed: 'NoneType' object has no attribute 'get'
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - WARNING - Ari preparation recommendations failed: 'NoneType' object has no attribute 'get'
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Analyzing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpn2u0zzf3.json
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Content analyzer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Analyzing single file: non_existent_file.json
+2025-08-05 17:07:39 - src.lyfe_kt.content_analyzer - INFO - Analyzing directory: non_existent_dir
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing single file: test.json
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - No original structure found, creating basic structure
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing single file: test.json
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - No original structure found, creating basic structure
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing single file: test.json
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing single file: test.json
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing directory: input_dir
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing directory: input_dir
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - ERROR - Failed to normalize test2.json: Normalization failed
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - No original structure found, creating basic structure
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - Missing flexibleItems, creating empty array
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - Missing required original field: dimension
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - Missing required original field: archetype
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - Missing required original field: relatedToType
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - Missing required original field: relatedToId
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - Missing required original field: estimatedDuration
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - Missing required original field: coinsReward
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalized file saved: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpdmm6b9q2.json
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - Failed to generate enhanced description: 'NoneType' object has no attribute 'get'
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - Failed to determine target audience: 'NoneType' object has no attribute 'get'
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - Failed to generate enhanced learning objectives: 'NoneType' object has no attribute 'get'
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpxn_bx72p.json
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - WARNING - No original structure found, creating basic structure
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - JSON normalizer initialized successfully
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing single file: non_existent_file.json
+2025-08-05 17:07:39 - src.lyfe_kt.json_normalizer - INFO - Normalizing directory: non_existent_dir

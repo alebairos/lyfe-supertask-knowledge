@@ -1,0 +1,109 @@
+{
+  "title": "Encontrando Sentido na Vida - Iniciante - Advanced",
+  "dimension": "mentalHealth",
+  "archetype": "explorer",
+  "relatedToType": "GENERIC",
+  "relatedToId": "find-meaning",
+  "estimatedDuration": 420,
+  "coinsReward": 15,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Neste exercício, você aprenderá sobre cinco áreas principais que trazem significado à vida: amor, transcendência, serviço, beleza e aceitação do sofrimento.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Com base na psicologia positiva e no modelo PERMA de Seligman, este conteúdo focará no desenvolvimento de micro-hábitos para melhorar o bem-estar mental.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "O sentido na vida é uma busca pessoal, mas existem áreas comuns nas quais muitas pessoas o encontram. Essas áreas incluem amor, transcendência, serviço, apreciação da beleza e aceitação do sofrimento.",
+      "author": "Ari"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual é o conceito principal sobre Encontrando Sentido na Vida?",
+      "options": [
+        "Desenvolvimento pessoal",
+        "Ciência comportamental",
+        "Mudança de hábitos",
+        "Autoconhecimento"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O desenvolvimento pessoal é fundamental para mudanças sustentáveis."
+    },
+    {
+      "type": "quiz",
+      "question": "Como aplicar Encontrando Sentido na Vida no dia a dia?",
+      "options": [
+        "Pequenos passos",
+        "Mudanças radicais",
+        "Esperar motivação",
+        "Ignorar dificuldades"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pequenos passos garantem progresso consistente e sustentável."
+    },
+    {
+      "type": "quiz",
+      "question": "Qual o maior desafio em Encontrando Sentido na Vida?",
+      "options": [
+        "Consistência",
+        "Conhecimento",
+        "Tempo",
+        "Recursos"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A consistência é o fator determinante para mudanças duradouras."
+    },
+    {
+      "type": "quote",
+      "content": "O progresso acontece através de pequenos passos consistentes.",
+      "author": "Ari"
+    },
+    {
+      "type": "quote",
+      "content": "A ciência comportamental nos ensina que mudanças sustentáveis começam devagar.",
+      "author": "Ari"
+    }
+  ],
+  "metadata": {
+    "generated_by": "lyfe-kt-structural-v1.0",
+    "generation_timestamp": "2025-08-05T11:34:45.043315",
+    "ari_persona_applied": true,
+    "difficulty_level": "advanced",
+    "source_template": "arthurcbrooks_mostmeaning_extracted_filled_template.md",
+    "template_metadata": {
+      "source_file": "arthurcbrooks_mostmeaning_extracted_filled_template.md",
+      "source_path": "work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md",
+      "file_size": 4946,
+      "modification_time": "2025-08-04T17:27:19.828628",
+      "frontmatter_keys": [
+        "title",
+        "description",
+        "target_audience",
+        "difficulty_level",
+        "estimated_time",
+        "dimension",
+        "archetype",
+        "related_to_type",
+        "related_to_id",
+        "estimated_duration",
+        "coins_reward",
+        "language",
+        "region",
+        "learning_objectives",
+        "prerequisites",
+        "tags"
+      ],
+      "processing_timestamp": "2025-08-05T11:34:45.019601"
+    },
+    "language": "portuguese",
+    "region": "Brazil",
+    "created_at": "2025-08-05T11:34:45.043320",
+    "updated_at": "2025-08-05T11:34:45.043321",
+    "version": "1.0.0"
+  }
+}

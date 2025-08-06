@@ -153,57 +153,90 @@ class StructuralJSONGenerator:
         }
     
     def _generate_flexible_items(self, template_data: Dict[str, Any], difficulty: str) -> List[Dict[str, Any]]:
-        """AI generates content within guaranteed item structures."""
+        """Generate mobile-optimized flexible items (3-8 items) with proper content distribution."""
         try:
-            content_sections = self._extract_content_sections(template_data)
-            quiz_sections = self._extract_quiz_sections(template_data)
-            
             flexible_items = []
             
-            # Generate content items with guaranteed structure
-            for section in content_sections:
-                content_item = {
-                    "type": "content",
-                    "content": self._ai_enhance_content(section, difficulty),
-                    "author": "Ari"  # Can be AI-generated or default
-                }
-                flexible_items.append(content_item)
+            # Extract and split content into mobile-sized chunks
+            content_items = self._extract_and_split_content(template_data, difficulty)
+            flexible_items.extend(content_items)
             
-            # Generate quiz items with guaranteed structure  
-            for quiz in quiz_sections:
-                quiz_item = {
-                    "type": "quiz",
-                    "question": self._ai_enhance_question(quiz.get('question', ''), difficulty),
-                    "options": self._ai_enhance_options(quiz.get('options', []), difficulty),
-                    "correctAnswer": quiz.get('correctAnswer', 0),
-                    "explanation": self._ai_enhance_explanation(quiz.get('explanation', ''), difficulty)
-                }
-                flexible_items.append(quiz_item)
+            # Generate quiz items (2-4 required for engagement)
+            quiz_items = self._generate_quiz_items(template_data, difficulty)
+            flexible_items.extend(quiz_items)
             
+            # Generate quote items for inspiration
+            quote_items = self._generate_quote_items(template_data, difficulty)
+            flexible_items.extend(quote_items)
+            
+            # Ensure we have 3-8 items as required by v1.1 schema
+            if len(flexible_items) < 3:
+                # Add more content items if needed
+                while len(flexible_items) < 3:
+                    flexible_items.append(self._create_default_content_item(difficulty, len(flexible_items)))
+            elif len(flexible_items) > 8:
+                # Trim to 8 items max (keep variety)
+                flexible_items = self._trim_to_mobile_limit(flexible_items)
+            
+            logger.info(f"Generated {len(flexible_items)} mobile-optimized flexible items")
             return flexible_items
             
         except Exception as e:
             logger.error(f"Failed to generate flexible items: {e}")
             raise GenerationError(f"Failed to generate flexible items: {e}")
     
-    def _extract_content_sections(self, template_data: Dict[str, Any]) -> List[str]:
-        """Extract content sections from template data."""
+    def _extract_and_split_content(self, template_data: Dict[str, Any], difficulty: str) -> List[Dict[str, Any]]:
+        """Extract content and split into mobile-optimized items (50-300 chars each)."""
         sections = template_data.get('sections', {})
-        content_sections = []
+        content_items = []
         
-        # Extract main content
+        # Get all available content
+        all_content = []
         if sections.get('main_content'):
-            content_sections.append(sections['main_content'])
-        
-        # Extract overview if present
+            all_content.append(sections['main_content'])
         if sections.get('overview'):
-            content_sections.append(sections['overview'])
-            
-        # Add at least one content section if none found
-        if not content_sections:
-            content_sections.append("Knowledge content about " + template_data.get('frontmatter', {}).get('title', 'the topic'))
+            all_content.append(sections['overview'])
+        if sections.get('key_concepts'):
+            all_content.append(sections['key_concepts'])
+        if sections.get('examples'):
+            all_content.append(sections['examples'])
         
-        return content_sections
+        # If no content found, create default
+        if not all_content:
+            title = template_data.get('frontmatter', {}).get('title', 'o tópico')
+            all_content = [f"Conteúdo educativo sobre {title} para desenvolvimento pessoal."]
+        
+        # Split content into mobile-sized chunks
+        for content_section in all_content:
+            chunks = self._split_content_to_mobile_chunks(content_section)
+            for chunk in chunks:
+                # Parse structured content (author, tips, main content)
+                parsed_content = self._parse_content_structure(chunk)
+                mobile_content = self._ai_enhance_content(parsed_content['content'], difficulty)
+                
+                if mobile_content and len(mobile_content) >= 50:  # Ensure minimum length
+                    content_item = {
+                        "type": "content",
+                        "content": mobile_content
+                    }
+                    
+                    # Add author if found
+                    if parsed_content['author']:
+                        content_item["author"] = parsed_content['author']
+                    else:
+                        content_item["author"] = "Ari"
+                    
+                    # Add tips if found
+                    if parsed_content['tips']:
+                        content_item["tips"] = parsed_content['tips']
+                    
+                    content_items.append(content_item)
+        
+        # Ensure at least 1 content item
+        if not content_items:
+            content_items.append(self._create_default_content_item(difficulty, 0))
+        
+        return content_items[:4]  # Limit to 4 content items max
     
     def _extract_quiz_sections(self, template_data: Dict[str, Any]) -> List[Dict[str, Any]]:
         """Extract quiz sections from template data."""
@@ -226,29 +259,361 @@ class StructuralJSONGenerator:
         return quiz_sections
     
     def _ai_enhance_content(self, content: str, difficulty: str) -> str:
-        """AI enhances content for specific difficulty."""
+        """AI enhances content for specific difficulty with mobile character limits."""
         # Handle both string and list content
         if isinstance(content, list):
             content = " ".join(str(item) for item in content)
         elif not isinstance(content, str):
             content = str(content)
             
-        # For now, return content as-is - can add AI enhancement later
-        return content.strip() if content else "Enhanced content for " + difficulty + " level"
+        # Clean content (remove markdown, extra whitespace)
+        content = self._clean_content_for_mobile(content)
+        
+        # Remove type labels that might have leaked into content
+        content = re.sub(r'^(Content|Quiz|Quote)\s+', '', content, flags=re.IGNORECASE)
+        
+        # Replace internal terminology with user-friendly terms
+        content = content.replace('supertask', 'exercício')
+        content = content.replace('Supertask', 'Exercício')
+        content = content.replace('SUPERTASK', 'EXERCÍCIO')
+        
+        # Enforce mobile character limits (50-300 chars)
+        if len(content) > 300:
+            # Truncate to 290 chars and add ellipsis
+            content = content[:290] + "..."
+            logger.warning(f"Content truncated to mobile limit: {len(content)} chars")
+        elif len(content) < 50:
+            # Pad with difficulty-appropriate content if too short
+            if content.strip():
+                content = f"{content.strip()} - {difficulty.capitalize()} level insights."
+            else:
+                content = f"Conteúdo educativo para nível {difficulty} sobre este tópico importante."
+        
+        return content.strip()
+    
+    def _parse_content_structure(self, content_text: str) -> Dict[str, Any]:
+        """Parse content to extract author, tips, and main content separately."""
+        import re
+        
+        if isinstance(content_text, list):
+            content_text = " ".join(str(item) for item in content_text)
+        elif not isinstance(content_text, str):
+            content_text = str(content_text)
+        
+        # Initialize result
+        result = {
+            'content': content_text,
+            'author': None,
+            'tips': None
+        }
+        
+        # Parse author line (handles markdown **Author**: format and "— Author" formats)
+        author_patterns = [
+            r'\*\*Author\*\*:\s*([^\n\r]+)',  # **Author**: Name
+            r'Author:\s*([^\n\r]+)',  # Author: Name
+            r'—\s*([^\n\r]+)$',  # — Author at end
+            r'^\s*—\s*([^\n\r]+)',  # — Author at start
+        ]
+        
+        for pattern in author_patterns:
+            author_match = re.search(pattern, content_text, re.MULTILINE)
+            if author_match:
+                result['author'] = author_match.group(1).strip()
+                # Remove author line from content
+                content_text = re.sub(pattern, '', content_text, flags=re.MULTILINE)
+                break
+        
+        # Parse tips section (handles markdown **Tips**: format)
+        tips_patterns = [
+            r'\*\*Tips\*\*:\s*([\s\S]*?)(?=\n\*\*|\n—|\n\n|$)',  # **Tips**: with bullet points
+            r'Tips?:\s*(.+?)(?=\n—|\n\n|$)',  # Tips: with bullet points
+        ]
+        
+        for pattern in tips_patterns:
+            tips_match = re.search(pattern, content_text, re.DOTALL | re.MULTILINE)
+            if tips_match:
+                tips_text = tips_match.group(1)
+                # Extract bullet points
+                tips = []
+                for line in tips_text.split('\n'):
+                    line = line.strip()
+                    if line.startswith('-') or line.startswith('•'):
+                        tip = line.lstrip('-•').strip()
+                        if tip:
+                            tips.append(tip)
+                
+                if tips:
+                    result['tips'] = tips
+                
+                # Remove tips section from content
+                content_text = re.sub(pattern, '', content_text, flags=re.DOTALL | re.MULTILINE)
+                break
+        
+        # Clean up the main content
+        main_content = content_text.strip()
+        # Remove any remaining formatting artifacts
+        main_content = re.sub(r'\n\s*\n\s*\n', '\n\n', main_content)  # Multiple newlines
+        main_content = re.sub(r'^\s*—\s*$', '', main_content, flags=re.MULTILINE)  # Standalone dashes
+        
+        result['content'] = main_content.strip()
+        
+        return result
     
     def _ai_enhance_question(self, question: str, difficulty: str) -> str:
-        """AI enhances quiz question for specific difficulty."""
-        return question.strip() if question else f"What is the key concept for {difficulty} level?"
+        """AI enhances quiz question for specific difficulty with mobile limits (15-120 chars)."""
+        if not question or not question.strip():
+            question = f"Qual o conceito-chave sobre este tópico?"
+        
+        question = question.strip()
+        
+        # Remove difficulty level from questions
+        question = re.sub(r'\s*-\s*(Iniciante|Avançado|Beginner|Advanced)\s*', '', question)
+        question = re.sub(r'\s*\((Iniciante|Avançado|Beginner|Advanced)\)\s*', '', question)
+        
+        # Replace internal terminology with user-friendly terms
+        question = question.replace('supertask', 'exercício')
+        question = question.replace('Supertask', 'Exercício')
+        
+        # Enforce mobile character limits (15-120 chars)
+        if len(question) > 120:
+            question = question[:115] + "...?"
+            logger.warning(f"Quiz question truncated to mobile limit: {len(question)} chars")
+        elif len(question) < 15:
+            question = f"{question} - conceito essencial"
+        
+        return question
     
     def _ai_enhance_options(self, options: List[str], difficulty: str) -> List[str]:
-        """AI enhances quiz options for specific difficulty."""
-        if options and len(options) >= 2:
-            return options
-        return [f"Option A ({difficulty})", f"Option B ({difficulty})", f"Option C ({difficulty})", f"Option D ({difficulty})"]
+        """AI enhances quiz options for specific difficulty with mobile limits (3-60 chars each)."""
+        if not options or len(options) < 2:
+            options = [f"Opção A", f"Opção B", f"Opção C", f"Opção D"]
+        
+        # Enforce mobile character limits (3-60 chars each)
+        mobile_options = []
+        for i, option in enumerate(options):
+            option = str(option).strip()
+            
+            if len(option) > 60:
+                option = option[:57] + "..."
+                logger.warning(f"Quiz option {i} truncated to mobile limit: {len(option)} chars")
+            elif len(option) < 3:
+                option = f"Op {i+1}"
+            
+            mobile_options.append(option)
+        
+        return mobile_options
     
     def _ai_enhance_explanation(self, explanation: str, difficulty: str) -> str:
-        """AI enhances quiz explanation for specific difficulty."""
-        return explanation.strip() if explanation else f"This is the correct answer for {difficulty} level understanding."
+        """AI enhances quiz explanation for specific difficulty with mobile limits (30-250 chars)."""
+        if not explanation or not explanation.strip():
+            explanation = f"Explicação para nível {difficulty} com insights comportamentais."
+        
+        explanation = explanation.strip()
+        
+        # Enforce mobile character limits (30-250 chars)
+        if len(explanation) > 250:
+            explanation = explanation[:245] + "..."
+            logger.warning(f"Quiz explanation truncated to mobile limit: {len(explanation)} chars")
+        elif len(explanation) < 30:
+            explanation = f"{explanation} - Nível {difficulty} com ciência comportamental."
+        
+        return explanation
+    
+    def _clean_content_for_mobile(self, content: str) -> str:
+        """Clean content for mobile display by removing markdown and excessive formatting."""
+        import re
+        
+        if not content:
+            return ""
+        
+        # Handle list input by joining
+        if isinstance(content, list):
+            content = " ".join(str(item) for item in content)
+        elif not isinstance(content, str):
+            content = str(content)
+        
+        # Remove content type prefixes that might appear
+        content = re.sub(r'^(Content|Quiz|Quote)\s*(Item\s*\d+)?\s*', '', content, flags=re.IGNORECASE | re.MULTILINE)
+        
+        # Remove markdown headers (### Header -> Header)
+        content = re.sub(r'^#{1,6}\s+', '', content, flags=re.MULTILINE)
+        
+        # Remove markdown bold/italic (**text** -> text)
+        content = re.sub(r'\*\*([^*]+)\*\*', r'\1', content)
+        content = re.sub(r'\*([^*]+)\*', r'\1', content)
+        
+        # Remove markdown links ([text](url) -> text)
+        content = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', content)
+        
+        # Replace internal terminology with user-friendly terms  
+        content = content.replace('supertask', 'exercício')
+        content = content.replace('Supertask', 'Exercício')
+        content = content.replace('SUPERTASK', 'EXERCÍCIO')
+        
+        # Remove Author: and Tips: sections (these should be handled separately)
+        content = re.sub(r'\*\*Author\*\*:.*?(?=\n\*\*|\n\n|$)', '', content, flags=re.DOTALL)
+        content = re.sub(r'Author:.*?(?=\n\*\*|\n\n|$)', '', content, flags=re.DOTALL)
+        content = re.sub(r'\*\*Tips\*\*:.*?(?=\n\*\*|\n\n|$)', '', content, flags=re.DOTALL)
+        content = re.sub(r'Tips?:.*?(?=\n\*\*|\n\n|$)', '', content, flags=re.DOTALL)
+        
+        # Remove excessive whitespace and newlines
+        content = re.sub(r'\n\s*\n', ' ', content)  # Multiple newlines -> single space
+        content = re.sub(r'\s+', ' ', content)      # Multiple spaces -> single space
+        
+        # Remove markdown list markers (- item -> item)
+        content = re.sub(r'^\s*[-*+]\s+', '', content, flags=re.MULTILINE)
+        
+        return content.strip()
+    
+    def _split_content_to_mobile_chunks(self, content: str) -> List[str]:
+        """Split large content into mobile-optimized chunks of 100-250 chars."""
+        if not content:
+            return []
+        
+        # Clean content first
+        content = self._clean_content_for_mobile(content)
+        
+        if len(content) <= 250:
+            return [content]
+        
+        # Split by sentences first
+        sentences = content.split('. ')
+        chunks = []
+        current_chunk = ""
+        
+        for sentence in sentences:
+            sentence = sentence.strip()
+            if not sentence:
+                continue
+                
+            # Add period back if missing
+            if not sentence.endswith('.'):
+                sentence += '.'
+            
+            # Check if adding this sentence would exceed limit
+            potential_chunk = current_chunk + (' ' if current_chunk else '') + sentence
+            
+            if len(potential_chunk) <= 250:
+                current_chunk = potential_chunk
+            else:
+                # Save current chunk and start new one
+                if current_chunk:
+                    chunks.append(current_chunk)
+                current_chunk = sentence
+        
+        # Add remaining chunk
+        if current_chunk:
+            chunks.append(current_chunk)
+        
+        return chunks
+    
+    def _generate_quiz_items(self, template_data: Dict[str, Any], difficulty: str) -> List[Dict[str, Any]]:
+        """Generate 2-4 quiz items for engagement."""
+        quiz_items = []
+        frontmatter = template_data.get('frontmatter', {})
+        title = frontmatter.get('title', 'este tópico')
+        
+        # Remove difficulty level from title for user-facing questions
+        clean_title = re.sub(r'\s*-\s*(Iniciante|Avançado|Beginner|Advanced)\s*', '', title)
+        clean_title = re.sub(r'\s*\((Iniciante|Avançado|Beginner|Advanced)\)\s*', '', clean_title)
+        
+        # Create basic quiz questions based on content
+        quiz_questions = [
+            {
+                'question': f"Qual é o conceito principal sobre {clean_title}?",
+                'options': ["Desenvolvimento pessoal", "Ciência comportamental", "Mudança de hábitos", "Autoconhecimento"],
+                'correctAnswer': 0,
+                'explanation': "O desenvolvimento pessoal é fundamental para mudanças sustentáveis."
+            },
+            {
+                'question': f"Como aplicar {clean_title} no dia a dia?",
+                'options': ["Pequenos passos", "Mudanças radicais", "Esperar motivação", "Ignorar dificuldades"],
+                'correctAnswer': 0,
+                'explanation': "Pequenos passos garantem progresso consistente e sustentável."
+            }
+        ]
+        
+        # Add more questions for advanced level
+        if difficulty == "advanced":
+            quiz_questions.append({
+                'question': f"Qual o maior desafio em {title}?",
+                'options': ["Consistência", "Conhecimento", "Tempo", "Recursos"],
+                'correctAnswer': 0,
+                'explanation': "A consistência é o fator determinante para mudanças duradouras."
+            })
+        
+        # Convert to mobile-optimized format
+        for quiz_data in quiz_questions[:4]:  # Max 4 quiz items
+            quiz_item = {
+                "type": "quiz",
+                "question": self._ai_enhance_question(quiz_data['question'], difficulty),
+                "options": self._ai_enhance_options(quiz_data['options'], difficulty),
+                "correctAnswer": quiz_data['correctAnswer'],
+                "explanation": self._ai_enhance_explanation(quiz_data['explanation'], difficulty)
+            }
+            quiz_items.append(quiz_item)
+        
+        return quiz_items
+    
+    def _generate_quote_items(self, template_data: Dict[str, Any], difficulty: str) -> List[Dict[str, Any]]:
+        """Generate inspirational quote items."""
+        quote_items = []
+        
+        # Create context-appropriate quotes
+        quotes = [
+            {
+                'content': "O progresso acontece através de pequenos passos consistentes.",
+                'author': "Ari"
+            },
+            {
+                'content': "A ciência comportamental nos ensina que mudanças sustentáveis começam devagar.",
+                'author': "Ari"
+            }
+        ]
+        
+        # Convert to mobile-optimized format
+        for quote_data in quotes[:2]:  # Max 2 quote items
+            # Ensure quote content is within 20-200 char limit
+            quote_content = quote_data['content']
+            if len(quote_content) > 200:
+                quote_content = quote_content[:195] + "..."
+            
+            quote_item = {
+                "type": "quote",
+                "content": quote_content,
+                "author": quote_data['author']
+            }
+            quote_items.append(quote_item)
+        
+        return quote_items
+    
+    def _create_default_content_item(self, difficulty: str, index: int) -> Dict[str, Any]:
+        """Create a default content item when needed."""
+        default_content = f"Conteúdo educativo {index+1} sobre desenvolvimento pessoal para nível {difficulty}. Aplicação prática da ciência comportamental."
+        
+        return {
+            "type": "content",
+            "content": default_content,
+            "author": "Ari"
+        }
+    
+    def _trim_to_mobile_limit(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Trim items to 8 max while maintaining variety."""
+        if len(items) <= 8:
+            return items
+        
+        # Prioritize variety: keep content, quiz, and quote types
+        content_items = [item for item in items if item.get('type') == 'content']
+        quiz_items = [item for item in items if item.get('type') == 'quiz']
+        quote_items = [item for item in items if item.get('type') == 'quote']
+        
+        # Build final list with variety
+        final_items = []
+        final_items.extend(content_items[:3])  # Max 3 content
+        final_items.extend(quiz_items[:3])     # Max 3 quiz
+        final_items.extend(quote_items[:2])    # Max 2 quotes
+        
+        return final_items[:8]  # Ensure max 8 items
     
     def _generate_metadata(self, template_data: Dict[str, Any], difficulty: str = "beginner") -> Dict[str, Any]:
         """Generate metadata with proper format."""
