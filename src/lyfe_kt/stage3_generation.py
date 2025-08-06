@@ -204,7 +204,7 @@ class StructuralJSONGenerator:
         # If no content found, create default
         if not all_content:
             title = template_data.get('frontmatter', {}).get('title', 'o tópico')
-            all_content = [f"Conteúdo educativo sobre {title} para desenvolvimento pessoal."]
+            all_content = [f"Informações educativas sobre {title} para desenvolvimento pessoal."]
         
         # Split content into mobile-sized chunks
         for content_section in all_content:
@@ -433,7 +433,10 @@ class StructuralJSONGenerator:
             content = str(content)
         
         # Remove content type prefixes that might appear
-        content = re.sub(r'^(Content|Quiz|Quote)\s*(Item\s*\d+)?\s*', '', content, flags=re.IGNORECASE | re.MULTILINE)
+        content = re.sub(r'^(Content|Quiz|Quote|Conteúdo|Item)\s*(Item\s*\d+)?\s*', '', content, flags=re.IGNORECASE | re.MULTILINE)
+        content = re.sub(r'^(Content\s*Item\s*\d+|Item\s*\d+)\s*', '', content, flags=re.IGNORECASE | re.MULTILINE)
+        # Remove mid-text content prefixes
+        content = re.sub(r'Content\s*Item\s*\d+\s*', '', content, flags=re.IGNORECASE)
         
         # Remove markdown headers (### Header -> Header)
         content = re.sub(r'^#{1,6}\s+', '', content, flags=re.MULTILINE)
@@ -589,7 +592,7 @@ class StructuralJSONGenerator:
     
     def _create_default_content_item(self, difficulty: str, index: int) -> Dict[str, Any]:
         """Create a default content item when needed."""
-        default_content = f"Conteúdo educativo {index+1} sobre desenvolvimento pessoal para nível {difficulty}. Aplicação prática da ciência comportamental."
+        default_content = f"Informações educativas {index+1} sobre desenvolvimento pessoal para nível {difficulty}. Aplicação prática da ciência comportamental."
         
         return {
             "type": "content",
