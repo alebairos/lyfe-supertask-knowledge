@@ -1,0 +1,78 @@
+{
+  "title": "Mastering Meaningful Living - Mastery",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "mastering_meaningful_living_mastery",
+  "estimatedDuration": 420,
+  "coinsReward": 200,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "🎓 Dominando conceitos avançados... (3/3)",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Dominar a arte de viver de maneira significativa é uma jornada que requer o equilíbrio de vários elementos. A prática do amor, por exemplo, é um pilar fundamental, assim como a busca por transcendência, que pode ser alcançada por meio da meditação diária.",
+      "author": "Ari",
+      "tips": [
+        "🎓 Avançado: Incorpore esses pilares em sua vida diária para alcançar maior satisfação e bem-estar"
+      ]
+    },
+    {
+      "type": "content",
+      "content": "No domínio de uma vida significativa, um aspecto avançado a ser explorado é a arte de abraçar e superar o sofrimento. Isso pode parecer contra intuitivo, mas há uma riqueza de sabedoria nessa prática.",
+      "author": "Ari",
+      "tips": [
+        "🎓 Avançado: Veja as adversidades como oportunidades para o crescimento e aprendizado, em vez de tentar evitá-las"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Como integrar Encontrar significado na vida  com Mastering Meaningful Living?",
+      "options": [
+        "Combinar estratégias",
+        "Aplicar isoladamente",
+        "Evitar complexidade",
+        "Usar ocasionalmente"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A integração maximiza o impacto porque Incorpore esses pilares em sua vida diária para alcançar maior satisfação e bem-estar."
+    },
+    {
+      "type": "quote",
+      "content": "Maestria é a arte de tornar o complexo simples.",
+      "author": "Expert"
+    },
+    {
+      "type": "content",
+      "content": "No caminho para uma vida mais significativa, a apreciação da beleza que nos cerca é um elemento poderoso. Este é um exercício de conscientização, que nos impulsiona a sair do piloto automático e realmente notar o que está ao nosso redor.",
+      "author": "Ari",
+      "tips": [
+        "🎓 Avançado: Faça um esforço consciente para notar e apreciar a beleza no dia a dia, seja na arte, na natureza ou"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Como integrar Aprender a abraçar e superar o com Mastering Meaningful Living?",
+      "options": [
+        "Combinar estratégias",
+        "Aplicar isoladamente",
+        "Evitar complexidade",
+        "Usar ocasionalmente"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A integração maximiza o impacto porque Veja as adversidades como oportunidades para o crescimento e aprendizado, em vez de tentar evitá-las."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1",
+    "learning_level": "mastery",
+    "narrative_theme": "Mastering Meaningful Living"
+  }
+}

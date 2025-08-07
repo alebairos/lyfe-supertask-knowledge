@@ -1,0 +1,78 @@
+{
+  "title": "Mastering Meaningful Living - Foundation",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "mastering_meaningful_living_foundation",
+  "estimatedDuration": 180,
+  "coinsReward": 100,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "🌱 Construindo sua base de conhecimento... (1/3)",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Viver uma vida com significado é como pintar um quadro com as cores da felicidade. Uma das maiores fontes dessas cores é o amor. O amor é como uma lâmpada que ilumina a escuridão, dando propósito e alegria à nossa existência.",
+      "author": "Ari",
+      "tips": [
+        "💡 Dica básica: Faça um esforço consciente para expressar amor todos os dias, seja para um ente querido, um amigo ou"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Como aplicar Mastering Meaningful Living no dia a dia?",
+      "options": [
+        "Faça um esforço consciente para expressar amor todos os",
+        "Ignorar completamente",
+        "Esperar motivação",
+        "Apenas teoria"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Esta aplicação funciona porque Faça um esforço consciente para expressar amor todos os dias, seja para um ente ."
+    },
+    {
+      "type": "content",
+      "content": "Ter um propósito na vida é como ter uma bússola interna que nos guia e motiva. Independentemente de qual seja o seu propósito, seja servir aos outros, buscar conhecimento ou criar algo novo, ele fornece uma direção para onde você deseja ir e o que deseja alcançar.",
+      "author": "Ari",
+      "tips": [
+        "💡 Dica básica: Identifique um propósito em sua vida, como servir aos outros, buscar conhecimento ou criar algo novo"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Todo grande conhecimento começa com um primeiro passo.",
+      "author": "Provérbio"
+    },
+    {
+      "type": "content",
+      "content": "Viver de forma significativa é uma arte que se aprimora com o tempo. Um dos segredos para isso é aprender a apreciar a beleza à nossa volta. Não só as grandes obras de arte ou as maravilhas da natureza, mas também os pequenos momentos que, normalmente, passam despercebidos.",
+      "author": "Ari",
+      "tips": [
+        "💡 Dica básica: Faça um esforço consciente para notar e apreciar a beleza no dia a dia, seja na arte, na natureza ou"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Como aplicar Mastering Meaningful Living no dia a dia?",
+      "options": [
+        "Identifique um propósito em sua vida, como servir aos o",
+        "Ignorar completamente",
+        "Esperar motivação",
+        "Apenas teoria"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Esta aplicação funciona porque Identifique um propósito em sua vida, como servir aos outros, buscar conheciment."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1",
+    "learning_level": "foundation",
+    "narrative_theme": "Mastering Meaningful Living"
+  }
+}

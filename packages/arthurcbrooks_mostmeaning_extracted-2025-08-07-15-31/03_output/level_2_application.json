@@ -1,0 +1,71 @@
+{
+  "title": "Aplicando Propósito e Beleza em Sua Vida - Intermediário",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "applying_purpose_beauty_intermediate",
+  "estimatedDuration": 400,
+  "coinsReward": 50,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo. Que tal começar a identificar seu propósito hoje?",
+      "author": "Ari",
+      "tips": [
+        "Pense sobre o que você ama fazer e como isso pode beneficiar os outros."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Por que é importante ter um propósito na vida?",
+      "options": [
+        "Dá direção e motivação",
+        "Para impressionar os outros",
+        "Para ganhar mais dinheiro",
+        "Nenhuma das anteriores"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ter um propósito na vida nos fornece uma direção e motivação para nossas ações e decisões."
+    },
+    {
+      "type": "content",
+      "content": "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas. Faça um esforço consciente para notar a beleza ao seu redor.",
+      "author": "Ari",
+      "tips": [
+        "Comece a notar a beleza em coisas pequenas, como o sorriso de um ente querido ou o pôr do sol."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "A beleza está em toda parte, você só precisa parar e observar.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Agora você conhece a importância do propósito e da beleza em sua vida. O próximo passo é aplicá-los em suas atividades diárias. Lembre-se, a jornada para uma vida significativa é contínua e requer prática e paciência.",
+      "author": "Ari",
+      "tips": [
+        "Defina pequenos objetivos que estejam alinhados com seu propósito e aprecie a beleza ao longo do caminho."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Como você pode incorporar o propósito e a beleza em sua vida diária?",
+      "options": [
+        "Definindo objetivos alinhados com meu propósito",
+        "Notando a beleza em coisas pequenas",
+        "Ambas as opções anteriores",
+        "Nenhuma das opções anteriores"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Definir objetivos alinhados com seu propósito e notar a beleza em coisas pequenas são maneiras eficazes de incorporar propósito e beleza em sua vida diária."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

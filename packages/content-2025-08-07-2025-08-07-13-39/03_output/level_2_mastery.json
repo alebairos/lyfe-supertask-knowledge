@@ -1,0 +1,71 @@
+{
+  "title": "Mastery: Explorando o Significado da Vida",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "advanced_meaningful_life",
+  "estimatedDuration": 600,
+  "coinsReward": 1000,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Vamos começar com o conceito de propósito. Ter um propósito na vida é o que nos impulsiona e nos motiva. Pode ser encontrado através da prestação de serviço aos outros, busca pelo conhecimento ou até mesmo na criação de algo novo.",
+      "author": "Ari",
+      "tips": [
+        "Identifique suas paixões e interesses para ajudá-lo a descobrir seu propósito."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual das seguintes opções é uma maneira de encontrar um propósito na vida?",
+      "options": [
+        "Evitar desafios",
+        "Prestar serviço aos outros",
+        "Ignorar a beleza ao redor",
+        "Focar no passado"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Prestar serviço aos outros é uma maneira significativa de encontrar um propósito na vida. Isso nos permite contribuir para o bem-estar dos outros e encontrar satisfação em nossas ações."
+    },
+    {
+      "type": "content",
+      "content": "Agora, vamos falar sobre beleza. Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas.",
+      "author": "Ari",
+      "tips": [
+        "Tire um tempo para apreciar a beleza ao seu redor. Pode ser um pôr do sol, uma obra de arte ou um sorriso amigável."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "A beleza está em todos os lugares, mas nem todos a veem. Aprenda a apreciar a beleza em todas as suas formas.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Por último, mas não menos importante, vamos falar sobre resiliência. A habilidade de superar adversidades e transformar o sofrimento em força é um aspecto crucial na busca de uma vida significativa.",
+      "author": "Ari",
+      "tips": [
+        "Quando enfrentar adversidades, lembre-se de que cada desafio é uma oportunidade para aprender e crescer."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "A resiliência envolve:",
+      "options": [
+        "Evitar sofrimento a todo custo",
+        "Nunca enfrentar desafios",
+        "Superar adversidades e transformar o sofrimento em força",
+        "Permanecer inalterado diante do sofrimento"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A resiliência é a capacidade de superar adversidades e transformar o sofrimento em força. Não se trata de evitar o sofrimento, mas de aprender a lidar com ele de forma eficaz."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

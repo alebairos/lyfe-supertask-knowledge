@@ -1,0 +1,71 @@
+{
+  "title": "Resiliência: Transformando Adversidades em Força - Expansão",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "resilience_expansion",
+  "estimatedDuration": 450,
+  "coinsReward": 350,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Bem-vindo à expansão sobre resiliência, um dos pilares cruciais para encontrar um significado na vida. A resiliência é a habilidade de superar as adversidades e transformar o sofrimento em força.",
+      "author": "Ari",
+      "tips": [
+        "Lembre-se de que o sofrimento faz parte da vida. O importante é como lidamos com ele."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual a melhor definição de resiliência?",
+      "options": [
+        "Evitar sofrimento a todo custo",
+        "Superar adversidades, transformando o sofrimento em força",
+        "Ser sempre positivo",
+        "Nunca enfrentar problemas"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Resiliência é a habilidade de superar adversidades e transformar o sofrimento em força. Não se trata de evitar o sofrimento, mas sim de aprender a lidar com ele."
+    },
+    {
+      "type": "content",
+      "content": "Aprender a abraçar e superar o sofrimento é uma parte essencial da resiliência. Em vez de evitar a dor, vemos cada obstáculo como uma oportunidade de crescimento e aprendizado.",
+      "author": "Ari",
+      "tips": [
+        "Ao enfrentar um desafio, pergunte a si mesmo: 'O que posso aprender com isso?'"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "A resiliência é a capacidade de transformar adversidades em aprendizado, fazendo do sofrimento uma força motriz para a superação.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Resiliência se conecta com os outros pilares para encontrar significado na vida. Por exemplo, ao expressar amor e buscar um propósito, podemos encontrar a força para superar as adversidades.",
+      "author": "Ari",
+      "tips": [
+        "Pratique a resiliência em diferentes aspectos da sua vida, seja no amor, no propósito ou na apreciação da beleza."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Como a resiliência se relaciona com outros pilares como amor e propósito?",
+      "options": [
+        "A resiliência é irrelevante para outros pilares",
+        "A resiliência nos ajuda a superar as adversidades no amor e a encontrar nosso propósito",
+        "A resiliência impede o amor e o propósito",
+        "A resiliência é o oposto do amor e do propósito"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A resiliência é uma ferramenta que nos ajuda a superar as adversidades que podemos enfrentar ao expressar amor e buscar nosso propósito na vida."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Encontrando Significado: Amor e Transcendência - Fundamentos",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "amor_transcendence_fundamentals",
+  "estimatedDuration": 420,
+  "coinsReward": 30,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Viver uma vida significativa pode parecer um desafio, mas é possível através de elementos fundamentais como o Amor e a Transcendência. Vamos explorar esses conceitos nesta sessão.",
+      "author": "Ari"
+    },
+    {
+      "type": "quiz",
+      "question": "O que é o Amor no contexto de uma vida significativa?",
+      "options": [
+        "Apenas um sentimento romântico",
+        "Uma emoção poderosa que pode ser expressa de várias formas",
+        "Algo que só se experimenta na juventude",
+        "Uma sensação temporária"
+      ],
+      "correctAnswer": 1,
+      "explanation": "No contexto de uma vida significativa, o amor vai além do romance. É uma emoção poderosa que pode ser expressa de várias formas e é uma fonte significativa de significado na vida."
+    },
+    {
+      "type": "content",
+      "content": "Expressar amor todos os dias através de gestos simples é um meio poderoso de vivenciar esse pilar. Isso pode variar desde preparar o café da manhã para um ente querido, até dizer a um amigo o quanto você o aprecia.",
+      "author": "Ari",
+      "tips": [
+        "Faça um esforço consciente para expressar amor todos os dias. Gestos simples podem ter um grande impacto."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "O amor não é apenas algo que você sente, é algo que você faz.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "A Transcendência é a capacidade de ver além do imediato e se conectar com algo maior. Isso pode ser alcançado através de práticas de meditação, conexão com a natureza, apreciação de música e arte.",
+      "author": "Ari",
+      "tips": [
+        "Pratique meditação diariamente. Isso pode ajudá-lo a alcançar um estado de transcendência."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Como podemos alcançar a Transcendência?",
+      "options": [
+        "Através da meditação e conexão com a natureza",
+        "Ignorando os problemas da vida",
+        "Vivendo em total isolamento",
+        "Focando apenas em objetivos materiais"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Transcendência pode ser alcançada através de práticas como meditação, conexão com a natureza, apreciação de música e arte. Não se trata de ignorar problemas ou viver isolado, mas de se conectar com algo maior."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Mastering Meaningful Living - Application",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "mastering_meaningful_living_application",
+  "estimatedDuration": 300,
+  "coinsReward": 150,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "🛠️ Aplicando conhecimento na prática... (2/3)",
+      "author": "Ari"
+    },
+    {
+      "type": "quote",
+      "content": "Conhecimento sem ação é como semente sem terra.",
+      "author": "Provérbio"
+    },
+    {
+      "type": "content",
+      "content": "Dominar uma vida com propósito requer a compreensão e a expressão consciente do amor. Isso não se limita a relacionamentos românticos, mas se estende ao amor por amigos, família, e crucialmente, por si mesmo.",
+      "author": "Ari",
+      "tips": [
+        "🛠️ Na prática: Faça um esforço consciente para expressar amor todos os dias, seja para um ente querido, um amigo ou"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Como integrar O amor é uma fonte poderosa de com Mastering Meaningful Living?",
+      "options": [
+        "Combinar estratégias",
+        "Aplicar isoladamente",
+        "Evitar complexidade",
+        "Usar ocasionalmente"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A integração maximiza o impacto porque Faça um esforço consciente para expressar amor todos os dias, seja para um ente querido, um amigo ou para si mesmo."
+    },
+    {
+      "type": "content",
+      "content": "A transcendência é uma ferramenta poderosa para se conectar a algo maior que o imediato. Ao buscar práticas de transcendência como meditação, contato com a natureza, música, arte ou práticas religiosas, você estará se permitindo uma visão além do presente instantâneo.",
+      "author": "Ari",
+      "tips": [
+        "🛠️ Na prática: Procure atividades que permitam a transcendência, como meditação, contato com a natureza, música, ar"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Como integrar A transcendência nos ajuda a v com Mastering Meaningful Living?",
+      "options": [
+        "Combinar estratégias",
+        "Aplicar isoladamente",
+        "Evitar complexidade",
+        "Usar ocasionalmente"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A integração maximiza o impacto porque Procure atividades que permitam a transcendência, como meditação, contato com a natureza, música, arte ou práticas relig."
+    },
+    {
+      "type": "quote",
+      "content": "A prática transforma teoria em sabedoria.",
+      "author": "Mestre"
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1",
+    "learning_level": "application",
+    "narrative_theme": "Mastering Meaningful Living"
+  }
+}

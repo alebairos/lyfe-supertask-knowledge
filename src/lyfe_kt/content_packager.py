@@ -60,8 +60,8 @@ class ContentPackager:
         Auto-detect package title from supertask files.
         
         Logic:
-        1. Look for JSON files in work/03_output/
-        2. Extract common prefix from filenames
+        1. Look for comprehensive_metadata.json and extract theme (comprehensive generations)
+        2. Look for JSON files in work/03_output/ and extract common prefix (simple generations)
         3. Fallback to timestamp if no clear pattern
         
         Returns:
@@ -74,7 +74,24 @@ class ContentPackager:
                 logger.warning(f"Output directory not found: {output_dir}")
                 return self._get_timestamp_title()
             
-            # Find all JSON files
+            # First, check for comprehensive metadata (preferred for comprehensive generations)
+            metadata_file = output_dir / "comprehensive_metadata.json"
+            if metadata_file.exists():
+                try:
+                    with open(metadata_file, 'r', encoding='utf-8') as f:
+                        metadata = json.load(f)
+                    
+                    theme = metadata.get('theme')
+                    if theme and len(theme) > 3:
+                        # Clean the theme to make it package-friendly
+                        cleaned_theme = self._clean_theme_name(theme)
+                        logger.info(f"Auto-detected title from comprehensive metadata: '{cleaned_theme}'")
+                        return cleaned_theme
+                        
+                except Exception as e:
+                    logger.warning(f"Failed to read comprehensive metadata: {e}")
+            
+            # Fallback to original logic for simple generations
             json_files = list(output_dir.glob("*.json"))
             
             if not json_files:
@@ -103,6 +120,24 @@ class ContentPackager:
         except Exception as e:
             logger.error(f"Error detecting title: {e}")
             return self._get_timestamp_title()
+    
+    def _clean_theme_name(self, theme: str) -> str:
+        """Clean theme name to make it package-friendly."""
+        import re
+        
+        # Convert to lowercase and replace spaces with underscores
+        cleaned = theme.lower().replace(' ', '_')
+        
+        # Remove special characters, keep only alphanumeric and underscores
+        cleaned = re.sub(r'[^a-z0-9_]', '', cleaned)
+        
+        # Remove multiple consecutive underscores
+        cleaned = re.sub(r'_+', '_', cleaned)
+        
+        # Remove leading/trailing underscores
+        cleaned = cleaned.strip('_')
+        
+        return cleaned
     
     def _clean_filename(self, filename: str) -> str:
         """Clean filename to extract meaningful title."""

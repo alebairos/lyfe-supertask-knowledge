@@ -1,0 +1,79 @@
+{
+  "title": "Integrando Amor, Transcendência, Propósito, Beleza e Resiliência",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "integrating_love_transcendence_purpose_beauty_resilience",
+  "estimatedDuration": 480,
+  "coinsReward": 500,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Viver uma vida significativa envolve a integração de vários conceitos. O primeiro é o Amor, a emoção poderosa que é uma fonte significativa de significado em nossas vidas, seja amor por nós mesmos, pelos outros ou pela humanidade.",
+      "author": "Ari",
+      "tips": [
+        "Pratique o amor diariamente. Pode ser através de pequenos gestos de bondade para com os outros ou cuidando de si mesmo."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "O amor é importante para a vida porque...",
+      "options": [
+        "Nos faz sentir bem",
+        "É uma fonte significativa de significado",
+        "Nos ajuda a fazer amigos",
+        "Todos os acima"
+      ],
+      "correctAnswer": 1,
+      "explanation": "O amor, em suas diferentes formas, é uma fonte significativa de significado em nossas vidas. Ele nos conecta com os outros e conosco mesmos de maneiras profundas."
+    },
+    {
+      "type": "content",
+      "content": "Transcendência é o segundo conceito. É a capacidade de ver além do imediato, nos conectando com algo maior. Isso pode ser alcançado através de práticas como meditação ou imersão na natureza.",
+      "author": "Ari",
+      "tips": [
+        "Tente meditar por alguns minutos todos os dias. Isso pode ajudá-lo a alcançar um estado de transcendência."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Na busca por significado, não devemos esquecer a beleza ao nosso redor. Apreciá-la pode nos trazer alegria e significado para nossas vidas.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "O Propósito é o nosso terceiro conceito. Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo.",
+      "author": "Ari",
+      "tips": [
+        "Pense em seus valores e paixões. Eles podem ajudá-lo a encontrar seu propósito na vida."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Como você pode encontrar seu propósito na vida?",
+      "options": [
+        "Servindo aos outros",
+        "Buscando conhecimento",
+        "Criando algo novo",
+        "Todas as anteriores"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Todos esses caminhos podem levar à descoberta do propósito. O importante é seguir o que ressoa com você."
+    },
+    {
+      "type": "content",
+      "content": "Por fim, mas não menos importante, está a Resiliência. É a habilidade de superar adversidades e transformar o sofrimento em força. A resiliência é essencial para enfrentar os desafios da vida e encontrar significado mesmo em tempos difíceis.",
+      "author": "Ari",
+      "tips": [
+        "Reconheça suas emoções e aceite-as. Isso é o primeiro passo para a resiliência."
+      ]
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

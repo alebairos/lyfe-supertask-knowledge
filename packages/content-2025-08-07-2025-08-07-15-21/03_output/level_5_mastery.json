@@ -1,0 +1,89 @@
+{
+  "title": "Dominando o Significado da Vida",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "dominating_the_meaning_of_life",
+  "estimatedDuration": 500,
+  "coinsReward": 500,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Amor é uma emoção poderosa que pode ser expressa de várias formas. Não se limita ao amor romântico, mas também inclui o amor fraternal, o amor por si mesmo e o amor pela humanidade.",
+      "author": "Ari",
+      "tips": [
+        "Comece o dia expressando amor de alguma forma. Pode ser um gesto simples ou uma palavra gentil."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "O amor é apenas um sentimento romântico?",
+      "options": [
+        "Sim",
+        "Não"
+      ],
+      "correctAnswer": 1,
+      "explanation": "O amor vai além do sentimento romântico. Inclui o amor fraternal, o amor por si mesmo e o amor pela humanidade."
+    },
+    {
+      "type": "content",
+      "content": "A transcendência é a capacidade de ver além do imediato e se conectar com algo maior. Pode ser alcançada através da meditação, da natureza, da música, da arte ou da religião.",
+      "author": "Ari",
+      "tips": [
+        "Reserve um tempo diário para meditar e se conectar com o seu eu interior."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "A beleza está em todos os lugares, você só precisa abrir os olhos e o coração para vê-la.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas.",
+      "author": "Ari",
+      "tips": [
+        "Faça um passeio na natureza e aprecie a beleza que ela oferece."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Apreciar a beleza pode trazer o que para nossas vidas?",
+      "options": [
+        "Alegria",
+        "Significado",
+        "Ambos",
+        "Nenhum"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Apreciar a beleza pode trazer tanto alegria quanto significado para nossas vidas."
+    },
+    {
+      "type": "content",
+      "content": "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo.",
+      "author": "Ari",
+      "tips": [
+        "Identifique suas paixões e veja como você pode utilizá-las para servir aos outros."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "O que nos dá um propósito na vida?",
+      "options": [
+        "Servir aos outros",
+        "Buscar conhecimento",
+        "Criar algo novo",
+        "Todas as opções"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Servir aos outros, buscar conhecimento e criar algo novo são todas maneiras de encontrar um propósito na vida."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

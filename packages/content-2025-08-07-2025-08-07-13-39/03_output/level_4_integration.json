@@ -1,0 +1,23 @@
+{
+  "title": "Arthur Brooks 5 Pillars - Integration (Fallback) - Advanced",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "fallback_advanced",
+  "estimatedDuration": 300,
+  "coinsReward": 100,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Este conteúdo sobre Arthur Brooks 5 Pillars - Integration (Fallback) foi criado para o nível advanced.",
+      "author": "Ari"
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

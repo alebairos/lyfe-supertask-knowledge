@@ -1,0 +1,71 @@
+{
+  "title": "A arte da resiliência na busca por significado - Expansão",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "arthurcbrooks_mostmeaning_extracted_-_expansion_expansion",
+  "estimatedDuration": 420,
+  "coinsReward": 30,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "A resiliência é um conceito poderoso na busca por uma vida significativa. É a habilidade de superar adversidades, enfrentando desafios com coragem e transformando o sofrimento em força.",
+      "author": "Ari",
+      "tips": [
+        "Lembre-se de que o sofrimento é parte da vida, mas como lidamos com ele define nosso crescimento."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "O que é resiliência?",
+      "options": [
+        "A arte de evitar sofrimento",
+        "A capacidade de superar adversidades e transformar o sofrimento em força",
+        "Um estado de felicidade constante",
+        "A habilidade de nunca enfrentar desafios"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A resiliência é a capacidade de superar adversidades e transformar o sofrimento em força. Não é sobre evitar desafios, mas enfrentá-los de maneira positiva."
+    },
+    {
+      "type": "content",
+      "content": "Resiliência e amor estão interligados. Ao expressarmos amor por nós mesmos e pelos outros, cultivamos a força para superar adversidades. O amor nos dá a coragem para enfrentar o sofrimento e transformá-lo em aprendizado.",
+      "author": "Ari",
+      "tips": [
+        "Pratique o amor-próprio. Isso fortalecerá sua resiliência."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "A resiliência não é sobre evitar o sofrimento, mas aprender a abraçá-lo e transformá-lo em força para continuar.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "A resiliência é um pilar crucial na busca por uma vida significativa, juntamente com o amor, a transcendência, o propósito e a beleza. Juntos, esses conceitos nos ajudam a navegar pelos desafios da vida e a encontrar satisfação em nossas experiências diárias.",
+      "author": "Ari",
+      "tips": [
+        "Tente ver adversidades como oportunidades para crescer e aprender."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual desses não é um pilar para encontrar significado na vida?",
+      "options": [
+        "Amor",
+        "Transcendência",
+        "Gratidão",
+        "Resiliência"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Embora a gratidão possa contribuir para uma vida significativa, os pilares discutidos são: Amor, Transcendência, Propósito, Beleza e Resiliência."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

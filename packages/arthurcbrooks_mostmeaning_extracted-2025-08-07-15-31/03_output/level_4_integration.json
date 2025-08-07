@@ -1,0 +1,71 @@
+{
+  "title": "Integração de Conceitos para uma Vida Significativa",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "integration_concepts_for_meaningful_life",
+  "estimatedDuration": 480,
+  "coinsReward": 500,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Viver uma vida significativa pode parecer um desafio, mas através de cinco pilares - amor, transcendência, propósito, beleza e resiliência - podemos encontrar significado e satisfação em nossas vidas diárias.",
+      "author": "Ari",
+      "tips": [
+        "Tente incorporar cada um desses pilares em suas atividades diárias."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual dos seguintes é um dos cinco pilares para encontrar significado na vida?",
+      "options": [
+        "Amor",
+        "Gratidão",
+        "Materialismo",
+        "Fama"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Amor é um dos pilares para encontrar significado na vida. Os outros são: transcendência, propósito, beleza e resiliência."
+    },
+    {
+      "type": "content",
+      "content": "Transcendência nos ajuda a ver além do imediato e a nos conectar com algo maior. Pode ser alcançada através da meditação, da natureza, da música, da arte ou da religião.",
+      "author": "Ari",
+      "tips": [
+        "Tente dedicar um tempo cada dia para uma atividade que lhe permita sentir a transcendência."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Nós não vemos as coisas como elas são, nós as vemos como nós somos.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas.",
+      "author": "Ari",
+      "tips": [
+        "Faça uma pausa para apreciar a beleza ao seu redor, mesmo em coisas simples como um pôr do sol ou um sorriso."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual é a melhor definição de resiliência no contexto de uma vida significativa?",
+      "options": [
+        "A habilidade de evitar o sofrimento",
+        "A habilidade de superar adversidades e transformar o sofrimento em força",
+        "A capacidade de ignorar problemas",
+        "A capacidade de ser sempre feliz"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A resiliência não é sobre evitar o sofrimento, mas sim sobre aprender a abraçá-lo e superá-lo, transformando a adversidade em força."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

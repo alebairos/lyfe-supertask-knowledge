@@ -611,10 +611,11 @@ def generate(ctx):
 @click.argument('output_dir', type=click.Path())
 @click.option('--difficulty', type=click.Choice(['beginner', 'advanced', 'both']), 
               default='both', help='Generate specific difficulty level or both (default: both)')
+@click.option('--sequence', type=str, help='Custom narrative sequence (e.g., "content → quiz → quote")')
 @click.option('--report', type=click.Path(), help='Save processing report to file')
 @click.option('--progress', is_flag=True, help='Show detailed progress')
 @click.pass_context
-def generate_template(ctx, template_file, output_dir, difficulty, report, progress):
+def generate_template(ctx, template_file, output_dir, difficulty, sequence, report, progress):
     """
     Generate supertask JSON from a single filled template.
     
@@ -636,12 +637,19 @@ def generate_template(ctx, template_file, output_dir, difficulty, report, progre
         click.echo(f"🚀 Starting generation from template: {template_file}")
         
         # Determine difficulty settings
-        generate_both = difficulty == 'both'
+        if difficulty == 'both':
+            generate_both = True
+            specific_difficulty = None
+        else:
+            generate_both = False
+            specific_difficulty = difficulty
         
         result = generate_from_template(
             template_file,
             output_dir,
             generate_both_difficulties=generate_both,
+            specific_difficulty=specific_difficulty,
+            custom_sequence=sequence,
             progress_callback=progress_callback if progress else None
         )
         
@@ -916,6 +924,616 @@ def package(ctx, title, output_dir, keep_work, session_id):
         sys.exit(1)
     except Exception as e:
         logger.error(f"Packaging failed: {e}")
+        click.echo(f"❌ Error: {e}")
+        sys.exit(1)
+
+
+@generate.command(name='narrative')
+@click.argument('template_file', type=click.Path(exists=True))
+@click.argument('output_dir', type=click.Path())
+@click.option('--levels', type=int, default=3, help='Number of learning levels (default: 3)')
+@click.option('--progression', type=str, default='foundation → application → mastery',
+              help='Learning progression pattern (default: foundation → application → mastery)')
+@click.option('--theme', type=str, help='Journey theme (auto-detected from content if not provided)')
+@click.option('--continuity', type=click.Choice(['low', 'medium', 'high']), default='medium',
+              help='Narrative continuity level (default: medium)')
+@click.option('--report', type=click.Path(), help='Save journey report to file')
+@click.option('--progress', is_flag=True, help='Show detailed progress')
+@click.pass_context
+def generate_narrative(ctx, template_file, output_dir, levels, progression, theme, continuity, report, progress):
+    """
+    Generate progressive learning narrative from a single template.
+    
+    Creates multiple interconnected supertasks (beginner → intermediate → advanced)
+    forming a complete learning journey with narrative continuity.
+    
+    TEMPLATE_FILE: Path to the filled markdown template
+    OUTPUT_DIR: Directory where generated narrative files will be saved
+    
+    Example:
+        lyfe-kt generate narrative work/02_preprocessed/sample.md work/03_output
+        lyfe-kt generate narrative content.md output/ --levels 2 --theme "Mastering Mindfulness"
+    """
+    logger = ctx.obj['logger']
+    
+    try:
+        from .progressive_narrative import NarrativeSequenceOrchestrator
+        from .content_enrichment import ContentEnrichmentEngine
+        from .openai_client import OpenAIClient
+        import json
+        from datetime import datetime
+        
+        def progress_callback(current, total, message):
+            if progress:
+                click.echo(f"[{current}/{total}] {message}")
+        
+        click.echo(f"🎭 Starting progressive narrative generation: {template_file}")
+        progress_callback(0, 5, "Initializing narrative generation system")
+        
+        # Parse progression levels
+        level_names = [level.strip() for level in progression.split(' → ')]
+        if len(level_names) != levels:
+            click.echo(f"⚠️  Warning: Progression has {len(level_names)} levels but --levels is {levels}")
+            level_names = level_names[:levels] if len(level_names) > levels else level_names + ['advanced'] * (levels - len(level_names))
+        
+        progress_callback(1, 5, f"Parsing template and extracting content")
+        
+        # Read and parse template
+        template_path = Path(template_file)
+        if not template_path.exists():
+            raise FileNotFoundError(f"Template file not found: {template_file}")
+        
+        with open(template_path, 'r', encoding='utf-8') as f:
+            template_content = f.read()
+        
+        # Extract title from template or filename
+        title = theme or template_path.stem.replace('_filled_template', '').replace('_', ' ').title()
+        
+        progress_callback(2, 5, f"Initializing AI systems for {len(level_names)} levels")
+        
+        # Initialize AI systems with configuration
+        from .config_loader import load_config
+        config = load_config()
+        
+        openai_client = OpenAIClient()
+        enrichment_engine = ContentEnrichmentEngine(openai_client)
+        orchestrator = NarrativeSequenceOrchestrator(enrichment_engine)
+        
+        progress_callback(3, 5, f"Generating progressive learning journey")
+        
+        # Generate progressive narrative
+        journey = orchestrator.create_progressive_journey(
+            source_material=template_content,
+            title=title,
+            levels=level_names,
+            theme=theme
+        )
+        
+        progress_callback(4, 5, "Saving narrative files and generating report")
+        
+        # Create output directory
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        
+        # Save individual supertasks
+        saved_files = []
+        for level_name, supertask in journey['supertasks'].items():
+            filename = f"level_{level_names.index(level_name)+1}_{level_name}.json"
+            file_path = output_path / filename
+            
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(supertask, f, indent=2, ensure_ascii=False)
+            
+            saved_files.append(filename)
+            logger.info(f"Saved {level_name} supertask: {filename}")
+        
+        # Save journey metadata
+        metadata_file = output_path / "narrative_metadata.json"
+        with open(metadata_file, 'w', encoding='utf-8') as f:
+            # Prepare serializable metadata
+            serializable_metadata = {
+                'levels': journey['metadata']['levels'],
+                'theme': journey['metadata']['theme'],
+                'total_supertasks': journey['metadata']['total_supertasks'],
+                'generated_at': datetime.now().isoformat(),
+                'progression': progression,
+                'continuity_level': continuity,
+                'source_template': str(template_path)
+            }
+            json.dump(serializable_metadata, f, indent=2, ensure_ascii=False)
+        
+        # Generate journey report
+        report_content = _generate_journey_report(journey, level_names, title, progression)
+        report_file = output_path / "narrative_journey_report.md"
+        with open(report_file, 'w', encoding='utf-8') as f:
+            f.write(report_content)
+        
+        # Save report to custom location if specified
+        if report:
+            custom_report_path = Path(report)
+            custom_report_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(custom_report_path, 'w', encoding='utf-8') as f:
+                f.write(report_content)
+        
+        progress_callback(5, 5, "Narrative generation completed")
+        
+        # Success summary
+        click.echo("✅ Progressive narrative generation completed!")
+        click.echo(f"📁 Output directory: {output_dir}")
+        click.echo(f"📄 Generated files: {len(saved_files) + 2}")
+        for filename in saved_files:
+            click.echo(f"   - {filename}")
+        click.echo(f"   - narrative_metadata.json")
+        click.echo(f"   - narrative_journey_report.md")
+        click.echo(f"🎭 Learning journey: {len(level_names)} levels with narrative continuity")
+        
+    except ImportError as e:
+        logger.error(f"Missing dependency for narrative generation: {e}")
+        click.echo(f"❌ Error: Missing dependency - {e}")
+        sys.exit(1)
+    except Exception as e:
+        logger.error(f"Narrative generation failed: {e}")
+        click.echo(f"❌ Error: {e}")
+        sys.exit(1)
+
+
+def _generate_journey_report(journey: dict, level_names: list, title: str, progression: str) -> str:
+    """Generate a comprehensive journey report."""
+    try:
+        from datetime import datetime
+        metadata = journey['metadata']
+        supertasks = journey['supertasks']
+        
+        report_lines = [
+            f"# Learning Journey: {title}",
+            "",
+            "## 🎯 Journey Overview",
+            f"**Total Levels**: {len(level_names)}",
+            f"**Progression**: {progression}",
+            f"**Theme**: {metadata.get('theme', 'N/A')}",
+            f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+            ""
+        ]
+        
+        # Add level details
+        total_duration = 0
+        for i, level_name in enumerate(level_names):
+            if level_name in supertasks:
+                supertask = supertasks[level_name]
+                duration = supertask.get('estimatedDuration', 300)
+                total_duration += duration
+                
+                level_emoji = {"foundation": "📚", "application": "🛠️", "mastery": "🎓"}.get(level_name, "⭐")
+                
+                report_lines.extend([
+                    f"## {level_emoji} Level {i+1}: {level_name.capitalize()} ({duration//60}-{(duration+120)//60} min)",
+                    f"**Objective**: {_get_level_objective(level_name)}",
+                    f"**Items**: {len(supertask.get('flexibleItems', []))}",
+                    f"**Reward**: {supertask.get('coinsReward', 100)} coins",
+                    ""
+                ])
+        
+        # Add summary
+        report_lines.extend([
+            "## 📊 Journey Summary",
+            f"**Total Estimated Time**: {total_duration//60}-{(total_duration+240)//60} minutes",
+            f"**Total Reward**: {sum(st.get('coinsReward', 100) for st in supertasks.values())} coins",
+            f"**Learning Path**: Progressive difficulty from basic concepts to mastery",
+            "",
+            "## 🚀 Getting Started",
+            "1. Begin with Level 1 (Foundation) to build core understanding",
+            "2. Progress sequentially through each level",
+            "3. Each level builds upon previous knowledge",
+            "4. Complete all levels for comprehensive mastery",
+            "",
+            "---",
+            "*Generated by Lyfe Supertask Knowledge Generator - Progressive Narrative System*"
+        ])
+        
+        return "\n".join(report_lines)
+        
+    except Exception as e:
+        # Use print since logger may not be available in this context
+        print(f"Failed to generate journey report: {e}")
+        return f"# Learning Journey Report\n\nError generating detailed report: {e}"
+
+
+def _get_level_objective(level_name: str) -> str:
+    """Get the learning objective for a level."""
+    objectives = {
+        'foundation': "Understand core concepts and build solid knowledge base",
+        'application': "Apply knowledge in practical, real-world scenarios", 
+        'mastery': "Integrate concepts and handle complex, nuanced situations"
+    }
+    return objectives.get(level_name, f"Master {level_name} level concepts")
+
+
+@generate.command(name='simple')
+@click.argument('template_file', type=click.Path(exists=True))
+@click.argument('output_dir', type=click.Path())
+@click.option('--difficulty', type=click.Choice(['beginner', 'intermediate', 'advanced']), 
+              default='beginner', help='Difficulty level (default: beginner)')
+@click.option('--sequence', type=str, default='content → quiz → content → quote → content → quiz',
+              help='Content sequence pattern')
+@click.option('--theme', type=str, help='Optional theme override')
+@click.option('--progress', is_flag=True, help='Show detailed progress')
+@click.pass_context
+def generate_simple(ctx, template_file, output_dir, difficulty, sequence, theme, progress):
+    """
+    Generate single supertask using simplified v2.0 system.
+    
+    Fast, high-quality generation with minimal processing.
+    Uses single AI call for complete supertask creation.
+    
+    TEMPLATE_FILE: Path to the filled markdown template
+    OUTPUT_DIR: Directory where generated JSON will be saved
+    
+    Example:
+        lyfe-kt generate simple content.md output/ --difficulty beginner
+        lyfe-kt generate simple content.md output/ --sequence "quote → content → quiz"
+    """
+    logger = ctx.obj['logger']
+    
+    try:
+        from .simplified_generator import SimplifiedGenerator, GenerationRequest
+        from .openai_client import OpenAIClient
+        from .config_loader import load_config
+        import json
+        from pathlib import Path
+        
+        def progress_callback(current, total, message):
+            if progress:
+                click.echo(f"[{current}/{total}] {message}")
+        
+        click.echo(f"🚀 Starting simplified generation: {template_file}")
+        progress_callback(0, 4, "Initializing simplified v2.0 system")
+        
+        # Load configuration
+        config = load_config()
+        
+        # Read template content
+        template_path = Path(template_file)
+        with open(template_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Extract title
+        title = theme or template_path.stem.replace('_filled_template', '').replace('_', ' ').title()
+        
+        progress_callback(1, 4, "Creating comprehensive AI prompt")
+        
+        # Initialize simplified generator
+        openai_client = OpenAIClient()
+        generator = SimplifiedGenerator(openai_client)
+        
+        # Create generation request
+        request = GenerationRequest(
+            source_content=content,
+            difficulty=difficulty,
+            sequence=sequence,
+            title=title,
+            theme=theme
+        )
+        
+        progress_callback(2, 4, f"Generating {difficulty} supertask with single AI call")
+        
+        # Generate supertask (single AI call!)
+        supertask = generator.generate_supertask(request)
+        
+        progress_callback(3, 4, "Saving output")
+        
+        # Save output
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        
+        filename = f"{template_path.stem}_{difficulty}.json"
+        output_file = output_path / filename
+        
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(supertask, f, indent=2, ensure_ascii=False)
+        
+        progress_callback(4, 4, "Generation completed")
+        
+        # Success summary
+        items_count = len(supertask.get('flexibleItems', []))
+        duration = supertask.get('estimatedDuration', 0)
+        reward = supertask.get('coinsReward', 0)
+        
+        click.echo("✅ Simplified generation completed!")
+        click.echo(f"📁 Output: {output_file}")
+        click.echo(f"📊 Content: {items_count} items, {duration//60} min, {reward} coins")
+        click.echo(f"⚡ Speed: ~30 seconds (vs 2+ minutes with complex system)")
+        
+    except ImportError as e:
+        logger.error(f"Missing dependency for simplified generation: {e}")
+        click.echo(f"❌ Error: Missing dependency - {e}")
+        sys.exit(1)
+    except Exception as e:
+        logger.error(f"Simplified generation failed: {e}")
+        click.echo(f"❌ Error: {e}")
+        sys.exit(1)
+
+
+@generate.command(name='journey')
+@click.argument('template_file', type=click.Path(exists=True))
+@click.argument('output_dir', type=click.Path())
+@click.option('--levels', type=int, default=3, help='Number of levels (default: 3)')
+@click.option('--progression', type=str, default='foundation → application → mastery',
+              help='Level progression pattern')
+@click.option('--sequence', type=str, default='content → quiz → content → quote → content → quiz',
+              help='Content sequence pattern for each level')
+@click.option('--theme', type=str, help='Journey theme')
+@click.option('--progress', is_flag=True, help='Show detailed progress')
+@click.pass_context
+def generate_journey(ctx, template_file, output_dir, levels, progression, sequence, theme, progress):
+    """
+    Generate progressive learning journey using simplified v2.0 system.
+    
+    Creates multiple levels in parallel for maximum speed.
+    Each level generated with single AI call.
+    
+    TEMPLATE_FILE: Path to the filled markdown template
+    OUTPUT_DIR: Directory where journey files will be saved
+    
+    Example:
+        lyfe-kt generate journey content.md output/
+        lyfe-kt generate journey content.md output/ --levels 2 --theme "Mindfulness Mastery"
+    """
+    logger = ctx.obj['logger']
+    
+    try:
+        from .simplified_generator import SimplifiedNarrativeGenerator, GenerationRequest
+        from .openai_client import OpenAIClient
+        from .config_loader import load_config
+        import json
+        from pathlib import Path
+        
+        def progress_callback(current, total, message):
+            if progress:
+                click.echo(f"[{current}/{total}] {message}")
+        
+        click.echo(f"🎭 Starting simplified journey generation: {template_file}")
+        progress_callback(0, 5, "Initializing simplified v2.0 journey system")
+        
+        # Parse progression levels
+        level_names = [level.strip() for level in progression.split(' → ')][:levels]
+        
+        # Load configuration
+        config = load_config()
+        
+        # Read template content
+        template_path = Path(template_file)
+        with open(template_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Extract title
+        title = theme or template_path.stem.replace('_filled_template', '').replace('_', ' ').title()
+        
+        progress_callback(1, 5, f"Preparing {len(level_names)} levels for parallel generation")
+        
+        # Initialize simplified narrative generator
+        openai_client = OpenAIClient()
+        generator = SimplifiedNarrativeGenerator(openai_client)
+        
+        # Create generation request
+        request = GenerationRequest(
+            source_content=content,
+            difficulty='beginner',  # Will be overridden per level
+            sequence=sequence,
+            title=title,
+            theme=theme
+        )
+        
+        progress_callback(2, 5, f"Generating {len(level_names)} levels in parallel")
+        
+        # Generate journey (parallel generation!)
+        journey = generator.generate_progressive_journey(request, level_names)
+        
+        progress_callback(3, 5, "Saving journey files")
+        
+        # Save outputs
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        
+        saved_files = []
+        supertasks = journey['supertasks']
+        
+        # Save individual level files
+        for i, (level_name, supertask) in enumerate(supertasks.items()):
+            filename = f"level_{i+1}_{level_name}.json"
+            file_path = output_path / filename
+            
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(supertask, f, indent=2, ensure_ascii=False)
+            
+            saved_files.append(filename)
+        
+        # Save journey metadata
+        metadata_file = output_path / "journey_metadata.json"
+        with open(metadata_file, 'w', encoding='utf-8') as f:
+            json.dump(journey['metadata'], f, indent=2, ensure_ascii=False)
+        
+        # Save journey report
+        report_file = output_path / "journey_report.md"
+        with open(report_file, 'w', encoding='utf-8') as f:
+            f.write(journey['journey_report'])
+        
+        progress_callback(4, 5, "Journey generation completed")
+        
+        # Success summary
+        total_items = sum(len(st.get('flexibleItems', [])) for st in supertasks.values())
+        total_duration = sum(st.get('estimatedDuration', 0) for st in supertasks.values())
+        total_reward = sum(st.get('coinsReward', 0) for st in supertasks.values())
+        
+        click.echo("✅ Simplified journey generation completed!")
+        click.echo(f"📁 Output directory: {output_dir}")
+        click.echo(f"📄 Generated files: {len(saved_files) + 2}")
+        for filename in saved_files:
+            click.echo(f"   - {filename}")
+        click.echo(f"   - journey_metadata.json")
+        click.echo(f"   - journey_report.md")
+        click.echo(f"📊 Journey: {len(level_names)} levels, {total_items} items, {total_duration//60} min, {total_reward} coins")
+        click.echo(f"⚡ Speed: ~60 seconds (vs 5+ minutes with complex system)")
+        
+    except ImportError as e:
+        logger.error(f"Missing dependency for simplified journey: {e}")
+        click.echo(f"❌ Error: Missing dependency - {e}")
+        sys.exit(1)
+    except Exception as e:
+        logger.error(f"Simplified journey generation failed: {e}")
+        click.echo(f"❌ Error: {e}")
+        sys.exit(1)
+
+
+@generate.command(name='comprehensive')
+@click.argument('template_file', type=click.Path(exists=True))
+@click.argument('output_dir', type=click.Path())
+@click.option('--levels', type=int, default=5, help='Number of levels (default: 5 for full coverage)')
+@click.option('--sequence', type=str, default='content → quiz → content → quote → content → quiz',
+              help='Content sequence pattern for each level')
+@click.option('--theme', type=str, help='Journey theme (auto-detected if not provided)')
+@click.option('--validate-coverage', is_flag=True, default=True, help='Validate comprehensive concept coverage')
+@click.option('--progress', is_flag=True, help='Show detailed progress')
+@click.pass_context
+def generate_comprehensive(ctx, template_file, output_dir, levels, sequence, theme, validate_coverage, progress):
+    """
+    Generate comprehensive journey with full concept coverage validation.
+    
+    Uses AI-powered concept extraction to ensure ALL source material concepts
+    are systematically covered across multiple learning levels. Includes
+    coverage validation and improvement suggestions.
+    
+    TEMPLATE_FILE: Path to the filled markdown template
+    OUTPUT_DIR: Directory where comprehensive journey files will be saved
+    
+    Example:
+        lyfe-kt generate comprehensive content.md output/
+        lyfe-kt generate comprehensive content.md output/ --levels 5 --validate-coverage
+        lyfe-kt generate comprehensive content.md output/ --theme "Arthur Brooks Pillars"
+    """
+    logger = ctx.obj['logger']
+    
+    try:
+        from .simplified_generator import ComprehensiveNarrativeGenerator, GenerationRequest
+        from .openai_client import OpenAIClient
+        from .config_loader import load_config
+        import json
+        from pathlib import Path
+        from datetime import datetime
+        
+        def progress_callback(current, total, message):
+            if progress:
+                click.echo(f"[{current}/{total}] {message}")
+        
+        click.echo(f"🎯 Starting comprehensive coverage generation: {template_file}")
+        progress_callback(0, 6, "Initializing comprehensive coverage system")
+        
+        # Load configuration
+        config = load_config()
+        
+        # Read template content
+        template_path = Path(template_file)
+        with open(template_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Extract title
+        title = theme or template_path.stem.replace('_filled_template', '').replace('_', ' ').title()
+        
+        progress_callback(1, 6, f"Extracting concepts for {levels}-level comprehensive coverage")
+        
+        # Initialize comprehensive generator
+        openai_client = OpenAIClient()
+        generator = ComprehensiveNarrativeGenerator(openai_client)
+        
+        # Create generation request
+        request = GenerationRequest(
+            source_content=content,
+            difficulty='comprehensive',  # Special mode for comprehensive coverage
+            sequence=sequence,
+            title=title,
+            theme=theme
+        )
+        
+        progress_callback(2, 6, "Generating comprehensive journey with concept mapping")
+        
+        # Generate comprehensive journey
+        result = generator.generate_comprehensive_journey(
+            request=request,
+            num_levels=levels,
+            validate_coverage=validate_coverage
+        )
+        
+        progress_callback(3, 6, "Validating concept coverage and generating reports")
+        
+        # Ensure output directory exists
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        
+        # Save all generated levels
+        supertasks = result.get('supertasks', {})
+        saved_files = []
+        
+        for i, (level_name, supertask) in enumerate(supertasks.items(), 1):
+            filename = f"level_{i}_{level_name}.json"
+            file_path = output_path / filename
+            
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(supertask, f, ensure_ascii=False, indent=2)
+            
+            saved_files.append(filename)
+            logger.info(f"Saved {level_name} level: {file_path}")
+        
+        progress_callback(4, 6, "Saving comprehensive metadata and reports")
+        
+        # Save comprehensive metadata
+        metadata = result.get('metadata', {})
+        metadata_file = output_path / 'comprehensive_metadata.json'
+        with open(metadata_file, 'w', encoding='utf-8') as f:
+            json.dump(metadata, f, ensure_ascii=False, indent=2)
+        
+        # Save comprehensive report
+        journey_report = result.get('journey_report', 'No report generated')
+        report_file = output_path / 'comprehensive_report.md'
+        with open(report_file, 'w', encoding='utf-8') as f:
+            f.write(journey_report)
+        
+        progress_callback(5, 6, "Comprehensive generation completed")
+        
+        # Display results
+        click.echo("✅ Comprehensive coverage generation completed!")
+        click.echo(f"📁 Output directory: {output_dir}")
+        click.echo(f"📄 Generated files: {len(saved_files) + 2}")
+        
+        for filename in saved_files:
+            click.echo(f"   - {filename}")
+        click.echo(f"   - comprehensive_metadata.json")
+        click.echo(f"   - comprehensive_report.md")
+        
+        # Display coverage summary
+        coverage_report = metadata.get('coverage_validation', {})
+        if coverage_report:
+            coverage_score = coverage_report.get('coverage_score', 'N/A')
+            click.echo(f"📊 Coverage Score: {coverage_score}{'%' if isinstance(coverage_score, (int, float)) else ''}")
+            
+            improvements = coverage_report.get('improvement_suggestions', [])
+            if improvements and len(improvements) > 0:
+                click.echo(f"💡 Improvement suggestions available in report")
+        
+        total_concepts = metadata.get('total_concepts', 0)
+        total_items = sum(len(st.get('flexibleItems', [])) for st in supertasks.values())
+        total_duration = sum(st.get('estimatedDuration', 300) for st in supertasks.values())
+        total_reward = sum(st.get('coinsReward', 50) for st in supertasks.values())
+        
+        click.echo(f"📚 Source Concepts: {total_concepts}, Items: {total_items}, Duration: {total_duration//60} min, Reward: {total_reward} coins")
+        click.echo(f"⚡ Comprehensive Coverage System: Systematic concept extraction and validation")
+        
+        progress_callback(6, 6, "All files saved successfully")
+        
+    except FileNotFoundError as e:
+        logger.error(f"File not found: {e}")
+        click.echo(f"❌ File not found: {e}")
+        sys.exit(1)
+    except Exception as e:
+        logger.error(f"Comprehensive generation failed: {e}")
         click.echo(f"❌ Error: {e}")
         sys.exit(1)
 

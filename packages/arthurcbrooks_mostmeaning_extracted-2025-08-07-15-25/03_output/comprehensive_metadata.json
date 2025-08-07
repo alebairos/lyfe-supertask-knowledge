@@ -1,0 +1,143 @@
+{
+  "levels": [
+    "foundation",
+    "application"
+  ],
+  "theme": "Arthurcbrooks Mostmeaning Extracted",
+  "total_supertasks": 2,
+  "total_concepts": 5,
+  "concept_assignment": {
+    "foundation": [
+      {
+        "name": "Amor",
+        "description": "Uma emoção poderosa que pode ser expressa de várias formas e é uma fonte significativa de significado na vida.",
+        "practical_applications": [
+          "Expressar amor diariamente para pessoas ao redor",
+          "Cuidar de si mesmo"
+        ],
+        "examples": [
+          "Preparar o café da manhã para um ente querido",
+          "Dizer a um amigo o quanto você o aprecia"
+        ],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "O amor é uma fonte poderosa de significado. Não apenas o amor romântico, mas o amor fraternal, o amor por si mesmo e o amor pela humanidade."
+        ]
+      },
+      {
+        "name": "Transcendência",
+        "description": "A capacidade de ver além do imediato e se conectar com algo maior.",
+        "practical_applications": [
+          "Meditar",
+          "Apreciar a natureza",
+          "Ouvir música",
+          "Admirar a arte",
+          "Praticar a religião"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "intermediate"
+        ],
+        "source_quotes": [
+          "A transcendência nos ajuda a ver além do imediato e a nos conectar com algo maior."
+        ]
+      }
+    ],
+    "application": [
+      {
+        "name": "Propósito",
+        "description": "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo.",
+        "practical_applications": [
+          "Servir aos outros",
+          "Buscar conhecimento",
+          "Criar algo novo"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "intermediate"
+        ],
+        "source_quotes": [
+          "Ter um propósito na vida nos dá direção e motivação."
+        ]
+      },
+      {
+        "name": "Beleza",
+        "description": "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia.",
+        "practical_applications": [
+          "Apreciar arte",
+          "Observar a natureza",
+          "Valorizar pequenos momentos do dia a dia"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas."
+        ]
+      }
+    ]
+  },
+  "coverage_validation": {
+    "coverage_score": 80,
+    "coverage_analysis": {
+      "coverage_analysis": [
+        {
+          "concept_name": "Amor",
+          "covered_in_level": "foundation",
+          "coverage_quality": "excelente",
+          "evidence": "O amor é uma fonte poderosa de significado. Não apenas o amor romântico, mas o amor fraternal, o amor por si mesmo e o amor pela humanidade...",
+          "suggestions": "N/A"
+        },
+        {
+          "concept_name": "Transcendência",
+          "covered_in_level": "foundation",
+          "coverage_quality": "superficial",
+          "evidence": "O que é a transcendência?...",
+          "suggestions": "Incluir mais detalhes sobre o conceito de transcendência e como ele pode ser alcançado ou experimentado."
+        },
+        {
+          "concept_name": "Propósito",
+          "covered_in_level": "application",
+          "coverage_quality": "boa",
+          "evidence": "O propósito na vida dá direção e motivação. Podemos encontrar propósito servindo aos outros, buscando conhecimento, ou criando algo novo...",
+          "suggestions": "N/A"
+        },
+        {
+          "concept_name": "Beleza",
+          "covered_in_level": "application",
+          "coverage_quality": "boa",
+          "evidence": "A beleza pode ser apreciada em todos os lugares, desde a arte até a natureza e pequenos momentos do dia a dia...",
+          "suggestions": "N/A"
+        },
+        {
+          "concept_name": "Resiliência",
+          "covered_in_level": "não_coberto",
+          "coverage_quality": "inexistente",
+          "evidence": "N/A",
+          "suggestions": "Incluir o conceito de resiliência no percurso, talvez em um nível mais avançado, com discussões sobre como a resiliência pode ser desenvolvida e como ela contribui para uma vida significativa."
+        }
+      ],
+      "overall_coverage_score": 80,
+      "missing_concepts": [
+        "Resiliência"
+      ],
+      "improvement_suggestions": [
+        {
+          "level": "expansion",
+          "add_concept": "Resiliência",
+          "reason": "É um dos conceitos principais do material fonte e é crucial para entender como superar adversidades e encontrar significado na vida."
+        }
+      ],
+      "coverage_summary": "A jornada de aprendizado cobre a maioria dos conceitos do material fonte, mas falha em abordar completamente o conceito de 'Resiliência'. Além disso, enquanto 'Transcendência' é mencionada, a cobertura é um pouco superficial e poderia beneficiar-se de mais detalhes."
+    },
+    "improvement_suggestions": [
+      "Adicionar conceitos faltantes: Resiliência",
+      "Melhorar cobertura superficial de: Transcendência, Resiliência",
+      "Nível expansion: adicionar Resiliência (É um dos conceitos principais do material fonte e é crucial para entender como superar adversidades e encontrar significado na vida.)"
+    ]
+  },
+  "generation_method": "comprehensive_coverage"
+}

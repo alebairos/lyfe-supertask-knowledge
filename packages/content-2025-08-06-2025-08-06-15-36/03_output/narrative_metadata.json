@@ -1,0 +1,13 @@
+{
+  "levels": [
+    "foundation",
+    "application",
+    "mastery"
+  ],
+  "theme": "Mastering Meaningful Living",
+  "total_supertasks": 3,
+  "generated_at": "2025-08-06T15:36:27.311719",
+  "progression": "foundation → application → mastery",
+  "continuity_level": "medium",
+  "source_template": "work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md"
+}

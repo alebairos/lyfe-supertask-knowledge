@@ -1,0 +1,87 @@
+{
+  "title": "Domínio Avançado da Vida Significativa",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "arthurcbrooks_mostmeaning_extracted_-_mastery_mastery",
+  "estimatedDuration": 540,
+  "coinsReward": 500,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "A jornada para uma vida significativa começa com o amor, uma emoção poderosa que pode ser expressa de várias formas. Seja o amor por si mesmo, por outros, ou pela humanidade, todos têm o poder de preencher nossas vidas com significado.",
+      "author": "Ari",
+      "tips": [
+        "Comece o dia fazendo algo amoroso para si mesmo ou para outra pessoa."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual das seguintes ações é um exemplo de expressar amor?",
+      "options": [
+        "Ignorar alguém que você não gosta.",
+        "Fazer um favor a um amigo sem esperar nada em troca.",
+        "Manter uma atitude negativa.",
+        "Criticar os outros continuamente."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Fazer um favor a um amigo sem esperar nada em troca é uma forma de expressar amor. Ignorar, manter uma atitude negativa e criticar não são comportamentos de amor."
+    },
+    {
+      "type": "content",
+      "content": "Transcendência é uma capacidade vital para encontrar significado na vida. Ela nos permite ver além do imediato, conectando-nos com algo maior, como a natureza, a arte, ou até mesmo uma experiência espiritual.",
+      "author": "Ari",
+      "tips": [
+        "Pratique a meditação ou passe um tempo na natureza para experimentar a transcendência."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "A transcendência é como um arco-íris após a chuva. Ela nos leva além do comum, nos conectando com a beleza e a grandeza do universo.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Não podemos esquecer a importância do propósito em nossa vida. Nosso propósito é o que nos dá direção e motivação, seja ele servir aos outros, buscar conhecimento, ou criar algo novo.",
+      "author": "Ari",
+      "tips": [
+        "Pense sobre o que te motiva e como você pode alinhar isso com seu propósito de vida."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual é a importância de ter um propósito na vida?",
+      "options": [
+        "Não tem importância.",
+        "Fornece direção e motivação.",
+        "Impede a felicidade.",
+        "Causa estresse e ansiedade."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ter um propósito na vida fornece direção e motivação. Ele nos ajuda a fazer escolhas que estão alinhadas com nossos valores e aspirações."
+    },
+    {
+      "type": "content",
+      "content": "Apreciar a beleza em nossa vida cotidiana também pode trazer significado. Isso pode ser a beleza na arte, na natureza, ou até mesmo em pequenos momentos do nosso dia a dia.",
+      "author": "Ari",
+      "tips": [
+        "Tente achar a beleza nos pequenos momentos. Pode ser o pôr do sol, um sorriso, ou uma obra de arte."
+      ]
+    },
+    {
+      "type": "content",
+      "content": "Por último, mas não menos importante, vem a resiliência. Ela é a habilidade de superar adversidades e transformar o sofrimento em força. É um pilar essencial para uma vida significativa.",
+      "author": "Ari",
+      "tips": [
+        "Lembre-se que as adversidades podem ser oportunidades para crescimento e aprendizado."
+      ]
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

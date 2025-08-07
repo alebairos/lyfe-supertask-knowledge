@@ -34,9 +34,9 @@ generation_prompts:
       ```
 
       ## FlexibleItems Types
-      - **content**: Conteúdo educativo (com "author" opcional)
-      - **quote**: Citações inspiracionais (com "author" obrigatório)
-      - **quiz**: Perguntas com options array, correctAnswer index, explanation
+      - **content**: Texto educativo direto, SEM prefixos (com "author" opcional)
+      - **quote**: Citações inspiracionais diretas (com "author" obrigatório)  
+      - **quiz**: Perguntas diretas com options array, correctAnswer index, explanation
 
       ## Limites Mobile (v1.1)
       - **content**: 50-300 caracteres para exibição mobile otimizada
@@ -48,6 +48,8 @@ generation_prompts:
 
       ## Regras Críticas
       - PRESERVE todos os campos obrigatórios
+      - **NUNCA inclua prefixos** como "Conteúdo", "Content", "Quiz", "Quote" no início do texto
+      - **Inicie diretamente** com o conteúdo útil, sem rótulos ou identificadores
       - NUNCA invente dados não presentes no template
       - MANTENHA consistência com Ari persona
       - USE português brasileiro correto (formas masculinas)
@@ -84,6 +86,18 @@ generation_prompts:
       - **Estimativa de duração**: {estimated_duration} segundos
       - **Recompensa sugerida**: {suggested_coins} moedas
 
+      ## Regras de Formatação de Conteúdo
+      **PROIBIDO usar prefixos:**
+      - ❌ "Conteúdo: Encontrar significado..."
+      - ❌ "Content Item 1: Encontrar significado..."  
+      - ❌ "Quiz: Qual é o conceito..."
+      - ❌ "Quote: O progresso acontece..."
+      
+      **CORRETO - texto direto:**
+      - ✅ "Encontrar significado na vida é fundamental..."
+      - ✅ "Qual é o conceito principal..."
+      - ✅ "O progresso acontece através..."
+
       **IMPORTANTE**: Retorne APENAS o JSON válido, sem texto adicional ou markdown.
 
   # Content conversion rules
@@ -96,10 +110,13 @@ generation_prompts:
           Converta seções de conteúdo para:
           {
             "type": "content",
-            "content": "texto_do_conteudo (50-300 chars para mobile)",
+            "content": "texto_do_conteudo_SEM_PREFIXOS (50-300 chars para mobile)",
             "author": "autor_se_especificado",
             "tips": ["array_de_dicas_se_presente (20-150 chars cada)"]
           }
+          
+          IMPORTANTE: O campo "content" deve começar diretamente com o texto útil,
+          SEM palavras como "Conteúdo", "Content Item", etc.
           
       quote_section:
         pattern: "### Quote Item"
@@ -337,4 +354,51 @@ output_formatting:
     structure_check: true
     ari_voice_check: true
     content_quality_check: true
-    json_validity_check: true 
+    json_validity_check: true
+
+# Comprehensive Level Guidance for Progressive Learning Journeys
+comprehensive_level_guidance:
+  foundation: |
+    NÍVEL FOUNDATION - Introdução de Conceitos Fundamentais:
+    - Estabeleça definições claras e acessíveis dos conceitos designados
+    - Explique "por que isso importa" para a vida da pessoa
+    - Crie conexão emocional com os conceitos
+    - Prepare base sólida para aprendizado futuro
+    - Use 2-3 conceitos principais apenas
+    - Foque em compreensão básica antes de aplicação
+    
+  application: |
+    NÍVEL APPLICATION - Aplicação Prática dos Conceitos Foundation:
+    - Transforme teoria dos conceitos foundation em prática
+    - Ofereça exercícios e técnicas específicas
+    - Guie através de aplicações passo-a-passo
+    - Use exemplos concretos e cenários reais
+    - Antecipe dificuldades comuns e ofereça soluções
+    - Construa sobre o conhecimento do nível foundation
+    
+  expansion: |
+    NÍVEL EXPANSION - Introdução de Novos Conceitos:
+    - Introduza 2-3 conceitos adicionais não cobertos anteriormente
+    - Conecte brevemente com conceitos já aprendidos
+    - Estabeleça definições e importância dos novos conceitos
+    - Use analogias para facilitar compreensão
+    - Prepare terreno para integração futura
+    - Evite sobrecarregar com muitos conceitos novos
+    
+  integration: |
+    NÍVEL INTEGRATION - Combinação Prática de Todos os Conceitos:
+    - Combine todos os conceitos aprendidos harmoniosamente
+    - Use cenários complexos da vida real
+    - Mostre interconexões entre diferentes conceitos
+    - Aplique conhecimento em situações desafiadoras
+    - Demonstre o "quadro completo" da transformação
+    - Foque em síntese e aplicação integrada
+    
+  mastery: |
+    NÍVEL MASTERY - Maestria Avançada e Casos Especiais:
+    - Explore nuances e casos especiais de todos os conceitos
+    - Aborde conflitos e dilemas complexos
+    - Ofereça perspectivas profundas e maduras
+    - Prepare para autonomia e liderança pessoal
+    - Use cenários sofisticados e edge cases
+    - Assuma conhecimento profundo de todos os conceitos anteriores 

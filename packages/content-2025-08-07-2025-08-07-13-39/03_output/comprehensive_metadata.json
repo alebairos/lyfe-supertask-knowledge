@@ -1,0 +1,172 @@
+{
+  "levels": [
+    "foundation",
+    "mastery"
+  ],
+  "theme": "Arthur Brooks Test",
+  "total_supertasks": 2,
+  "total_concepts": 5,
+  "concept_assignment": {
+    "foundation": [
+      {
+        "name": "Amor",
+        "description": "Uma emoção poderosa que pode ser expressa de várias formas e é uma fonte significativa de significado na vida.",
+        "practical_applications": [
+          "Expressar amor em ações cotidianas",
+          "Cultivar o amor próprio e o amor pela humanidade"
+        ],
+        "examples": [
+          "Fazer um gesto simples como preparar o café da manhã para um ente querido, dizer a um amigo o quanto você o aprecia, ou passar algum tempo cuidando de si mesmo"
+        ],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "O amor é uma fonte poderosa de significado. Não apenas o amor romântico, mas o amor fraternal, o amor por si mesmo e o amor pela humanidade."
+        ]
+      },
+      {
+        "name": "Transcendência",
+        "description": "A capacidade de ver além do imediato e se conectar com algo maior.",
+        "practical_applications": [
+          "Praticar meditação",
+          "Apreciar a natureza, música, arte e religião"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "intermediate"
+        ],
+        "source_quotes": [
+          "A transcendência nos ajuda a ver além do imediato e a nos conectar com algo maior. Pode ser alcançada através da meditação, da natureza, da música, da arte ou da religião."
+        ]
+      },
+      {
+        "name": "Propósito",
+        "description": "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo.",
+        "practical_applications": [
+          "Servir aos outros",
+          "Buscar conhecimento",
+          "Criar algo novo"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "intermediate"
+        ],
+        "source_quotes": [
+          "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo."
+        ]
+      }
+    ],
+    "mastery": [
+      {
+        "name": "Propósito",
+        "description": "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo.",
+        "practical_applications": [
+          "Servir aos outros",
+          "Buscar conhecimento",
+          "Criar algo novo"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "intermediate"
+        ],
+        "source_quotes": [
+          "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo."
+        ]
+      },
+      {
+        "name": "Beleza",
+        "description": "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas.",
+        "practical_applications": [
+          "Apreciar arte",
+          "Observar a natureza",
+          "Valorizar pequenos momentos do dia a dia"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas."
+        ]
+      },
+      {
+        "name": "Resiliência",
+        "description": "A habilidade de superar adversidades e transformar o sofrimento em força.",
+        "practical_applications": [
+          "Enfrentar adversidades",
+          "Transformar o sofrimento em força"
+        ],
+        "examples": [
+          "Enfrentar adversidades é uma parte inevitável da vida. Em vez de tentar evitar o sofrimento, aprenda a abraçá-lo e a vê-lo como uma oportunidade para crescimento e aprendizado."
+        ],
+        "complexity_levels": [
+          "intermediate"
+        ],
+        "source_quotes": [
+          "Aprender a abraçar e superar o sofrimento pode nos fortalecer e nos dar uma nova perspectiva sobre a vida."
+        ]
+      }
+    ]
+  },
+  "coverage_validation": {
+    "coverage_score": 80,
+    "coverage_analysis": {
+      "coverage_analysis": [
+        {
+          "concept_name": "Amor",
+          "covered_in_level": "foundation",
+          "coverage_quality": "boa",
+          "evidence": "Mencionado e explicado no conteúdo e quiz do nível 1",
+          "suggestions": "Incorporar mais exemplos práticos de como expressar amor no dia a dia."
+        },
+        {
+          "concept_name": "Transcendência",
+          "covered_in_level": "foundation",
+          "coverage_quality": "boa",
+          "evidence": "Mencionado e explicado no conteúdo e quiz do nível 1",
+          "suggestions": "Incluir mais discussões sobre como a transcendência pode ser aplicada na vida diária."
+        },
+        {
+          "concept_name": "Propósito",
+          "covered_in_level": "mastery",
+          "coverage_quality": "boa",
+          "evidence": "Mencionado e explicado no conteúdo e quiz do nível 2",
+          "suggestions": "Incluir mais exemplos de como encontrar um propósito na vida."
+        },
+        {
+          "concept_name": "Beleza",
+          "covered_in_level": "mastery",
+          "coverage_quality": "boa",
+          "evidence": "Mencionado e explicado no conteúdo e quiz do nível 2",
+          "suggestions": "Incluir mais exemplos de como apreciar a beleza no dia a dia"
+        },
+        {
+          "concept_name": "Resiliência",
+          "covered_in_level": "não_coberto",
+          "coverage_quality": "inexistente",
+          "evidence": "O conceito de resiliência não foi abordado na jornada de aprendizado",
+          "suggestions": "Adicionar conteúdo e quiz sobre o conceito de resiliência."
+        }
+      ],
+      "overall_coverage_score": 80,
+      "missing_concepts": [
+        "Resiliência"
+      ],
+      "improvement_suggestions": [
+        {
+          "level": "expansion",
+          "add_concept": "Resiliência",
+          "reason": "Resiliência é um conceito fundamental para uma vida significativa e não foi abordado na jornada."
+        }
+      ],
+      "coverage_summary": "A maioria dos conceitos foi abordada, exceto a resiliência. Cada conceito abordado foi explicado com qualidade, mas poderia beneficiar-se de mais exemplos práticos de aplicação na vida diária."
+    },
+    "improvement_suggestions": [
+      "Adicionar conceitos faltantes: Resiliência",
+      "Melhorar cobertura superficial de: Resiliência",
+      "Nível expansion: adicionar Resiliência (Resiliência é um conceito fundamental para uma vida significativa e não foi abordado na jornada.)"
+    ]
+  },
+  "generation_method": "comprehensive_coverage"
+}

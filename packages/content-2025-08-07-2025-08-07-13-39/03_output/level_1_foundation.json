@@ -1,0 +1,88 @@
+{
+  "title": "Fundamentos da Vida Significativa - Iniciante",
+  "dimension": "mentalHealth",
+  "archetype": "explorer",
+  "relatedToType": "GENERIC",
+  "relatedToId": "meaningful-life-beginner_foundation",
+  "estimatedDuration": 420,
+  "coinsReward": 30,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Viver uma vida significativa pode parecer um desafio, mas através de conceitos como amor, transcendência e propósito, podemos encontrar significado e satisfação em nossas vidas diárias. Vamos começar por entender cada um deles.",
+      "author": "Ari"
+    },
+    {
+      "type": "quiz",
+      "question": "O que é o amor no contexto de uma vida significativa?",
+      "options": [
+        "Apenas o amor romântico",
+        "Apenas o amor fraternal",
+        "Apenas o amor por si mesmo",
+        "O amor romântico, fraternal, o amor por si mesmo e pela humanidade"
+      ],
+      "correctAnswer": 3,
+      "explanation": "O amor em uma vida significativa envolve todas as formas de amor - romântico, fraternal, amor próprio e amor pela humanidade."
+    },
+    {
+      "type": "content",
+      "content": "O amor é uma fonte poderosa de significado. Pode ser expresso em ações cotidianas como um gesto simples de preparar o café da manhã para um ente querido, dizer a um amigo o quanto você o aprecia, ou passar algum tempo cuidando de si mesmo.",
+      "author": "Ari",
+      "tips": [
+        "Faça um esforço consciente para expressar amor todos os dias, mesmo em pequenos gestos."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "O amor não é apenas algo que você sente, é algo que você faz.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Agora, vamos falar sobre a transcendência. Transcendência é a capacidade de ver além do imediato e se conectar com algo maior. Pode ser alcançada através da meditação, da natureza, da música, da arte ou da religião.",
+      "author": "Ari",
+      "tips": [
+        "Pratique a meditação ou passe algum tempo na natureza para cultivar a transcendência."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual dos seguintes é a melhor definição de transcendência?",
+      "options": [
+        "A habilidade de criar algo novo",
+        "A capacidade de superar adversidades",
+        "A capacidade de se conectar com algo maior",
+        "A habilidade de servir aos outros"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A transcendência é a capacidade de ver além do imediato e se conectar com algo maior."
+    },
+    {
+      "type": "content",
+      "content": "Por último, vamos explorar o conceito de propósito. Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo.",
+      "author": "Ari",
+      "tips": [
+        "Pense sobre o que você sente paixão e como isso pode servir aos outros ou contribuir para o seu crescimento pessoal."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual dos seguintes pode ser uma maneira de encontrar um propósito na vida?",
+      "options": [
+        "Servir aos outros",
+        "Busca pelo conhecimento",
+        "Criação de algo novo",
+        "Todos os anteriores"
+      ],
+      "correctAnswer": 3,
+      "explanation": "O propósito na vida pode ser encontrado de várias maneiras, incluindo servir aos outros, buscar conhecimento e criar algo novo."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

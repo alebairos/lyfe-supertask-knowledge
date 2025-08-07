@@ -1143,8 +1143,28 @@ def build_generation_prompt(filled_template: str,
   "metadata": {}
 }"""
         
-        # Build system message
-        system_message = main_prompt['system_message']
+        # Get difficulty-specific configuration
+        difficulty_config = get_difficulty_configuration(target_difficulty)
+        
+        # Build difficulty-specific instructions
+        difficulty_instructions = f"""
+        
+## Configuração de Dificuldade: {target_difficulty.upper()}
+
+**Características para este nível:**
+{chr(10).join(f"- {char}" for char in difficulty_config['characteristics'])}
+
+**Diretrizes de Conteúdo:**
+- Complexidade do quiz: {difficulty_config['quiz_style']['question_complexity']}
+- Estilo das opções: {difficulty_config['quiz_style']['options_style']}
+- Estilo das explicações: {difficulty_config['quiz_style']['explanation_style']}
+- Profundidade do conteúdo: {difficulty_config['content_guidelines']['content_depth']}
+
+**IMPORTANTE**: Adapte TODO o conteúdo (textos, perguntas, explicações) para este nível de dificuldade específico.
+        """
+        
+        # Build system message with difficulty instructions
+        system_message = main_prompt['system_message'] + difficulty_instructions
         
         # Build user message with content substitution
         user_message = main_prompt['user_prompt_template'].format(

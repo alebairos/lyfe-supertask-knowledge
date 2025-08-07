@@ -1,0 +1,92 @@
+{
+  "title": "Encontrando Significado na Vida - Iniciante - Advanced",
+  "dimension": "mentalHealth",
+  "archetype": "explorer",
+  "relatedToType": "GENERIC",
+  "relatedToId": "meaningful-life",
+  "estimatedDuration": 420,
+  "coinsReward": 20,
+  "flexibleItems": [
+    {
+      "type": "quote",
+      "content": "O progresso acontece através de pequenos passos consistentes.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Neste exercício, você dominará as nuances de como encontrar mais significado na vida. Isso é crucial para a sua saúde mental e bem-estar geral. Vamos explorar várias fontes de significado e como você pode integrá-las à sua vida diária.",
+      "author": "Ari"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual é o conceito principal sobre Encontrando Significado na Vida?",
+      "options": [
+        "Desenvolvimento pessoal",
+        "Ciência comportamental",
+        "Mudança de hábitos",
+        "Autoconhecimento"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O desenvolvimento pessoal é fundamental para mudanças sustentáveis."
+    },
+    {
+      "type": "content",
+      "content": "Existem várias maneiras de encontrar significado na vida. Isso inclui se apaixonar, buscar transcendência, encontrar sua vocação e servir aos outros, experimentar beleza, natureza e arte, e aprender a abraçar seu sofrimento.",
+      "author": "Ari"
+    },
+    {
+      "type": "quiz",
+      "question": "Como aplicar Encontrando Significado na Vida no dia a dia?",
+      "options": [
+        "Pequenos passos",
+        "Mudanças radicais",
+        "Esperar motivação",
+        "Ignorar dificuldades"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pequenos passos garantem progresso consistente e sustentável."
+    },
+    {
+      "type": "quote",
+      "content": "A ciência comportamental nos ensina que mudanças sustentáveis começam devagar.",
+      "author": "Ari"
+    }
+  ],
+  "metadata": {
+    "generated_by": "lyfe-kt-structural-v1.0",
+    "generation_timestamp": "2025-08-06T11:54:34.858441",
+    "ari_persona_applied": true,
+    "difficulty_level": "advanced",
+    "source_template": "arthurcbrooks_mostmeaning_extracted_filled_template.md",
+    "template_metadata": {
+      "source_file": "arthurcbrooks_mostmeaning_extracted_filled_template.md",
+      "source_path": "work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md",
+      "file_size": 4526,
+      "modification_time": "2025-08-06T11:53:07.406870",
+      "frontmatter_keys": [
+        "title",
+        "description",
+        "target_audience",
+        "difficulty_level",
+        "estimated_time",
+        "dimension",
+        "archetype",
+        "related_to_type",
+        "related_to_id",
+        "estimated_duration",
+        "coins_reward",
+        "language",
+        "region",
+        "learning_objectives",
+        "prerequisites",
+        "tags"
+      ],
+      "processing_timestamp": "2025-08-06T11:54:34.833052"
+    },
+    "language": "portuguese",
+    "region": "Brazil",
+    "created_at": "2025-08-06T11:54:34.858446",
+    "updated_at": "2025-08-06T11:54:34.858447",
+    "version": "1.0.0"
+  }
+}

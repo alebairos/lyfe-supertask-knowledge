@@ -1,0 +1,71 @@
+{
+  "title": "Aplicando Propósito e Beleza na Vida - Application",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "applying_purpose_and_beauty_in_life",
+  "estimatedDuration": 300,
+  "coinsReward": 50,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Ter um propósito na vida pode ser um catalisador poderoso para a motivação e o sucesso. Ele pode ser encontrado no serviço aos outros ou na busca pelo conhecimento. Mas, como aplicamos isso na vida real?",
+      "author": "Ari",
+      "tips": [
+        "Identifique suas paixões e interesses. Eles podem ser um bom ponto de partida para descobrir o seu propósito."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual das seguintes atividades é uma aplicação prática do conceito de propósito na vida?",
+      "options": [
+        "Assistir televisão o dia todo",
+        "Servir numa organização sem fins lucrativos",
+        "Ficar em casa sem fazer nada",
+        "Gastar dinheiro de forma irresponsável"
+      ],
+      "correctAnswer": 1,
+      "explanation": "O serviço aos outros, como trabalhar numa organização sem fins lucrativos, é uma maneira prática de aplicar o conceito de propósito na vida."
+    },
+    {
+      "type": "content",
+      "content": "Apreciar a beleza ao nosso redor é outra maneira de encontrar significado na vida. Pode ser na arte, na natureza ou em pequenos momentos do dia a dia. Experimente passar algum tempo em um museu ou fazer uma caminhada na natureza.",
+      "author": "Ari",
+      "tips": [
+        "Tire um tempo todos os dias para apreciar a beleza ao seu redor. Pode ser uma flor no seu caminho, um pôr do sol ou uma obra de arte."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "A beleza está em todos os lugares, mas nem todos a veem. Aprenda a apreciar a beleza à sua volta e encontre alegria nas coisas simples da vida.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Como ponto de partida para implementar esses conceitos, comece identificando o que você ama fazer e quais são as coisas de beleza que mais lhe agradam. Então, tente incorporar esses elementos em sua vida diariamente.",
+      "author": "Ari",
+      "tips": [
+        "Faça uma lista de coisas que você ama e que te fazem feliz. Isso pode te ajudar a identificar seu propósito e as coisas de beleza que você mais aprecia."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual é o primeiro passo para implementar o propósito e a beleza na vida?",
+      "options": [
+        "Ignorar seus interesses",
+        "Identificar o que você ama e o que você acha bonito",
+        "Ficar estressado",
+        "Desistir de suas paixões"
+      ],
+      "correctAnswer": 1,
+      "explanation": "O primeiro passo é identificar o que você ama e o que você acha bonito. Isso pode te ajudar a encontrar seu propósito e a apreciar a beleza na sua vida."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

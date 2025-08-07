@@ -1,0 +1,71 @@
+{
+  "title": "Encontrando Significado na Vida: Amor e Transcendência",
+  "dimension": "mentalHealth",
+  "archetype": "explorer",
+  "relatedToType": "GENERIC",
+  "relatedToId": "finding_meaning_in_life_love_and_transcendence",
+  "estimatedDuration": 420,
+  "coinsReward": 30,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Viver uma vida significativa pode parecer um desafio, mas através de pilares como amor e transcendência, podemos encontrar significado e satisfação em nossas vidas diárias.",
+      "author": "Ari",
+      "tips": [
+        "Tente expressar amor de pequenas formas todos os dias, seja para si mesmo ou para os outros."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual dos seguintes é um pilar para encontrar significado na vida?",
+      "options": [
+        "Desapego",
+        "Amor",
+        "Fama",
+        "Riqueza"
+      ],
+      "correctAnswer": 1,
+      "explanation": "O amor é um dos pilares para encontrar significado na vida. Não apenas o amor romântico, mas o amor fraternal, o amor por si mesmo e o amor pela humanidade."
+    },
+    {
+      "type": "content",
+      "content": "O amor é uma fonte poderosa de significado. Não apenas o amor romântico, mas o amor fraternal, o amor por si mesmo e o amor pela humanidade.",
+      "author": "Ari",
+      "tips": [
+        "Pratique expressar amor todos os dias. Pode ser um gesto simples como preparar o café da manhã para um ente querido ou dizer a um amigo o quanto você o aprecia."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "O amor não é apenas algo que você sente, é algo que você faz.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "A transcendência nos ajuda a ver além do imediato e a nos conectar com algo maior. Pode ser alcançada através da meditação, da natureza, da música, da arte ou da religião.",
+      "author": "Ari",
+      "tips": [
+        "Pratique a meditação ou passe algum tempo na natureza para cultivar uma sensação de transcendência."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "O que é a transcendência?",
+      "options": [
+        "A habilidade de evitar sofrimento",
+        "A capacidade de se conectar com algo maior",
+        "A habilidade de expressar amor",
+        "A capacidade de acumular riquezas"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A transcendência é a capacidade de ver além do imediato e se conectar com algo maior, seja através da meditação, da natureza, da música, da arte ou da religião."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "title": "Encontrando Significado na Vida - Iniciante - Advanced",
+  "dimension": "mentalHealth",
+  "archetype": "explorer",
+  "relatedToType": "GENERIC",
+  "relatedToId": "finding-meaning",
+  "estimatedDuration": 420,
+  "coinsReward": 20,
+  "flexibleItems": [
+    {
+      "type": "quote",
+      "content": "O progresso acontece através de pequenos passos consistentes.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Conteúdo Encontrar significado na vida é fundamental para a satisfação pessoal e a saúde mental. Este exercício explora várias maneiras de encontrar significado e como incorporá-las em sua vida diária.",
+      "author": "Ari"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual é o conceito principal sobre Encontrando Significado na Vida?",
+      "options": [
+        "Desenvolvimento pessoal",
+        "Ciência comportamental",
+        "Mudança de hábitos",
+        "Autoconhecimento"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O desenvolvimento pessoal é fundamental para mudanças sustentáveis."
+    },
+    {
+      "type": "content",
+      "content": "Item de Conteúdo 1 Encontrar significado na vida pode envolver experiências emocionais profundas, como se apaixonar, buscar transcendência, encontrar um chamado pessoal, ou apreciar a beleza, a natureza e a arte.",
+      "author": "Ari"
+    },
+    {
+      "type": "quiz",
+      "question": "Como aplicar Encontrando Significado na Vida no dia a dia?",
+      "options": [
+        "Pequenos passos",
+        "Mudanças radicais",
+        "Esperar motivação",
+        "Ignorar dificuldades"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pequenos passos garantem progresso consistente e sustentável."
+    },
+    {
+      "type": "quote",
+      "content": "A ciência comportamental nos ensina que mudanças sustentáveis começam devagar.",
+      "author": "Ari"
+    }
+  ],
+  "metadata": {
+    "generated_by": "lyfe-kt-structural-v1.0",
+    "generation_timestamp": "2025-08-06T11:14:25.038336",
+    "ari_persona_applied": true,
+    "difficulty_level": "advanced",
+    "source_template": "arthurcbrooks_mostmeaning_extracted_filled_template.md",
+    "template_metadata": {
+      "source_file": "arthurcbrooks_mostmeaning_extracted_filled_template.md",
+      "source_path": "work/02_preprocessed/arthurcbrooks_mostmeaning_extracted_filled_template.md",
+      "file_size": 4719,
+      "modification_time": "2025-08-06T11:14:18.883447",
+      "frontmatter_keys": [
+        "title",
+        "description",
+        "target_audience",
+        "difficulty_level",
+        "estimated_time",
+        "dimension",
+        "archetype",
+        "related_to_type",
+        "related_to_id",
+        "estimated_duration",
+        "coins_reward",
+        "language",
+        "region",
+        "learning_objectives",
+        "prerequisites",
+        "tags"
+      ],
+      "processing_timestamp": "2025-08-06T11:14:25.010930"
+    },
+    "language": "portuguese",
+    "region": "Brazil",
+    "created_at": "2025-08-06T11:14:25.038340",
+    "updated_at": "2025-08-06T11:14:25.038341",
+    "version": "1.0.0"
+  }
+}

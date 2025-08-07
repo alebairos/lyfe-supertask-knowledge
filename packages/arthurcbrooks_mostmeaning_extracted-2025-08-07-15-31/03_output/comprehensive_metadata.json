@@ -1,0 +1,308 @@
+{
+  "levels": [
+    "foundation",
+    "application",
+    "expansion",
+    "integration",
+    "mastery"
+  ],
+  "theme": "Arthurcbrooks Mostmeaning Extracted",
+  "total_supertasks": 5,
+  "total_concepts": 5,
+  "concept_assignment": {
+    "foundation": [
+      {
+        "name": "Amor",
+        "description": "Uma emoção poderosa que pode ser expressa de várias formas e é uma fonte significativa de significado na vida.",
+        "practical_applications": [
+          "Expressar amor todos os dias através de gestos simples"
+        ],
+        "examples": [
+          "Preparar o café da manhã para um ente querido, dizer a um amigo o quanto você o aprecia, ou passar algum tempo cuidando de si mesmo"
+        ],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "O amor é uma fonte poderosa de significado. Não apenas o amor romântico, mas o amor fraternal, o amor por si mesmo e o amor pela humanidade."
+        ]
+      },
+      {
+        "name": "Transcendência",
+        "description": "A capacidade de ver além do imediato e se conectar com algo maior.",
+        "practical_applications": [
+          "Práticas de meditação, conexão com a natureza, apreciação de música e arte"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic",
+          "intermediate"
+        ],
+        "source_quotes": [
+          "A transcendência nos ajuda a ver além do imediato e a nos conectar com algo maior. Pode ser alcançada através da meditação, da natureza, da música, da arte ou da religião."
+        ]
+      }
+    ],
+    "application": [
+      {
+        "name": "Propósito",
+        "description": "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo.",
+        "practical_applications": [
+          "Identificar e buscar um propósito na vida"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "intermediate"
+        ],
+        "source_quotes": [
+          "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo."
+        ]
+      },
+      {
+        "name": "Beleza",
+        "description": "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas.",
+        "practical_applications": [
+          "Prática de apreciação da beleza ao nosso redor"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas."
+        ]
+      }
+    ],
+    "expansion": [
+      {
+        "name": "Resiliência",
+        "description": "A habilidade de superar adversidades e transformar o sofrimento em força.",
+        "practical_applications": [
+          "Aprender a abraçá-lo e superá-lo em face do sofrimento"
+        ],
+        "examples": [
+          "Enfrentar adversidades é uma parte inevitável da vida. Em vez de tentar evitar o sofrimento, aprenda a abraçá-lo e a vê-lo como uma oportunidade para crescimento e aprendizado."
+        ],
+        "complexity_levels": [
+          "intermediate",
+          "advanced"
+        ],
+        "source_quotes": [
+          "Aprender a abraçar e superar o sofrimento pode nos fortalecer e nos dar uma nova perspectiva sobre a vida."
+        ]
+      }
+    ],
+    "integration": [
+      {
+        "name": "Amor",
+        "description": "Uma emoção poderosa que pode ser expressa de várias formas e é uma fonte significativa de significado na vida.",
+        "practical_applications": [
+          "Expressar amor todos os dias através de gestos simples"
+        ],
+        "examples": [
+          "Preparar o café da manhã para um ente querido, dizer a um amigo o quanto você o aprecia, ou passar algum tempo cuidando de si mesmo"
+        ],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "O amor é uma fonte poderosa de significado. Não apenas o amor romântico, mas o amor fraternal, o amor por si mesmo e o amor pela humanidade."
+        ]
+      },
+      {
+        "name": "Transcendência",
+        "description": "A capacidade de ver além do imediato e se conectar com algo maior.",
+        "practical_applications": [
+          "Práticas de meditação, conexão com a natureza, apreciação de música e arte"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic",
+          "intermediate"
+        ],
+        "source_quotes": [
+          "A transcendência nos ajuda a ver além do imediato e a nos conectar com algo maior. Pode ser alcançada através da meditação, da natureza, da música, da arte ou da religião."
+        ]
+      },
+      {
+        "name": "Propósito",
+        "description": "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo.",
+        "practical_applications": [
+          "Identificar e buscar um propósito na vida"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "intermediate"
+        ],
+        "source_quotes": [
+          "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo."
+        ]
+      },
+      {
+        "name": "Beleza",
+        "description": "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas.",
+        "practical_applications": [
+          "Prática de apreciação da beleza ao nosso redor"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas."
+        ]
+      },
+      {
+        "name": "Resiliência",
+        "description": "A habilidade de superar adversidades e transformar o sofrimento em força.",
+        "practical_applications": [
+          "Aprender a abraçá-lo e superá-lo em face do sofrimento"
+        ],
+        "examples": [
+          "Enfrentar adversidades é uma parte inevitável da vida. Em vez de tentar evitar o sofrimento, aprenda a abraçá-lo e a vê-lo como uma oportunidade para crescimento e aprendizado."
+        ],
+        "complexity_levels": [
+          "intermediate",
+          "advanced"
+        ],
+        "source_quotes": [
+          "Aprender a abraçar e superar o sofrimento pode nos fortalecer e nos dar uma nova perspectiva sobre a vida."
+        ]
+      }
+    ],
+    "mastery": [
+      {
+        "name": "Amor",
+        "description": "Uma emoção poderosa que pode ser expressa de várias formas e é uma fonte significativa de significado na vida.",
+        "practical_applications": [
+          "Expressar amor todos os dias através de gestos simples"
+        ],
+        "examples": [
+          "Preparar o café da manhã para um ente querido, dizer a um amigo o quanto você o aprecia, ou passar algum tempo cuidando de si mesmo"
+        ],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "O amor é uma fonte poderosa de significado. Não apenas o amor romântico, mas o amor fraternal, o amor por si mesmo e o amor pela humanidade."
+        ]
+      },
+      {
+        "name": "Transcendência",
+        "description": "A capacidade de ver além do imediato e se conectar com algo maior.",
+        "practical_applications": [
+          "Práticas de meditação, conexão com a natureza, apreciação de música e arte"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic",
+          "intermediate"
+        ],
+        "source_quotes": [
+          "A transcendência nos ajuda a ver além do imediato e a nos conectar com algo maior. Pode ser alcançada através da meditação, da natureza, da música, da arte ou da religião."
+        ]
+      },
+      {
+        "name": "Propósito",
+        "description": "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo.",
+        "practical_applications": [
+          "Identificar e buscar um propósito na vida"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "intermediate"
+        ],
+        "source_quotes": [
+          "Ter um propósito na vida nos dá direção e motivação. Este propósito pode ser encontrado através do serviço aos outros, da busca pelo conhecimento ou da criação de algo novo."
+        ]
+      },
+      {
+        "name": "Beleza",
+        "description": "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas.",
+        "practical_applications": [
+          "Prática de apreciação da beleza ao nosso redor"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Apreciar a beleza ao nosso redor, seja na arte, na natureza ou em pequenos momentos do dia a dia, pode trazer alegria e significado para nossas vidas."
+        ]
+      },
+      {
+        "name": "Resiliência",
+        "description": "A habilidade de superar adversidades e transformar o sofrimento em força.",
+        "practical_applications": [
+          "Aprender a abraçá-lo e superá-lo em face do sofrimento"
+        ],
+        "examples": [
+          "Enfrentar adversidades é uma parte inevitável da vida. Em vez de tentar evitar o sofrimento, aprenda a abraçá-lo e a vê-lo como uma oportunidade para crescimento e aprendizado."
+        ],
+        "complexity_levels": [
+          "intermediate",
+          "advanced"
+        ],
+        "source_quotes": [
+          "Aprender a abraçar e superar o sofrimento pode nos fortalecer e nos dar uma nova perspectiva sobre a vida."
+        ]
+      }
+    ]
+  },
+  "coverage_validation": {
+    "coverage_score": 90,
+    "coverage_analysis": {
+      "coverage_analysis": [
+        {
+          "concept_name": "Amor",
+          "covered_in_level": "foundation/mastery",
+          "coverage_quality": "excelente",
+          "evidence": "Nível 1 e 5",
+          "suggestions": "N/A"
+        },
+        {
+          "concept_name": "Transcendência",
+          "covered_in_level": "foundation/mastery",
+          "coverage_quality": "excelente",
+          "evidence": "Nível 1 e 5",
+          "suggestions": "N/A"
+        },
+        {
+          "concept_name": "Propósito",
+          "covered_in_level": "application",
+          "coverage_quality": "boa",
+          "evidence": "Nível 2",
+          "suggestions": "Poderia ser melhorada com mais exemplos práticos em níveis mais avançados"
+        },
+        {
+          "concept_name": "Beleza",
+          "covered_in_level": "application",
+          "coverage_quality": "boa",
+          "evidence": "Nível 2",
+          "suggestions": "Poderia ser melhorada com mais exemplos práticos em níveis mais avançados"
+        },
+        {
+          "concept_name": "Resiliência",
+          "covered_in_level": "expansion",
+          "coverage_quality": "boa",
+          "evidence": "Nível 3",
+          "suggestions": "Poderia ser melhorada com mais exemplos práticos em níveis mais avançados"
+        }
+      ],
+      "overall_coverage_score": 90,
+      "missing_concepts": [],
+      "improvement_suggestions": [
+        {
+          "level": "mastery",
+          "add_concept": "Propósito, Beleza, Resiliência",
+          "reason": "Para garantir a integração completa e a aplicação prática destes conceitos em nível avançado"
+        }
+      ],
+      "coverage_summary": "A jornada de aprendizado cobre todos os conceitos principais do material fonte em diferentes níveis. No entanto, os conceitos de Propósito, Beleza e Resiliência poderiam ser ainda mais explorados em níveis mais avançados para garantir uma compreensão mais profunda e aplicação prática."
+    },
+    "improvement_suggestions": [
+      "Nível mastery: adicionar Propósito, Beleza, Resiliência (Para garantir a integração completa e a aplicação prática destes conceitos em nível avançado)"
+    ]
+  },
+  "generation_method": "comprehensive_coverage"
+}

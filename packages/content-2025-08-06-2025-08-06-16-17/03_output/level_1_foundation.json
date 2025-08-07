@@ -1,0 +1,71 @@
+{
+  "title": "Encontrando Significado na Vida - Iniciante",
+  "dimension": "mentalHealth",
+  "archetype": "explorer",
+  "relatedToType": "GENERIC",
+  "relatedToId": "meaningful-life-beginner",
+  "estimatedDuration": 420,
+  "coinsReward": 30,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Viver uma vida significativa pode parecer um desafio, mas através de cinco pilares - amor, transcendência, propósito, beleza e resiliência - podemos encontrar significado e satisfação em nossas vidas diárias.",
+      "author": "Ari",
+      "tips": [
+        "Pratique diariamente ações que representem cada um desses cinco pilares."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Quais são os cinco pilares para encontrar significado na vida?",
+      "options": [
+        "Amor, Transcendência, Propósito, Beleza, Resiliência",
+        "Dinheiro, Fama, Poder, Beleza, Inteligência",
+        "Saúde, Dinheiro, Amor, Viagens, Educação",
+        "Família, Amigos, Trabalho, Hobbies, Saúde"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Os cinco pilares para encontrar significado na vida são: Amor, Transcendência, Propósito, Beleza e Resiliência."
+    },
+    {
+      "type": "content",
+      "content": "O amor é uma fonte poderosa de significado. Não apenas o amor romântico, mas o amor fraternal, o amor por si mesmo e o amor pela humanidade.",
+      "author": "Ari",
+      "tips": [
+        "Expresse amor todos os dias, seja por gestos simples ou palavras sinceras."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "O amor não é apenas algo que você sente, é algo que você faz. - David Wilkerson",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "A transcendência nos ajuda a ver além do imediato e a nos conectar com algo maior. Pode ser alcançada através da meditação, da natureza, da música, da arte ou da religião.",
+      "author": "Ari",
+      "tips": [
+        "Pratique a meditação ou passe um tempo na natureza para experimentar a transcendência."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "O que é a transcendência?",
+      "options": [
+        "A capacidade de se levantar após uma queda",
+        "A capacidade de ver além do imediato e se conectar com algo maior",
+        "A habilidade de expressar amor",
+        "A habilidade de apreciar a beleza"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A transcendência nos permite ver além de nossas circunstâncias imediatas e experimentar um senso de conexão com algo maior."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}
