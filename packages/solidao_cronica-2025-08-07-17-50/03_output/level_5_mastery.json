@@ -1,0 +1,71 @@
+{
+  "title": "Mastery: Combate à Solidão Crônica e Cultivo de Conexões Sociais",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "solidao_cronica_-_mastery_mastery",
+  "estimatedDuration": 480,
+  "coinsReward": 750,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "A solidão crônica é um sério problema de saúde que afeta milhões de pessoas, com impactos comparáveis a comportamentos de risco como fumar. É essencial reservar tempo para interagir socialmente todos os dias para mitigar esses efeitos.",
+      "author": "Ari",
+      "tips": [
+        "Encontre atividades que você goste e participe delas regularmente, isso pode ajudar a reduzir a sensação de solidão."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Quais são os impactos da solidão crônica?",
+      "options": [
+        "Apenas emocionais",
+        "Apenas físicos",
+        "Emocionais e físicos",
+        "Nenhum impacto"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A solidão crônica tem impactos tanto físicos quanto emocionais, comparáveis a comportamentos de risco como fumar."
+    },
+    {
+      "type": "content",
+      "content": "Manter fortes conexões sociais é fundamental para uma vida saudável e longa. O isolamento social, ao contrário, pode aumentar o risco de morte prematura.",
+      "author": "Ari",
+      "tips": [
+        "Cultive a empatia e a compreensão para fortalecer suas conexões existentes."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "As conexões humanas são tão essenciais para a sua saúde quanto uma boa alimentação ou a prática de exercícios.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Investir em relacionamentos e conexões humanas é uma necessidade básica, não um luxo. É tão importante quanto cuidar da nossa alimentação e fazer exercícios.",
+      "author": "Ari",
+      "tips": [
+        "Se você se sente constantemente sozinho, tente se envolver em atividades de grupo que você goste, como aulas de dança, grupos de leitura ou times de esportes."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Investir em relacionamentos e conexões humanas é...",
+      "options": [
+        "Um luxo",
+        "Uma necessidade básica",
+        "Desnecessário",
+        "Apenas para pessoas extrovertidas"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Investir em relacionamentos e conexões humanas é uma necessidade básica, tão importante quanto cuidar da nossa alimentação e fazer exercícios."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "levels": [
+    "foundation",
+    "application",
+    "expansion",
+    "integration",
+    "mastery"
+  ],
+  "theme": "Solidao Cronica",
+  "total_supertasks": 5,
+  "total_concepts": 3,
+  "concept_assignment": {
+    "foundation": [
+      {
+        "name": "Solidão Crônica e Saúde",
+        "description": "A solidão crônica é um sério problema de saúde física e mental que afeta milhões de pessoas em todo o mundo. Seus impactos na saúde são comparáveis a comportamentos de risco bem conhecidos, como fumar.",
+        "practical_applications": [
+          "Reservar tempo para interagir socialmente todos os dias, mesmo que virtualmente",
+          "Participar de atividades que você gosta para encontrar pessoas com interesses semelhantes"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "A solidão crônica é um problema de saúde pública que afeta milhões de pessoas em todo o mundo. Seus impactos na saúde física e mental são comparáveis a comportamentos de risco bem conhecidos, como fumar."
+        ]
+      },
+      {
+        "name": "Importância das Conexões Sociais",
+        "description": "Manter conexões sociais fortes é fundamental para uma vida saudável e longa. O isolamento social pode aumentar o risco de morte prematura.",
+        "practical_applications": [
+          "Cultivar a empatia e a compreensão para fortalecer suas conexões existentes"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Manter conexões sociais fortes pode aumentar suas chances de sobrevivência em 50%",
+          "O isolamento social aumenta o risco de morte prematura em 26%"
+        ]
+      }
+    ],
+    "application": [
+      {
+        "name": "Investimento em Relacionamentos e Conexões Humanas",
+        "description": "Investir em relacionamentos e conexões humanas não é um luxo, mas uma necessidade básica. Assim como cuidamos da nossa alimentação e fazemos exercícios, também devemos cultivar nossas conexões sociais.",
+        "practical_applications": [
+          "Se envolver em atividades de grupo que você goste, como aulas de dança, grupos de leitura ou times de esportes"
+        ],
+        "examples": [
+          "Se você se sente constantemente sozinho, tente se envolver em atividades de grupo que você goste, como aulas de dança, grupos de leitura ou times de esportes"
+        ],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Investir em relacionamentos e conexões humanas não é um luxo, mas uma necessidade. Assim como cuidamos da nossa alimentação e fazemos exercícios, também devemos cultivar nossas conexões sociais."
+        ]
+      }
+    ],
+    "expansion": [],
+    "integration": [
+      {
+        "name": "Solidão Crônica e Saúde",
+        "description": "A solidão crônica é um sério problema de saúde física e mental que afeta milhões de pessoas em todo o mundo. Seus impactos na saúde são comparáveis a comportamentos de risco bem conhecidos, como fumar.",
+        "practical_applications": [
+          "Reservar tempo para interagir socialmente todos os dias, mesmo que virtualmente",
+          "Participar de atividades que você gosta para encontrar pessoas com interesses semelhantes"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "A solidão crônica é um problema de saúde pública que afeta milhões de pessoas em todo o mundo. Seus impactos na saúde física e mental são comparáveis a comportamentos de risco bem conhecidos, como fumar."
+        ]
+      },
+      {
+        "name": "Importância das Conexões Sociais",
+        "description": "Manter conexões sociais fortes é fundamental para uma vida saudável e longa. O isolamento social pode aumentar o risco de morte prematura.",
+        "practical_applications": [
+          "Cultivar a empatia e a compreensão para fortalecer suas conexões existentes"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Manter conexões sociais fortes pode aumentar suas chances de sobrevivência em 50%",
+          "O isolamento social aumenta o risco de morte prematura em 26%"
+        ]
+      },
+      {
+        "name": "Investimento em Relacionamentos e Conexões Humanas",
+        "description": "Investir em relacionamentos e conexões humanas não é um luxo, mas uma necessidade básica. Assim como cuidamos da nossa alimentação e fazemos exercícios, também devemos cultivar nossas conexões sociais.",
+        "practical_applications": [
+          "Se envolver em atividades de grupo que você goste, como aulas de dança, grupos de leitura ou times de esportes"
+        ],
+        "examples": [
+          "Se você se sente constantemente sozinho, tente se envolver em atividades de grupo que você goste, como aulas de dança, grupos de leitura ou times de esportes"
+        ],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Investir em relacionamentos e conexões humanas não é um luxo, mas uma necessidade. Assim como cuidamos da nossa alimentação e fazemos exercícios, também devemos cultivar nossas conexões sociais."
+        ]
+      }
+    ],
+    "mastery": [
+      {
+        "name": "Solidão Crônica e Saúde",
+        "description": "A solidão crônica é um sério problema de saúde física e mental que afeta milhões de pessoas em todo o mundo. Seus impactos na saúde são comparáveis a comportamentos de risco bem conhecidos, como fumar.",
+        "practical_applications": [
+          "Reservar tempo para interagir socialmente todos os dias, mesmo que virtualmente",
+          "Participar de atividades que você gosta para encontrar pessoas com interesses semelhantes"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "A solidão crônica é um problema de saúde pública que afeta milhões de pessoas em todo o mundo. Seus impactos na saúde física e mental são comparáveis a comportamentos de risco bem conhecidos, como fumar."
+        ]
+      },
+      {
+        "name": "Importância das Conexões Sociais",
+        "description": "Manter conexões sociais fortes é fundamental para uma vida saudável e longa. O isolamento social pode aumentar o risco de morte prematura.",
+        "practical_applications": [
+          "Cultivar a empatia e a compreensão para fortalecer suas conexões existentes"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Manter conexões sociais fortes pode aumentar suas chances de sobrevivência em 50%",
+          "O isolamento social aumenta o risco de morte prematura em 26%"
+        ]
+      },
+      {
+        "name": "Investimento em Relacionamentos e Conexões Humanas",
+        "description": "Investir em relacionamentos e conexões humanas não é um luxo, mas uma necessidade básica. Assim como cuidamos da nossa alimentação e fazemos exercícios, também devemos cultivar nossas conexões sociais.",
+        "practical_applications": [
+          "Se envolver em atividades de grupo que você goste, como aulas de dança, grupos de leitura ou times de esportes"
+        ],
+        "examples": [
+          "Se você se sente constantemente sozinho, tente se envolver em atividades de grupo que você goste, como aulas de dança, grupos de leitura ou times de esportes"
+        ],
+        "complexity_levels": [
+          "basic"
+        ],
+        "source_quotes": [
+          "Investir em relacionamentos e conexões humanas não é um luxo, mas uma necessidade. Assim como cuidamos da nossa alimentação e fazemos exercícios, também devemos cultivar nossas conexões sociais."
+        ]
+      }
+    ]
+  },
+  "coverage_validation": {
+    "coverage_score": 100,
+    "coverage_analysis": {
+      "coverage_analysis": [
+        {
+          "concept_name": "Solidão Crônica e Saúde",
+          "covered_in_level": "foundation",
+          "coverage_quality": "excelente",
+          "evidence": "A solidão crônica é um problema de saúde pública que afeta milhões de pessoas em todo o mundo. Seus impactos na saúde física e mental são comparáveis a comportamentos de risco bem conhecidos, como fumar.",
+          "suggestions": "None"
+        },
+        {
+          "concept_name": "Importância das Conexões Sociais",
+          "covered_in_level": "foundation",
+          "coverage_quality": "excelente",
+          "evidence": "Manter conexões sociais fortes é fundamental para uma vida saudável e longa. O isolamento social pode aumentar o risco de morte prematura em 26%....",
+          "suggestions": "None"
+        },
+        {
+          "concept_name": "Investimento em Relacionamentos e Conexões Humanas",
+          "covered_in_level": "application",
+          "coverage_quality": "excelente",
+          "evidence": "Investir em relacionamentos e conexões humanas não é um luxo, mas uma necessidade. Assim como cuidamos da nossa alimentação e fazemos exercícios, também devemos cultivar nossas conexões sociais. Esta é uma parte fundamental do nosso bem-estar.",
+          "suggestions": "None"
+        }
+      ],
+      "overall_coverage_score": 100,
+      "missing_concepts": [],
+      "improvement_suggestions": [],
+      "coverage_summary": "Todos os conceitos principais do material fonte foram adequadamente cobertos em todos os níveis da jornada de aprendizado. A qualidade da cobertura dos conceitos foi excelente, com cada conceito sendo abordado de maneira abrangente e informativa."
+    },
+    "improvement_suggestions": []
+  },
+  "generation_method": "comprehensive_coverage"
+}

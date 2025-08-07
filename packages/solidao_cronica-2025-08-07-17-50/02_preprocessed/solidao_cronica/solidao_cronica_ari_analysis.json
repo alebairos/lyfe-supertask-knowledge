@@ -1,0 +1,18 @@
+{
+  "ari_analysis": {
+    "applicable_frameworks": [],
+    "total_frameworks_identified": 0,
+    "content_analysis": {
+      "word_count": 316,
+      "primary_themes": [
+        "health",
+        "exercise",
+        "sleep",
+        "nutrition"
+      ],
+      "complexity_level": "advanced",
+      "language": "portuguese"
+    }
+  },
+  "coaching_opportunities": []
+}

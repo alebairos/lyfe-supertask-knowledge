@@ -6387,3 +6387,98 @@
 2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
 2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
 2025-08-07 17:43:50 - lyfe-kt - INFO - Status command called
+2025-08-07 17:47:22 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-08-07 17:47:22 - lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-07_17-47-22_51df0ed1
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-07 17:47:22 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-07 17:47:22 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-07 17:47:22 - lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-47-22_51df0ed1] Preprocessing pipeline initialized
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Processing directory: work/01_raw
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/1 - Found 1 files
+2025-08-07 17:47:22 - lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-47-22_51df0ed1] Processing input file: work/01_raw/solidao_cronica.md
+2025-08-07 17:47:22 - lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-47-22_51df0ed1] Starting stage: preprocessing
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/solidao_cronica.md
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of solidao_cronica.md
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-08-07 17:47:22 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-08-07 17:48:08 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:48:08 - lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-08-07 17:48:08 - lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-08-07 17:48:08 - lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-47-22_51df0ed1] Generated output file: work/02_preprocessed/solidao_cronica/solidao_cronica_filled_template.md
+2025-08-07 17:48:08 - lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-47-22_51df0ed1] Generated output file: work/02_preprocessed/solidao_cronica/solidao_cronica_ari_analysis.json
+2025-08-07 17:48:08 - lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-47-22_51df0ed1] Generated output file: work/02_preprocessed/solidao_cronica/solidao_cronica_oracle_context.json
+2025-08-07 17:48:08 - lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-47-22_51df0ed1] Completed stage: preprocessing
+2025-08-07 17:48:08 - lyfe_kt.stage1_preprocessing - INFO - Successfully processed work/01_raw/solidao_cronica.md in 45.61 seconds
+2025-08-07 17:48:08 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/1 - Processed solidao_cronica.md
+2025-08-07 17:48:08 - lyfe_kt.stage1_preprocessing - INFO - Batch processing completed: 1/1 files successful
+2025-08-07 17:48:08 - lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-07_17-48-08_91633203
+2025-08-07 17:48:08 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-07 17:48:08 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-07 17:48:08 - lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-48-08_91633203] Preprocessing pipeline initialized
+2025-08-07 17:48:08 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-07 17:48:08 - lyfe_kt.stage1_preprocessing - INFO - Report generated: work/reports/supertasks_2025-08-07_17-48-08.md
+2025-08-07 17:48:08 - lyfe-kt - INFO - Generation command group accessed
+2025-08-07 17:48:08 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-07 17:48:08 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-07 17:48:08 - lyfe_kt.simplified_generator - INFO - Starting comprehensive journey generation: 5 levels
+2025-08-07 17:48:08 - lyfe_kt.simplified_generator - INFO - Extracting comprehensive concepts from source material
+2025-08-07 17:48:29 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:48:29 - lyfe_kt.simplified_generator - INFO - Extracted 3 concepts from source material
+2025-08-07 17:48:29 - lyfe_kt.simplified_generator - INFO - Assigning concepts to levels strategically
+2025-08-07 17:48:29 - lyfe_kt.simplified_generator - INFO - Generating 5 levels with comprehensive coverage
+2025-08-07 17:48:49 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:48:49 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-07 17:48:49 - lyfe_kt.simplified_generator - INFO - Successfully generated expansion supertask: 6 items
+2025-08-07 17:48:53 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:48:53 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-07 17:48:53 - lyfe_kt.simplified_generator - INFO - Successfully generated foundation supertask: 6 items
+2025-08-07 17:48:53 - lyfe_kt.simplified_generator - INFO - Generated foundation level successfully
+2025-08-07 17:49:00 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:49:00 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-07 17:49:00 - lyfe_kt.simplified_generator - INFO - Successfully generated application supertask: 6 items
+2025-08-07 17:49:00 - lyfe_kt.simplified_generator - INFO - Generated application level successfully
+2025-08-07 17:49:00 - lyfe_kt.simplified_generator - INFO - Generated expansion level successfully
+2025-08-07 17:49:17 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:49:17 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-07 17:49:17 - lyfe_kt.simplified_generator - INFO - Successfully generated integration supertask: 6 items
+2025-08-07 17:49:17 - lyfe_kt.simplified_generator - INFO - Generated integration level successfully
+2025-08-07 17:49:21 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:49:21 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-07 17:49:21 - lyfe_kt.simplified_generator - INFO - Successfully generated mastery supertask: 6 items
+2025-08-07 17:49:21 - lyfe_kt.simplified_generator - INFO - Generated mastery level successfully
+2025-08-07 17:49:21 - lyfe_kt.simplified_generator - INFO - Validating comprehensive coverage
+2025-08-07 17:49:38 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:49:38 - lyfe_kt.simplified_generator - INFO - Coverage validation score: 100%
+2025-08-07 17:49:38 - lyfe_kt.simplified_generator - INFO - Comprehensive journey completed: 5 levels
+2025-08-07 17:49:38 - lyfe-kt - INFO - Saved foundation level: work/03_output/level_1_foundation.json
+2025-08-07 17:49:38 - lyfe-kt - INFO - Saved application level: work/03_output/level_2_application.json
+2025-08-07 17:49:38 - lyfe-kt - INFO - Saved expansion level: work/03_output/level_3_expansion.json
+2025-08-07 17:49:38 - lyfe-kt - INFO - Saved integration level: work/03_output/level_4_integration.json
+2025-08-07 17:49:38 - lyfe-kt - INFO - Saved mastery level: work/03_output/level_5_mastery.json
+2025-08-07 17:50:15 - lyfe-kt - INFO - Packaging command accessed
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - ContentPackager initialized: work → packages
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Auto-detected title from comprehensive metadata: 'solidao_cronica'
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Starting content packaging workflow
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Created package directory: packages/solidao_cronica-2025-08-07-17-50
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Moved 1 items from 01_raw/
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Moved 4 items from 02_preprocessed/
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Moved 7 items from 03_output/
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Moved 1 items from reports/
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Skipped workspace file: 01_raw
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Skipped workspace file: 02_preprocessed
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Skipped workspace file: README.md
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Skipped workspace file: .gitignore
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Skipped workspace file: 03_output
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Skipped workspace file: reports
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Total files moved: 13
+2025-08-07 17:50:15 - lyfe_kt.content_packager - ERROR - Failed to copy execution logs: unsupported operand type(s) for /: 'str' and 'str'
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Cleaned 01_raw/ (kept folder structure)
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Cleaned 02_preprocessed/ (kept folder structure)
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Cleaned 03_output/ (kept folder structure)
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Cleaned reports/ (kept folder structure)
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Work directory cleaned: 10 items removed, structure preserved
+2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Packaging completed successfully: packages/solidao_cronica-2025-08-07-17-50
