@@ -2173,7 +2173,17 @@ def generate_from_template(template_path: str, output_dir: str,
     if progress_callback:
         pipeline.set_progress_callback(progress_callback)
     
-    return pipeline.process_template(template_path, output_dir, generate_both_difficulties, specific_difficulty, custom_sequence)
+    # For backward compatibility with tests expecting a 3-arg call, only pass
+    # optional params when explicitly provided.
+    if specific_difficulty is None and custom_sequence is None:
+        return pipeline.process_template(template_path, output_dir, generate_both_difficulties)
+    return pipeline.process_template(
+        template_path,
+        output_dir,
+        generate_both_difficulties,
+        specific_difficulty,
+        custom_sequence,
+    )
 
 
 def generate_from_directory(input_dir: str, output_dir: str,

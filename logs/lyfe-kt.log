@@ -6241,3 +6241,149 @@
 2025-08-07 15:31:36 - lyfe_kt.content_packager - INFO - Cleaned reports/ (kept folder structure)
 2025-08-07 15:31:36 - lyfe_kt.content_packager - INFO - Work directory cleaned: 7 items removed, structure preserved
 2025-08-07 15:31:36 - lyfe_kt.content_packager - INFO - Packaging completed successfully: packages/arthurcbrooks_mostmeaning_extracted-2025-08-07-15-31
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9sb23hqc/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp9sb23hqc/output.json
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7id2h52a/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7id2h52a/output.json
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpt7i8gm_0/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpt7i8gm_0/output
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpp7d2thqh/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpp7d2thqh/output
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpruvpu2u6/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpruvpu2u6/output
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2r0jojaq/results.json
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7sia3f9_/results.json
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:36:28 - lyfe-kt - INFO - Status command called
+2025-08-07 17:36:28 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-08-07 17:36:28 - src.lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-07_17-36-28_d2618a51
+2025-08-07 17:36:28 - src.lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-07 17:36:28 - src.lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-07 17:36:28 - src.lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-07 17:36:28 - src.lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-07 17:36:28 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-36-28_d2618a51] Preprocessing pipeline initialized
+2025-08-07 17:36:28 - src.lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-07 17:36:28 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-36-28_d2618a51] Processing input file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnwjkiakh/work/01_raw/habitos_matinais.md
+2025-08-07 17:36:28 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-36-28_d2618a51] Starting stage: preprocessing
+2025-08-07 17:36:28 - src.lyfe_kt.stage1_preprocessing - INFO - Processing file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnwjkiakh/work/01_raw/habitos_matinais.md
+2025-08-07 17:36:28 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of habitos_matinais.md
+2025-08-07 17:36:28 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-08-07 17:36:28 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-08-07 17:36:28 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-08-07 17:36:28 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-08-07 17:37:10 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:37:10 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-08-07 17:37:10 - src.lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-08-07 17:37:10 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-36-28_d2618a51] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnwjkiakh/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-07 17:37:10 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-36-28_d2618a51] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnwjkiakh/work/02_preprocessed/habitos_matinais_ari_analysis.json
+2025-08-07 17:37:10 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-36-28_d2618a51] Generated output file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnwjkiakh/work/02_preprocessed/habitos_matinais_oracle_context.json
+2025-08-07 17:37:10 - src.lyfe_kt.session_logger - INFO - [sess_2025-08-07_17-36-28_d2618a51] Completed stage: preprocessing
+2025-08-07 17:37:10 - src.lyfe_kt.stage1_preprocessing - INFO - Successfully processed /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnwjkiakh/work/01_raw/habitos_matinais.md in 42.10 seconds
+2025-08-07 17:37:10 - lyfe-kt - INFO - Generation command group accessed
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Template processor initialized successfully
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Structural JSON generator initialized for format v1.1
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Generation pipeline initialized successfully
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Processing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnwjkiakh/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Progress: 0/5 - Starting processing of habitos_matinais_filled_template.md
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Progress: 1/5 - Parsing template
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Parsing template: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpnwjkiakh/work/02_preprocessed/habitos_matinais_filled_template.md
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Progress: 2/5 - Validating template
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Template validation passed
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Progress: 3/5 - Generating JSON
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Generating multiple supertasks with guaranteed structure (beginner and advanced)
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: beginner
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-07 17:37:10 - src.lyfe_kt.stage3_generation - INFO - Extracting insights from source material for content generation
+2025-08-07 17:37:40 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:37:40 - src.lyfe_kt.content_enrichment - INFO - Extracted 4 source insights
+2025-08-07 17:37:40 - src.lyfe_kt.stage3_generation - INFO - Generating source-driven content for difficulty: beginner
+2025-08-07 17:37:46 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:37:46 - src.lyfe_kt.stage3_generation - INFO - Generated source-driven content item 1: 268 chars
+2025-08-07 17:37:51 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:37:51 - src.lyfe_kt.stage3_generation - INFO - Generated source-driven content item 2: 169 chars
+2025-08-07 17:37:56 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:37:56 - src.lyfe_kt.stage3_generation - INFO - Generated source-driven content item 3: 245 chars
+2025-08-07 17:37:56 - src.lyfe_kt.stage3_generation - INFO - Validating content relevance with chain-of-thought analysis
+2025-08-07 17:38:16 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:38:16 - src.lyfe_kt.content_enrichment - WARNING - Failed to parse validation JSON: Extra data: line 1 column 2 (char 1)
+2025-08-07 17:38:16 - src.lyfe_kt.stage3_generation - INFO - Content validation: enhanced, relevance: 0.60, enrichment: 0.60
+2025-08-07 17:38:16 - src.lyfe_kt.stage3_generation - INFO - Applying conditional content enhancement
+2025-08-07 17:38:16 - src.lyfe_kt.content_enrichment - INFO - Enhancing content based on 2 improvements
+2025-08-07 17:38:16 - src.lyfe_kt.stage3_generation - INFO - Generated 3 source-driven content items
+2025-08-07 17:38:16 - src.lyfe_kt.stage3_generation - INFO - Extracting insights for source-driven quiz generation
+2025-08-07 17:38:35 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:38:35 - src.lyfe_kt.content_enrichment - INFO - Extracted 3 source insights
+2025-08-07 17:38:35 - src.lyfe_kt.stage3_generation - INFO - Generating source-driven quiz questions for difficulty: beginner
+2025-08-07 17:38:35 - src.lyfe_kt.stage3_generation - INFO - Validating quiz relevance with chain-of-thought analysis
+2025-08-07 17:38:53 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:38:53 - src.lyfe_kt.content_enrichment - WARNING - Failed to parse validation JSON: Extra data: line 1 column 2 (char 1)
+2025-08-07 17:38:53 - src.lyfe_kt.stage3_generation - INFO - Quiz validation: enhanced, relevance: 0.60
+2025-08-07 17:38:53 - src.lyfe_kt.stage3_generation - INFO - Applying conditional quiz enhancement
+2025-08-07 17:38:53 - src.lyfe_kt.content_enrichment - INFO - Enhancing content based on 2 improvements
+2025-08-07 17:38:53 - src.lyfe_kt.stage3_generation - WARNING - AI question enhancement failed, using fallback: 'quiz_guidelines'
+2025-08-07 17:38:55 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:38:55 - src.lyfe_kt.stage3_generation - INFO - Generated source-driven quiz item 1
+2025-08-07 17:38:55 - src.lyfe_kt.stage3_generation - WARNING - AI question enhancement failed, using fallback: 'quiz_guidelines'
+2025-08-07 17:38:58 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:38:58 - src.lyfe_kt.stage3_generation - INFO - Generated source-driven quiz item 2
+2025-08-07 17:38:58 - src.lyfe_kt.stage3_generation - WARNING - AI question enhancement failed, using fallback: 'quiz_guidelines'
+2025-08-07 17:39:00 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-07 17:39:00 - src.lyfe_kt.stage3_generation - INFO - Generated source-driven quiz item 3
+2025-08-07 17:39:00 - src.lyfe_kt.stage3_generation - INFO - Generated 3 source-driven quiz items
+2025-08-07 17:39:00 - src.lyfe_kt.stage3_generation - INFO - Created narrative sequence with 6 items following story pattern
+2025-08-07 17:39:00 - src.lyfe_kt.stage3_generation - INFO - Generated 6 mobile-optimized flexible items with narrative flow
+2025-08-07 17:39:00 - src.lyfe_kt.stage3_generation - INFO - JSON Schema validation passed for format v1.1
+2025-08-07 17:39:00 - src.lyfe_kt.stage3_generation - INFO - Successfully generated supertask with guaranteed structure
+2025-08-07 17:39:00 - src.lyfe_kt.stage3_generation - INFO - Generating supertask with guaranteed structure, difficulty: advanced
+2025-08-07 17:39:00 - src.lyfe_kt.stage3_generation - INFO - Normalized archetype 'explorer' → 'explorer'
+2025-08-07 17:39:00 - src.lyfe_kt.stage3_generation - INFO - Extracting insights from source material for content generation
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptuuxavzn/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmptuuxavzn/output.json
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpha_anwxh/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpha_anwxh/output.json
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpbi59xm27/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpbi59xm27/output
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkvjqu0xx/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpkvjqu0xx/output
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2h814bmm/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2h814bmm/output
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpgfr5xm2t/results.json
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp7sav_1bp/results.json
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:39:39 - lyfe-kt - INFO - Status command called
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp1ddienuk/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp1ddienuk/output.json
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Processing single file: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpaatzynt7/input.json -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpaatzynt7/output.json
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp28nzlxyd/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp28nzlxyd/output
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmph4t2rju5/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmph4t2rju5/output
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Processing directory: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2z7rry8n/input -> /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp2z7rry8n/output
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmpui5_ivzi/results.json
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Generating technical report from: /var/folders/f7/rqd14g9d2rv0v4rhwj55l7v40000gn/T/tmp4qcrzepz/results.json
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Stage 1 command group accessed
+2025-08-07 17:43:50 - lyfe-kt - INFO - Status command called
