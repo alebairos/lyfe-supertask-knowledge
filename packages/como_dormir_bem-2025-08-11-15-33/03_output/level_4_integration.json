@@ -1,0 +1,68 @@
+{
+  "title": "Como Dormir Bem - Integration - Integration",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "como_dormir_bem_-_integration_integration",
+  "estimatedDuration": 480,
+  "coinsReward": 500,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Dormir não é apenas uma questão de fechar os olhos, mas um processo que começa muito antes de ir para a cama. Um ritual noturno, por exemplo, pode sinalizar ao seu corpo que é hora de descansar.",
+      "author": "Ari",
+      "tips": [
+        "Experimente trocar o celular por leitura leve, música calma ou um banho morno antes de dormir"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Por que um ritual noturno é benéfico para um bom sono?",
+      "options": [
+        "Ajuda a relaxar",
+        "Sinaliza ao corpo que é hora de dormir",
+        "Melhora a qualidade do sono",
+        "Todas as opções estão corretas"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Um ritual noturno ajuda a relaxar, sinaliza ao corpo que é hora de dormir e, consequentemente, melhora a qualidade do sono."
+    },
+    {
+      "type": "content",
+      "content": "Além de um ritual noturno, dormir e acordar sempre na mesma hora, inclusive nos fins de semana, pode alinhar seu ritmo circadiano e facilitar o adormecer.",
+      "author": "Ari"
+    },
+    {
+      "type": "quote",
+      "content": "A consistência é a chave para uma boa noite de sono. Mantenha seus horários de sono regulares, independentemente do dia da semana.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "A higiene do sono é outro aspecto importante. Isso envolve evitar cafeína à tarde, álcool perto da hora de dormir e refeições pesadas à noite.",
+      "author": "Ari",
+      "tips": [
+        "A hidratação é importante, mas evite beber muitos líquidos próximo ao horário de dormir para evitar interrupções"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Por que é importante evitar cafeína à tarde para um sono melhor?",
+      "options": [
+        "A cafeína pode causar pesadelos",
+        "A cafeína pode interferir no ritmo circadiano",
+        "A cafeína faz você acordar à noite para ir ao banheiro",
+        "Nenhuma das opções está correta"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A cafeína é um estimulante que pode interferir no seu ritmo circadiano e dificultar o sono."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

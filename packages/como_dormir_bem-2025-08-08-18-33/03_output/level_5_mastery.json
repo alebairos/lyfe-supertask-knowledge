@@ -1,0 +1,71 @@
+{
+  "title": "Dominando o Sono: Ritual, Ambiente e Estilo de Vida - Mastery",
+  "dimension": "physicalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "dominando_o_sono_mastery",
+  "estimatedDuration": 450,
+  "coinsReward": 500,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "O sono é essencial para a saúde física e mental. Criar um ritual consistente de sono pode ajudar a regular seu ritmo circadiano, facilitando o adormecer e o acordar.",
+      "author": "Ari",
+      "tips": [
+        "Comece seu ritual pelo menos uma hora antes de dormir."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Por que é importante evitar luzes fortes e telas antes de dormir?",
+      "options": [
+        "Elas podem causar dor de cabeça",
+        "Elas atrapalham a produção de melatonina",
+        "Elas podem causar insônia",
+        "Nenhuma das opções acima"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A luz forte, especialmente a luz azul emitida pelas telas, pode atrapalhar a produção de melatonina, um hormônio que sinaliza para o corpo que é hora de dormir."
+    },
+    {
+      "type": "content",
+      "content": "O ambiente onde você dorme também é crucial para a qualidade do sono. Um quarto fresco, escuro e silencioso pode contribuir para um sono mais profundo e restaurador.",
+      "author": "Ari",
+      "tips": [
+        "Mantenha a temperatura entre 18–21°C. Minimize ruídos com tampões de ouvido ou som branco."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Dormir bem é a melhor meditação. Vamos criar condições ideais para isso.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Além do ritual e do ambiente de sono, o que você come, bebe e como se exercita também afeta a qualidade do seu sono. Evitar cafeína à tarde, não comer refeições pesadas à noite e finalizar exercícios intensos algumas horas antes de dormir são práticas recomendadas.",
+      "author": "Ari",
+      "tips": [
+        "Finalize exercícios intensos pelo menos três horas antes de deitar."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual dos seguintes é mais provável de perturbar a qualidade do seu sono?",
+      "options": [
+        "Comer uma maçã",
+        "Tomar um copo de água",
+        "Tomar uma xícara de café",
+        "Fazer uma caminhada leve"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A cafeína é um estimulante que pode dificultar o adormecer. Portanto, é melhor evitar o consumo de café à tarde e próximo à hora de dormir."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

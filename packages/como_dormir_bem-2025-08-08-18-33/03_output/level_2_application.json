@@ -1,0 +1,68 @@
+{
+  "title": "Aplicando Alimentação, Hidratação e Exercícios para Melhorar o Sono",
+  "dimension": "physicalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "sono_saudavel_application",
+  "estimatedDuration": 300,
+  "coinsReward": 50,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "A alimentação, hidratação e exercícios desempenham um papel fundamental na qualidade do sono. Portanto, é essencial entender como esses fatores podem afetar seu descanso noturno e o que você pode fazer para otimizá-los.",
+      "author": "Ari"
+    },
+    {
+      "type": "quiz",
+      "question": "Por que é importante evitar a cafeína à tarde para a qualidade do sono?",
+      "options": [
+        "A cafeína pode causar dor de estômago",
+        "A cafeína pode causar insônia",
+        "A cafeína pode causar desidratação",
+        "A cafeína pode causar ganho de peso"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A cafeína pode perturbar seu sono, pois é um estimulante que pode tornar mais difícil adormecer e permanecer dormindo."
+    },
+    {
+      "type": "content",
+      "content": "Evitar refeições pesadas à noite é outra estratégia eficaz para melhorar a qualidade do sono. Comer muito ou alimentos pesados antes de dormir pode causar desconforto e indigestão, dificultando o sono.",
+      "author": "Ari",
+      "tips": [
+        "Tente fazer uma refeição leve à noite e evite comer pelo menos 2 horas antes de dormir."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Cuidar do corpo é o primeiro passo para uma boa noite de sono. Alimentação adequada, hidratação e exercícios podem ser a chave para melhorar sua qualidade de sono.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Exercitar-se regularmente pode ajudar a melhorar a qualidade do sono. No entanto, é importante evitar exercícios intensos perto da hora de dormir, pois eles podem deixá-lo muito energizado para adormecer.",
+      "author": "Ari",
+      "tips": [
+        "Tente fazer exercícios intensos pela manhã ou no início da tarde e opte por atividades mais leves à noite, como yoga ou alongamento."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual é a melhor estratégia para implementar o exercício em sua rotina para melhorar o sono?",
+      "options": [
+        "Exercite-se intensamente 1 hora antes de dormir",
+        "Exercite-se intensamente pela manhã",
+        "Não faça exercício",
+        "Exercite-se apenas aos finais de semana"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Exercitar-se intensamente pela manhã ou no início da tarde pode ajudar a melhorar a qualidade do sono à noite."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

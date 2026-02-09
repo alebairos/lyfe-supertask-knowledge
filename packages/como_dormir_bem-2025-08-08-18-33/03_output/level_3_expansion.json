@@ -1,0 +1,73 @@
+{
+  "title": "Como Dormir Bem - Expansion - Expansion",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "como_dormir_bem_-_expansion_expansion",
+  "estimatedDuration": 400,
+  "coinsReward": 50,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "O ritual do sono é uma sequência consistente de atividades pré-sono que ajudam a regular o seu ritmo circadiano. Como por exemplo, a leitura ou ouvir música calma.",
+      "author": "Ari",
+      "tips": [
+        "Evite luzes fortes e telas uma hora antes de dormir"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual atividade é recomendada para o seu ritual de sono?",
+      "options": [
+        "Usar o celular",
+        "Assistir televisão",
+        "Leitura",
+        "Exercícios intensos"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A leitura é uma atividade relaxante que pode ajudar a preparar o corpo para o sono. Evite luzes fortes e telas, que podem atrapalhar a produção de melatonina, o hormônio do sono."
+    },
+    {
+      "type": "content",
+      "content": "O local onde você dorme é muito importante para a qualidade do seu sono. Condições como a temperatura, luz e ruído podem afetar o seu descanso.",
+      "author": "Ari",
+      "tips": [
+        "Mantenha a temperatura entre 18–21°C",
+        "Minimize ruídos usando tampões de ouvido ou som branco"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Um quarto fresco, escuro e silencioso pode contribuir para um sono mais profundo e restaurador.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "A alimentação, hidratação e exercícios físicos também têm um grande impacto na qualidade do seu sono. Por exemplo, é recomendado evitar a cafeína à tarde e não comer refeições pesadas à noite.",
+      "author": "Ari",
+      "tips": [
+        "Não faça refeições pesadas à noite",
+        "Evite cafeína à tarde"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual das seguintes opções pode prejudicar a qualidade do seu sono?",
+      "options": [
+        "Exercícios físicos pela manhã",
+        "Beber muita água durante o dia",
+        "Comer refeições pesadas à noite",
+        "Manter o quarto escuro e silencioso"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Comer refeições pesadas à noite pode prejudicar a qualidade do seu sono. É recomendado evitar alimentos pesados algumas horas antes de dormir."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

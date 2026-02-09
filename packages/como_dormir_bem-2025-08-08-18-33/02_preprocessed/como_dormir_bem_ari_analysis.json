@@ -1,0 +1,25 @@
+{
+  "ari_analysis": {
+    "applicable_frameworks": [],
+    "total_frameworks_identified": 0,
+    "content_analysis": {
+      "word_count": 242,
+      "primary_themes": [
+        "morning",
+        "mindfulness",
+        "exercise",
+        "sleep"
+      ],
+      "complexity_level": "intermediate",
+      "language": "portuguese"
+    }
+  },
+  "coaching_opportunities": [
+    {
+      "type": "habit_formation",
+      "framework": "tiny_habits",
+      "suggestion": "Aplicar princípios de micro-hábitos para facilitar adoção",
+      "coaching_prompt": "Menor que isso, impossível?"
+    }
+  ]
+}

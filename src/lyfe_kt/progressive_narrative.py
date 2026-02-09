@@ -15,6 +15,18 @@ from .content_enrichment import ContentEnrichmentEngine, SourceInsight
 
 logger = logging.getLogger(__name__)
 
+# Allowed expert authors for quote items (per feature 01)
+ALLOWED_QUOTE_AUTHORS: List[str] = [
+    "BJ Fogg",
+    "Jason Hreha",
+    "Anna Lembke",
+    "Lieberman & Long",
+    "Martin Seligman",
+    "Abraham Maslow",
+    "Andrew Huberman",
+    "Michael Easter",
+    "Andrew Newberg",
+]
 
 class LearningLevel(Enum):
     """Learning progression levels."""
@@ -512,6 +524,9 @@ class NarrativeSequenceOrchestrator:
             sequence_items = self._apply_level_sequence(
                 config.sequence, content_items, quiz_items, quotes
             )
+
+            # Sanitize authorship and quotes per acceptance criteria
+            sequence_items = self._sanitize_authorship_and_quotes(sequence_items)
             
             # Add narrative elements
             if level in narrative_thread.progress_markers:
@@ -579,6 +594,7 @@ class NarrativeSequenceOrchestrator:
             sequence_items = []
             
             content_idx = quiz_idx = quote_idx = 0
+            quote_used = False  # Cap quotes at one per level
             
             for seq_type in sequence_types:
                 if seq_type == 'content' and content_idx < len(content_items):
@@ -587,9 +603,10 @@ class NarrativeSequenceOrchestrator:
                 elif seq_type == 'quiz' and quiz_idx < len(quiz_items):
                     sequence_items.append(quiz_items[quiz_idx])
                     quiz_idx += 1
-                elif seq_type == 'quote' and quote_idx < len(quotes):
+                elif seq_type == 'quote' and not quote_used and quote_idx < len(quotes):
                     sequence_items.append(quotes[quote_idx])
                     quote_idx += 1
+                    quote_used = True
                 
                 # Stop if we reach mobile limit
                 if len(sequence_items) >= 8:
@@ -603,9 +620,10 @@ class NarrativeSequenceOrchestrator:
                 elif quiz_idx < len(quiz_items):
                     sequence_items.append(quiz_items[quiz_idx])
                     quiz_idx += 1
-                elif quote_idx < len(quotes):
+                elif not quote_used and quote_idx < len(quotes):
                     sequence_items.append(quotes[quote_idx])
                     quote_idx += 1
+                    quote_used = True
                 else:
                     break
             
@@ -616,6 +634,30 @@ class NarrativeSequenceOrchestrator:
             # Fallback to simple ordering
             all_items = content_items + quiz_items + quotes
             return all_items[:6]  # Safe mobile limit
+
+    def _sanitize_authorship_and_quotes(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Enforce: max one quote; quote author from allowed list; default content author to 'Ari'."""
+        sanitized: List[Dict[str, Any]] = []
+        quote_seen = False
+        for item in items:
+            item_type = item.get("type")
+            if item_type == "quote":
+                if quote_seen:
+                    continue  # drop extra quotes
+                quote_seen = True
+                # Ensure author is in allowed list
+                author = item.get("author")
+                if author not in ALLOWED_QUOTE_AUTHORS:
+                    item = {**item, "author": ALLOWED_QUOTE_AUTHORS[0]}
+                sanitized.append(item)
+            elif item_type == "content":
+                # Default missing author to Ari
+                if not item.get("author"):
+                    item = {**item, "author": "Ari"}
+                sanitized.append(item)
+            else:
+                sanitized.append(item)
+        return sanitized[:8]
     
     def _calculate_level_reward(self, level: str) -> int:
         """Calculate appropriate coin reward for learning level."""

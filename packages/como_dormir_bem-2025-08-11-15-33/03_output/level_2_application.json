@@ -1,0 +1,68 @@
+{
+  "title": "Práticas de Higiene do Sono - Aplicação",
+  "dimension": "physicalHealth",
+  "archetype": "warrior",
+  "relatedToType": "HABITBP",
+  "relatedToId": "good-sleep-habit",
+  "estimatedDuration": 300,
+  "coinsReward": 50,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "A higiene do sono é uma prática essencial para um bom descanso. Vamos explorar algumas ações concretas que você pode tomar para melhorar a qualidade do seu sono.",
+      "author": "Ari"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual das seguintes ações não é recomendada para uma boa higiene do sono?",
+      "options": [
+        "Evitar cafeína à tarde",
+        "Reduzir a ingestão de água à noite",
+        "Ingerir álcool antes de dormir",
+        "Manter um horário de sono regular"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ingerir álcool antes de dormir pode levar a um sono de má qualidade e interrupções durante a noite."
+    },
+    {
+      "type": "content",
+      "content": "Evitar cafeína à tarde é uma parte importante da higiene do sono. A cafeína pode interferir com o seu ritmo circadiano e dificultar o sono.",
+      "author": "Ari",
+      "tips": [
+        "Experimente substituir o café da tarde por chás de ervas ou água aromatizada."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Uma noite de sono de qualidade começa com boas práticas de higiene do sono durante o dia.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "A hidratação é importante para a saúde geral, mas beber muita água à noite pode levar a interrupções do sono. Tente equilibrar a hidratação durante o dia e reduza a ingestão de líquidos algumas horas antes de dormir.",
+      "author": "Ari",
+      "tips": [
+        "Mantenha uma garrafa de água por perto durante o dia para se lembrar de se hidratar."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Por que é importante evitar a ingestão excessiva de líquidos antes de dormir?",
+      "options": [
+        "Pode causar pesadelos",
+        "Pode levar a interrupções do sono",
+        "Pode causar insônia",
+        "Pode levar a sonhos vívidos"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Beber muita água à noite pode levar a interrupções do sono, pois você pode precisar se levantar para ir ao banheiro."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

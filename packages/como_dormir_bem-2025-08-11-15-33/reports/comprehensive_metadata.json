@@ -1,0 +1,178 @@
+{
+  "levels": [
+    "foundation",
+    "application",
+    "expansion",
+    "integration",
+    "mastery"
+  ],
+  "theme": "Como Dormir Bem",
+  "total_supertasks": 5,
+  "total_concepts": 3,
+  "concept_assignment": {
+    "foundation": [
+      {
+        "name": "Ritual Noturno",
+        "description": "Uma sequência de atividades relaxantes antes de dormir que sinalizam ao corpo que é hora de descansar.",
+        "practical_applications": [
+          "Ajuda a relaxar antes de dormir",
+          "Melhora a qualidade do sono"
+        ],
+        "examples": [
+          "Trocar o celular por leitura leve, música calma ou um banho morno"
+        ],
+        "complexity_levels": [
+          "beginner"
+        ],
+        "source_quotes": [
+          "Dormir bem começa antes de deitar. Criar um ritual noturno previsível sinaliza ao corpo que é hora de desligar."
+        ]
+      },
+      {
+        "name": "Ritmo Circadiano",
+        "description": "O ciclo biológico de 24 horas que determina nossos padrões de sono e vigília.",
+        "practical_applications": [
+          "Ajustar os horários de sono e acordar para se alinhar com o ritmo circadiano pode facilitar o adormecer"
+        ],
+        "examples": [
+          "Tente dormir e acordar sempre na mesma hora, inclusive nos fins de semana"
+        ],
+        "complexity_levels": [
+          "beginner"
+        ],
+        "source_quotes": [
+          "O horário regular é o pilar mais importante: tente dormir e acordar sempre na mesma hora, inclusive nos fins de semana."
+        ]
+      }
+    ],
+    "application": [
+      {
+        "name": "Higiene do Sono",
+        "description": "Práticas e hábitos que são necessários para ter uma boa noite de sono e pleno alerta diurno.",
+        "practical_applications": [
+          "Evitar cafeína à tarde",
+          "Evitar álcool perto da hora de dormir",
+          "Evitar refeições pesadas à noite"
+        ],
+        "examples": [
+          "Hidratação é importante, mas sem exagero próximo ao horário de dormir para evitar interrupções"
+        ],
+        "complexity_levels": [
+          "beginner"
+        ],
+        "source_quotes": [
+          "Preste atenção no que entra no corpo: evite cafeína à tarde, álcool perto da hora de dormir e refeições pesadas à noite."
+        ]
+      }
+    ],
+    "expansion": [],
+    "integration": [
+      {
+        "name": "Ritual Noturno",
+        "description": "Uma sequência de atividades relaxantes antes de dormir que sinalizam ao corpo que é hora de descansar.",
+        "practical_applications": [
+          "Ajuda a relaxar antes de dormir",
+          "Melhora a qualidade do sono"
+        ],
+        "examples": [
+          "Trocar o celular por leitura leve, música calma ou um banho morno"
+        ],
+        "complexity_levels": [
+          "beginner"
+        ],
+        "source_quotes": [
+          "Dormir bem começa antes de deitar. Criar um ritual noturno previsível sinaliza ao corpo que é hora de desligar."
+        ]
+      },
+      {
+        "name": "Ritmo Circadiano",
+        "description": "O ciclo biológico de 24 horas que determina nossos padrões de sono e vigília.",
+        "practical_applications": [
+          "Ajustar os horários de sono e acordar para se alinhar com o ritmo circadiano pode facilitar o adormecer"
+        ],
+        "examples": [
+          "Tente dormir e acordar sempre na mesma hora, inclusive nos fins de semana"
+        ],
+        "complexity_levels": [
+          "beginner"
+        ],
+        "source_quotes": [
+          "O horário regular é o pilar mais importante: tente dormir e acordar sempre na mesma hora, inclusive nos fins de semana."
+        ]
+      },
+      {
+        "name": "Higiene do Sono",
+        "description": "Práticas e hábitos que são necessários para ter uma boa noite de sono e pleno alerta diurno.",
+        "practical_applications": [
+          "Evitar cafeína à tarde",
+          "Evitar álcool perto da hora de dormir",
+          "Evitar refeições pesadas à noite"
+        ],
+        "examples": [
+          "Hidratação é importante, mas sem exagero próximo ao horário de dormir para evitar interrupções"
+        ],
+        "complexity_levels": [
+          "beginner"
+        ],
+        "source_quotes": [
+          "Preste atenção no que entra no corpo: evite cafeína à tarde, álcool perto da hora de dormir e refeições pesadas à noite."
+        ]
+      }
+    ],
+    "mastery": [
+      {
+        "name": "Ritual Noturno",
+        "description": "Uma sequência de atividades relaxantes antes de dormir que sinalizam ao corpo que é hora de descansar.",
+        "practical_applications": [
+          "Ajuda a relaxar antes de dormir",
+          "Melhora a qualidade do sono"
+        ],
+        "examples": [
+          "Trocar o celular por leitura leve, música calma ou um banho morno"
+        ],
+        "complexity_levels": [
+          "beginner"
+        ],
+        "source_quotes": [
+          "Dormir bem começa antes de deitar. Criar um ritual noturno previsível sinaliza ao corpo que é hora de desligar."
+        ]
+      },
+      {
+        "name": "Ritmo Circadiano",
+        "description": "O ciclo biológico de 24 horas que determina nossos padrões de sono e vigília.",
+        "practical_applications": [
+          "Ajustar os horários de sono e acordar para se alinhar com o ritmo circadiano pode facilitar o adormecer"
+        ],
+        "examples": [
+          "Tente dormir e acordar sempre na mesma hora, inclusive nos fins de semana"
+        ],
+        "complexity_levels": [
+          "beginner"
+        ],
+        "source_quotes": [
+          "O horário regular é o pilar mais importante: tente dormir e acordar sempre na mesma hora, inclusive nos fins de semana."
+        ]
+      },
+      {
+        "name": "Higiene do Sono",
+        "description": "Práticas e hábitos que são necessários para ter uma boa noite de sono e pleno alerta diurno.",
+        "practical_applications": [
+          "Evitar cafeína à tarde",
+          "Evitar álcool perto da hora de dormir",
+          "Evitar refeições pesadas à noite"
+        ],
+        "examples": [
+          "Hidratação é importante, mas sem exagero próximo ao horário de dormir para evitar interrupções"
+        ],
+        "complexity_levels": [
+          "beginner"
+        ],
+        "source_quotes": [
+          "Preste atenção no que entra no corpo: evite cafeína à tarde, álcool perto da hora de dormir e refeições pesadas à noite."
+        ]
+      }
+    ]
+  },
+  "coverage_validation": {},
+  "generation_method": "comprehensive_coverage"
+}

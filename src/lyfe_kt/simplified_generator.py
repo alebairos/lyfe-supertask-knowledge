@@ -630,6 +630,8 @@ class QualityReviewer:
     def review_if_needed(self, supertask: Dict[str, Any], request: GenerationRequest) -> Dict[str, Any]:
         """ONLY fix critical issues, don't recreate content."""
         try:
+            # Enforce authorship/quote constraints before identifying issues
+            supertask = self._sanitize_authorship_and_quotes(supertask)
             issues = self._identify_critical_issues(supertask)
             
             if not issues:
@@ -741,6 +743,47 @@ class QualityReviewer:
                         item['author'] = 'Ari'
             return supertask
         except:
+            return supertask
+
+    def _sanitize_authorship_and_quotes(self, supertask: Dict[str, Any]) -> Dict[str, Any]:
+        """Cap quotes at one; ensure quote author from allowed list; default content author to 'Ari'."""
+        try:
+            items = supertask.get('flexibleItems', [])
+            if not isinstance(items, list):
+                return supertask
+            quote_seen = False
+            sanitized_items: List[Dict[str, Any]] = []
+            # Allowed experts (mirror stage3/progressive)
+            allowed_authors = [
+                "BJ Fogg",
+                "Jason Hreha",
+                "Anna Lembke",
+                "Lieberman & Long",
+                "Martin Seligman",
+                "Abraham Maslow",
+                "Andrew Huberman",
+                "Michael Easter",
+                "Andrew Newberg",
+            ]
+            for item in items:
+                item_type = item.get('type')
+                if item_type == 'quote':
+                    if quote_seen:
+                        continue
+                    quote_seen = True
+                    author = item.get('author')
+                    if author not in allowed_authors:
+                        item = {**item, 'author': allowed_authors[0]}
+                    sanitized_items.append(item)
+                elif item_type == 'content':
+                    if not item.get('author'):
+                        item = {**item, 'author': 'Ari'}
+                    sanitized_items.append(item)
+                else:
+                    sanitized_items.append(item)
+            supertask['flexibleItems'] = sanitized_items[:8]
+            return supertask
+        except Exception:
             return supertask
     
     def _fix_missing_fields(self, supertask: Dict[str, Any], request: GenerationRequest) -> Dict[str, Any]:

@@ -1,0 +1,73 @@
+{
+  "title": "Construindo uma Rotina de Sono Efetiva - Iniciante",
+  "dimension": "physicalHealth",
+  "archetype": "explorer",
+  "relatedToType": "GENERIC",
+  "relatedToId": "sleep_habits",
+  "estimatedDuration": 600,
+  "coinsReward": 20,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "Dormir bem é um componente essencial para a saúde física e mental. Um dos aspectos fundamentais para uma boa noite de sono é estabelecer um ritual consistente, que pode ajudar a regular seu ritmo circadiano.",
+      "author": "Ari",
+      "tips": [
+        "Comece seu ritual de sono pelo menos uma hora antes de dormir."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Por que é importante estabelecer um ritual de sono?",
+      "options": [
+        "Para se sentir mais produtivo",
+        "Para regular o ritmo circadiano",
+        "Para ter mais tempo livre",
+        "Para evitar sonhos"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Estabelecer um ritual de sono ajuda a regular seu ritmo circadiano, facilitando a adormecer e a acordar."
+    },
+    {
+      "type": "content",
+      "content": "Atividades relaxantes, como leitura ou ouvir música calma, são ótimas opções para incluir em seu ritual de sono. Evite luzes fortes e telas, que podem atrapalhar a produção de melatonina.",
+      "author": "Ari",
+      "tips": [
+        "Substitua o uso de dispositivos eletrônicos por atividades relaxantes antes de dormir."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Não subestime o poder de uma boa noite de sono. Um ritual de sono adequado pode ser um verdadeiro jogo-changer para a sua saúde e bem-estar.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Além do ritual de sono, o ambiente onde você descansa também é crucial para a qualidade do sono. Um quarto fresco, escuro e silencioso pode contribuir para um sono mais profundo e restaurador.",
+      "author": "Ari",
+      "tips": [
+        "Mantenha a temperatura do quarto entre 18–21°C.",
+        "Minimize ruídos com tampões de ouvido ou som branco.",
+        "Use cortinas blackout ou máscara de olho para bloquear a luz."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual dos seguintes é uma boa prática para promover um ambiente de sono ideal?",
+      "options": [
+        "Deixar a TV ligada para adormecer",
+        "Manter a temperatura do quarto acima de 30°C",
+        "Usar cortinas blackout para bloquear a luz",
+        "Tocar música alta para abafar ruídos externos"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Usar cortinas blackout é uma das maneiras eficazes de criar um ambiente de sono ideal, pois ajuda a bloquear a luz, que pode atrapalhar o sono."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

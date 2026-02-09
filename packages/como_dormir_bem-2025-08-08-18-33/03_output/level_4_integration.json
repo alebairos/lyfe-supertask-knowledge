@@ -1,0 +1,71 @@
+{
+  "title": "Integração para um sono saudável",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "sono_saudavel_integration",
+  "estimatedDuration": 450,
+  "coinsReward": 300,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "O sono de qualidade começa muito antes de você deitar na cama. Vamos explorar como os rituais de sono, o ambiente de descanso e a alimentação podem se unir para aprimorar seu repouso.",
+      "author": "Ari",
+      "tips": [
+        "Comece a preparação para o sono algumas horas antes de ir para a cama"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual dos seguintes comportamentos pode ser benéfico para o seu ritual de sono?",
+      "options": [
+        "Tomar uma xícara de café",
+        "Praticar exercícios intensos",
+        "Ler um livro",
+        "Jogar videogame"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ler um livro é uma atividade relaxante que pode ajudar a sinalizar ao seu corpo que é hora de dormir. Evite cafeína e exercícios intensos perto da hora de dormir."
+    },
+    {
+      "type": "content",
+      "content": "O ambiente de sono também é crucial. Um quarto fresco, escuro e silencioso pode contribuir para um sono mais profundo e restaurador.",
+      "author": "Ari",
+      "tips": [
+        "Use cortinas blackout ou uma máscara de olho para bloquear a luz"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "O primeiro passo para um sono de qualidade é criar um ambiente propício para isso. O espaço em que você descansa tem grande impacto na qualidade do seu sono.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "Além do ambiente e do ritual de sono, sua alimentação e hidratação também afetam a qualidade do seu repouso. Evite cafeína à tarde e não coma refeições pesadas à noite.",
+      "author": "Ari",
+      "tips": [
+        "Faça uma refeição leve à noite para evitar desconforto e dificuldade para dormir"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual dos seguintes comportamentos não é recomendado para uma boa noite de sono?",
+      "options": [
+        "Meditar antes de dormir",
+        "Beber água durante o dia",
+        "Comer uma refeição pesada antes de dormir",
+        "Manter o quarto fresco"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Comer uma refeição pesada antes de dormir pode causar desconforto e dificultar o adormecer. As outras opções são comportamentos benéficos para o sono."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}

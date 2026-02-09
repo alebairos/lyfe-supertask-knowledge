@@ -1,0 +1,227 @@
+{
+  "levels": [
+    "foundation",
+    "application",
+    "expansion",
+    "integration",
+    "mastery"
+  ],
+  "theme": "Como Dormir Bem",
+  "total_supertasks": 5,
+  "total_concepts": 3,
+  "concept_assignment": {
+    "foundation": [
+      {
+        "name": "Ritual de Sono",
+        "description": "Rotina consistente de atividades pré-sono que ajudam a regular o ritmo circadiano.",
+        "practical_applications": [
+          "Estabelecer uma rotina pré-sono",
+          "Evitar luzes fortes e telas uma hora antes de dormir",
+          "Substituir o uso de eletrônicos por atividades relaxantes"
+        ],
+        "examples": [
+          "Leitura",
+          "Ouvir música calma"
+        ],
+        "complexity_levels": [
+          "iniciante"
+        ],
+        "source_quotes": [
+          "Seu corpo precisa de sinais claros para entender que é hora de dormir. Criar um ritual consistente de sono pode ajudar a regular seu ritmo circadiano, facilitando a adormecer e a acordar."
+        ]
+      },
+      {
+        "name": "Ambiente de Sono",
+        "description": "Condições do local de sono que contribuem para a qualidade e regularidade do repouso.",
+        "practical_applications": [
+          "Manter a temperatura entre 18–21°C",
+          "Minimizar ruídos",
+          "Bloquear luzes"
+        ],
+        "examples": [
+          "Uso de cortinas blackout ou máscara de olho",
+          "Uso de tampões de ouvido ou som branco"
+        ],
+        "complexity_levels": [
+          "iniciante"
+        ],
+        "source_quotes": [
+          "O ambiente onde você dorme também é crucial para a qualidade do sono. Um quarto fresco, escuro e silencioso pode contribuir para um sono mais profundo e restaurador."
+        ]
+      }
+    ],
+    "application": [
+      {
+        "name": "Alimentação, Hidratação e Exercícios",
+        "description": "Impacto da alimentação, hidratação e exercícios físicos na qualidade do sono.",
+        "practical_applications": [
+          "Evitar cafeína à tarde",
+          "Não comer refeições pesadas à noite",
+          "Evitar exercícios intensos três horas antes de dormir"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "iniciante"
+        ],
+        "source_quotes": [
+          "O que você come e bebe, e quando você se exercita, também pode afetar seu sono."
+        ]
+      }
+    ],
+    "expansion": [],
+    "integration": [
+      {
+        "name": "Ritual de Sono",
+        "description": "Rotina consistente de atividades pré-sono que ajudam a regular o ritmo circadiano.",
+        "practical_applications": [
+          "Estabelecer uma rotina pré-sono",
+          "Evitar luzes fortes e telas uma hora antes de dormir",
+          "Substituir o uso de eletrônicos por atividades relaxantes"
+        ],
+        "examples": [
+          "Leitura",
+          "Ouvir música calma"
+        ],
+        "complexity_levels": [
+          "iniciante"
+        ],
+        "source_quotes": [
+          "Seu corpo precisa de sinais claros para entender que é hora de dormir. Criar um ritual consistente de sono pode ajudar a regular seu ritmo circadiano, facilitando a adormecer e a acordar."
+        ]
+      },
+      {
+        "name": "Ambiente de Sono",
+        "description": "Condições do local de sono que contribuem para a qualidade e regularidade do repouso.",
+        "practical_applications": [
+          "Manter a temperatura entre 18–21°C",
+          "Minimizar ruídos",
+          "Bloquear luzes"
+        ],
+        "examples": [
+          "Uso de cortinas blackout ou máscara de olho",
+          "Uso de tampões de ouvido ou som branco"
+        ],
+        "complexity_levels": [
+          "iniciante"
+        ],
+        "source_quotes": [
+          "O ambiente onde você dorme também é crucial para a qualidade do sono. Um quarto fresco, escuro e silencioso pode contribuir para um sono mais profundo e restaurador."
+        ]
+      },
+      {
+        "name": "Alimentação, Hidratação e Exercícios",
+        "description": "Impacto da alimentação, hidratação e exercícios físicos na qualidade do sono.",
+        "practical_applications": [
+          "Evitar cafeína à tarde",
+          "Não comer refeições pesadas à noite",
+          "Evitar exercícios intensos três horas antes de dormir"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "iniciante"
+        ],
+        "source_quotes": [
+          "O que você come e bebe, e quando você se exercita, também pode afetar seu sono."
+        ]
+      }
+    ],
+    "mastery": [
+      {
+        "name": "Ritual de Sono",
+        "description": "Rotina consistente de atividades pré-sono que ajudam a regular o ritmo circadiano.",
+        "practical_applications": [
+          "Estabelecer uma rotina pré-sono",
+          "Evitar luzes fortes e telas uma hora antes de dormir",
+          "Substituir o uso de eletrônicos por atividades relaxantes"
+        ],
+        "examples": [
+          "Leitura",
+          "Ouvir música calma"
+        ],
+        "complexity_levels": [
+          "iniciante"
+        ],
+        "source_quotes": [
+          "Seu corpo precisa de sinais claros para entender que é hora de dormir. Criar um ritual consistente de sono pode ajudar a regular seu ritmo circadiano, facilitando a adormecer e a acordar."
+        ]
+      },
+      {
+        "name": "Ambiente de Sono",
+        "description": "Condições do local de sono que contribuem para a qualidade e regularidade do repouso.",
+        "practical_applications": [
+          "Manter a temperatura entre 18–21°C",
+          "Minimizar ruídos",
+          "Bloquear luzes"
+        ],
+        "examples": [
+          "Uso de cortinas blackout ou máscara de olho",
+          "Uso de tampões de ouvido ou som branco"
+        ],
+        "complexity_levels": [
+          "iniciante"
+        ],
+        "source_quotes": [
+          "O ambiente onde você dorme também é crucial para a qualidade do sono. Um quarto fresco, escuro e silencioso pode contribuir para um sono mais profundo e restaurador."
+        ]
+      },
+      {
+        "name": "Alimentação, Hidratação e Exercícios",
+        "description": "Impacto da alimentação, hidratação e exercícios físicos na qualidade do sono.",
+        "practical_applications": [
+          "Evitar cafeína à tarde",
+          "Não comer refeições pesadas à noite",
+          "Evitar exercícios intensos três horas antes de dormir"
+        ],
+        "examples": [],
+        "complexity_levels": [
+          "iniciante"
+        ],
+        "source_quotes": [
+          "O que você come e bebe, e quando você se exercita, também pode afetar seu sono."
+        ]
+      }
+    ]
+  },
+  "coverage_validation": {
+    "coverage_score": 90,
+    "coverage_analysis": {
+      "coverage_analysis": [
+        {
+          "concept_name": "Ritual de Sono",
+          "covered_in_level": "foundation",
+          "coverage_quality": "boa",
+          "evidence": "Nível 1: Construindo uma Rotina de Sono Efetiva - Iniciante",
+          "suggestions": "Adicionar mais exemplos e estratégias específicas para estabelecer um ritual de sono eficaz"
+        },
+        {
+          "concept_name": "Ambiente de Sono",
+          "covered_in_level": "expansion",
+          "coverage_quality": "boa",
+          "evidence": "Nível 3: Como Dormir Bem - Expansion",
+          "suggestions": "Detalhar mais sobre como criar um ambiente de sono ideal, incluindo exemplos práticos"
+        },
+        {
+          "concept_name": "Alimentação, Hidratação e Exercícios",
+          "covered_in_level": "application",
+          "coverage_quality": "boa",
+          "evidence": "Nível 2: Aplicando Alimentação, Hidratação e Exercícios para Melhorar o Sono",
+          "suggestions": "Adicionar mais informações sobre a importância da hidratação e dos exercícios para a qualidade do sono"
+        }
+      ],
+      "overall_coverage_score": 90,
+      "missing_concepts": [],
+      "improvement_suggestions": [
+        {
+          "level": "expansion",
+          "add_concept": "Efeitos da luz azul no sono",
+          "reason": "A luz azul, emitida por dispositivos eletrônicos, pode interferir na qualidade do sono e caberia bem no contexto do ambiente de sono"
+        }
+      ],
+      "coverage_summary": "A jornada de aprendizado cobriu todos os principais conceitos do material fonte com qualidade boa. Ainda assim, há espaço para aprofundar mais cada conceito, oferecendo mais exemplos práticos e estratégias específicas. Além disso, considerar a inclusão de conceitos relacionados, como o impacto da luz azul no sono."
+    },
+    "improvement_suggestions": [
+      "Nível expansion: adicionar Efeitos da luz azul no sono (A luz azul, emitida por dispositivos eletrônicos, pode interferir na qualidade do sono e caberia bem no contexto do ambiente de sono)"
+    ]
+  },
+  "generation_method": "comprehensive_coverage"
+}

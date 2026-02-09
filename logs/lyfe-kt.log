@@ -6482,3 +6482,210 @@
 2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Cleaned reports/ (kept folder structure)
 2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Work directory cleaned: 10 items removed, structure preserved
 2025-08-07 17:50:15 - lyfe_kt.content_packager - INFO - Packaging completed successfully: packages/solidao_cronica-2025-08-07-17-50
+2025-08-08 18:31:11 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-08-08 18:31:11 - lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-08_18-31-11_24021c4b
+2025-08-08 18:31:11 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-08 18:31:11 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-08 18:31:11 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-08 18:31:11 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-08 18:31:11 - lyfe_kt.session_logger - INFO - [sess_2025-08-08_18-31-11_24021c4b] Preprocessing pipeline initialized
+2025-08-08 18:31:11 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-08 18:31:11 - lyfe_kt.session_logger - INFO - [sess_2025-08-08_18-31-11_24021c4b] Processing input file: work/01_raw/como_dormir_bem.md
+2025-08-08 18:31:11 - lyfe_kt.session_logger - INFO - [sess_2025-08-08_18-31-11_24021c4b] Starting stage: preprocessing
+2025-08-08 18:31:11 - lyfe_kt.stage1_preprocessing - INFO - Processing file: work/01_raw/como_dormir_bem.md
+2025-08-08 18:31:11 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of como_dormir_bem.md
+2025-08-08 18:31:11 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-08-08 18:31:11 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-08-08 18:31:11 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-08-08 18:31:11 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-08-08 18:31:49 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-08 18:31:49 - lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-08-08 18:31:49 - lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-08-08 18:31:49 - lyfe_kt.session_logger - INFO - [sess_2025-08-08_18-31-11_24021c4b] Generated output file: work/02_preprocessed/como_dormir_bem_filled_template.md
+2025-08-08 18:31:49 - lyfe_kt.session_logger - INFO - [sess_2025-08-08_18-31-11_24021c4b] Generated output file: work/02_preprocessed/como_dormir_bem_ari_analysis.json
+2025-08-08 18:31:49 - lyfe_kt.session_logger - INFO - [sess_2025-08-08_18-31-11_24021c4b] Generated output file: work/02_preprocessed/como_dormir_bem_oracle_context.json
+2025-08-08 18:31:49 - lyfe_kt.session_logger - INFO - [sess_2025-08-08_18-31-11_24021c4b] Completed stage: preprocessing
+2025-08-08 18:31:49 - lyfe_kt.stage1_preprocessing - INFO - Successfully processed work/01_raw/como_dormir_bem.md in 38.43 seconds
+2025-08-08 18:31:49 - lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-08_18-31-49_3b722cc6
+2025-08-08 18:31:49 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-08 18:31:49 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-08 18:31:49 - lyfe_kt.session_logger - INFO - [sess_2025-08-08_18-31-49_3b722cc6] Preprocessing pipeline initialized
+2025-08-08 18:31:49 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-08 18:31:49 - lyfe_kt.stage1_preprocessing - INFO - Report generated: work/reports/supertasks_2025-08-08_18-31-49.md
+2025-08-08 18:32:01 - lyfe-kt - INFO - Generation command group accessed
+2025-08-08 18:32:01 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-08 18:32:01 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-08 18:32:01 - lyfe_kt.simplified_generator - INFO - Starting comprehensive journey generation: 5 levels
+2025-08-08 18:32:01 - lyfe_kt.simplified_generator - INFO - Extracting comprehensive concepts from source material
+2025-08-08 18:32:20 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-08 18:32:20 - lyfe_kt.simplified_generator - INFO - Extracted 3 concepts from source material
+2025-08-08 18:32:20 - lyfe_kt.simplified_generator - INFO - Assigning concepts to levels strategically
+2025-08-08 18:32:20 - lyfe_kt.simplified_generator - INFO - Generating 5 levels with comprehensive coverage
+2025-08-08 18:32:42 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-08 18:32:42 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-08 18:32:42 - lyfe_kt.simplified_generator - INFO - Successfully generated expansion supertask: 6 items
+2025-08-08 18:32:48 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-08 18:32:48 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-08 18:32:48 - lyfe_kt.simplified_generator - INFO - Successfully generated application supertask: 6 items
+2025-08-08 18:32:54 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-08 18:32:54 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-08 18:32:54 - lyfe_kt.simplified_generator - INFO - Successfully generated foundation supertask: 6 items
+2025-08-08 18:32:54 - lyfe_kt.simplified_generator - INFO - Generated foundation level successfully
+2025-08-08 18:32:54 - lyfe_kt.simplified_generator - INFO - Generated application level successfully
+2025-08-08 18:32:54 - lyfe_kt.simplified_generator - INFO - Generated expansion level successfully
+2025-08-08 18:33:05 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-08 18:33:05 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-08 18:33:05 - lyfe_kt.simplified_generator - INFO - Successfully generated integration supertask: 6 items
+2025-08-08 18:33:05 - lyfe_kt.simplified_generator - INFO - Generated integration level successfully
+2025-08-08 18:33:17 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-08 18:33:17 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-08 18:33:17 - lyfe_kt.simplified_generator - INFO - Successfully generated mastery supertask: 6 items
+2025-08-08 18:33:17 - lyfe_kt.simplified_generator - INFO - Generated mastery level successfully
+2025-08-08 18:33:17 - lyfe_kt.simplified_generator - INFO - Validating comprehensive coverage
+2025-08-08 18:33:33 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-08 18:33:33 - lyfe_kt.simplified_generator - INFO - Coverage validation score: 90%
+2025-08-08 18:33:33 - lyfe_kt.simplified_generator - INFO - Comprehensive journey completed: 5 levels
+2025-08-08 18:33:33 - lyfe-kt - INFO - Saved foundation level: work/03_output/level_1_foundation.json
+2025-08-08 18:33:33 - lyfe-kt - INFO - Saved application level: work/03_output/level_2_application.json
+2025-08-08 18:33:33 - lyfe-kt - INFO - Saved expansion level: work/03_output/level_3_expansion.json
+2025-08-08 18:33:33 - lyfe-kt - INFO - Saved integration level: work/03_output/level_4_integration.json
+2025-08-08 18:33:33 - lyfe-kt - INFO - Saved mastery level: work/03_output/level_5_mastery.json
+2025-08-08 18:33:38 - lyfe-kt - INFO - Packaging command accessed
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - ContentPackager initialized: work → packages
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Auto-detected title from comprehensive metadata: 'como_dormir_bem'
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Starting content packaging workflow
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Created package directory: packages/como_dormir_bem-2025-08-08-18-33
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Moved 1 items from 01_raw/
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Moved 3 items from 02_preprocessed/
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Moved 7 items from 03_output/
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Moved 1 items from reports/
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Skipped workspace file: 01_raw
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Skipped workspace file: 02_preprocessed
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Skipped workspace file: README.md
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Skipped workspace file: .gitignore
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Skipped workspace file: 03_output
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Skipped workspace file: reports
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Total files moved: 12
+2025-08-08 18:33:38 - lyfe_kt.content_packager - ERROR - Failed to copy execution logs: unsupported operand type(s) for /: 'str' and 'str'
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Cleaned 01_raw/ (kept folder structure)
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Cleaned 02_preprocessed/ (kept folder structure)
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Cleaned 03_output/ (kept folder structure)
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Cleaned reports/ (kept folder structure)
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Work directory cleaned: 12 items removed, structure preserved
+2025-08-08 18:33:38 - lyfe_kt.content_packager - INFO - Packaging completed successfully: packages/como_dormir_bem-2025-08-08-18-33
+2025-08-11 15:27:05 - lyfe-kt - INFO - Preprocessing command group accessed
+2025-08-11 15:27:05 - lyfe_kt.session_logger - INFO - Session logger initialized: sess_2025-08-11_15-27-05_848598bd
+2025-08-11 15:27:05 - lyfe_kt.stage1_preprocessing - INFO - Ari integrator initialized successfully
+2025-08-11 15:27:05 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-11 15:27:05 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-11 15:27:05 - lyfe_kt.stage1_preprocessing - INFO - Template generator initialized successfully
+2025-08-11 15:27:05 - lyfe_kt.session_logger - INFO - [sess_2025-08-11_15-27-05_848598bd] Preprocessing pipeline initialized
+2025-08-11 15:27:05 - lyfe_kt.stage1_preprocessing - INFO - Preprocessing pipeline initialized successfully
+2025-08-11 15:27:05 - lyfe_kt.session_logger - INFO - [sess_2025-08-11_15-27-05_848598bd] Processing input file: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/01_raw/como_dormir_bem.md
+2025-08-11 15:27:05 - lyfe_kt.session_logger - INFO - [sess_2025-08-11_15-27-05_848598bd] Starting stage: preprocessing
+2025-08-11 15:27:05 - lyfe_kt.stage1_preprocessing - INFO - Processing file: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/01_raw/como_dormir_bem.md
+2025-08-11 15:27:05 - lyfe_kt.stage1_preprocessing - INFO - Progress: 0/6 - Starting processing of como_dormir_bem.md
+2025-08-11 15:27:05 - lyfe_kt.stage1_preprocessing - INFO - Progress: 1/6 - Extracting content
+2025-08-11 15:27:05 - lyfe_kt.stage1_preprocessing - INFO - Progress: 2/6 - Analyzing with Ari frameworks
+2025-08-11 15:27:05 - lyfe_kt.stage1_preprocessing - INFO - Progress: 3/6 - Identifying coaching opportunities
+2025-08-11 15:27:05 - lyfe_kt.stage1_preprocessing - INFO - Progress: 4/6 - Generating filled template
+2025-08-11 15:27:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-11 15:27:39 - lyfe_kt.stage1_preprocessing - INFO - Progress: 5/6 - Validating template
+2025-08-11 15:27:39 - lyfe_kt.stage1_preprocessing - INFO - Progress: 6/6 - Saving outputs
+2025-08-11 15:27:39 - lyfe_kt.session_logger - INFO - [sess_2025-08-11_15-27-05_848598bd] Generated output file: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/02_preprocessed/como_dormir_bem_filled_template.md
+2025-08-11 15:27:39 - lyfe_kt.session_logger - INFO - [sess_2025-08-11_15-27-05_848598bd] Generated output file: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/02_preprocessed/como_dormir_bem_ari_analysis.json
+2025-08-11 15:27:39 - lyfe_kt.session_logger - INFO - [sess_2025-08-11_15-27-05_848598bd] Generated output file: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/02_preprocessed/como_dormir_bem_oracle_context.json
+2025-08-11 15:27:39 - lyfe_kt.session_logger - INFO - [sess_2025-08-11_15-27-05_848598bd] Completed stage: preprocessing
+2025-08-11 15:27:39 - lyfe_kt.stage1_preprocessing - INFO - Successfully processed /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/01_raw/como_dormir_bem.md in 33.75 seconds
+2025-08-11 15:27:48 - lyfe-kt - INFO - Generation command group accessed
+2025-08-11 15:27:48 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-11 15:27:48 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-11 15:27:48 - lyfe_kt.simplified_generator - INFO - Starting comprehensive journey generation: 5 levels
+2025-08-11 15:27:48 - lyfe_kt.simplified_generator - INFO - Extracting comprehensive concepts from source material
+2025-08-11 15:28:07 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-11 15:28:07 - lyfe_kt.simplified_generator - INFO - Extracted 3 concepts from source material
+2025-08-11 15:28:07 - lyfe_kt.simplified_generator - INFO - Assigning concepts to levels strategically
+2025-08-11 15:28:07 - lyfe_kt.simplified_generator - INFO - Generating 5 levels with comprehensive coverage
+2025-08-11 15:28:30 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-11 15:28:30 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-11 15:28:30 - lyfe_kt.simplified_generator - INFO - Successfully generated foundation supertask: 6 items
+2025-08-11 15:28:30 - lyfe_kt.simplified_generator - INFO - Generated foundation level successfully
+2025-08-11 15:28:35 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-11 15:28:35 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-11 15:28:35 - lyfe_kt.simplified_generator - INFO - Successfully generated application supertask: 6 items
+2025-08-11 15:28:35 - lyfe_kt.simplified_generator - INFO - Generated application level successfully
+2025-08-11 15:28:35 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-11 15:28:35 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-11 15:28:35 - lyfe_kt.simplified_generator - INFO - Successfully generated expansion supertask: 6 items
+2025-08-11 15:28:35 - lyfe_kt.simplified_generator - INFO - Generated expansion level successfully
+2025-08-11 15:28:57 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-11 15:28:57 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-11 15:28:57 - lyfe_kt.simplified_generator - INFO - Successfully generated integration supertask: 6 items
+2025-08-11 15:28:57 - lyfe_kt.simplified_generator - INFO - Generated integration level successfully
+2025-08-11 15:29:05 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-11 15:29:05 - lyfe_kt.simplified_generator - INFO - No critical issues found, returning supertask as-is
+2025-08-11 15:29:05 - lyfe_kt.simplified_generator - INFO - Successfully generated mastery supertask: 6 items
+2025-08-11 15:29:05 - lyfe_kt.simplified_generator - INFO - Generated mastery level successfully
+2025-08-11 15:29:05 - lyfe_kt.simplified_generator - INFO - Comprehensive journey completed: 5 levels
+2025-08-11 15:29:05 - lyfe-kt - INFO - Saved foundation level: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/packages/level_1_foundation.json
+2025-08-11 15:29:05 - lyfe-kt - INFO - Saved application level: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/packages/level_2_application.json
+2025-08-11 15:29:05 - lyfe-kt - INFO - Saved expansion level: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/packages/level_3_expansion.json
+2025-08-11 15:29:05 - lyfe-kt - INFO - Saved integration level: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/packages/level_4_integration.json
+2025-08-11 15:29:05 - lyfe-kt - INFO - Saved mastery level: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/packages/level_5_mastery.json
+2025-08-11 15:33:17 - lyfe-kt - INFO - Packaging command accessed
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - ContentPackager initialized: work → packages
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Starting content packaging workflow
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Created package directory: packages/como_dormir_bem-2025-08-11-15-33
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Moved 1 items from 01_raw/
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Moved 3 items from 02_preprocessed/
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Created empty directory: 03_output/
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Created empty directory: reports/
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Skipped workspace file: 01_raw
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Skipped workspace file: 02_preprocessed
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Skipped workspace file: README.md
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Skipped workspace file: .gitignore
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Skipped workspace file: 03_output
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Skipped workspace file: reports
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Total files moved: 4
+2025-08-11 15:33:17 - lyfe_kt.content_packager - ERROR - Failed to copy execution logs: unsupported operand type(s) for /: 'str' and 'str'
+2025-08-11 15:33:17 - lyfe_kt.content_packager - INFO - Packaging completed successfully: packages/como_dormir_bem-2025-08-11-15-33
+2025-08-12 16:28:12 - lyfe-kt - INFO - Generation command group accessed
+2025-08-12 16:28:12 - lyfe_kt.openai_client - INFO - OpenAI client initialized with model: gpt-4
+2025-08-12 16:28:12 - lyfe_kt.openai_client - INFO - Prompt auditing enabled
+2025-08-12 16:28:12 - lyfe_kt.simplified_generator - INFO - Starting comprehensive journey generation: 5 levels
+2025-08-12 16:28:12 - lyfe_kt.simplified_generator - INFO - Extracting comprehensive concepts from source material
+2025-08-12 16:28:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 16:28:34 - lyfe_kt.simplified_generator - INFO - Extracted 3 concepts from source material
+2025-08-12 16:28:34 - lyfe_kt.simplified_generator - INFO - Assigning concepts to levels strategically
+2025-08-12 16:28:34 - lyfe_kt.simplified_generator - INFO - Generating 5 levels with comprehensive coverage
+2025-08-12 16:29:02 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 16:29:02 - lyfe_kt.simplified_generator - WARNING - Found critical issues: ['fake_authors']
+2025-08-12 16:29:02 - lyfe_kt.simplified_generator - INFO - Applying minimal fixes for: ['fake_authors']
+2025-08-12 16:29:02 - lyfe_kt.simplified_generator - INFO - Successfully generated foundation supertask: 6 items
+2025-08-12 16:29:02 - lyfe_kt.simplified_generator - INFO - Generated foundation level successfully
+2025-08-12 16:29:03 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 16:29:03 - lyfe_kt.simplified_generator - WARNING - Found critical issues: ['fake_authors']
+2025-08-12 16:29:03 - lyfe_kt.simplified_generator - INFO - Applying minimal fixes for: ['fake_authors']
+2025-08-12 16:29:03 - lyfe_kt.simplified_generator - INFO - Successfully generated expansion supertask: 6 items
+2025-08-12 16:29:04 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 16:29:04 - lyfe_kt.simplified_generator - WARNING - Found critical issues: ['fake_authors']
+2025-08-12 16:29:04 - lyfe_kt.simplified_generator - INFO - Applying minimal fixes for: ['fake_authors']
+2025-08-12 16:29:04 - lyfe_kt.simplified_generator - INFO - Successfully generated application supertask: 6 items
+2025-08-12 16:29:04 - lyfe_kt.simplified_generator - INFO - Generated application level successfully
+2025-08-12 16:29:04 - lyfe_kt.simplified_generator - INFO - Generated expansion level successfully
+2025-08-12 16:29:31 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 16:29:31 - lyfe_kt.simplified_generator - WARNING - Found critical issues: ['fake_authors']
+2025-08-12 16:29:31 - lyfe_kt.simplified_generator - INFO - Applying minimal fixes for: ['fake_authors']
+2025-08-12 16:29:31 - lyfe_kt.simplified_generator - INFO - Successfully generated integration supertask: 6 items
+2025-08-12 16:29:31 - lyfe_kt.simplified_generator - INFO - Generated integration level successfully
+2025-08-12 16:29:33 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 16:29:33 - lyfe_kt.simplified_generator - WARNING - Found critical issues: ['fake_authors']
+2025-08-12 16:29:33 - lyfe_kt.simplified_generator - INFO - Applying minimal fixes for: ['fake_authors']
+2025-08-12 16:29:33 - lyfe_kt.simplified_generator - INFO - Successfully generated mastery supertask: 6 items
+2025-08-12 16:29:33 - lyfe_kt.simplified_generator - INFO - Generated mastery level successfully
+2025-08-12 16:29:33 - lyfe_kt.simplified_generator - INFO - Comprehensive journey completed: 5 levels
+2025-08-12 16:29:33 - lyfe-kt - INFO - Saved foundation level: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/03_output/level_1_foundation.json
+2025-08-12 16:29:33 - lyfe-kt - INFO - Saved application level: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/03_output/level_2_application.json
+2025-08-12 16:29:33 - lyfe-kt - INFO - Saved expansion level: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/03_output/level_3_expansion.json
+2025-08-12 16:29:33 - lyfe-kt - INFO - Saved integration level: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/03_output/level_4_integration.json
+2025-08-12 16:29:33 - lyfe-kt - INFO - Saved mastery level: /Users/alebairos/Projects/mahhp/lyfe-supertask-knowledge/work/03_output/level_5_mastery.json

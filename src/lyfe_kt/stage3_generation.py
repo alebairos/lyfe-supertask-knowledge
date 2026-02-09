@@ -49,6 +49,18 @@ from .content_enrichment import ContentEnrichmentEngine
 # Set up logging
 logger = logging.getLogger(__name__)
 
+# Allowed expert authors for quote items (per feature 01)
+ALLOWED_QUOTE_AUTHORS: List[str] = [
+    "BJ Fogg",
+    "Jason Hreha",
+    "Anna Lembke",
+    "Lieberman & Long",
+    "Martin Seligman",
+    "Abraham Maslow",
+    "Andrew Huberman",
+    "Michael Easter",
+    "Andrew Newberg",
+]
 
 class SequenceParser:
     """Parser for custom narrative sequence strings."""
@@ -292,7 +304,8 @@ class StructuralJSONGenerator:
             quiz_iter = iter(quiz_items)
             quote_iter = iter(quote_items)
             
-            # Build narrative sequence using custom pattern
+            # Build narrative sequence using custom pattern (cap quotes at one)
+            quote_used = False
             for i, item_type in enumerate(sequence):
                 if len(narrative_items) >= 8:  # Max mobile limit
                     break
@@ -302,8 +315,9 @@ class StructuralJSONGenerator:
                         narrative_items.append(next(content_iter))
                     elif item_type == 'quiz':
                         narrative_items.append(next(quiz_iter))
-                    elif item_type == 'quote':
+                    elif item_type == 'quote' and not quote_used:
                         narrative_items.append(next(quote_iter))
+                        quote_used = True
                 except StopIteration:
                     # If we run out of items of this type, skip
                     continue
@@ -313,6 +327,8 @@ class StructuralJSONGenerator:
                 narrative_items.append(self._create_default_content_item("beginner", len(narrative_items)))
             
             logger.info(f"Created narrative sequence with {len(narrative_items)} items following story pattern")
+            # Sanitize authorship defaults and allowed quote authors
+            narrative_items = self._sanitize_authorship_and_quotes(narrative_items)
             return narrative_items
             
         except Exception as e:
@@ -1207,20 +1223,20 @@ REGRAS:
         """Generate inspirational quote items."""
         quote_items = []
         
-        # Create context-appropriate quotes
+        # Create context-appropriate quotes (use allowed expert authors)
         quotes = [
             {
                 'content': "O progresso acontece através de pequenos passos consistentes.",
-                'author': "Ari"
+                'author': ALLOWED_QUOTE_AUTHORS[0]
             },
             {
                 'content': "A ciência comportamental nos ensina que mudanças sustentáveis começam devagar.",
-                'author': "Ari"
+                'author': ALLOWED_QUOTE_AUTHORS[1]
             }
         ]
         
         # Convert to mobile-optimized format
-        for quote_data in quotes[:2]:  # Max 2 quote items
+        for quote_data in quotes[:2]:  # Limit candidates before sequencing
             # Ensure quote content is within 20-200 char limit
             quote_content = quote_data['content']
             if len(quote_content) > 200:
@@ -1265,8 +1281,30 @@ REGRAS:
         return {
             "type": "quote",
             "content": "O progresso acontece através de pequenos passos consistentes.",
-            "author": "Ari"
+            "author": ALLOWED_QUOTE_AUTHORS[0]
         }
+
+    def _sanitize_authorship_and_quotes(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Enforce: max one quote; quote author from allowed list; default content author to 'Ari'."""
+        sanitized: List[Dict[str, Any]] = []
+        quote_seen = False
+        for item in items:
+            item_type = item.get("type")
+            if item_type == "quote":
+                if quote_seen:
+                    continue
+                quote_seen = True
+                author = item.get("author")
+                if author not in ALLOWED_QUOTE_AUTHORS:
+                    item = {**item, "author": ALLOWED_QUOTE_AUTHORS[0]}
+                sanitized.append(item)
+            elif item_type == "content":
+                if not item.get("author"):
+                    item = {**item, "author": "Ari"}
+                sanitized.append(item)
+            else:
+                sanitized.append(item)
+        return sanitized[:8]
     
     def _trim_to_mobile_limit(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Trim items to 8 max while maintaining variety."""

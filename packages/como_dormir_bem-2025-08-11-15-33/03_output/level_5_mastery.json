@@ -1,0 +1,71 @@
+{
+  "title": "Mastery em Ritmo Circadiano, Ritual Noturno e Higiene do Sono",
+  "dimension": "mentalHealth",
+  "archetype": "sage",
+  "relatedToType": "GENERIC",
+  "relatedToId": "mastery_em_ritmo_circadiano_ritual_noturno_e_higiene_do_sono",
+  "estimatedDuration": 600,
+  "coinsReward": 750,
+  "flexibleItems": [
+    {
+      "type": "content",
+      "content": "A chave para um sono de qualidade é um ritual noturno consistente. Encerrar atividades estimulantes e trocar por uma leitura leve ou música suave pode ajudar a sinalizar ao nosso corpo que é hora de descansar.",
+      "author": "Ari",
+      "tips": [
+        "Crie uma rotina noturna que inclua atividades relaxantes e faça dela um hábito."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Qual é o propósito de um ritual noturno eficaz?",
+      "options": [
+        "Reduzir a ansiedade",
+        "Sinalizar ao corpo que é hora de descansar",
+        "Ambas as opções estão corretas",
+        "Nenhuma das opções está correta"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Um ritual noturno eficaz serve para reduzir a ansiedade e sinalizar ao corpo que é hora de descansar, promovendo um sono de qualidade."
+    },
+    {
+      "type": "content",
+      "content": "Nosso corpo opera em um ciclo biológico de 24 horas chamado ritmo circadiano. Dormir e acordar sempre no mesmo horário ajuda a alinhar nosso ritmo circadiano, facilitando o adormecer e melhorando a qualidade do sono.",
+      "author": "Ari",
+      "tips": [
+        "Evite mudanças drásticas na sua rotina de sono. Mantenha consistência, mesmo nos fins de semana."
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "O sono de qualidade começa muito antes de deitar na cama. A preparação é a chave.",
+      "author": "Ari"
+    },
+    {
+      "type": "content",
+      "content": "A higiene do sono envolve cuidado com o que consumimos. Cafeína à tarde e álcool perto da hora de dormir podem interferir em nosso ritmo circadiano e afetar a qualidade do sono.",
+      "author": "Ari",
+      "tips": [
+        "Evite bebidas alcoólicas e cafeinadas perto da hora de dormir. Opte por um chá de ervas ou leite morno."
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "Por que a cafeína à tarde pode afetar a qualidade do sono?",
+      "options": [
+        "A cafeína pode causar ansiedade",
+        "A cafeína pode interferir no ritmo circadiano",
+        "Ambas as opções estão corretas",
+        "Nenhuma das opções está correta"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A cafeína é um estimulante que pode causar ansiedade e interferir no ritmo circadiano, dificultando o sono."
+    }
+  ],
+  "metadata": {
+    "language": "portuguese",
+    "region": "brazil",
+    "created_at": "2025-08-06T00:00:00Z",
+    "updated_at": "2025-08-06T00:00:00Z",
+    "version": "1.1"
+  }
+}
